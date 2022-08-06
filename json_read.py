@@ -1,3 +1,6 @@
+# This file basically learning the JSON module.
+# This file needs more refractoring
+
 from operator import itemgetter
 import json,os
 
