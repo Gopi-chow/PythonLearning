@@ -1,0 +1,8 @@
+#Programming K7 NWL_EP
+print my_xsdb "target -set -filter {name =~ \"xc7k325t\"}"
+print my_xsdb "targets"
+print my_xsdb "after 500"
+print my_xsdb "puts \"Downloading K7 EP KC705 :$EP_BITSTREAM\""
+print my_xsdb "fpga -f $EP_BITSTREAM"
+print my_xsdb "after 500"
+

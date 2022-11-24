@@ -1,0 +1,80 @@
+$PALLADIUM_BUILD = "<::build_dir::>"
+$RUN_SESSION_SCRIPT = "<::run_script:=:run_session.tcl::>"
+
+$PALLADIUM_DATABASE = "$PWD"
+
+if run "[ -d $PALLADIUM_BUILD/ecc_files ]" then
+        run "cp -rf $PALLADIUM_BUILD/ecc_files/* $PALLADIUM_DATABASE"
+endif
+
+run "cp -f $PALLADIUM_BUILD/palladium.tcl $PALLADIUM_DATABASE"
+run "cp -f $PALLADIUM_BUILD/$RUN_SESSION_SCRIPT $PALLADIUM_DATABASE"
+
+# Check if  palladium.tcl file is present
+if run "[ ! -f $PALLADIUM_DATABASE/palladium.tcl ]" then
+        fail "ERROR: Cannot find file: $PALLADIUM_DATABASE/palladium.tcl"
+endif
+
+# Check if  run_session tcl file is present
+if run "[ ! -f $PALLADIUM_DATABASE/$RUN_SESSION_SCRIPT ]" then
+        fail "ERROR: Cannot find file: $PALLADIUM_DATABASE/$RUN_SESSION_SCRIPT"
+endif
+
+<::baud_rate:=:serial baud=4800::>
+<::com:=:serial::> txdelay=100
+$seed := "perl -e 'printf \"%08x\", int(rand 4294967295)'"
+
+$MONARCH_SEED = "Monarch_seed=0x$seed;"
+$BURST_KNOBS = "$MONARCH_SEED$BURST_KNOBS"
+
+#Check if all paths are accessible
+if run "[ ! -f $BURST_ELF ]" then
+  fail "ERROR: Cannot find file: $BURST_ELF"
+endif
+
+$dir1 = "$SYSTEST_HOST"
+run "mkdir -p $LOGPATH/$dir1"
+$dir2 = "$logdate"
+run "mkdir $LOGPATH/$SYSTEST_HOST/$dir2"
+cd "$LOGPATH/$SYSTEST_HOST/$dir2"
+$BURST_RESULTS = "$LOGPATH/$SYSTEST_HOST/$dir2"
+$WHICH_XSDB := "which xsdb"
+
+
+$SERIAL_LOG = "$BURST_RESULTS/burst_serial_$SYSTEST_HOST.log"
+debug append "$BURST_RESULTS/burst_debug_$SYSTEST_HOST.log"
+
+# Echo all paths and configurations
+print "Printing all launch information..."
+print "PALLADIUM_ID_$logdate,$BURST_HW,$BURST_BUP,$BURST_ELF,$SYSTEST_HOST,$logdate1,$BURST_RUNTIME,xx,$PREEMPTABLE,IN_PROGRESS,TBD,$BURST_RESULTS,[A72]$BURST_HW.$BURST_BUP.$BURST_ELF.$SYSTEST_HOST.xx.TBD,$BURST_KNOBS"
+print "Palladium Build          :$BURST_HW"
+print "BOARD                    :$SYSTEST_HOST"
+print "BURST elf                :$BURST_ELF"
+print "Palladium Build path     :$PALLADIUM_BUILD"
+print "Palladium session        :$PALLADIUM_SESSION"
+print "XSDB Version             :$WHICH_XSDB"
+print "Job ID                   :$LSB_JOBID"
+
+<::__SUB_TEMPLATE__module_switch__:=:No::>
+record <::com:=:serial::> append $SERIAL_LOG
+
+if running my_pall then
+        kill my_pall
+        sleep 1
+endif
+
+fork "xeDebug" as my_pall
+#Requires certain time to create tmp and xe.msg files
+sleep 10 
+my_pall echo = 1
+
+$ptm_exit_time := "expr $BURST_RUNTIME / 60 + 30"
+print my_pall "xeset idleExit $ptm_exit_time"
+
+print my_pall "cd \"$PALLADIUM_DATABASE\""
+sleep 2
+
+print my_pall "set argv [list $BURST_ELF]"
+
+print my_pall "source $RUN_SESSION_SCRIPT"
+

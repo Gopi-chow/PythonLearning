@@ -1,0 +1,96 @@
+<::com:=:serial::> baud=115200
+<::com:=:serial::> txdelay=100
+
+$BUILD_DIR = "<::build_dir:=:/group/siv4/proj/everest/public/releases/ipp/$BURST_HW::>"
+$PROTIUM_SCRIPT = "$BUILD_DIR/<::run_script:=:run.tcl::>"
+$PDI_IMAGE = "<::image_path:=: ::>"
+
+# Create log directories for host
+$dir1 = "$SYSTEST_HOST"
+run "mkdir -p $LOGPATH/$dir1"
+$dir2 = "$logdate"
+run "mkdir -p $LOGPATH/$SYSTEST_HOST/$dir2"
+$BURST_RESULTS = "$LOGPATH/$SYSTEST_HOST/$dir2"
+$SERIAL_LOG = "$BURST_RESULTS/burst_serial_$SYSTEST_HOST.log"
+$DEBUG_LOG = "$BURST_RESULTS/burst_debug_$SYSTEST_HOST.log"
+$XSDB := "which xsdb"
+$WHICH_XSDB := "which xsdb"
+
+debug append $DEBUG_LOG
+
+#Echo all paths and configurations
+print "Printing all launch information..."
+print "PROTIUM_$logdate,$BURST_HW,$BURST_BUP,$BURST_ELF,$SYSTEST_HOST,$logdate1,$BURST_RUNTIME,xx,$PREEMPTABLE,IN_PROGRESS,TBD,$BURST_RESULTS,$BURST_HW.$BURST_BUP.$BURST_ELF.$SYSTEST_HOST.xx.TBD,$BURST_KNOBS"
+print "DA Version               :$BURST_HW"
+print "BOARD                    :$SYSTEST_HOST"
+print "BURST KNOBS              :$BURST_KNOBS"
+print "BURST runtime            :$BURST_RUNTIME seconds"
+print "BURST elf                :$BURST_ELF"
+print "BURST results            :$BURST_RESULTS"
+print "XSDB Version             :$WHICH_XSDB"
+print "Job ID                   :$LSB_JOBID" 
+
+power 0
+sleep 2
+power 1
+sleep 2
+
+record <::com:=:serial::> append $SERIAL_LOG
+
+cd "$BURST_RESULTS"
+
+# launch xsdb
+fork "$XSDB" as my_xsdb
+my_xsdb echo = 1
+
+test
+        sleep 5
+        wait
+        when my_xsdb matches "xsdb%"
+                print "Forking xsdb completed"
+                continue
+        end
+        after 2 minutes
+                fail "Forking xsdb failed"
+        end
+        on failure
+                print "FAILURE: $0"
+                #Changing the current working directory
+                cd "$BURST_HOME"
+                close
+                exit
+        end
+endtest
+
+# Take <::proc::> out of reset and download BURST elf
+print my_xsdb "connect"
+print my_xsdb "ta 1"
+<::__SUB_TEMPLATE__tenzing_pdi_images_dow__:=:No::>
+<::__SUB_TEMPLATE__spp_a72_ta_sel__:=:No::>
+<::__SUB_TEMPLATE__spp_r5_ta_sel__:=:No::>
+
+print my_xsdb "<::rst_type::>"
+print my_xsdb "dow -force $BURST_ELF"
+
+test
+	sleep 5
+	wait
+	when my_xsdb matches "Successfully downloaded .*burstarm.*"
+		continue
+	end
+	when my_xsdb matches "Failed to download .*burstarm.*"
+		fail "BURST elf download failed"
+	end
+	when my_xsdb inactive 2 minutes
+		fail "BURST not started"
+	end
+	on failure
+                print "FAILURE: $0"
+                #Changing the current working directory
+                cd "$BURST_HOME"
+                close
+		exit
+	end
+endtest
+print my_xsdb "con"
+print my_xsdb "exit"

@@ -1,0 +1,240 @@
+<::preemption_off:=: ::>
+<::com:=:serial::> baud=115200
+<::com:=:serial::> txdelay=100
+
+$BUILD_DIR = "<::build_dir:=:/group/siv4/proj/everest/public/releases/spp/$BURST_HW::>"
+$PDRPP_WORK = "<::pdrpp_work:=:$BUILD_DIR/run_dir::>/pdrpp_work"
+$PROTIUM_SCRIPT = "$BUILD_DIR/<::run_script:=:run_plm.tcl::>"
+$XSDB = "<::xsdb_ver:=:/proj/xbuilds/2019.2_released/installs/lin64/Vivado/2019.2/bin/xsdb::>"
+if run "[ ! -z \"$6\" ]" then
+	print "Protium requires a specific XSDB tool version. $6 will be used for the Systest tool version."
+endif
+
+$XILINX_VITIS=""
+$XSDB_RC = "<::xsdbrc_path:=:/group/siv4/proj/everest/public/releases/spp/$BURST_HW/.xsdbrc::>"
+$PDI_IMAGE = "<::image_path:=: ::>"
+
+# Unlock Protium
+<::unlock_cmd:=:unlock_4::>
+sleep 4
+
+# Create log directories for host
+$dir1 = "$SYSTEST_HOST"
+run "mkdir -p $LOGPATH/$dir1"
+$dir2 = "$logdate"
+run "mkdir -p $LOGPATH/$SYSTEST_HOST/$dir2"
+$BURST_RESULTS = "$LOGPATH/$SYSTEST_HOST/$dir2"
+$SERIAL_LOG = "$BURST_RESULTS/burst_serial_$SYSTEST_HOST.log"
+$DEBUG_LOG = "$BURST_RESULTS/burst_debug_$SYSTEST_HOST.log"
+
+if run "[ \"$XSDB\" == \"xsdb\" ] || [ \"$WHICH_XSDB\" == \"$XSDB\" ]" then
+   $WHICH_XSDB := "which xsdb"
+else
+   $WHICH_XSDB = "$XSDB"
+endif
+
+record <::com:=:serial::> append $SERIAL_LOG
+debug append $DEBUG_LOG
+
+#Echo all paths and configurations
+print "Printing all launch information..."
+print "PROTIUM_$logdate,$BURST_HW,$PDRPP_WORK,$BURST_BUP,$BURST_ELF,$SYSTEST_HOST,$logdate1,$BURST_RUNTIME,xx,$PREEMPTABLE,IN_PROGRESS,TBD,$BURST_RESULTS,$BURST_HW.$PDRPP_WORK.$BURST_BUP.$BURST_ELF.$SYSTEST_HOST.xx.TBD,$BURST_KNOBS"
+print "DA Version               :$BURST_HW"
+print "BOARD                    :$SYSTEST_HOST"
+print "PDRPP_WORK               :$PDRPP_WORK"
+print "BURST KNOBS              :$BURST_KNOBS"
+print "BURST runtime            :$BURST_RUNTIME seconds"
+print "BURST elf                :$BURST_ELF"
+print "BURST results            :$BURST_RESULTS"
+print "XSDB Version             :$WHICH_XSDB"
+print "Job ID                   :$LSB_JOBID" 
+
+# launch ptm
+if running my_ptm then
+        kill my_ptm
+        sleep 1
+endif
+
+cd "$BURST_RESULTS"
+$H10_ES2  = "<::h10_es2:=: ::>"
+if run  "[ \"$H10_ES2\" == \"true\" ]" then
+   <::ptm_ver:=: ::>
+   <::unlock_cmd:=: ::>
+else
+   module "use /everest/sivhw_bkup/tools/modulefiles"
+   <::ptm_ver:=: ::>
+endif
+
+check_board
+print "starting protium"
+if run "[ \"$H10_ES2\" == \"true\" ]" then
+   fork "/everest/sivhw_bkup/tools/protium/PTM_20.07.137.s002_210119-235057.p1/bin/ptmRun" as my_ptm
+else
+   fork "ptmRun" as my_ptm
+endif
+my_ptm echo = 1
+$serial := "$CLUSTER_HOME/bin/protium_lookup"
+sleep 3
+print my_ptm "sys"
+print my_ptm "system -set $serial -reserve <::reserve_count:=:2::>"
+sleep 3
+
+$ptm_exit_time := "expr $BURST_RUNTIME / 60 + 30"
+print my_ptm "xeset idleExit $ptm_exit_time"
+print my_ptm "download $PDRPP_WORK"
+test
+	sleep 5
+        wait
+        when my_ptm matches "Info: Infra reset asserted"
+                print "PTM download completed"
+                continue
+        end
+        when my_ptm matches "Infra-Reset successfully completed"
+                print "PTM download completed"
+                continue
+        end
+	when my_ptm inactive 5 minutes
+		fail "PTM download is too slow or error while downloading"
+	end
+        after 20 minutes
+		fail "PTM dowload is taking more than 20 min"
+	end
+	on failure
+		print "FAILURE: $0"
+                #Clearing the FPGA's
+                print my_ptm "clear"
+                sleep 3
+                print my_ptm "exit"
+                <::unlock_cmd:=:unlock_4::>
+                #Changing the current working directory
+                cd "$BURST_HOME"
+                close
+                exit
+        end
+endtest
+print my_ptm "source $PROTIUM_SCRIPT"
+test
+	sleep 5
+	wait
+	when my_ptm matches "run script finished"
+		print "Sourcing Run script complete"
+		continue
+	end
+	when my_ptm inactive 2 minutes
+		fail "Sourcing run script is too slow or error while downloading"	
+	end
+	after 5 minutes
+		fail "Sourcing run script is taking more than 5 min"
+	end
+	on failure
+		print "FAILURE: $0"
+                #Clearing the FPGA's
+                print my_ptm "clear"
+                sleep 3
+                print my_ptm "exit"
+                <::unlock_cmd:=:unlock_4::>
+                #Changing the current working directory
+                cd "$BURST_HOME"
+                close
+		exit
+	end	
+endtest
+
+<::preemption_on:=: ::>
+sleep 10
+<::preemption_off:=: ::>
+
+# launch xsdb
+fork "$XSDB" as my_xsdb
+my_xsdb echo = 1
+
+test
+        sleep 5
+        wait
+        when my_xsdb matches "xsdb%"
+                print "Forking xsdb completed"
+                continue
+        end
+        after 2 minutes
+                fail "Forking xsdb failed"
+        end
+        on failure
+                print "FAILURE: $0"
+                #Clearing the FPGA's
+                print my_ptm "clear"
+                sleep 3
+                print my_ptm "exit"
+                <::unlock_cmd:=:unlock_4::>
+                #Changing the current working directory
+                cd "$BURST_HOME"
+                close
+                exit
+        end
+endtest
+
+# Take <::proc::> out of reset and download BURST elf
+print my_xsdb "source $XSDB_RC"
+print my_xsdb "protium"
+
+test
+	sleep 5
+	wait
+	when my_xsdb matches "<::jtag_freq:=:600000::>"
+		print "JTAG frequency successfully set to <::jtag_freq:=:600000::>Hz"
+		continue
+	end
+	after 5 minutes
+		print "FAILURE: Couldn't set JTAG frequency to <::jtag_freq:=:600000::>Hz"
+                #Clearing the FPGA's
+                print my_ptm "clear"
+                sleep 3
+                print my_ptm "exit"
+                <::unlock_cmd:=:unlock_4::>
+                #Changing the current working directory
+                cd "$BURST_HOME"
+                close
+		exit
+	end
+endtest
+
+sleep 10
+print my_xsdb "jtag targets"
+sleep 5
+
+<::__SUB_TEMPLATE__spp_noc_compiler_dow__:=:No::>
+<::__SUB_TEMPLATE__spp_cpm5_a72_bme__:=:No::>
+<::__SUB_TEMPLATE__spp_a72_ta_sel__:=:No::>
+<::__SUB_TEMPLATE__spp_r5_ta_sel__:=:No::>
+print my_xsdb "<::rst_type::>"
+print my_xsdb "dow -skip-activate-subsystem -force $BURST_ELF"
+
+test
+	sleep 5
+	wait
+	when my_xsdb matches "Successfully downloaded .*burstarm.*"
+		continue
+
+	end
+	when my_xsdb matches "Failed to download .*burstarm.*"
+		fail "BURST elf download failed"
+	end
+	when my_xsdb inactive 10 minutes
+		fail "BURST not started"
+	end
+	on failure
+                print "FAILURE: $0"
+                #Clearing the FPGA's
+                print my_ptm "clear"
+                sleep 3
+                print my_ptm "exit"
+                <::unlock_cmd:=:unlock_4::>
+                #Changing the current working directory
+                cd "$BURST_HOME"
+                close
+		exit
+	end
+endtest
+print my_xsdb "after <::dwn_burst_wait::>"
+<::preemption_on:=: ::>
+print my_xsdb "con"
+print my_xsdb "exit"

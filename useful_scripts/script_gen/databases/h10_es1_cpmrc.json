@@ -1,0 +1,772 @@
+{
+    "h10_rc_h10_ep_aximmc0_x16_g4_a72": {
+        "cmd": "-pj everest -si h10_es1_cpmrc -rc h10 -ep h10 --cpm_mode aximmc0 --lane_count x16 --pcie_gen g4 --processor a72",
+        "form": [
+            {
+                "keys": {
+                    "bup": "none",
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "h10_es1_cpm",
+                    "knobs": "",
+                    "preempt": "NO",
+                    "script_name": "h10_rc_h10_ep_aximmc0_x16_g4_a72"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__everest_es1_cpm_ep_dow__": "NO",
+                    "__SUB_TEMPLATE__everest_es1_k7_ep_dow__": "No",
+                    "__SUB_TEMPLATE__h10_a72_ta_sel__": "Yes",
+                    "__SUB_TEMPLATE__h10_es1_h10_ep_dow__": "Yes",
+                    "__SUB_TEMPLATE__h10_es1_r5_sel__": "No",
+                    "baud_rate": "115200",
+                    "board_serial_num": "",
+                    "com": "com0",
+                    "ep_bit": "None",
+                    "ep_image_path": "/everest/set_vnc_bkup/vnc/h10/es1/results/burst/bup/cpm5/2022.1_INT_1214_1/gui_xa2785_cpm5_2MHP_3x_aximm_ep_c0_x16g4_2022.1_1214/h10_ep/h10_ep.runs/impl_1/h10_ep_wrapper.pdi",
+                    "proc": "a72",
+                    "rc_bit": "None",
+                    "rc_image_path": "/everest/set_vnc_bkup/vnc/h10/es1/results/burst/bup/cpm5/2022.1_INT_0105_1/gui_xa2785_cpm5_2MHP_6x_aximm_rc_x16g4_2022.1_0105/h10_rc/h10_rc.runs/impl_1/h10_rc_wrapper.pdi",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "h10_es1_cpmrc.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__h10_noc_reg_dump_cpm__": "Yes",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "com": "com0",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "everest/h10_es1_cpmrc/pcie",
+        "script_num": 9
+    },
+    "h10_rc_h10_ep_aximmc0_x16_g4_a72_preempt": {
+        "cmd": "-pj everest -si h10_es1_cpmrc -rc h10 -ep h10 --cpm_mode aximmc0 --lane_count x16 --pcie_gen g4 --processor a72 -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "bup": "none",
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "h10_es1_cpm",
+                    "knobs": "",
+                    "preempt": "YES",
+                    "script_name": "h10_rc_h10_ep_aximmc0_x16_g4_a72_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__everest_es1_cpm_ep_dow__": "NO",
+                    "__SUB_TEMPLATE__everest_es1_k7_ep_dow__": "No",
+                    "__SUB_TEMPLATE__h10_a72_ta_sel__": "Yes",
+                    "__SUB_TEMPLATE__h10_es1_h10_ep_dow__": "Yes",
+                    "__SUB_TEMPLATE__h10_es1_r5_sel__": "No",
+                    "baud_rate": "115200",
+                    "board_serial_num": "",
+                    "com": "com0",
+                    "ep_bit": "None",
+                    "ep_image_path": "/everest/set_vnc_bkup/vnc/h10/es1/results/burst/bup/cpm5/2022.1_INT_1214_1/gui_xa2785_cpm5_2MHP_3x_aximm_ep_c0_x16g4_2022.1_1214/h10_ep/h10_ep.runs/impl_1/h10_ep_wrapper.pdi",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "rc_bit": "None",
+                    "rc_image_path": "/everest/set_vnc_bkup/vnc/h10/es1/results/burst/bup/cpm5/2022.1_INT_0105_1/gui_xa2785_cpm5_2MHP_6x_aximm_rc_x16g4_2022.1_0105/h10_rc/h10_rc.runs/impl_1/h10_rc_wrapper.pdi",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "h10_es1_cpmrc.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__h10_noc_reg_dump_cpm__": "Yes",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "com": "com0",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "everest/h10_es1_cpmrc/pcie",
+        "script_num": 10
+    },
+    "h10_rc_h10_ep_aximmc0_x8_g4_a72": {
+        "cmd": "-pj everest -si h10_es1_cpmrc -rc h10 -ep h10 --cpm_mode aximmc0 --lane_count x8 --pcie_gen g4 --processor a72",
+        "form": [
+            {
+                "keys": {
+                    "bup": "none",
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "h10_es1_cpm",
+                    "knobs": "",
+                    "preempt": "NO",
+                    "script_name": "h10_rc_h10_ep_aximmc0_x8_g4_a72"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__everest_es1_cpm_ep_dow__": "NO",
+                    "__SUB_TEMPLATE__everest_es1_k7_ep_dow__": "No",
+                    "__SUB_TEMPLATE__h10_a72_ta_sel__": "Yes",
+                    "__SUB_TEMPLATE__h10_es1_h10_ep_dow__": "Yes",
+                    "__SUB_TEMPLATE__h10_es1_r5_sel__": "No",
+                    "baud_rate": "115200",
+                    "board_serial_num": "",
+                    "com": "com0",
+                    "ep_bit": "None",
+                    "ep_image_path": "/everest/set_vnc_bkup/vnc/h10/es1/results/burst/designs/cpm5/2021.1_INT_0601_1/gui_xa2785_cpm5_2MP_a1_aximm_ep_c0_x8g4_2021.1_0601/gui_xa2785_cpm5_2MP_a1_aximm_ep_c0_x8g4.runs/impl_1/gui_xa2785_cpm5_2MP_a1_aximm_ep_c0_x8g4_wrapper.pdi",
+                    "proc": "a72",
+                    "rc_bit": "None",
+                    "rc_image_path": "/everest/set_vnc_bkup/vnc/h10/es1/results/burst/designs/cpm5/2021.1_INT_0601_1/gui_xa2785_cpm5_2MP_a1_aximm_rc_x8g4_2021.1_0601/gui_xa2785_cpm5_2MP_a1_aximm_rc_x8g4.runs/impl_1/gui_xa2785_cpm5_2MP_a1_aximm_rc_x8g4_wrapper.pdi",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "h10_es1_cpmrc.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__h10_noc_reg_dump_cpm__": "Yes",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "com": "com0",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "everest/h10_es1_cpmrc/pcie",
+        "script_num": -7
+    },
+    "h10_rc_h10_ep_aximmc0_x8_g4_a72_preempt": {
+        "cmd": "-pj everest -si h10_es1_cpmrc -rc h10 -ep h10 --cpm_mode aximmc0 --lane_count x8 --pcie_gen g4 --processor a72 -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "bup": "none",
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "h10_es1_cpm",
+                    "knobs": "",
+                    "preempt": "YES",
+                    "script_name": "h10_rc_h10_ep_aximmc0_x8_g4_a72_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__everest_es1_cpm_ep_dow__": "NO",
+                    "__SUB_TEMPLATE__everest_es1_k7_ep_dow__": "No",
+                    "__SUB_TEMPLATE__h10_a72_ta_sel__": "Yes",
+                    "__SUB_TEMPLATE__h10_es1_h10_ep_dow__": "Yes",
+                    "__SUB_TEMPLATE__h10_es1_r5_sel__": "No",
+                    "baud_rate": "115200",
+                    "board_serial_num": "",
+                    "com": "com0",
+                    "ep_bit": "None",
+                    "ep_image_path": "/everest/set_vnc_bkup/vnc/h10/es1/results/burst/designs/cpm5/2021.1_INT_0601_1/gui_xa2785_cpm5_2MP_a1_aximm_ep_c0_x8g4_2021.1_0601/gui_xa2785_cpm5_2MP_a1_aximm_ep_c0_x8g4.runs/impl_1/gui_xa2785_cpm5_2MP_a1_aximm_ep_c0_x8g4_wrapper.pdi",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "rc_bit": "None",
+                    "rc_image_path": "/everest/set_vnc_bkup/vnc/h10/es1/results/burst/designs/cpm5/2021.1_INT_0601_1/gui_xa2785_cpm5_2MP_a1_aximm_rc_x8g4_2021.1_0601/gui_xa2785_cpm5_2MP_a1_aximm_rc_x8g4.runs/impl_1/gui_xa2785_cpm5_2MP_a1_aximm_rc_x8g4_wrapper.pdi",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "h10_es1_cpmrc.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__h10_noc_reg_dump_cpm__": "Yes",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "com": "com0",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "everest/h10_es1_cpmrc/pcie",
+        "script_num": -8
+    },
+    "h10_rc_h10_ep_aximmc0_x8_g5_a72": {
+        "cmd": "-pj everest -si h10_es1_cpmrc -rc h10 -ep h10 --cpm_mode aximmc0 --lane_count x8 --pcie_gen g5 --processor a72",
+        "form": [
+            {
+                "keys": {
+                    "bup": "none",
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "h10_es1_cpm",
+                    "knobs": "",
+                    "preempt": "NO",
+                    "script_name": "h10_rc_h10_ep_aximmc0_x8_g5_a72"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__everest_es1_cpm_ep_dow__": "NO",
+                    "__SUB_TEMPLATE__everest_es1_k7_ep_dow__": "No",
+                    "__SUB_TEMPLATE__h10_a72_ta_sel__": "Yes",
+                    "__SUB_TEMPLATE__h10_es1_h10_ep_dow__": "Yes",
+                    "__SUB_TEMPLATE__h10_es1_r5_sel__": "No",
+                    "baud_rate": "115200",
+                    "board_serial_num": "",
+                    "com": "com0",
+                    "ep_bit": "None",
+                    "ep_image_path": "/everest/set_vnc_bkup/vnc/h10/es1/results/burst/bup/cpm5/2022.1_INT_1214_1/gui_xa2785_cpm5_2MHP_3x_aximm_ep_c0_x8g5_2022.1_1214/h10_ep/h10_ep.runs/impl_1/h10_ep_wrapper.pdi",
+                    "proc": "a72",
+                    "rc_bit": "None",
+                    "rc_image_path": "/everest/set_vnc_bkup/vnc/h10/es1/results/burst/bup/cpm5/2022.1_INT_0105_1/gui_xa2785_cpm5_2MHP_6x_aximm_rc_x8g5_2022.1_0105/h10_rc/h10_rc.runs/impl_1/h10_rc_wrapper.pdi",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "h10_es1_cpmrc.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__h10_noc_reg_dump_cpm__": "Yes",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "com": "com0",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "everest/h10_es1_cpmrc/pcie",
+        "script_num": 5
+    },
+    "h10_rc_h10_ep_aximmc0_x8_g5_a72_preempt": {
+        "cmd": "-pj everest -si h10_es1_cpmrc -rc h10 -ep h10 --cpm_mode aximmc0 --lane_count x8 --pcie_gen g5 --processor a72 -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "bup": "none",
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "h10_es1_cpm",
+                    "knobs": "",
+                    "preempt": "YES",
+                    "script_name": "h10_rc_h10_ep_aximmc0_x8_g5_a72_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__everest_es1_cpm_ep_dow__": "NO",
+                    "__SUB_TEMPLATE__everest_es1_k7_ep_dow__": "No",
+                    "__SUB_TEMPLATE__h10_a72_ta_sel__": "Yes",
+                    "__SUB_TEMPLATE__h10_es1_h10_ep_dow__": "Yes",
+                    "__SUB_TEMPLATE__h10_es1_r5_sel__": "No",
+                    "baud_rate": "115200",
+                    "board_serial_num": "",
+                    "com": "com0",
+                    "ep_bit": "None",
+                    "ep_image_path": "/everest/set_vnc_bkup/vnc/h10/es1/results/burst/bup/cpm5/2022.1_INT_1214_1/gui_xa2785_cpm5_2MHP_3x_aximm_ep_c0_x8g5_2022.1_1214/h10_ep/h10_ep.runs/impl_1/h10_ep_wrapper.pdi",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "rc_bit": "None",
+                    "rc_image_path": "/everest/set_vnc_bkup/vnc/h10/es1/results/burst/bup/cpm5/2022.1_INT_0105_1/gui_xa2785_cpm5_2MHP_6x_aximm_rc_x8g5_2022.1_0105/h10_rc/h10_rc.runs/impl_1/h10_rc_wrapper.pdi",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "h10_es1_cpmrc.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__h10_noc_reg_dump_cpm__": "Yes",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "com": "com0",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "everest/h10_es1_cpmrc/pcie",
+        "script_num": 6
+    },
+    "h10_rc_h10_ep_aximmc1_x8_g4_a72": {
+        "cmd": "-pj everest -si h10_es1_cpmrc -rc h10 -ep h10 --cpm_mode aximmc1 --lane_count x8 --pcie_gen g4 --processor a72",
+        "form": [
+            {
+                "keys": {
+                    "bup": "none",
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "h10_es1_cpm",
+                    "knobs": "",
+                    "preempt": "NO",
+                    "script_name": "h10_rc_h10_ep_aximmc1_x8_g4_a72"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__everest_es1_cpm_ep_dow__": "NO",
+                    "__SUB_TEMPLATE__everest_es1_k7_ep_dow__": "No",
+                    "__SUB_TEMPLATE__h10_a72_ta_sel__": "Yes",
+                    "__SUB_TEMPLATE__h10_es1_h10_ep_dow__": "Yes",
+                    "__SUB_TEMPLATE__h10_es1_r5_sel__": "No",
+                    "baud_rate": "115200",
+                    "board_serial_num": "",
+                    "com": "com0",
+                    "ep_bit": "None",
+                    "ep_image_path": "/everest/set_vnc_bkup/vnc/h10/es1/results/burst/designs/cpm5/2021.1_INT_0601_1/gui_xa2785_cpm5_2MP_a1_aximm_ep_c1_x8g4_2021.1_0601/gui_xa2785_cpm5_2MP_a1_aximm_ep_c1_x8g4.runs/impl_1/gui_xa2785_cpm5_2MP_a1_aximm_ep_c1_x8g4_wrapper.pdi",
+                    "proc": "a72",
+                    "rc_bit": "None",
+                    "rc_image_path": "/everest/set_vnc_bkup/vnc/h10/es1/results/burst/designs/cpm5/2021.1_INT_0601_1/gui_xa2785_cpm5_2MP_a1_aximm_rc_x8g4_2021.1_0601/gui_xa2785_cpm5_2MP_a1_aximm_rc_x8g4.runs/impl_1/gui_xa2785_cpm5_2MP_a1_aximm_rc_x8g4_wrapper.pdi",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "h10_es1_cpmrc.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__h10_noc_reg_dump_cpm__": "Yes",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "com": "com0",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "everest/h10_es1_cpmrc/pcie",
+        "script_num": -1
+    },
+    "h10_rc_h10_ep_aximmc1_x8_g4_a72_preempt": {
+        "cmd": "-pj everest -si h10_es1_cpmrc -rc h10 -ep h10 --cpm_mode aximmc1 --lane_count x8 --pcie_gen g4 --processor a72 -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "bup": "none",
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "h10_es1_cpm",
+                    "knobs": "",
+                    "preempt": "YES",
+                    "script_name": "h10_rc_h10_ep_aximmc1_x8_g4_a72_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__everest_es1_cpm_ep_dow__": "NO",
+                    "__SUB_TEMPLATE__everest_es1_k7_ep_dow__": "No",
+                    "__SUB_TEMPLATE__h10_a72_ta_sel__": "Yes",
+                    "__SUB_TEMPLATE__h10_es1_h10_ep_dow__": "Yes",
+                    "__SUB_TEMPLATE__h10_es1_r5_sel__": "No",
+                    "baud_rate": "115200",
+                    "board_serial_num": "",
+                    "com": "com0",
+                    "ep_bit": "None",
+                    "ep_image_path": "/everest/set_vnc_bkup/vnc/h10/es1/results/burst/designs/cpm5/2021.1_INT_0601_1/gui_xa2785_cpm5_2MP_a1_aximm_ep_c1_x8g4_2021.1_0601/gui_xa2785_cpm5_2MP_a1_aximm_ep_c1_x8g4.runs/impl_1/gui_xa2785_cpm5_2MP_a1_aximm_ep_c1_x8g4_wrapper.pdi",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "rc_bit": "None",
+                    "rc_image_path": "/everest/set_vnc_bkup/vnc/h10/es1/results/burst/designs/cpm5/2021.1_INT_0601_1/gui_xa2785_cpm5_2MP_a1_aximm_rc_x8g4_2021.1_0601/gui_xa2785_cpm5_2MP_a1_aximm_rc_x8g4.runs/impl_1/gui_xa2785_cpm5_2MP_a1_aximm_rc_x8g4_wrapper.pdi",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "h10_es1_cpmrc.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__h10_noc_reg_dump_cpm__": "Yes",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "com": "com0",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "everest/h10_es1_cpmrc/pcie",
+        "script_num": -2
+    },
+    "h10_rc_h10_ep_aximmc1_x8_g5_a72": {
+        "cmd": "-pj everest -si h10_es1_cpmrc -rc h10 -ep h10 --cpm_mode aximmc1 --lane_count x8 --pcie_gen g5 --processor a72",
+        "form": [
+            {
+                "keys": {
+                    "bup": "none",
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "h10_es1_cpm",
+                    "knobs": "",
+                    "preempt": "NO",
+                    "script_name": "h10_rc_h10_ep_aximmc1_x8_g5_a72"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__everest_es1_cpm_ep_dow__": "NO",
+                    "__SUB_TEMPLATE__everest_es1_k7_ep_dow__": "No",
+                    "__SUB_TEMPLATE__h10_a72_ta_sel__": "Yes",
+                    "__SUB_TEMPLATE__h10_es1_h10_ep_dow__": "Yes",
+                    "__SUB_TEMPLATE__h10_es1_r5_sel__": "No",
+                    "baud_rate": "115200",
+                    "board_serial_num": "",
+                    "com": "com0",
+                    "ep_bit": "None",
+                    "ep_image_path": "/everest/set_vnc_bkup/vnc/h10/es1/results/burst/bup/cpm5/2022.1_INT_1214_1/gui_xa2785_cpm5_2MHP_3x_aximm_ep_c1_x8g5_2022.1_1214/h10_ep/h10_ep.runs/impl_1/h10_ep_wrapper.pdi",
+                    "proc": "a72",
+                    "rc_bit": "None",
+                    "rc_image_path": "/everest/set_vnc_bkup/vnc/h10/es1/results/burst/bup/cpm5/2022.1_INT_0105_1/gui_xa2785_cpm5_2MHP_6x_aximm_rc_x8g5_2022.1_0105/h10_rc/h10_rc.runs/impl_1/h10_rc_wrapper.pdi",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "h10_es1_cpmrc.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__h10_noc_reg_dump_cpm__": "Yes",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "com": "com0",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "everest/h10_es1_cpmrc/pcie",
+        "script_num": 3
+    },
+    "h10_rc_h10_ep_aximmc1_x8_g5_a72_preempt": {
+        "cmd": "-pj everest -si h10_es1_cpmrc -rc h10 -ep h10 --cpm_mode aximmc1 --lane_count x8 --pcie_gen g5 --processor a72 -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "bup": "none",
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "h10_es1_cpm",
+                    "knobs": "",
+                    "preempt": "YES",
+                    "script_name": "h10_rc_h10_ep_aximmc1_x8_g5_a72_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__everest_es1_cpm_ep_dow__": "NO",
+                    "__SUB_TEMPLATE__everest_es1_k7_ep_dow__": "No",
+                    "__SUB_TEMPLATE__h10_a72_ta_sel__": "Yes",
+                    "__SUB_TEMPLATE__h10_es1_h10_ep_dow__": "Yes",
+                    "__SUB_TEMPLATE__h10_es1_r5_sel__": "No",
+                    "baud_rate": "115200",
+                    "board_serial_num": "",
+                    "com": "com0",
+                    "ep_bit": "None",
+                    "ep_image_path": "/everest/set_vnc_bkup/vnc/h10/es1/results/burst/bup/cpm5/2022.1_INT_1214_1/gui_xa2785_cpm5_2MHP_3x_aximm_ep_c1_x8g5_2022.1_1214/h10_ep/h10_ep.runs/impl_1/h10_ep_wrapper.pdi",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "rc_bit": "None",
+                    "rc_image_path": "/everest/set_vnc_bkup/vnc/h10/es1/results/burst/bup/cpm5/2022.1_INT_0105_1/gui_xa2785_cpm5_2MHP_6x_aximm_rc_x8g5_2022.1_0105/h10_rc/h10_rc.runs/impl_1/h10_rc_wrapper.pdi",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "h10_es1_cpmrc.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__h10_noc_reg_dump_cpm__": "Yes",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "com": "com0",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "everest/h10_es1_cpmrc/pcie",
+        "script_num": 4
+    },
+    "h10_rc_k7_ep_nwlpcie_3ddr_x4_g2_a72": {
+        "cmd": "-pj everest -si h10_es1_cpmrc -rc h10 -ep k7 --bridge_ep nwlpcie --ddr_mode 3ddr --lane_count x4 --pcie_gen g2 --processor a72",
+        "form": [
+            {
+                "keys": {
+                    "bup": "none",
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "h10_es1_cpm",
+                    "knobs": "",
+                    "preempt": "NO",
+                    "script_name": "h10_rc_k7_ep_nwlpcie_3ddr_x4_g2_a72"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__everest_es1_cpm_ep_dow__": "No",
+                    "__SUB_TEMPLATE__everest_es1_k7_ep_dow__": "Yes",
+                    "__SUB_TEMPLATE__h10_a72_ta_sel__": "Yes",
+                    "__SUB_TEMPLATE__h10_es1_r5_sel__": "No",
+                    "baud_rate": "115200",
+                    "board_serial_num": "getsn",
+                    "com": "com0",
+                    "ep_bit": "/group/siv2/proj/ronaldo/nwl_pcie/pre-si_verif/releases/pcie705nwlv_8_x4g1/implementation/project_1.runs/impl_1/top.bit",
+                    "ep_image_path": "None",
+                    "proc": "a72",
+                    "rc_bit": "None",
+                    "rc_image_path": "/everest/set_vnc_bkup/vnc/h10/es1/results/burst/bup/cpm5/2022.1_INT_0105_1/gui_xa2785_cpm5_2MHP_6x_aximm_rc_x16g4_2022.1_0105/h10_rc/h10_rc.runs/impl_1/h10_rc_wrapper.pdi",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "h10_es1_cpmrc.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__h10_noc_reg_dump_cpm__": "Yes",
+                    "__SUB_TEMPLATE__preempt_time__": "No",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "com": "com0",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "everest/h10_es1_cpmrc/pcie",
+        "script_num": 15
+    },
+    "h10_rc_k7_ep_nwlpcie_3ddr_x4_g2_a72_preempt": {
+        "cmd": "-pj everest -si h10_es1_cpmrc -rc h10 -ep k7 --bridge_ep nwlpcie --ddr_mode 3ddr --lane_count x4 --pcie_gen g2 --processor a72 -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "bup": "none",
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "h10_es1_cpm",
+                    "knobs": "",
+                    "preempt": "YES",
+                    "script_name": "h10_rc_k7_ep_nwlpcie_3ddr_x4_g2_a72_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__everest_es1_cpm_ep_dow__": "No",
+                    "__SUB_TEMPLATE__everest_es1_k7_ep_dow__": "Yes",
+                    "__SUB_TEMPLATE__h10_a72_ta_sel__": "Yes",
+                    "__SUB_TEMPLATE__h10_es1_r5_sel__": "No",
+                    "baud_rate": "115200",
+                    "board_serial_num": "getsn",
+                    "com": "com0",
+                    "ep_bit": "/group/siv2/proj/ronaldo/nwl_pcie/pre-si_verif/releases/pcie705nwlv_8_x4g1/implementation/project_1.runs/impl_1/top.bit",
+                    "ep_image_path": "None",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "rc_bit": "None",
+                    "rc_image_path": "/everest/set_vnc_bkup/vnc/h10/es1/results/burst/bup/cpm5/2022.1_INT_0105_1/gui_xa2785_cpm5_2MHP_6x_aximm_rc_x16g4_2022.1_0105/h10_rc/h10_rc.runs/impl_1/h10_rc_wrapper.pdi",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "h10_es1_cpmrc.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__h10_noc_reg_dump_cpm__": "Yes",
+                    "__SUB_TEMPLATE__preempt_time__": {
+                        "com": "com0"
+                    },
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "com": "com0",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "everest/h10_es1_cpmrc/pcie",
+        "script_num": 16
+    },
+    "h10_rc_k7_ep_plb2pcie_3ddr_x4_g2_a72": {
+        "cmd": "-pj everest -si h10_es1_cpmrc -rc h10 -ep k7 --bridge_ep plb2pcie --ddr_mode 3ddr --lane_count x4 --pcie_gen g2 --processor a72",
+        "form": [
+            {
+                "keys": {
+                    "bup": "none",
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "h10_es1_cpm",
+                    "knobs": "Prob_plb2pcie_inject_continuous=0;",
+                    "preempt": "NO",
+                    "script_name": "h10_rc_k7_ep_plb2pcie_3ddr_x4_g2_a72"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__everest_es1_cpm_ep_dow__": "No",
+                    "__SUB_TEMPLATE__everest_es1_k7_ep_dow__": "Yes",
+                    "__SUB_TEMPLATE__h10_a72_ta_sel__": "Yes",
+                    "__SUB_TEMPLATE__h10_es1_r5_sel__": "No",
+                    "baud_rate": "115200",
+                    "board_serial_num": "getsn",
+                    "com": "com0",
+                    "ep_bit": "/group/siv2/work/ronaldo/avas/alto_vnc/build/pcie705_18_X_x4g2/implementation/download.bit",
+                    "ep_image_path": "None",
+                    "proc": "a72",
+                    "rc_bit": "None",
+                    "rc_image_path": "/everest/set_vnc_bkup/vnc/h10/es1/results/burst/bup/cpm5/2022.1_INT_0105_1/gui_xa2785_cpm5_2MHP_6x_aximm_rc_x16g4_2022.1_0105/h10_rc/h10_rc.runs/impl_1/h10_rc_wrapper.pdi",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "h10_es1_cpmrc.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__h10_noc_reg_dump_cpm__": "Yes",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "com": "com0",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "everest/h10_es1_cpmrc/pcie",
+        "script_num": 13
+    },
+    "h10_rc_k7_ep_plb2pcie_3ddr_x4_g2_a72_preempt": {
+        "cmd": "-pj everest -si h10_es1_cpmrc -rc h10 -ep k7 --bridge_ep plb2pcie --ddr_mode 3ddr --lane_count x4 --pcie_gen g2 --processor a72 -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "bup": "none",
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "h10_es1_cpm",
+                    "knobs": "Prob_plb2pcie_inject_continuous=0;",
+                    "preempt": "YES",
+                    "script_name": "h10_rc_k7_ep_plb2pcie_3ddr_x4_g2_a72_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__everest_es1_cpm_ep_dow__": "No",
+                    "__SUB_TEMPLATE__everest_es1_k7_ep_dow__": "Yes",
+                    "__SUB_TEMPLATE__h10_a72_ta_sel__": "Yes",
+                    "__SUB_TEMPLATE__h10_es1_r5_sel__": "No",
+                    "baud_rate": "115200",
+                    "board_serial_num": "getsn",
+                    "com": "com0",
+                    "ep_bit": "/group/siv2/work/ronaldo/avas/alto_vnc/build/pcie705_18_X_x4g2/implementation/download.bit",
+                    "ep_image_path": "None",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "rc_bit": "None",
+                    "rc_image_path": "/everest/set_vnc_bkup/vnc/h10/es1/results/burst/bup/cpm5/2022.1_INT_0105_1/gui_xa2785_cpm5_2MHP_6x_aximm_rc_x16g4_2022.1_0105/h10_rc/h10_rc.runs/impl_1/h10_rc_wrapper.pdi",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "h10_es1_cpmrc.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__h10_noc_reg_dump_cpm__": "Yes",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "com": "com0",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "everest/h10_es1_cpmrc/pcie",
+        "script_num": 14
+    },
+    "h10_rc_s80v350_ep_x16_g4_a72": {
+        "cmd": "-pj everest -si h10_es1_cpmrc -rc h10 -ep s80v350 --lane_count x16 --pcie_gen g4 --processor a72",
+        "form": [
+            {
+                "keys": {
+                    "bup": "none",
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "h10_es1_cpm",
+                    "knobs": "",
+                    "preempt": "NO",
+                    "script_name": "h10_rc_s80v350_ep_x16_g4_a72"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__everest_es1_cpm_ep_dow__": {
+                        "v350_boot_hack": "1"
+                    },
+                    "__SUB_TEMPLATE__everest_es1_k7_ep_dow__": "No",
+                    "__SUB_TEMPLATE__h10_a72_ta_sel__": "Yes",
+                    "__SUB_TEMPLATE__h10_es1_r5_sel__": "No",
+                    "baud_rate": "115200",
+                    "board_serial_num": "getsn",
+                    "com": "com0",
+                    "ep_bit": "None",
+                    "ep_image_path": "/everest/set_vnc_bkup/vnc/s80/prod/results/burst/bup/cpm/2020.3_int_0311_1/ps4_3hp_qddr_8xa_v350_cpmep_x16g4_2020_3_0311_gmii/hwflow_project_1/project_1.runs/impl_1/project_1_wrapper.pdi",
+                    "proc": "a72",
+                    "rc_bit": "None",
+                    "rc_image_path": "/everest/set_vnc_bkup/vnc/h10/es1/results/burst/bup/cpm5/2022.1_INT_0105_1/gui_xa2785_cpm5_2MHP_6x_aximm_rc_x16g4_2022.1_0105/h10_rc/h10_rc.runs/impl_1/h10_rc_wrapper.pdi",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "h10_es1_cpmrc.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__h10_noc_reg_dump_cpm__": "Yes",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "com": "com0",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "everest/h10_es1_cpmrc/pcie",
+        "script_num": -11
+    },
+    "h10_rc_s80v350_ep_x16_g4_a72_preempt": {
+        "cmd": "-pj everest -si h10_es1_cpmrc -rc h10 -ep s80v350 --lane_count x16 --pcie_gen g4 --processor a72 -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "bup": "none",
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "h10_es1_cpm",
+                    "knobs": "",
+                    "preempt": "YES",
+                    "script_name": "h10_rc_s80v350_ep_x16_g4_a72_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__everest_es1_cpm_ep_dow__": {
+                        "v350_boot_hack": "1"
+                    },
+                    "__SUB_TEMPLATE__everest_es1_k7_ep_dow__": "No",
+                    "__SUB_TEMPLATE__h10_a72_ta_sel__": "Yes",
+                    "__SUB_TEMPLATE__h10_es1_r5_sel__": "No",
+                    "baud_rate": "115200",
+                    "board_serial_num": "getsn",
+                    "com": "com0",
+                    "ep_bit": "None",
+                    "ep_image_path": "/everest/set_vnc_bkup/vnc/s80/prod/results/burst/bup/cpm/2020.3_int_0311_1/ps4_3hp_qddr_8xa_v350_cpmep_x16g4_2020_3_0311_gmii/hwflow_project_1/project_1.runs/impl_1/project_1_wrapper.pdi",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "rc_bit": "None",
+                    "rc_image_path": "/everest/set_vnc_bkup/vnc/h10/es1/results/burst/bup/cpm5/2022.1_INT_0105_1/gui_xa2785_cpm5_2MHP_6x_aximm_rc_x16g4_2022.1_0105/h10_rc/h10_rc.runs/impl_1/h10_rc_wrapper.pdi",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "h10_es1_cpmrc.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__h10_noc_reg_dump_cpm__": "Yes",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "com": "com0",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "everest/h10_es1_cpmrc/pcie",
+        "script_num": -12
+    }
+}

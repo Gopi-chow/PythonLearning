@@ -1,0 +1,29 @@
+
+print my_xsdb "device program $PDI_IMAGE"
+
+test
+        sleep 5
+        wait
+        when my_xsdb matches "100%"
+                print "PDI image loaded and PMCFW completed"
+                continue
+        end
+        when my_xsdb matches "No supported device"
+                fail "Couldn't load PDI or PMCFW issue"
+        end
+        when my_xsdb inactive 5 minutes
+                fail "Couldn't load PDI or PMCFW issue"
+        end
+        on failure
+                print "FAILURE: $0"
+                #Clearing the FPGA's
+                print my_ptm "clear"
+                sleep 3
+                print my_ptm "exit"
+                unlock
+                #Changing the current working directory
+                cd "$BURST_HOME"
+                close
+                exit
+        end
+endtest

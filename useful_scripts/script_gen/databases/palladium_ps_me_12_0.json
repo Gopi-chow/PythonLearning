@@ -1,0 +1,35 @@
+{
+    "palladium_a72": {
+        "cmd": "-pj everest -si ps_me_12_0 -b palladium --processor a72",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "emu_ps_me_12_0",
+                    "knobs": "",
+                    "preempt": "NO",
+                    "script_name": "palladium_a72"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "baud_rate": "serial baud=2400",
+                    "build_dir": "/group/siv_burst/proj/everest/releases/emu/emu_ps_me_12.0_bup"
+                },
+                "template_file": "everest_palladium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_palladium__": "Yes",
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "com": "serial",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test_palladium.txt"
+            }
+        ],
+        "script_location": "everest/ps_me_12_0/palladium",
+        "script_num": 1
+    }
+}

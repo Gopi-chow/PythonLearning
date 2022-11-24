@@ -1,0 +1,190 @@
+{
+    "tenpro_a72": {
+        "cmd": "-pj everest -si aie2_vdu_ipp_5_0 -b tenpro --processor a72",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "aie2_vdu_ipp_v5_0",
+                    "knobs": "Me_enable=2,Zynq_clk_rand_mask_disable=0xffffffff,Everest_aximon0_base_addr=0xa4100000,Axidma_max_txn_size=1600,Prob_xcanfd_randomize_ref_clk=0,",
+                    "preempt": "NO",
+                    "script_name": "tenpro_a72"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__aie2_hack__": "yes",
+                    "__SUB_TEMPLATE__r5_ta_sel__": "no",
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__vcc_aux_test__": "yes",
+                    "build_dir": "/group/siv4/proj/everest/public/releases/ipp/aie2_vdu_ipp_v5_0/",
+                    "com": "com0",
+                    "image_path": "/group/siv4/proj/everest/public/releases/ipp/aie2_vdu_ipp_v5_0/tenzing_pdi/ps0_me_wrapper.pdi",
+                    "proc": "a72",
+                    "ptm_ver": "module \"switch protium/19.11.175.s002_200527-141721.p1\"",
+                    "reserve_count": "2",
+                    "rst_type": "rst -proc",
+                    "unlock_cmd": "unlock",
+                    "xsdbrc_path": "/group/siv4/proj/everest/public/releases/ipp/aie2_vdu_ipp_v5_0/.xsdbrc"
+                },
+                "template_file": "everest_tenpro.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": {
+                        "unlock_cmd": "unlock"
+                    },
+                    "com": "com0",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/aie2_vdu_ipp_5_0/tenpro",
+        "script_num": 1
+    },
+    "tenpro_a72_be": {
+        "cmd": "-pj everest -si aie2_vdu_ipp_5_0 -b tenpro --processor a72 -be",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "aie2_vdu_ipp_v5_0",
+                    "knobs": "Me_enable=2,Zynq_clk_rand_mask_disable=0xffffffff,Everest_aximon0_base_addr=0xa4100000,Axidma_max_txn_size=1600,Prob_xcanfd_randomize_ref_clk=0,",
+                    "preempt": "NO",
+                    "script_name": "tenpro_a72_be"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__aie2_hack__": "yes",
+                    "__SUB_TEMPLATE__r5_ta_sel__": "no",
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__vcc_aux_test__": "yes",
+                    "build_dir": "/group/siv4/proj/everest/public/releases/ipp/aie2_vdu_ipp_v5_0/",
+                    "com": "com0",
+                    "image_path": "/group/siv4/proj/everest/public/releases/ipp/aie2_vdu_ipp_v5_0/tenzing_pdi/ps0_me_wrapper.pdi",
+                    "proc": "a72",
+                    "ptm_ver": "module \"switch protium/19.11.175.s002_200527-141721.p1\"",
+                    "reserve_count": "2",
+                    "rst_type": "rst -proc",
+                    "unlock_cmd": "unlock",
+                    "xsdbrc_path": "/group/siv4/proj/everest/public/releases/ipp/aie2_vdu_ipp_v5_0/.xsdbrc"
+                },
+                "template_file": "everest_tenpro.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": {
+                        "unlock_cmd": "unlock"
+                    },
+                    "com": "com0",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/aie2_vdu_ipp_5_0/tenpro",
+        "script_num": 3
+    },
+    "tenpro_a72_be_preempt": {
+        "cmd": "-pj everest -si aie2_vdu_ipp_5_0 -b tenpro --processor a72 -be -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "aie2_vdu_ipp_v5_0",
+                    "knobs": "Me_enable=2,Zynq_clk_rand_mask_disable=0xffffffff,Everest_aximon0_base_addr=0xa4100000,Axidma_max_txn_size=1600,Prob_xcanfd_randomize_ref_clk=0,",
+                    "preempt": "YES",
+                    "script_name": "tenpro_a72_be_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__aie2_hack__": "yes",
+                    "__SUB_TEMPLATE__r5_ta_sel__": "no",
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__vcc_aux_test__": "yes",
+                    "build_dir": "/group/siv4/proj/everest/public/releases/ipp/aie2_vdu_ipp_v5_0/",
+                    "com": "com0",
+                    "image_path": "/group/siv4/proj/everest/public/releases/ipp/aie2_vdu_ipp_v5_0/tenzing_pdi/ps0_me_wrapper.pdi",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "ptm_ver": "module \"switch protium/19.11.175.s002_200527-141721.p1\"",
+                    "reserve_count": "2",
+                    "rst_type": "rst -proc",
+                    "unlock_cmd": "unlock",
+                    "xsdbrc_path": "/group/siv4/proj/everest/public/releases/ipp/aie2_vdu_ipp_v5_0/.xsdbrc"
+                },
+                "template_file": "everest_tenpro.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": {
+                        "unlock_cmd": "unlock"
+                    },
+                    "com": "com0",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/aie2_vdu_ipp_5_0/tenpro",
+        "script_num": 4
+    },
+    "tenpro_a72_preempt": {
+        "cmd": "-pj everest -si aie2_vdu_ipp_5_0 -b tenpro --processor a72 -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "aie2_vdu_ipp_v5_0",
+                    "knobs": "Me_enable=2,Zynq_clk_rand_mask_disable=0xffffffff,Everest_aximon0_base_addr=0xa4100000,Axidma_max_txn_size=1600,Prob_xcanfd_randomize_ref_clk=0,",
+                    "preempt": "YES",
+                    "script_name": "tenpro_a72_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__aie2_hack__": "yes",
+                    "__SUB_TEMPLATE__r5_ta_sel__": "no",
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__vcc_aux_test__": "yes",
+                    "build_dir": "/group/siv4/proj/everest/public/releases/ipp/aie2_vdu_ipp_v5_0/",
+                    "com": "com0",
+                    "image_path": "/group/siv4/proj/everest/public/releases/ipp/aie2_vdu_ipp_v5_0/tenzing_pdi/ps0_me_wrapper.pdi",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "ptm_ver": "module \"switch protium/19.11.175.s002_200527-141721.p1\"",
+                    "reserve_count": "2",
+                    "rst_type": "rst -proc",
+                    "unlock_cmd": "unlock",
+                    "xsdbrc_path": "/group/siv4/proj/everest/public/releases/ipp/aie2_vdu_ipp_v5_0/.xsdbrc"
+                },
+                "template_file": "everest_tenpro.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": {
+                        "unlock_cmd": "unlock"
+                    },
+                    "com": "com0",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/aie2_vdu_ipp_5_0/tenpro",
+        "script_num": 2
+    }
+}

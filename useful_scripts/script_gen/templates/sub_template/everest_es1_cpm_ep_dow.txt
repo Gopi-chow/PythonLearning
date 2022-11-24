@@ -1,0 +1,77 @@
+
+$V350_BOOT_HACK  = "<::v350_boot_hack:=:0::>"
+if run "[ \"$V350_BOOT_HACK\" == \"1\" ]" then
+	print my_xsdb "targets -set -filter {(name =~ \"*Versal*\" && jtag_cable_name =~ \"*V350*\")||(name =~ \"*Versal*\" && jtag_cable_name =~ \"*VCK5000*\")}"
+	print my_xsdb "targets"
+	print my_xsdb "mwr 0xf1260200 0x0100"   #JTAG BOOT MODE
+	print my_xsdb "mrd 0xf1260200"
+	print my_xsdb "mwr -force 0xF1260138 0" # SYSMON_REF_CTRL is switched to NPI by user PDI so ensure its switched back
+	print my_xsdb "mrd -force 0xF1120000"  #Perform reset
+	print my_xsdb "targets -set -filter {(name =~ \"*PMC*\" && jtag_cable_name =~ \"*V350*\")||(name =~ \"*PMC*\" && jtag_cable_name =~ \"*VCK5000*\")}"
+	print my_xsdb "rst"
+	print my_xsdb "configparams default-config-timeout 30000"
+endif
+
+if run "[ \"$V350_BOOT_HACK\" == \"0\" ]" then
+	print my_xsdb "targets -set -filter {(name =~ \"*Versal*\")}"
+endif
+
+print my_xsdb "puts \"Programing CPM EP $EP_PDI_IMAGE\""
+print my_xsdb "device program $EP_PDI_IMAGE"
+test
+	sleep 5
+	wait
+	when my_xsdb matches "100%"
+		print "PDI image loaded and PMCFW completed"
+		continue
+	end
+	when my_xsdb matches "No supported device"
+		fail "Couldn't load PDI or PMCFW issue"
+	end
+	when my_xsdb inactive 5 minutes
+		fail "Couldn't load PDI or PMCFW issue"
+	end
+	on failure
+		print my_xsdb "device status jtag_status"
+		sleep 2
+		print my_xsdb "device status error_status"
+		sleep 2
+		print "FAILURE: $0"
+		close
+		exit
+	end
+endtest
+
+if run "[ \"$V350_BOOT_HACK\" == \"1\" ]" then
+	print my_xsdb "targets -set -filter {(name =~ \"*Versal*\" && jtag_cable_name =~ \"*V350*\")||(name =~ \"*Versal*\" && jtag_cable_name =~ \"*VCK5000*\")}"
+endif
+
+$CCIX_ENABLE = "<::ccix_enable:=:0::>"
+if run "[ \"$CCIX_ENABLE\" == \"1\" ]" then
+	print my_xsdb "source $EP_PCIE_ATTR_TCL"
+endif
+sleep 2
+print "CPM_CRCPM register dump!!!!!"
+print my_xsdb "puts [mrd -force 0xFCA00000 85]"
+print my_xsdb "puts [mrd -force 0xFCA00300 11]"
+print "CPM_PCSR register dump!!!!"
+print my_xsdb "puts [mrd -force 0xFCFF0000 4]"
+print my_xsdb "puts [mrd -force 0xFCFF0020 1]"
+print my_xsdb "puts [mrd -force 0xFCFF0030 1]"
+print "CPM_SLCR register dump!!!!"
+print my_xsdb "puts [mrd -force 0xFCA10000 69]"
+print my_xsdb "puts [mrd -force 0xFCA10200 6]"
+print my_xsdb "puts [mrd -force 0xFCA10300 75]"
+print my_xsdb "puts [mrd -force 0xFCA10500 4]"
+print my_xsdb "puts [mrd -force 0xFCA10600 8]"
+print "PCIe Attr_0 register dump!!!"
+print my_xsdb "puts [mrd -force 0xFCA50000 1]"
+print my_xsdb "puts [mrd -force 0xFCA50010 6]"
+print my_xsdb "puts [mrd -force 0xFCA50030 756]"
+print my_xsdb "puts [mrd -force 0xFCA50E00 40]"
+print "PCIe_DMA Attr register dump!!!"
+print my_xsdb "puts [mrd -force 0xFCA70000 1]"
+print my_xsdb "puts [mrd -force 0xFCA70014 594]"
+print my_xsdb "puts [mrd -force 0xFCA70E00 3]"
+print my_xsdb "after 500"
+

@@ -1,0 +1,45 @@
+
+print my_xsdb "targets -set -filter {name =~ \"*PMC*\" && jtag_cable_name =~ \"*Platform*\"}"
+print my_xsdb "targets"                 # List all cores
+sleep 2
+
+
+print my_xsdb "puts \"Programing EP $EP_PDI_IMAGE\""
+print my_xsdb "device program $EP_PDI_IMAGE"
+sleep 5
+
+$match1 = 0
+test
+        sleep 5
+        wait
+        when my_xsdb matches "100%"
+                if run "[ \"$match1\" == \"0\" ]" then
+                        $match1 = 1
+                        print "EP PDI image loaded and PMCFW completed"
+                        continue
+                endif
+        end
+        when my_xsdb matches "No supported device"
+                fail "Couldn't load PDI or PMCFW issue"
+        end
+        when my_xsdb inactive 5 minutes
+                fail "Couldn't load PDI or PMCFW issue"
+        end
+        on failure
+                print my_xsdb "device status jtag_status"
+                sleep 2
+                print my_xsdb "device status error_status"
+                sleep 2
+                print "FAILURE: $0"
+                close
+                exit
+        end
+endtest
+
+
+print my_xsdb "targets -set -filter {name =~ \"*Cortex-A72 #0*\" && jtag_cable_name =~ \"*Platform*\"}"
+print my_xsdb "targets"
+
+print my_xsdb "rst -proc"
+print my_xsdb "puts [mrd -force 0xFCE20E1C]"
+sleep 4

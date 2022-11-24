@@ -1,0 +1,124 @@
+#!/tools/batonroot/rodin/engkits/lnx64/python-3.8.3_slv/bin/python
+
+############################################## USAGE ###################################################################
+# When user shell is bash
+# systest$ bash_systest
+# OR
+# When user shell is csh
+# systest$ shell_systest
+#
+# AND
+#
+# $ ./<::script_name::>.py [optional parameters]
+# $ ./<::script_name::>.py -lp $PWD -bp $PWD -rt 1800 -k Fail_after_test=0x100, 30mt-run -tv 2021.2_weelky_latest
+#
+# Optional Parameters
+# --log_path/-lp     : base dir path for placing logs, defaults to current directory
+# --burst_path/-bp   : base dir path for finding burst binary, defaults to $PWD
+# --runtime/-rt      : required test runtime, defaults to 1800 seconds
+# --knobs/-k         : knob list string, Seperated with a comma (no spaces)
+# --message/-msg     : message: to display in cluster-ping
+# --tool_version/-tv : XSDB version, default version
+########################################################################################################################
+
+import sys
+import os
+import time
+import re
+import argparse
+
+sys.dont_write_bytecode = True
+from systest import Systest
+from boards.common import default
+
+SYSTEST_HOST = os.environ["SYSTEST_HOST"]
+PWD = os.getcwd()
+reset_time = float()
+cluster_type = os.environ["SYSTEST_CLUSTER"]
+b = Systest(cluster_type, False)
+IOU_INIT_TCL = default.get_var_value("IOU_INIT_TCL")
+
+BURST_HOME = PWD
+BURST_HW = "<::burst_hw:=:None::>"
+PREEMPTABLE = "<::preempt:=:NO::>"
+BURST_BUP = "<::bup:=:none::>"
+
+try:
+  # Parse General Arguments
+  parser = argparse.ArgumentParser(
+      description="Run BURST using command line flags",
+      formatter_class=argparse.ArgumentDefaultsHelpFormatter,
+      epilog="Queries Contact: burst_script_team@xilinx.com",
+  )
+  
+  parser.add_argument(
+      "--log_path",
+      "-lp",
+      default=PWD + "/logs/<::script_name::>",
+      help="Specify a log path to save the results",
+  )
+  burst_bin_list = {
+      "burst86",
+      "burstarm.elf",
+      "burstarm64.elf",
+      "burstarm64be.elf",
+      "burstarmbe.elf",
+      "burstarmqemu.elf",
+      "burstarmqemu64.elf",
+      "burstmble.elf",
+  }
+  pwd_files = {f for f in os.listdir(PWD) if os.path.isfile(os.path.join(PWD, f))}
+  if burst_bin_list & pwd_files: # If there is a binary in PWD
+      default_bin = PWD
+  else:
+      default_bin = os.path.realpath(
+          "/group/siv_burst/proj/common/regression_elfs/burst/dev/latest_burst_dev"
+      )
+  parser.add_argument(
+      "--burst_path", "-bp", default=default_bin, help="Specify location of BURST elf"
+  )
+  default_runtime = <::burst_runtime:=:1800::>
+  parser.add_argument(
+      "--run_time",
+      "-rt",
+      default=default_runtime,
+      help="Run time limit for the run, default: 30mts",
+  )
+  parser.add_argument(
+      "--knobs",
+      "-k",
+      default="<::knobs::>",
+      help="Pass command line knobs Format: knob1,knob2,knob3,",
+  )
+  parser.add_argument(
+      "--message",
+      "-msg",
+      default=f"<::script_name::> {default_runtime} sec",
+      help="Systest message",
+  )
+  parser.add_argument("--tool_version", "-tv", help="XSDB tool version")
+  args = parser.parse_args()
+  
+  LOGPATH = args.log_path
+  BURST_RUNTIME = args.run_time
+  BURST_KNOBS = args.knobs
+  BURST_ELF = args.burst_path + "/<::burst_elf::>"
+  default.message(args.message)
+  if args.tool_version:
+      default.loadmodule(args.tool_version)
+  
+  BURST_KNOBS_FAT = ""
+  FAT_KNOB = True if ("%" in BURST_KNOBS) else False
+  if FAT_KNOB:
+      if re.search("%", BURST_KNOBS):
+          [BURST_KNOBS, BURST_KNOBS_FAT] = BURST_KNOBS.split("%")
+      print(BURST_KNOBS)
+      print(BURST_KNOBS_FAT)
+  
+  BURST_KNOBS = BURST_KNOBS.replace(",", ";")
+  logdate = time.strftime("%Y%m%d_%H%M")
+  logdate1 = time.strftime("%D")
+  BURST_RESULTS = f"{LOGPATH}/{SYSTEST_HOST}/{logdate}"
+  os.system(f"mkdir -p {BURST_RESULTS}")
+  LOGFILE = f"{BURST_RESULTS}/burst_serial_{SYSTEST_HOST}.log"
+  WHICH_XSDB = default.command_output("which xsdb")

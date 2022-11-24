@@ -1,0 +1,9 @@
+if run "[ -f $ECC_INIT_ELF ]" then                
+	print "Initializing ECC mem..."                
+	print my_xsdb "dow $ECC_INIT_ELF"
+	print my_xsdb "con"                
+	print my_xsdb "exec sleep 100"
+	print my_xsdb "stop"                
+	print my_xsdb "mwr -force 0xFD07007C 0xF"
+endif
+print my_xsdb "rst -processor"

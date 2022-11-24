@@ -1,0 +1,518 @@
+{
+    "vck190_a72_be_ospi_sddr_bupcoh": {
+        "cmd": "-pj everest -si es2_pscon4 -b vck190 --processor a72 --ddr_mode sddr -be -ospi -bupcoh",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "tenzing_es2_ps",
+                    "knobs": "",
+                    "preempt": "NO",
+                    "script_name": "vck190_a72_be_ospi_sddr_bupcoh"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "__SUB_TEMPLATE__tenzing_pdi_images_dow__": "yes",
+                    "board_serial_num": "getsn",
+                    "com": "com0",
+                    "dwn_burst_wait": "500",
+                    "image_path": "/everest/set_vnc_bkup/vnc/s80/prod/results/burst/bup/ps/2022.1_int_0112_1/vck190_ps4_emb1o_sddr_4x_2022_1/hwflow_project_1/project_1.runs/impl_1/project_1_wrapper.pdi",
+                    "proc": "a72",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "everest_es1.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__noc_reg_dump__": "Yes",
+                    "com": "com0",
+                    "inactv_t": "300",
+                    "preemption_off": "",
+                    "read_power": "readpower"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/es2_pscon4/vck190",
+        "script_num": 27
+    },
+    "vck190_a72_be_ospi_sddr_bupcoh_preempt": {
+        "cmd": "-pj everest -si es2_pscon4 -b vck190 --processor a72 --ddr_mode sddr -be -ospi -bupcoh -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "tenzing_es2_ps",
+                    "knobs": "",
+                    "preempt": "YES",
+                    "script_name": "vck190_a72_be_ospi_sddr_bupcoh_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "__SUB_TEMPLATE__tenzing_pdi_images_dow__": "yes",
+                    "board_serial_num": "getsn",
+                    "com": "com0",
+                    "dwn_burst_wait": "500",
+                    "image_path": "/everest/set_vnc_bkup/vnc/s80/prod/results/burst/bup/ps/2022.1_int_0112_1/vck190_ps4_emb1o_sddr_4x_2022_1/hwflow_project_1/project_1.runs/impl_1/project_1_wrapper.pdi",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "everest_es1.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__noc_reg_dump__": "Yes",
+                    "com": "com0",
+                    "inactv_t": "300",
+                    "preemption_off": "preemption_off",
+                    "read_power": "readpower"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/es2_pscon4/vck190",
+        "script_num": 28
+    },
+    "vck190_a72_be_sddr_bup": {
+        "cmd": "-pj everest -si es2_pscon4 -b vck190 --processor a72 --ddr_mode sddr -be -bup",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "tenzing_es2_ps",
+                    "knobs": "",
+                    "preempt": "NO",
+                    "script_name": "vck190_a72_be_sddr_bup"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "__SUB_TEMPLATE__tenzing_pdi_images_dow__": "yes",
+                    "board_serial_num": "getsn",
+                    "com": "com0",
+                    "dwn_burst_wait": "500",
+                    "image_path": "/everest/set_vnc_bkup/vnc/s80/prod/results/burst/bup/ps/2022.1_int_0112_1/vck190_ps4_emb1q_sddr_4x_2022_1/hwflow_project_1/project_1.runs/impl_1/project_1_wrapper.pdi",
+                    "proc": "a72",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "everest_es1.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__noc_reg_dump__": "Yes",
+                    "com": "com0",
+                    "inactv_t": "300",
+                    "preemption_off": "",
+                    "read_power": "readpower"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/es2_pscon4/vck190",
+        "script_num": 21
+    },
+    "vck190_a72_be_sddr_bup_preempt": {
+        "cmd": "-pj everest -si es2_pscon4 -b vck190 --processor a72 --ddr_mode sddr -be -bup -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "tenzing_es2_ps",
+                    "knobs": "",
+                    "preempt": "YES",
+                    "script_name": "vck190_a72_be_sddr_bup_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "__SUB_TEMPLATE__tenzing_pdi_images_dow__": "yes",
+                    "board_serial_num": "getsn",
+                    "com": "com0",
+                    "dwn_burst_wait": "500",
+                    "image_path": "/everest/set_vnc_bkup/vnc/s80/prod/results/burst/bup/ps/2022.1_int_0112_1/vck190_ps4_emb1q_sddr_4x_2022_1/hwflow_project_1/project_1.runs/impl_1/project_1_wrapper.pdi",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "everest_es1.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__noc_reg_dump__": "Yes",
+                    "com": "com0",
+                    "inactv_t": "300",
+                    "preemption_off": "preemption_off",
+                    "read_power": "readpower"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/es2_pscon4/vck190",
+        "script_num": 22
+    },
+    "vck190_a72_ospi_sddr_bupcoh": {
+        "cmd": "-pj everest -si es2_pscon4 -b vck190 --processor a72 --ddr_mode sddr -ospi -bupcoh",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "tenzing_es2_ps",
+                    "knobs": "",
+                    "preempt": "NO",
+                    "script_name": "vck190_a72_ospi_sddr_bupcoh"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "__SUB_TEMPLATE__tenzing_pdi_images_dow__": "yes",
+                    "board_serial_num": "getsn",
+                    "com": "com0",
+                    "dwn_burst_wait": "500",
+                    "image_path": "/everest/set_vnc_bkup/vnc/s80/prod/results/burst/bup/ps/2022.1_int_0112_1/vck190_ps4_emb1o_sddr_4x_2022_1/hwflow_project_1/project_1.runs/impl_1/project_1_wrapper.pdi",
+                    "proc": "a72",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "everest_es1.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__noc_reg_dump__": "Yes",
+                    "com": "com0",
+                    "inactv_t": "300",
+                    "preemption_off": "",
+                    "read_power": "readpower"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/es2_pscon4/vck190",
+        "script_num": 25
+    },
+    "vck190_a72_ospi_sddr_bupcoh_preempt": {
+        "cmd": "-pj everest -si es2_pscon4 -b vck190 --processor a72 --ddr_mode sddr -ospi -bupcoh -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "tenzing_es2_ps",
+                    "knobs": "",
+                    "preempt": "YES",
+                    "script_name": "vck190_a72_ospi_sddr_bupcoh_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "__SUB_TEMPLATE__tenzing_pdi_images_dow__": "yes",
+                    "board_serial_num": "getsn",
+                    "com": "com0",
+                    "dwn_burst_wait": "500",
+                    "image_path": "/everest/set_vnc_bkup/vnc/s80/prod/results/burst/bup/ps/2022.1_int_0112_1/vck190_ps4_emb1o_sddr_4x_2022_1/hwflow_project_1/project_1.runs/impl_1/project_1_wrapper.pdi",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "everest_es1.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__noc_reg_dump__": "Yes",
+                    "com": "com0",
+                    "inactv_t": "300",
+                    "preemption_off": "preemption_off",
+                    "read_power": "readpower"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/es2_pscon4/vck190",
+        "script_num": 26
+    },
+    "vck190_a72_sddr_bup": {
+        "cmd": "-pj everest -si es2_pscon4 -b vck190 --processor a72 --ddr_mode sddr -bup",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "tenzing_es2_ps",
+                    "knobs": "",
+                    "preempt": "NO",
+                    "script_name": "vck190_a72_sddr_bup"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "__SUB_TEMPLATE__tenzing_pdi_images_dow__": "yes",
+                    "board_serial_num": "getsn",
+                    "com": "com0",
+                    "dwn_burst_wait": "500",
+                    "image_path": "/everest/set_vnc_bkup/vnc/s80/prod/results/burst/bup/ps/2022.1_int_0112_1/vck190_ps4_emb1q_sddr_4x_2022_1/hwflow_project_1/project_1.runs/impl_1/project_1_wrapper.pdi",
+                    "proc": "a72",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "everest_es1.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__noc_reg_dump__": "Yes",
+                    "com": "com0",
+                    "inactv_t": "300",
+                    "preemption_off": "",
+                    "read_power": "readpower"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/es2_pscon4/vck190",
+        "script_num": 19
+    },
+    "vck190_a72_sddr_bup_preempt": {
+        "cmd": "-pj everest -si es2_pscon4 -b vck190 --processor a72 --ddr_mode sddr -bup -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "tenzing_es2_ps",
+                    "knobs": "",
+                    "preempt": "YES",
+                    "script_name": "vck190_a72_sddr_bup_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "__SUB_TEMPLATE__tenzing_pdi_images_dow__": "yes",
+                    "board_serial_num": "getsn",
+                    "com": "com0",
+                    "dwn_burst_wait": "500",
+                    "image_path": "/everest/set_vnc_bkup/vnc/s80/prod/results/burst/bup/ps/2022.1_int_0112_1/vck190_ps4_emb1q_sddr_4x_2022_1/hwflow_project_1/project_1.runs/impl_1/project_1_wrapper.pdi",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "everest_es1.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__noc_reg_dump__": "Yes",
+                    "com": "com0",
+                    "inactv_t": "300",
+                    "preemption_off": "preemption_off",
+                    "read_power": "readpower"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/es2_pscon4/vck190",
+        "script_num": 20
+    },
+    "vck190_r5_ospi_sddr_bupcoh": {
+        "cmd": "-pj everest -si es2_pscon4 -b vck190 --processor r5 --ddr_mode sddr -ospi -bupcoh",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "tenzing_es2_ps",
+                    "knobs": "",
+                    "preempt": "NO",
+                    "script_name": "vck190_r5_ospi_sddr_bupcoh"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "no",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__tenzing_pdi_images_dow__": "yes",
+                    "board_serial_num": "getsn",
+                    "com": "com0",
+                    "dwn_burst_wait": "500",
+                    "image_path": "/everest/set_vnc_bkup/vnc/s80/prod/results/burst/bup/ps/2022.1_int_0112_1/vck190_ps4_emb1o_sddr_4x_2022_1/hwflow_project_1/project_1.runs/impl_1/project_1_wrapper.pdi",
+                    "proc": "r5",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "everest_es1.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__noc_reg_dump__": "Yes",
+                    "com": "com0",
+                    "inactv_t": "300",
+                    "preemption_off": "",
+                    "read_power": "readpower"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/es2_pscon4/vck190",
+        "script_num": 29
+    },
+    "vck190_r5_ospi_sddr_bupcoh_preempt": {
+        "cmd": "-pj everest -si es2_pscon4 -b vck190 --processor r5 --ddr_mode sddr -ospi -bupcoh -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "tenzing_es2_ps",
+                    "knobs": "",
+                    "preempt": "YES",
+                    "script_name": "vck190_r5_ospi_sddr_bupcoh_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "no",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__tenzing_pdi_images_dow__": "yes",
+                    "board_serial_num": "getsn",
+                    "com": "com0",
+                    "dwn_burst_wait": "500",
+                    "image_path": "/everest/set_vnc_bkup/vnc/s80/prod/results/burst/bup/ps/2022.1_int_0112_1/vck190_ps4_emb1o_sddr_4x_2022_1/hwflow_project_1/project_1.runs/impl_1/project_1_wrapper.pdi",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "r5",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "everest_es1.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__noc_reg_dump__": "Yes",
+                    "com": "com0",
+                    "inactv_t": "300",
+                    "preemption_off": "preemption_off",
+                    "read_power": "readpower"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/es2_pscon4/vck190",
+        "script_num": 30
+    },
+    "vck190_r5_sddr_bup": {
+        "cmd": "-pj everest -si es2_pscon4 -b vck190 --processor r5 --ddr_mode sddr -bup",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "tenzing_es2_ps",
+                    "knobs": "",
+                    "preempt": "NO",
+                    "script_name": "vck190_r5_sddr_bup"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "no",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__tenzing_pdi_images_dow__": "yes",
+                    "board_serial_num": "getsn",
+                    "com": "com0",
+                    "dwn_burst_wait": "500",
+                    "image_path": "/everest/set_vnc_bkup/vnc/s80/prod/results/burst/bup/ps/2022.1_int_0112_1/vck190_ps4_emb1q_sddr_4x_2022_1/hwflow_project_1/project_1.runs/impl_1/project_1_wrapper.pdi",
+                    "proc": "r5",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "everest_es1.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__noc_reg_dump__": "Yes",
+                    "com": "com0",
+                    "inactv_t": "300",
+                    "preemption_off": "",
+                    "read_power": "readpower"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/es2_pscon4/vck190",
+        "script_num": 23
+    },
+    "vck190_r5_sddr_bup_preempt": {
+        "cmd": "-pj everest -si es2_pscon4 -b vck190 --processor r5 --ddr_mode sddr -bup -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "tenzing_es2_ps",
+                    "knobs": "",
+                    "preempt": "YES",
+                    "script_name": "vck190_r5_sddr_bup_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "no",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__tenzing_pdi_images_dow__": "yes",
+                    "board_serial_num": "getsn",
+                    "com": "com0",
+                    "dwn_burst_wait": "500",
+                    "image_path": "/everest/set_vnc_bkup/vnc/s80/prod/results/burst/bup/ps/2022.1_int_0112_1/vck190_ps4_emb1q_sddr_4x_2022_1/hwflow_project_1/project_1.runs/impl_1/project_1_wrapper.pdi",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "r5",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "everest_es1.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__noc_reg_dump__": "Yes",
+                    "com": "com0",
+                    "inactv_t": "300",
+                    "preemption_off": "preemption_off",
+                    "read_power": "readpower"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/es2_pscon4/vck190",
+        "script_num": 24
+    }
+}

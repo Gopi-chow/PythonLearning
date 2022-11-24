@@ -1,0 +1,3 @@
+print my_xsdb "targets -set -filter {name =~ \"Cortex-R5 #0\" && jtag_cable_name =~ \"Digilent*\"}"
+# Take R5-0 out of reset
+print my_xsdb "rst -processor"

@@ -1,0 +1,238 @@
+<::com:=:serial::> baud=115200
+<::com:=:serial::> txdelay=100
+
+$BUILD_DIR = "<::build_dir:=:/group/siv4/proj/everest/public/releases/ipp/$BURST_HW::>"
+$PDRPP_WORK = "<::pdrpp_work:=:$BUILD_DIR/run_dir::>/pdrpp_work"
+$PROTIUM_SCRIPT = "$BUILD_DIR/<::run_script:=:run.tcl::>"
+$XSDB_RC = "<::xsdbrc_path:=:/group/siv4/proj/everest/public/releases/spp/$BURST_HW/.xsdbrc::>"
+$PDI_IMAGE = "<::image_path:=: ::>"
+
+# Unlock Protium
+<::unlock_cmd:=:unlock::>
+sleep 4
+
+# Create log directories for host
+$dir1 = "$SYSTEST_HOST"
+run "mkdir -p $LOGPATH/$dir1"
+$dir2 = "$logdate"
+run "mkdir -p $LOGPATH/$SYSTEST_HOST/$dir2"
+$BURST_RESULTS = "$LOGPATH/$SYSTEST_HOST/$dir2"
+$SERIAL_LOG = "$BURST_RESULTS/burst_serial_$SYSTEST_HOST.log"
+$DEBUG_LOG = "$BURST_RESULTS/burst_debug_$SYSTEST_HOST.log"
+$XSDB := "which xsdb"
+$WHICH_XSDB := "which xsdb"
+
+debug append $DEBUG_LOG
+
+#Echo all paths and configurations
+print "Printing all launch information..."
+print "PROTIUM_$logdate,$BURST_HW,$PDRPP_WORK,$BURST_BUP,$BURST_ELF,$SYSTEST_HOST,$logdate1,$BURST_RUNTIME,xx,$PREEMPTABLE,IN_PROGRESS,TBD,$BURST_RESULTS,$BURST_HW.$PDRPP_WORK.$BURST_BUP.$BURST_ELF.$SYSTEST_HOST.xx.TBD,$BURST_KNOBS"
+print "DA Version               :$BURST_HW"
+print "BOARD                    :$SYSTEST_HOST"
+print "PDRPP_WORK               :$PDRPP_WORK"
+print "BURST KNOBS              :$BURST_KNOBS"
+print "BURST runtime            :$BURST_RUNTIME seconds"
+print "BURST elf                :$BURST_ELF"
+print "BURST results            :$BURST_RESULTS"
+print "XSDB Version             :$WHICH_XSDB"
+print "Job ID                   :$LSB_JOBID" 
+
+power 0
+sleep 2
+power 1
+sleep 2
+<::__SUB_TEMPLATE__vcc_aux_test__:=:No::>
+
+record <::com:=:serial::> append $SERIAL_LOG
+
+# launch ptm
+if running my_ptm then
+        kill my_ptm
+        sleep 1
+endif
+
+cd "$BURST_RESULTS"
+module "use /everest/sivhw_bkup/tools/modulefiles"
+<::ptm_ver:=: ::>
+
+check_board
+print "starting tenpro"
+fork "ptmRun" as my_ptm
+my_ptm echo = 1
+$serial := "$CLUSTER_HOME/bin/protium_lookup"
+sleep 3
+print my_ptm "sys"
+print my_ptm "system -set $serial -reserve <::reserve_count:=:2::>"
+sleep 3
+
+<::preemption_off:=: ::>
+$ptm_exit_time := "expr $BURST_RUNTIME / 60 + 30"
+print my_ptm "xeset idleExit $ptm_exit_time"
+print my_ptm "download $PDRPP_WORK"
+test
+	sleep 5
+        wait
+        when my_ptm matches "Info: Infra reset asserted"
+                print "PTM download completed"
+                continue
+        end
+        when my_ptm matches "Infra-Reset successfully completed"
+                print "PTM download completed"
+                continue
+        end
+	when my_ptm inactive 5 minutes
+		fail "PTM download is too slow or error while downloading"
+	end
+        after 20 minutes
+		fail "PTM dowload is taking more than 20 min"
+	end
+	on failure
+		print "FAILURE: $0"
+                #Clearing the FPGA's
+                print my_ptm "clear"
+                sleep 3
+                print my_ptm "exit"
+                <::unlock_cmd:=:unlock::>
+                #Changing the current working directory
+                cd "$BURST_HOME"
+                close
+                exit
+        end
+endtest
+print my_ptm "source $PROTIUM_SCRIPT"
+test
+	sleep 5
+	wait
+	when my_ptm matches "run script finished"
+		print "Sourcing Run script complete"
+		continue
+	end	
+	when my_ptm inactive 1 minutes
+		fail "Sourcing run script is too slow or error while downloading"
+	end
+        after 5 minutes
+		fail "Sourcing run script is taking more than 5 min"
+	end
+	on failure
+		print "FAILURE: $0"
+                #Clearing the FPGA's
+                print my_ptm "clear"
+                sleep 3
+                print my_ptm "exit"
+                <::unlock_cmd:=:unlock::>
+                #Changing the current working directory
+                cd "$BURST_HOME"
+                close
+		exit
+	end	
+endtest
+
+# launch xsdb
+fork "$XSDB" as my_xsdb
+my_xsdb echo = 1
+
+test
+        sleep 5
+        wait
+        when my_xsdb matches "xsdb%"
+                print "Forking xsdb completed"
+                continue
+        end
+        after 2 minutes
+                fail "Forking xsdb failed"
+        end
+        on failure
+                print "FAILURE: $0"
+                #Clearing the FPGA's
+                print my_ptm "clear"
+                sleep 3
+                print my_ptm "exit"
+                <::unlock_cmd:=:unlock_4::>
+                #Changing the current working directory
+                cd "$BURST_HOME"
+                close
+                exit
+        end
+endtest
+
+# Take <::proc::> out of reset and download BURST elf
+print my_xsdb "source $XSDB_RC"
+print my_xsdb "connect"
+print my_xsdb "global cable"
+print my_xsdb "jtag targets"
+sleep 5
+
+<::__SUB_TEMPLATE__spp_noc_compiler_dow__:=:No::>
+<::__SUB_TEMPLATE__spp_a72_ta_sel__:=:No::>
+<::__SUB_TEMPLATE__r5_ta_sel__:=:No::>
+
+print my_xsdb "<::rst_type::>"
+print my_xsdb "puts \" PROTIUM TENZING LINK CHECK \" "
+print my_xsdb "mrd -force 0xA4000000"
+
+print my_xsdb "puts \" Unlocking NPI chain \" "
+print my_xsdb "mwr -force 0x221D000000c 0xF9E8D7C6"
+print my_xsdb "puts \" NPI Programming as per Verif Test Case \" "
+print my_xsdb "mwr -force 0x221D0000000 0x01000000"
+print my_xsdb "mwr -force 0x221D0000004 0x040381FE"
+print my_xsdb "mwr -force 0x221D0000148 0x00000008"
+print my_xsdb "mwr -force 0x221D0000000 0x02000008"
+print my_xsdb "mwr -force 0x221D0000004 0x060381F6"
+print my_xsdb "mwr -force 0x221D0000000 0x00000004"
+print my_xsdb "mwr -force 0x221D0000004 0x060381F2"
+print my_xsdb "mwr -force 0x221D000000C 0xF9E8D7C6"
+print my_xsdb "mwr -force 0x221D0000100 0x00014809"
+print my_xsdb "mwr -force 0x221D0000100 0x00024809"
+print my_xsdb "mwr -force 0x221D0000138 0x02000100"
+print my_xsdb "mwr -force 0x221D0000104 0x7E5DCC62"
+print my_xsdb "mwr -force 0x221D0000100 0x00024808"
+print my_xsdb "mwr -force 0x221D0000208 0x00000000"
+print my_xsdb "mwr -force 0x221D0000000 0x00000002"
+print my_xsdb "mwr -force 0x221D0000004 0x060381F0"
+print my_xsdb "mwr -force 0x221D0000000 0x00000040"
+print my_xsdb "mwr -force 0x221D0000004 0x060381B0"
+print my_xsdb "mwr -force 0x221D0000100 0x00024800"
+print my_xsdb "mwr -force 0x221D0000000 0x04000000"
+print my_xsdb "mwr -force 0x221D0000004 0x020381B0"
+
+print my_xsdb "puts \" Secure mode (Set to Non secure Mode) \" "
+print my_xsdb "mwr -force 0x221D0000208 0x00000000"
+print my_xsdb "puts \" Locking NPI chain \" "
+print my_xsdb "mwr -force 0x221D000000c 0x12341234"
+
+print my_xsdb "puts \" Setting CAN0_REF_CTRL and CAN1_REF_CTRL \" "
+print my_xsdb "mwr -force 0xff5e0138 0x02000603"
+print my_xsdb "mwr -force 0xff5e013c 0x02000603"
+
+<::__SUB_TEMPLATE__aie2_hack__:=:No::>
+
+print my_xsdb "dow -force $BURST_ELF"
+
+test
+	sleep 5
+	wait
+	when my_xsdb matches "Successfully downloaded .*burstarm.*"
+		continue
+	end
+	when my_xsdb matches "Failed to download .*burstarm.*"
+		fail "BURST elf download failed"
+	end
+	when my_xsdb inactive 2 minutes
+		fail "BURST not started"
+	end
+	on failure
+                print "FAILURE: $0"
+                #Clearing the FPGA's
+                print my_ptm "clear"
+                sleep 3
+                print my_ptm "exit"
+                <::unlock_cmd:=:unlock::>
+                #Changing the current working directory
+                cd "$BURST_HOME"
+                close
+		exit
+	end
+endtest
+<::preemption_on:=: ::>
+print my_xsdb "con"
+print my_xsdb "exit"

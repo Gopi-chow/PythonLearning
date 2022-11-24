@@ -1,0 +1,91 @@
+{
+    "tenpro_a72": {
+        "cmd": "-pj everest -si h20_ipp_es2_v2_0 -b tenpro --processor a72",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "H20_IPP_ES2_V2_0",
+                    "knobs": "g_is_h20h=0x1;",
+                    "preempt": "NO",
+                    "script_name": "tenpro_a72"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__h20_ipp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__r5_ta_sel__": "no",
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__vcc_aux_test__": "yes",
+                    "com": "com0",
+                    "proc": "a72",
+                    "ptm_ver": "module \"switch protium/19.11.175.s002_200527-141721.p1\"",
+                    "reserve_count": "4",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "unlock_cmd": "unlock_4",
+                    "xsdb_ver": "xsdb",
+                    "xsdbrc_path": ""
+                },
+                "template_file": "everest_h20_es2_tenpro.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": {
+                        "unlock_cmd": "unlock_4"
+                    },
+                    "com": "com0",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/h20_ipp_es2_v2_0/tenpro",
+        "script_num": 1
+    },
+    "tenpro_a72_preempt": {
+        "cmd": "-pj everest -si h20_ipp_es2_v2_0 -b tenpro --processor a72 -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "H20_IPP_ES2_V2_0",
+                    "knobs": "g_is_h20h=0x1;",
+                    "preempt": "YES",
+                    "script_name": "tenpro_a72_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__h20_ipp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__r5_ta_sel__": "no",
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "com": "com0",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "ptm_ver": "module \"switch protium/19.11.175.s002_200527-141721.p1\"",
+                    "reserve_count": "4",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "unlock_cmd": "unlock_4",
+                    "xsdb_ver": "xsdb",
+                    "xsdbrc_path": ""
+                },
+                "template_file": "everest_h20_es2_tenpro.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": {
+                        "unlock_cmd": "unlock_4"
+                    },
+                    "com": "com0",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/h20_ipp_es2_v2_0/tenpro",
+        "script_num": 2
+    }
+}

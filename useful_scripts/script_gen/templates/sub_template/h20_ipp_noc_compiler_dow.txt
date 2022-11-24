@@ -1,0 +1,3 @@
+
+print my_xsdb "device program $PDI_IMAGE"
+sleep 10

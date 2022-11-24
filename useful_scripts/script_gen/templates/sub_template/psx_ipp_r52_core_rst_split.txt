@@ -1,0 +1,7 @@
+print my_xsdb "targets -set -filter {name =~ \"DAP*\"}"
+print my_xsdb "mwr -force 0xf601800c 0xF9E8D7C6"
+print my_xsdb "mwr -force 0xf60182c0 0x3f 2"
+print my_xsdb "mwr -force 0xf601800c 0x1"
+sleep 5
+print my_xsdb "rpu0_core0_rst_split"
+sleep 2

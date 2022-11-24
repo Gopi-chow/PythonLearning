@@ -1,0 +1,1 @@
+print my_xsdb "apu0_core0_rst"

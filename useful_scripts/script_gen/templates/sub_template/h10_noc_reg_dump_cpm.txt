@@ -1,0 +1,16 @@
+		if run "[ \"$burst_started\" == \"1\" ]" then
+			# Change directory
+			cd $BURST_RESULTS
+			# launch xsdb
+			fork "$XSDB" as my_xsdb
+			my_xsdb echo = 1
+			print my_xsdb "connect"
+			print my_xsdb "targets -set -filter {target_ctx =~ \"*VP-X-A2785*\" && name =~ \"DPC*\"}"
+			print my_xsdb "targets"        		# List all cores
+			sleep 2
+			print my_xsdb "source /group/siv_burst/proj/everest/releases/noc/noc_dump_utility/h10_spp_everest_nocdump.tcl"
+			sleep 60
+			cd $BURST_HOME
+			print my_xsdb "exit"
+		endif
+

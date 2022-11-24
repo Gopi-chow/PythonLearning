@@ -1,0 +1,24 @@
+if os.path.exists(ECC_INIT_ELF) :
+        print("Initializing ECC mem...")
+        b.execute("my_xsdb", "targets -set -filter {name =~ \"Cortex-A53 #0\"}")
+        b.execute("my_xsdb", "rst -proc")
+        b.execute("my_xsdb", f"dow {ECC_INIT_ELF}")
+        b.execute("my_xsdb", "con")
+        try:
+                time.sleep(5)
+                fail_flag = 0
+                wait
+                while 1:
+                  if re.search("Done.", str(xsdb_handle.get_response())):
+                        continue
+                  if xsdb_handle.inactivity(5, "min"):
+                        print("ECC not started")
+                        fail_flag = 1
+                  if fail_flag:
+                        print(f"FAILURE: {sys.argv[0]}")
+                        os._exit(0)
+        except Exception as e:
+                print(e)
+        b.execute("my_xsdb", "stop")
+        b.execute("my_xsdb", "mwr -force 0xFD07007C 0xF")
+        b.execute("my_xsdb", "rst -proc")

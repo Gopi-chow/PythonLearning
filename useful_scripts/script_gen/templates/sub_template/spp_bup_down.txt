@@ -1,0 +1,8 @@
+if run "[ -f $BURST_BUP ]" then
+# Connect to hw server
+        $USER_PL_BITSTREAM = $BURST_BUP
+else
+        unset $USER_PL_BITSTREAM
+        print "No BUP to download, path: $BURST_BUP"
+endif
+sleep 2

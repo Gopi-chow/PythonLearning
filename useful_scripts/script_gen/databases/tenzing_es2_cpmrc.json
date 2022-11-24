@@ -1,0 +1,746 @@
+{
+    "s80_rc_cfg4_k7_ep_nwlpcie_3ddr_be_x4_a72": {
+        "cmd": "-pj everest -si es2_cpmrc -rc s80 --config_rc cfg4 -ep k7 --bridge_ep nwlpcie --ddr_mode 3ddr --lane_count x4 --processor a72 -be",
+        "form": [
+            {
+                "keys": {
+                    "bup": "none",
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "tenzing_es2_cpm",
+                    "knobs": "",
+                    "preempt": "NO",
+                    "script_name": "s80_rc_cfg4_k7_ep_nwlpcie_3ddr_be_x4_a72"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__everest_es1_a72_sel__": "Yes",
+                    "__SUB_TEMPLATE__everest_es1_cpm_ep_dow__": "No",
+                    "__SUB_TEMPLATE__everest_es1_k7_ep_dow__": "Yes",
+                    "baud_rate": "115200",
+                    "board_serial_num": "getsn",
+                    "com": "serial",
+                    "ep_bit": "/group/siv2/proj/ronaldo/nwl_pcie/pre-si_verif/releases/pcie705nwlv_8_x4g1/implementation/project_1.runs/impl_1/top.bit",
+                    "proc": "a72",
+                    "rc_bit": "None",
+                    "rc_image_path": "/everest/set_vnc_bkup/vnc/s80/prod/results/burst/bup/cpm/2020.3_released/ps4_se1q_1mp_3ddr_Ax_tenzing_cpmrc_a0_x8g4_2020_3_rel_gmii/hwflow_project_1/project_1.runs/impl_1/project_1_wrapper.pdi",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "everest_es1_cpmrc.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__noc_reg_dump_cpm__": "Yes",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "com": "serial",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "everest/es2_cpmrc/pcie",
+        "script_num": 21
+    },
+    "s80_rc_cfg4_k7_ep_nwlpcie_3ddr_be_x4_a72_preempt": {
+        "cmd": "-pj everest -si es2_cpmrc -rc s80 --config_rc cfg4 -ep k7 --bridge_ep nwlpcie --ddr_mode 3ddr --lane_count x4 --processor a72 -be -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "bup": "none",
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "tenzing_es2_cpm",
+                    "knobs": "",
+                    "preempt": "YES",
+                    "script_name": "s80_rc_cfg4_k7_ep_nwlpcie_3ddr_be_x4_a72_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__everest_es1_a72_sel__": "Yes",
+                    "__SUB_TEMPLATE__everest_es1_cpm_ep_dow__": "No",
+                    "__SUB_TEMPLATE__everest_es1_k7_ep_dow__": "Yes",
+                    "baud_rate": "115200",
+                    "board_serial_num": "getsn",
+                    "com": "serial",
+                    "ep_bit": "/group/siv2/proj/ronaldo/nwl_pcie/pre-si_verif/releases/pcie705nwlv_8_x4g1/implementation/project_1.runs/impl_1/top.bit",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "rc_bit": "None",
+                    "rc_image_path": "/everest/set_vnc_bkup/vnc/s80/prod/results/burst/bup/cpm/2020.3_released/ps4_se1q_1mp_3ddr_Ax_tenzing_cpmrc_a0_x8g4_2020_3_rel_gmii/hwflow_project_1/project_1.runs/impl_1/project_1_wrapper.pdi",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "everest_es1_cpmrc.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__noc_reg_dump_cpm__": "Yes",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "com": "serial",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "everest/es2_cpmrc/pcie",
+        "script_num": 22
+    },
+    "s80_rc_cfg4_k7_ep_nwlpcie_3ddr_x4_a72": {
+        "cmd": "-pj everest -si es2_cpmrc -rc s80 --config_rc cfg4 -ep k7 --bridge_ep nwlpcie --ddr_mode 3ddr --lane_count x4 --processor a72",
+        "form": [
+            {
+                "keys": {
+                    "bup": "none",
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "tenzing_es2_cpm",
+                    "knobs": "",
+                    "preempt": "NO",
+                    "script_name": "s80_rc_cfg4_k7_ep_nwlpcie_3ddr_x4_a72"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__everest_es1_a72_sel__": "Yes",
+                    "__SUB_TEMPLATE__everest_es1_cpm_ep_dow__": "No",
+                    "__SUB_TEMPLATE__everest_es1_k7_ep_dow__": "Yes",
+                    "baud_rate": "115200",
+                    "board_serial_num": "getsn",
+                    "com": "serial",
+                    "ep_bit": "/group/siv2/proj/ronaldo/nwl_pcie/pre-si_verif/releases/pcie705nwlv_8_x4g1/implementation/project_1.runs/impl_1/top.bit",
+                    "proc": "a72",
+                    "rc_bit": "None",
+                    "rc_image_path": "/everest/set_vnc_bkup/vnc/s80/prod/results/burst/bup/cpm/2020.3_released/ps4_se1q_1mp_3ddr_Ax_tenzing_cpmrc_a0_x8g4_2020_3_rel_gmii/hwflow_project_1/project_1.runs/impl_1/project_1_wrapper.pdi",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "everest_es1_cpmrc.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__noc_reg_dump_cpm__": "Yes",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "com": "serial",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "everest/es2_cpmrc/pcie",
+        "script_num": 21
+    },
+    "s80_rc_cfg4_k7_ep_nwlpcie_3ddr_x4_a72_preempt": {
+        "cmd": "-pj everest -si es2_cpmrc -rc s80 --config_rc cfg4 -ep k7 --bridge_ep nwlpcie --ddr_mode 3ddr --lane_count x4 --processor a72 -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "bup": "none",
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "tenzing_es2_cpm",
+                    "knobs": "",
+                    "preempt": "YES",
+                    "script_name": "s80_rc_cfg4_k7_ep_nwlpcie_3ddr_x4_a72_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__everest_es1_a72_sel__": "Yes",
+                    "__SUB_TEMPLATE__everest_es1_cpm_ep_dow__": "No",
+                    "__SUB_TEMPLATE__everest_es1_k7_ep_dow__": "Yes",
+                    "baud_rate": "115200",
+                    "board_serial_num": "getsn",
+                    "com": "serial",
+                    "ep_bit": "/group/siv2/proj/ronaldo/nwl_pcie/pre-si_verif/releases/pcie705nwlv_8_x4g1/implementation/project_1.runs/impl_1/top.bit",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "rc_bit": "None",
+                    "rc_image_path": "/everest/set_vnc_bkup/vnc/s80/prod/results/burst/bup/cpm/2020.3_released/ps4_se1q_1mp_3ddr_Ax_tenzing_cpmrc_a0_x8g4_2020_3_rel_gmii/hwflow_project_1/project_1.runs/impl_1/project_1_wrapper.pdi",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "everest_es1_cpmrc.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__noc_reg_dump_cpm__": "Yes",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "com": "serial",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "everest/es2_cpmrc/pcie",
+        "script_num": 22
+    },
+    "s80_rc_cfg4_k7_ep_plb2pcie_3ddr_be_x4_a72": {
+        "cmd": "-pj everest -si es2_cpmrc -rc s80 --config_rc cfg4 -ep k7 --bridge_ep plb2pcie --ddr_mode 3ddr --lane_count x4 --processor a72 -be",
+        "form": [
+            {
+                "keys": {
+                    "bup": "none",
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "tenzing_es2_cpm",
+                    "knobs": "",
+                    "preempt": "NO",
+                    "script_name": "s80_rc_cfg4_k7_ep_plb2pcie_3ddr_be_x4_a72"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__everest_es1_a72_sel__": "Yes",
+                    "__SUB_TEMPLATE__everest_es1_cpm_ep_dow__": "No",
+                    "__SUB_TEMPLATE__everest_es1_k7_ep_dow__": "Yes",
+                    "baud_rate": "115200",
+                    "board_serial_num": "getsn",
+                    "com": "serial",
+                    "ep_bit": "/group/siv2/work/ronaldo/avas/alto_vnc/build/pcie705_18_X_x4g2/implementation/download.bit",
+                    "proc": "a72",
+                    "rc_bit": "None",
+                    "rc_image_path": "/everest/set_vnc_bkup/vnc/s80/prod/results/burst/bup/cpm/2020.3_released/ps4_se1q_1mp_3ddr_Ax_tenzing_cpmrc_a0_x8g4_2020_3_rel_gmii/hwflow_project_1/project_1.runs/impl_1/project_1_wrapper.pdi",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "everest_es1_cpmrc.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__noc_reg_dump_cpm__": "Yes",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "com": "serial",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "everest/es2_cpmrc/pcie",
+        "script_num": 21
+    },
+    "s80_rc_cfg4_k7_ep_plb2pcie_3ddr_be_x4_a72_preempt": {
+        "cmd": "-pj everest -si es2_cpmrc -rc s80 --config_rc cfg4 -ep k7 --bridge_ep plb2pcie --ddr_mode 3ddr --lane_count x4 --processor a72 -be -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "bup": "none",
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "tenzing_es2_cpm",
+                    "knobs": "",
+                    "preempt": "YES",
+                    "script_name": "s80_rc_cfg4_k7_ep_plb2pcie_3ddr_be_x4_a72_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__everest_es1_a72_sel__": "Yes",
+                    "__SUB_TEMPLATE__everest_es1_cpm_ep_dow__": "No",
+                    "__SUB_TEMPLATE__everest_es1_k7_ep_dow__": "Yes",
+                    "baud_rate": "115200",
+                    "board_serial_num": "getsn",
+                    "com": "serial",
+                    "ep_bit": "/group/siv2/work/ronaldo/avas/alto_vnc/build/pcie705_18_X_x4g2/implementation/download.bit",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "rc_bit": "None",
+                    "rc_image_path": "/everest/set_vnc_bkup/vnc/s80/prod/results/burst/bup/cpm/2020.3_released/ps4_se1q_1mp_3ddr_Ax_tenzing_cpmrc_a0_x8g4_2020_3_rel_gmii/hwflow_project_1/project_1.runs/impl_1/project_1_wrapper.pdi",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "everest_es1_cpmrc.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__noc_reg_dump_cpm__": "Yes",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "com": "serial",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "everest/es2_cpmrc/pcie",
+        "script_num": 22
+    },
+    "s80_rc_cfg4_k7_ep_plb2pcie_3ddr_x4_a72": {
+        "cmd": "-pj everest -si es2_cpmrc -rc s80 --config_rc cfg4 -ep k7 --bridge_ep plb2pcie --ddr_mode 3ddr --lane_count x4 --processor a72",
+        "form": [
+            {
+                "keys": {
+                    "bup": "none",
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "tenzing_es2_cpm",
+                    "knobs": "",
+                    "preempt": "NO",
+                    "script_name": "s80_rc_cfg4_k7_ep_plb2pcie_3ddr_x4_a72"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__everest_es1_a72_sel__": "Yes",
+                    "__SUB_TEMPLATE__everest_es1_cpm_ep_dow__": "No",
+                    "__SUB_TEMPLATE__everest_es1_k7_ep_dow__": "Yes",
+                    "baud_rate": "115200",
+                    "board_serial_num": "getsn",
+                    "com": "serial",
+                    "ep_bit": "/group/siv2/work/ronaldo/avas/alto_vnc/build/pcie705_18_X_x4g2/implementation/download.bit",
+                    "proc": "a72",
+                    "rc_bit": "None",
+                    "rc_image_path": "/everest/set_vnc_bkup/vnc/s80/prod/results/burst/bup/cpm/2020.3_released/ps4_se1q_1mp_3ddr_Ax_tenzing_cpmrc_a0_x8g4_2020_3_rel_gmii/hwflow_project_1/project_1.runs/impl_1/project_1_wrapper.pdi",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "everest_es1_cpmrc.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__noc_reg_dump_cpm__": "Yes",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "com": "serial",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "everest/es2_cpmrc/pcie",
+        "script_num": 21
+    },
+    "s80_rc_cfg4_k7_ep_plb2pcie_3ddr_x4_a72_preempt": {
+        "cmd": "-pj everest -si es2_cpmrc -rc s80 --config_rc cfg4 -ep k7 --bridge_ep plb2pcie --ddr_mode 3ddr --lane_count x4 --processor a72 -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "bup": "none",
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "tenzing_es2_cpm",
+                    "knobs": "",
+                    "preempt": "YES",
+                    "script_name": "s80_rc_cfg4_k7_ep_plb2pcie_3ddr_x4_a72_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__everest_es1_a72_sel__": "Yes",
+                    "__SUB_TEMPLATE__everest_es1_cpm_ep_dow__": "No",
+                    "__SUB_TEMPLATE__everest_es1_k7_ep_dow__": "Yes",
+                    "baud_rate": "115200",
+                    "board_serial_num": "getsn",
+                    "com": "serial",
+                    "ep_bit": "/group/siv2/work/ronaldo/avas/alto_vnc/build/pcie705_18_X_x4g2/implementation/download.bit",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "rc_bit": "None",
+                    "rc_image_path": "/everest/set_vnc_bkup/vnc/s80/prod/results/burst/bup/cpm/2020.3_released/ps4_se1q_1mp_3ddr_Ax_tenzing_cpmrc_a0_x8g4_2020_3_rel_gmii/hwflow_project_1/project_1.runs/impl_1/project_1_wrapper.pdi",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "everest_es1_cpmrc.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__noc_reg_dump_cpm__": "Yes",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "com": "serial",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "everest/es2_cpmrc/pcie",
+        "script_num": 22
+    },
+    "s80_rc_cfg4_s80v350_ep_a0cci_3ddr_be_x8_a72": {
+        "cmd": "-pj everest -si es2_cpmrc -rc s80 --config_rc cfg4 -ep s80v350 --cpm_mode a0cci --ddr_mode 3ddr --lane_count x8 --processor a72 -be",
+        "form": [
+            {
+                "keys": {
+                    "bup": "none",
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "tenzing_es2_cpm",
+                    "knobs": "",
+                    "preempt": "NO",
+                    "script_name": "s80_rc_cfg4_s80v350_ep_a0cci_3ddr_be_x8_a72"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__everest_es1_a72_sel__": "Yes",
+                    "__SUB_TEMPLATE__everest_es1_cpm_ep_dow__": {
+                        "v350_boot_hack": "1"
+                    },
+                    "__SUB_TEMPLATE__everest_es1_k7_ep_dow__": "No",
+                    "baud_rate": "115200",
+                    "board_serial_num": "getsn",
+                    "com": "serial",
+                    "ep_bit": "None",
+                    "ep_image_path": "/everest/set_vnc_bkup/vnc/s80/prod/results/burst/bup/cpm/2020.3_released/ps4_1mp_qddr_Ax_v350_cpmep_x8g4_2020_3_rel/hwflow_project_1/project_1.runs/impl_1/project_1_wrapper.pdi",
+                    "proc": "a72",
+                    "rc_bit": "None",
+                    "rc_image_path": "/everest/set_vnc_bkup/vnc/s80/prod/results/burst/bup/cpm/2020.3_released/ps4_se1q_1mp_3ddr_Ax_tenzing_cpmrc_a0_x8g4_2020_3_rel_gmii/hwflow_project_1/project_1.runs/impl_1/project_1_wrapper.pdi",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "everest_es1_cpmrc.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__noc_reg_dump_cpm__": "Yes",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "com": "serial",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "everest/es2_cpmrc/pcie",
+        "script_num": 3
+    },
+    "s80_rc_cfg4_s80v350_ep_a0cci_3ddr_be_x8_a72_preempt": {
+        "cmd": "-pj everest -si es2_cpmrc -rc s80 --config_rc cfg4 -ep s80v350 --cpm_mode a0cci --ddr_mode 3ddr --lane_count x8 --processor a72 -be -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "bup": "none",
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "tenzing_es2_cpm",
+                    "knobs": "",
+                    "preempt": "YES",
+                    "script_name": "s80_rc_cfg4_s80v350_ep_a0cci_3ddr_be_x8_a72_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__everest_es1_a72_sel__": "Yes",
+                    "__SUB_TEMPLATE__everest_es1_cpm_ep_dow__": {
+                        "v350_boot_hack": "1"
+                    },
+                    "__SUB_TEMPLATE__everest_es1_k7_ep_dow__": "No",
+                    "baud_rate": "115200",
+                    "board_serial_num": "getsn",
+                    "com": "serial",
+                    "ep_bit": "None",
+                    "ep_image_path": "/everest/set_vnc_bkup/vnc/s80/prod/results/burst/bup/cpm/2020.3_released/ps4_1mp_qddr_Ax_v350_cpmep_x8g4_2020_3_rel/hwflow_project_1/project_1.runs/impl_1/project_1_wrapper.pdi",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "rc_bit": "None",
+                    "rc_image_path": "/everest/set_vnc_bkup/vnc/s80/prod/results/burst/bup/cpm/2020.3_released/ps4_se1q_1mp_3ddr_Ax_tenzing_cpmrc_a0_x8g4_2020_3_rel_gmii/hwflow_project_1/project_1.runs/impl_1/project_1_wrapper.pdi",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "everest_es1_cpmrc.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__noc_reg_dump_cpm__": "Yes",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "com": "serial",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "everest/es2_cpmrc/pcie",
+        "script_num": 4
+    },
+    "s80_rc_cfg4_s80v350_ep_a0cci_3ddr_x8_a72": {
+        "cmd": "-pj everest -si es2_cpmrc -rc s80 --config_rc cfg4 -ep s80v350 --cpm_mode a0cci --ddr_mode 3ddr --lane_count x8 --processor a72",
+        "form": [
+            {
+                "keys": {
+                    "bup": "none",
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "tenzing_es2_cpm",
+                    "knobs": "",
+                    "preempt": "NO",
+                    "script_name": "s80_rc_cfg4_s80v350_ep_a0cci_3ddr_x8_a72"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__everest_es1_a72_sel__": "Yes",
+                    "__SUB_TEMPLATE__everest_es1_cpm_ep_dow__": {
+                        "v350_boot_hack": "1"
+                    },
+                    "__SUB_TEMPLATE__everest_es1_k7_ep_dow__": "No",
+                    "baud_rate": "115200",
+                    "board_serial_num": "getsn",
+                    "com": "serial",
+                    "ep_bit": "None",
+                    "ep_image_path": "/everest/set_vnc_bkup/vnc/s80/prod/results/burst/bup/cpm/2020.3_released/ps4_1mp_qddr_Ax_v350_cpmep_x8g4_2020_3_rel/hwflow_project_1/project_1.runs/impl_1/project_1_wrapper.pdi",
+                    "proc": "a72",
+                    "rc_bit": "None",
+                    "rc_image_path": "/everest/set_vnc_bkup/vnc/s80/prod/results/burst/bup/cpm/2020.3_released/ps4_se1q_1mp_3ddr_Ax_tenzing_cpmrc_a0_x8g4_2020_3_rel_gmii/hwflow_project_1/project_1.runs/impl_1/project_1_wrapper.pdi",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "everest_es1_cpmrc.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__noc_reg_dump_cpm__": "Yes",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "com": "serial",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "everest/es2_cpmrc/pcie",
+        "script_num": 1
+    },
+    "s80_rc_cfg4_s80v350_ep_a0cci_3ddr_x8_a72_preempt": {
+        "cmd": "-pj everest -si es2_cpmrc -rc s80 --config_rc cfg4 -ep s80v350 --cpm_mode a0cci --ddr_mode 3ddr --lane_count x8 --processor a72 -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "bup": "none",
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "tenzing_es2_cpm",
+                    "knobs": "",
+                    "preempt": "YES",
+                    "script_name": "s80_rc_cfg4_s80v350_ep_a0cci_3ddr_x8_a72_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__everest_es1_a72_sel__": "Yes",
+                    "__SUB_TEMPLATE__everest_es1_cpm_ep_dow__": {
+                        "v350_boot_hack": "1"
+                    },
+                    "__SUB_TEMPLATE__everest_es1_k7_ep_dow__": "No",
+                    "baud_rate": "115200",
+                    "board_serial_num": "getsn",
+                    "com": "serial",
+                    "ep_bit": "None",
+                    "ep_image_path": "/everest/set_vnc_bkup/vnc/s80/prod/results/burst/bup/cpm/2020.3_released/ps4_1mp_qddr_Ax_v350_cpmep_x8g4_2020_3_rel/hwflow_project_1/project_1.runs/impl_1/project_1_wrapper.pdi",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "rc_bit": "None",
+                    "rc_image_path": "/everest/set_vnc_bkup/vnc/s80/prod/results/burst/bup/cpm/2020.3_released/ps4_se1q_1mp_3ddr_Ax_tenzing_cpmrc_a0_x8g4_2020_3_rel_gmii/hwflow_project_1/project_1.runs/impl_1/project_1_wrapper.pdi",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "everest_es1_cpmrc.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__noc_reg_dump_cpm__": "Yes",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "com": "serial",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "everest/es2_cpmrc/pcie",
+        "script_num": 2
+    },
+    "s80_rc_cfg4_s80v350_ep_a1_3ddr_be_x8_a72": {
+        "cmd": "-pj everest -si es2_cpmrc -rc s80 --config_rc cfg4 -ep s80v350 --cpm_mode a1 --ddr_mode 3ddr --lane_count x8 --processor a72 -be",
+        "form": [
+            {
+                "keys": {
+                    "bup": "none",
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "tenzing_es2_cpm",
+                    "knobs": "",
+                    "preempt": "NO",
+                    "script_name": "s80_rc_cfg4_s80v350_ep_a1_3ddr_be_x8_a72"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__everest_es1_a72_sel__": "Yes",
+                    "__SUB_TEMPLATE__everest_es1_cpm_ep_dow__": {
+                        "v350_boot_hack": "1"
+                    },
+                    "__SUB_TEMPLATE__everest_es1_k7_ep_dow__": "No",
+                    "baud_rate": "115200",
+                    "board_serial_num": "getsn",
+                    "com": "serial",
+                    "ep_bit": "None",
+                    "ep_image_path": "/everest/set_vnc_bkup/vnc/s80/prod/results/burst/bup/cpm/2020.3_released/ps4_1mp_qddr_Ax_v350_cpmep_x8g4_2020_3_rel/hwflow_project_1/project_1.runs/impl_1/project_1_wrapper.pdi",
+                    "proc": "a72",
+                    "rc_bit": "None",
+                    "rc_image_path": "/everest/set_vnc_bkup/vnc/s80/prod/results/burst/bup/cpm/2020.3_released/ps4_se1q_1mp_3ddr_Ax_tenzing_cpmrc_a1_x8g4_2020_3_rel_gmii/hwflow_project_1/project_1.runs/impl_1/project_1_wrapper.pdi",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "everest_es1_cpmrc.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__noc_reg_dump_cpm__": "Yes",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "com": "serial",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "everest/es2_cpmrc/pcie",
+        "script_num": -23
+    },
+    "s80_rc_cfg4_s80v350_ep_a1_3ddr_be_x8_a72_preempt": {
+        "cmd": "-pj everest -si es2_cpmrc -rc s80 --config_rc cfg4 -ep s80v350 --cpm_mode a1 --ddr_mode 3ddr --lane_count x8 --processor a72 -be -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "bup": "none",
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "tenzing_es2_cpm",
+                    "knobs": "",
+                    "preempt": "YES",
+                    "script_name": "s80_rc_cfg4_s80v350_ep_a1_3ddr_be_x8_a72_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__everest_es1_a72_sel__": "Yes",
+                    "__SUB_TEMPLATE__everest_es1_cpm_ep_dow__": {
+                        "v350_boot_hack": "1"
+                    },
+                    "__SUB_TEMPLATE__everest_es1_k7_ep_dow__": "No",
+                    "baud_rate": "115200",
+                    "board_serial_num": "getsn",
+                    "com": "serial",
+                    "ep_bit": "None",
+                    "ep_image_path": "/everest/set_vnc_bkup/vnc/s80/prod/results/burst/bup/cpm/2020.3_released/ps4_1mp_qddr_Ax_v350_cpmep_x8g4_2020_3_rel/hwflow_project_1/project_1.runs/impl_1/project_1_wrapper.pdi",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "rc_bit": "None",
+                    "rc_image_path": "/everest/set_vnc_bkup/vnc/s80/prod/results/burst/bup/cpm/2020.3_released/ps4_se1q_1mp_3ddr_Ax_tenzing_cpmrc_a1_x8g4_2020_3_rel_gmii/hwflow_project_1/project_1.runs/impl_1/project_1_wrapper.pdi",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "everest_es1_cpmrc.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__noc_reg_dump_cpm__": "Yes",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "com": "serial",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "everest/es2_cpmrc/pcie",
+        "script_num": -24
+    },
+    "s80_rc_cfg4_s80v350_ep_a1_3ddr_x8_a72": {
+        "cmd": "-pj everest -si es2_cpmrc -rc s80 --config_rc cfg4 -ep s80v350 --cpm_mode a1 --ddr_mode 3ddr --lane_count x8 --processor a72",
+        "form": [
+            {
+                "keys": {
+                    "bup": "none",
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "tenzing_es2_cpm",
+                    "knobs": "",
+                    "preempt": "NO",
+                    "script_name": "s80_rc_cfg4_s80v350_ep_a1_3ddr_x8_a72"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__everest_es1_a72_sel__": "Yes",
+                    "__SUB_TEMPLATE__everest_es1_cpm_ep_dow__": {
+                        "v350_boot_hack": "1"
+                    },
+                    "__SUB_TEMPLATE__everest_es1_k7_ep_dow__": "No",
+                    "baud_rate": "115200",
+                    "board_serial_num": "getsn",
+                    "com": "serial",
+                    "ep_bit": "None",
+                    "ep_image_path": "/everest/set_vnc_bkup/vnc/s80/prod/results/burst/bup/cpm/2020.3_released/ps4_1mp_qddr_Ax_v350_cpmep_x8g4_2020_3_rel/hwflow_project_1/project_1.runs/impl_1/project_1_wrapper.pdi",
+                    "proc": "a72",
+                    "rc_bit": "None",
+                    "rc_image_path": "/everest/set_vnc_bkup/vnc/s80/prod/results/burst/bup/cpm/2020.3_released/ps4_se1q_1mp_3ddr_Ax_tenzing_cpmrc_a1_x8g4_2020_3_rel_gmii/hwflow_project_1/project_1.runs/impl_1/project_1_wrapper.pdi",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "everest_es1_cpmrc.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__noc_reg_dump_cpm__": "Yes",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "com": "serial",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "everest/es2_cpmrc/pcie",
+        "script_num": -21
+    },
+    "s80_rc_cfg4_s80v350_ep_a1_3ddr_x8_a72_preempt": {
+        "cmd": "-pj everest -si es2_cpmrc -rc s80 --config_rc cfg4 -ep s80v350 --cpm_mode a1 --ddr_mode 3ddr --lane_count x8 --processor a72 -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "bup": "none",
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "tenzing_es2_cpm",
+                    "knobs": "",
+                    "preempt": "YES",
+                    "script_name": "s80_rc_cfg4_s80v350_ep_a1_3ddr_x8_a72_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__everest_es1_a72_sel__": "Yes",
+                    "__SUB_TEMPLATE__everest_es1_cpm_ep_dow__": {
+                        "v350_boot_hack": "1"
+                    },
+                    "__SUB_TEMPLATE__everest_es1_k7_ep_dow__": "No",
+                    "baud_rate": "115200",
+                    "board_serial_num": "getsn",
+                    "com": "serial",
+                    "ep_bit": "None",
+                    "ep_image_path": "/everest/set_vnc_bkup/vnc/s80/prod/results/burst/bup/cpm/2020.3_released/ps4_1mp_qddr_Ax_v350_cpmep_x8g4_2020_3_rel/hwflow_project_1/project_1.runs/impl_1/project_1_wrapper.pdi",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "rc_bit": "None",
+                    "rc_image_path": "/everest/set_vnc_bkup/vnc/s80/prod/results/burst/bup/cpm/2020.3_released/ps4_se1q_1mp_3ddr_Ax_tenzing_cpmrc_a1_x8g4_2020_3_rel_gmii/hwflow_project_1/project_1.runs/impl_1/project_1_wrapper.pdi",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "everest_es1_cpmrc.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__noc_reg_dump_cpm__": "Yes",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "com": "serial",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "everest/es2_cpmrc/pcie",
+        "script_num": -22
+    }
+}

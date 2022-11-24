@@ -1,0 +1,3 @@
+b.execute("my_xsdb", "targets -set -filter {name =~ \"Cortex-R5 #0\"}")
+# Take R5-0 out of reset
+b.execute("my_xsdb", "rst -processor")

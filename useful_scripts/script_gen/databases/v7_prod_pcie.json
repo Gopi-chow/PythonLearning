@@ -1,0 +1,70 @@
+{
+    "v7_rc_axipcie_v7_ep_axipcie_x4_mb": {
+        "cmd": "-pj virtex7 -si prod -rc v7 --bridge_rc axipcie -ep v7 --bridge_ep axipcie --lane_count x4 --processor mb",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstmble.elf",
+                    "burst_hw": "",
+                    "knobs": "Prob_axiex_enable_interrupts=0;Prob_bus2pcie_change_link=0;Plb_bram_add_plb_mem=0;Axiex_add_plb_mem=0;",
+                    "preempt": "NO",
+                    "script_name": "v7_rc_axipcie_v7_ep_axipcie_x4_mb"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "ep_bup": "/group/siv_burst/proj/vc70x/ep/viv-ep707_5_X/implementation/project_1.runs/impl_1/burst_bd_wrapper.bit",
+                    "rc_bup": "/group/siv_burst/proj/vc70x/rc/viv-vc707_3_X/implementation/project_1.runs/impl_1/top.bit"
+                },
+                "template_file": "v7_rc_v7_ep.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "com": "serial",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "virtex7/prod/pcie",
+        "script_num": 1
+    },
+    "v7_rc_axipcie_v7_ep_axipcie_x4_mb_preempt": {
+        "cmd": "-pj virtex7 -si prod -rc v7 --bridge_rc axipcie -ep v7 --bridge_ep axipcie --lane_count x4 --processor mb -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstmble.elf",
+                    "burst_hw": "",
+                    "knobs": "Prob_axiex_enable_interrupts=0;Prob_bus2pcie_change_link=0;Plb_bram_add_plb_mem=0;Axiex_add_plb_mem=0;",
+                    "preempt": "YES",
+                    "script_name": "v7_rc_axipcie_v7_ep_axipcie_x4_mb_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "ep_bup": "/group/siv_burst/proj/vc70x/ep/viv-ep707_5_X/implementation/project_1.runs/impl_1/burst_bd_wrapper.bit",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "rc_bup": "/group/siv_burst/proj/vc70x/rc/viv-vc707_3_X/implementation/project_1.runs/impl_1/top.bit"
+                },
+                "template_file": "v7_rc_v7_ep.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "com": "serial",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "virtex7/prod/pcie",
+        "script_num": 2
+    }
+}

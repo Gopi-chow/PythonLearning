@@ -1,0 +1,3 @@
+
+b.execute("my_xsdb", "targets -set -filter {name =~ \"Cortex-R5 #0\"}")
+b.execute("my_xsdb", "exec sleep 2")

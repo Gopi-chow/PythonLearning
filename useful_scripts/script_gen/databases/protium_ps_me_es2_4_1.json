@@ -1,0 +1,626 @@
+{
+    "protium_a72_be_bup": {
+        "cmd": "-pj everest -si ps_me_es2_4_1 -b protium --processor a72 -be -bup",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "spp_ps_me_es2_4_1",
+                    "knobs": "Me_enable=1,",
+                    "preempt": "NO",
+                    "script_name": "protium_a72_be_bup"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__pl_rst__": "yes",
+                    "__SUB_TEMPLATE__ppu1_rst__": "yes",
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_bup_down__": "No",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_ecc_dow__": "no",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "build_dir": "/group/siv4/proj/everest/public/releases/spp/spp_ps_me_s80es2_v4_1/",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "image_path": "/group/siv4/proj/everest/public/releases/spp/spp_ps_me_s80es2_v4_1/pdi/static.pdi",
+                    "jtag_freq": "400000",
+                    "proc": "a72",
+                    "ptm_ver": "module \"switch protium/18.10.000\"",
+                    "reserve_count": "4",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "unlock_cmd": "unlock_4",
+                    "xsdb_ver": "/group/siv4/tools/xilinx/2019.2_INT_1014_1/installs/lin64/Vitis/2019.2/bin/xsdb",
+                    "xsdbrc_path": "/group/siv4/proj/everest/public/releases/spp/spp_ps_me_s80es2_v4_1/.xsdbrc"
+                },
+                "template_file": "everest_protium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": {
+                        "unlock_cmd": "unlock_4"
+                    },
+                    "com": "com0",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/ps_me_es2_4_1/protium",
+        "script_num": 1
+    },
+    "protium_a72_be_bup_preempt": {
+        "cmd": "-pj everest -si ps_me_es2_4_1 -b protium --processor a72 -be -bup -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "spp_ps_me_es2_4_1",
+                    "knobs": "Me_enable=1,",
+                    "preempt": "YES",
+                    "script_name": "protium_a72_be_bup_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__pl_rst__": "yes",
+                    "__SUB_TEMPLATE__ppu1_rst__": "yes",
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_bup_down__": "No",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_ecc_dow__": "no",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "build_dir": "/group/siv4/proj/everest/public/releases/spp/spp_ps_me_s80es2_v4_1/",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "image_path": "/group/siv4/proj/everest/public/releases/spp/spp_ps_me_s80es2_v4_1/pdi/static.pdi",
+                    "jtag_freq": "400000",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "ptm_ver": "module \"switch protium/18.10.000\"",
+                    "reserve_count": "4",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "unlock_cmd": "unlock_4",
+                    "xsdb_ver": "/group/siv4/tools/xilinx/2019.2_INT_1014_1/installs/lin64/Vitis/2019.2/bin/xsdb",
+                    "xsdbrc_path": "/group/siv4/proj/everest/public/releases/spp/spp_ps_me_s80es2_v4_1/.xsdbrc"
+                },
+                "template_file": "everest_protium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": {
+                        "unlock_cmd": "unlock_4"
+                    },
+                    "com": "com0",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/ps_me_es2_4_1/protium",
+        "script_num": 2
+    },
+    "protium_a72_be_ospi_bup": {
+        "cmd": "-pj everest -si ps_me_es2_4_1 -b protium --processor a72 -be -ospi -bup",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "spp_ps_me_es2_4_1",
+                    "knobs": "Me_enable=1,",
+                    "preempt": "NO",
+                    "script_name": "protium_a72_be_ospi_bup"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__pl_rst__": "yes",
+                    "__SUB_TEMPLATE__ppu1_rst__": "yes",
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_bup_down__": "No",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_ecc_dow__": "no",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "build_dir": "/group/siv4/proj/everest/public/releases/spp/spp_ps_me_s80es2_v4_1/",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "image_path": "/group/siv4/proj/everest/public/releases/spp/spp_ps_me_s80es2_v4_1/pdi/static_ospi.pdi",
+                    "jtag_freq": "400000",
+                    "proc": "a72",
+                    "ptm_ver": "module \"switch protium/18.10.000\"",
+                    "reserve_count": "4",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "unlock_cmd": "unlock_4",
+                    "xsdb_ver": "/group/siv4/tools/xilinx/2019.2_INT_1014_1/installs/lin64/Vitis/2019.2/bin/xsdb",
+                    "xsdbrc_path": "/group/siv4/proj/everest/public/releases/spp/spp_ps_me_s80es2_v4_1/.xsdbrc"
+                },
+                "template_file": "everest_protium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": {
+                        "unlock_cmd": "unlock_4"
+                    },
+                    "com": "com0",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/ps_me_es2_4_1/protium",
+        "script_num": 3
+    },
+    "protium_a72_be_ospi_bup_preempt": {
+        "cmd": "-pj everest -si ps_me_es2_4_1 -b protium --processor a72 -be -ospi -bup -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "spp_ps_me_es2_4_1",
+                    "knobs": "Me_enable=1,",
+                    "preempt": "YES",
+                    "script_name": "protium_a72_be_ospi_bup_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__pl_rst__": "yes",
+                    "__SUB_TEMPLATE__ppu1_rst__": "yes",
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_bup_down__": "No",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_ecc_dow__": "no",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "build_dir": "/group/siv4/proj/everest/public/releases/spp/spp_ps_me_s80es2_v4_1/",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "image_path": "/group/siv4/proj/everest/public/releases/spp/spp_ps_me_s80es2_v4_1/pdi/static_ospi.pdi",
+                    "jtag_freq": "400000",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "ptm_ver": "module \"switch protium/18.10.000\"",
+                    "reserve_count": "4",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "unlock_cmd": "unlock_4",
+                    "xsdb_ver": "/group/siv4/tools/xilinx/2019.2_INT_1014_1/installs/lin64/Vitis/2019.2/bin/xsdb",
+                    "xsdbrc_path": "/group/siv4/proj/everest/public/releases/spp/spp_ps_me_s80es2_v4_1/.xsdbrc"
+                },
+                "template_file": "everest_protium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": {
+                        "unlock_cmd": "unlock_4"
+                    },
+                    "com": "com0",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/ps_me_es2_4_1/protium",
+        "script_num": 4
+    },
+    "protium_a72_bup": {
+        "cmd": "-pj everest -si ps_me_es2_4_1 -b protium --processor a72 -bup",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "spp_ps_me_es2_4_1",
+                    "knobs": "Me_enable=1,",
+                    "preempt": "NO",
+                    "script_name": "protium_a72_bup"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__pl_rst__": "yes",
+                    "__SUB_TEMPLATE__ppu1_rst__": "yes",
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_bup_down__": "No",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_ecc_dow__": "no",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "build_dir": "/group/siv4/proj/everest/public/releases/spp/spp_ps_me_s80es2_v4_1/",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "image_path": "/group/siv4/proj/everest/public/releases/spp/spp_ps_me_s80es2_v4_1/pdi/static.pdi",
+                    "jtag_freq": "400000",
+                    "proc": "a72",
+                    "ptm_ver": "module \"switch protium/18.10.000\"",
+                    "reserve_count": "4",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "unlock_cmd": "unlock_4",
+                    "xsdb_ver": "/group/siv4/tools/xilinx/2019.2_INT_1014_1/installs/lin64/Vitis/2019.2/bin/xsdb",
+                    "xsdbrc_path": "/group/siv4/proj/everest/public/releases/spp/spp_ps_me_s80es2_v4_1/.xsdbrc"
+                },
+                "template_file": "everest_protium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": {
+                        "unlock_cmd": "unlock_4"
+                    },
+                    "com": "com0",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/ps_me_es2_4_1/protium",
+        "script_num": 5
+    },
+    "protium_a72_bup_preempt": {
+        "cmd": "-pj everest -si ps_me_es2_4_1 -b protium --processor a72 -bup -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "spp_ps_me_es2_4_1",
+                    "knobs": "Me_enable=1,",
+                    "preempt": "YES",
+                    "script_name": "protium_a72_bup_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__pl_rst__": "yes",
+                    "__SUB_TEMPLATE__ppu1_rst__": "yes",
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_bup_down__": "No",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_ecc_dow__": "no",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "build_dir": "/group/siv4/proj/everest/public/releases/spp/spp_ps_me_s80es2_v4_1/",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "image_path": "/group/siv4/proj/everest/public/releases/spp/spp_ps_me_s80es2_v4_1/pdi/static.pdi",
+                    "jtag_freq": "400000",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "ptm_ver": "module \"switch protium/18.10.000\"",
+                    "reserve_count": "4",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "unlock_cmd": "unlock_4",
+                    "xsdb_ver": "/group/siv4/tools/xilinx/2019.2_INT_1014_1/installs/lin64/Vitis/2019.2/bin/xsdb",
+                    "xsdbrc_path": "/group/siv4/proj/everest/public/releases/spp/spp_ps_me_s80es2_v4_1/.xsdbrc"
+                },
+                "template_file": "everest_protium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": {
+                        "unlock_cmd": "unlock_4"
+                    },
+                    "com": "com0",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/ps_me_es2_4_1/protium",
+        "script_num": 6
+    },
+    "protium_a72_ospi_bup": {
+        "cmd": "-pj everest -si ps_me_es2_4_1 -b protium --processor a72 -ospi -bup",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "spp_ps_me_es2_4_1",
+                    "knobs": "Me_enable=1,",
+                    "preempt": "NO",
+                    "script_name": "protium_a72_ospi_bup"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__pl_rst__": "yes",
+                    "__SUB_TEMPLATE__ppu1_rst__": "yes",
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_bup_down__": "No",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_ecc_dow__": "no",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "build_dir": "/group/siv4/proj/everest/public/releases/spp/spp_ps_me_s80es2_v4_1/",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "image_path": "/group/siv4/proj/everest/public/releases/spp/spp_ps_me_s80es2_v4_1/pdi/static_ospi.pdi",
+                    "jtag_freq": "400000",
+                    "proc": "a72",
+                    "ptm_ver": "module \"switch protium/18.10.000\"",
+                    "reserve_count": "4",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "unlock_cmd": "unlock_4",
+                    "xsdb_ver": "/group/siv4/tools/xilinx/2019.2_INT_1014_1/installs/lin64/Vitis/2019.2/bin/xsdb",
+                    "xsdbrc_path": "/group/siv4/proj/everest/public/releases/spp/spp_ps_me_s80es2_v4_1/.xsdbrc"
+                },
+                "template_file": "everest_protium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": {
+                        "unlock_cmd": "unlock_4"
+                    },
+                    "com": "com0",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/ps_me_es2_4_1/protium",
+        "script_num": 7
+    },
+    "protium_a72_ospi_bup_preempt": {
+        "cmd": "-pj everest -si ps_me_es2_4_1 -b protium --processor a72 -ospi -bup -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "spp_ps_me_es2_4_1",
+                    "knobs": "Me_enable=1,",
+                    "preempt": "YES",
+                    "script_name": "protium_a72_ospi_bup_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__pl_rst__": "yes",
+                    "__SUB_TEMPLATE__ppu1_rst__": "yes",
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_bup_down__": "No",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_ecc_dow__": "no",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "build_dir": "/group/siv4/proj/everest/public/releases/spp/spp_ps_me_s80es2_v4_1/",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "image_path": "/group/siv4/proj/everest/public/releases/spp/spp_ps_me_s80es2_v4_1/pdi/static_ospi.pdi",
+                    "jtag_freq": "400000",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "ptm_ver": "module \"switch protium/18.10.000\"",
+                    "reserve_count": "4",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "unlock_cmd": "unlock_4",
+                    "xsdb_ver": "/group/siv4/tools/xilinx/2019.2_INT_1014_1/installs/lin64/Vitis/2019.2/bin/xsdb",
+                    "xsdbrc_path": "/group/siv4/proj/everest/public/releases/spp/spp_ps_me_s80es2_v4_1/.xsdbrc"
+                },
+                "template_file": "everest_protium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": {
+                        "unlock_cmd": "unlock_4"
+                    },
+                    "com": "com0",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/ps_me_es2_4_1/protium",
+        "script_num": 8
+    },
+    "protium_r5_bup": {
+        "cmd": "-pj everest -si ps_me_es2_4_1 -b protium --processor r5 -bup",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "spp_ps_me_es2_4_1",
+                    "knobs": "Me_enable=1,",
+                    "preempt": "NO",
+                    "script_name": "protium_r5_bup"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__pl_rst__": "yes",
+                    "__SUB_TEMPLATE__ppu1_rst__": "no",
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "no",
+                    "__SUB_TEMPLATE__spp_bup_down__": "No",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_ecc_dow__": "no",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "yes",
+                    "build_dir": "/group/siv4/proj/everest/public/releases/spp/spp_ps_me_s80es2_v4_1/",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "image_path": "/group/siv4/proj/everest/public/releases/spp/spp_ps_me_s80es2_v4_1/pdi/static.pdi",
+                    "jtag_freq": "400000",
+                    "proc": "r5",
+                    "ptm_ver": "module \"switch protium/18.10.000\"",
+                    "reserve_count": "4",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "unlock_cmd": "unlock_4",
+                    "xsdb_ver": "/group/siv4/tools/xilinx/2019.2_INT_1014_1/installs/lin64/Vitis/2019.2/bin/xsdb",
+                    "xsdbrc_path": "/group/siv4/proj/everest/public/releases/spp/spp_ps_me_s80es2_v4_1/.xsdbrc"
+                },
+                "template_file": "everest_protium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": {
+                        "unlock_cmd": "unlock_4"
+                    },
+                    "com": "com0",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/ps_me_es2_4_1/protium",
+        "script_num": 9
+    },
+    "protium_r5_bup_preempt": {
+        "cmd": "-pj everest -si ps_me_es2_4_1 -b protium --processor r5 -bup -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "spp_ps_me_es2_4_1",
+                    "knobs": "Me_enable=1,",
+                    "preempt": "YES",
+                    "script_name": "protium_r5_bup_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__pl_rst__": "yes",
+                    "__SUB_TEMPLATE__ppu1_rst__": "no",
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "no",
+                    "__SUB_TEMPLATE__spp_bup_down__": "No",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_ecc_dow__": "no",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "yes",
+                    "build_dir": "/group/siv4/proj/everest/public/releases/spp/spp_ps_me_s80es2_v4_1/",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "image_path": "/group/siv4/proj/everest/public/releases/spp/spp_ps_me_s80es2_v4_1/pdi/static.pdi",
+                    "jtag_freq": "400000",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "r5",
+                    "ptm_ver": "module \"switch protium/18.10.000\"",
+                    "reserve_count": "4",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "unlock_cmd": "unlock_4",
+                    "xsdb_ver": "/group/siv4/tools/xilinx/2019.2_INT_1014_1/installs/lin64/Vitis/2019.2/bin/xsdb",
+                    "xsdbrc_path": "/group/siv4/proj/everest/public/releases/spp/spp_ps_me_s80es2_v4_1/.xsdbrc"
+                },
+                "template_file": "everest_protium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": {
+                        "unlock_cmd": "unlock_4"
+                    },
+                    "com": "com0",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/ps_me_es2_4_1/protium",
+        "script_num": 10
+    },
+    "protium_r5_ospi_bup": {
+        "cmd": "-pj everest -si ps_me_es2_4_1 -b protium --processor r5 -ospi -bup",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "spp_ps_me_es2_4_1",
+                    "knobs": "Me_enable=1,",
+                    "preempt": "NO",
+                    "script_name": "protium_r5_ospi_bup"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__pl_rst__": "yes",
+                    "__SUB_TEMPLATE__ppu1_rst__": "no",
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "no",
+                    "__SUB_TEMPLATE__spp_bup_down__": "No",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_ecc_dow__": "no",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "yes",
+                    "build_dir": "/group/siv4/proj/everest/public/releases/spp/spp_ps_me_s80es2_v4_1/",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "image_path": "/group/siv4/proj/everest/public/releases/spp/spp_ps_me_s80es2_v4_1/pdi/static_ospi.pdi",
+                    "jtag_freq": "400000",
+                    "proc": "r5",
+                    "ptm_ver": "module \"switch protium/18.10.000\"",
+                    "reserve_count": "4",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "unlock_cmd": "unlock_4",
+                    "xsdb_ver": "/group/siv4/tools/xilinx/2019.2_INT_1014_1/installs/lin64/Vitis/2019.2/bin/xsdb",
+                    "xsdbrc_path": "/group/siv4/proj/everest/public/releases/spp/spp_ps_me_s80es2_v4_1/.xsdbrc"
+                },
+                "template_file": "everest_protium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": {
+                        "unlock_cmd": "unlock_4"
+                    },
+                    "com": "com0",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/ps_me_es2_4_1/protium",
+        "script_num": 11
+    },
+    "protium_r5_ospi_bup_preempt": {
+        "cmd": "-pj everest -si ps_me_es2_4_1 -b protium --processor r5 -ospi -bup -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "spp_ps_me_es2_4_1",
+                    "knobs": "Me_enable=1,",
+                    "preempt": "YES",
+                    "script_name": "protium_r5_ospi_bup_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__pl_rst__": "yes",
+                    "__SUB_TEMPLATE__ppu1_rst__": "no",
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "no",
+                    "__SUB_TEMPLATE__spp_bup_down__": "No",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_ecc_dow__": "no",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "yes",
+                    "build_dir": "/group/siv4/proj/everest/public/releases/spp/spp_ps_me_s80es2_v4_1/",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "image_path": "/group/siv4/proj/everest/public/releases/spp/spp_ps_me_s80es2_v4_1/pdi/static_ospi.pdi",
+                    "jtag_freq": "400000",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "r5",
+                    "ptm_ver": "module \"switch protium/18.10.000\"",
+                    "reserve_count": "4",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "unlock_cmd": "unlock_4",
+                    "xsdb_ver": "/group/siv4/tools/xilinx/2019.2_INT_1014_1/installs/lin64/Vitis/2019.2/bin/xsdb",
+                    "xsdbrc_path": "/group/siv4/proj/everest/public/releases/spp/spp_ps_me_s80es2_v2_1/.xsdbrc"
+                },
+                "template_file": "everest_protium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": {
+                        "unlock_cmd": "unlock_4"
+                    },
+                    "com": "com0",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/ps_me_es2_4_1/protium",
+        "script_num": 12
+    }
+}

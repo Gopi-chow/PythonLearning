@@ -1,0 +1,10 @@
+                # Calculate runtime for preempted jobs
+                if run "[ \"$actualruntime\" == \"0\" ]" then
+	              print <::com:=:serial::> "\003"
+	              print "ctrl+c is pressed before exiting"
+	              sleep 10
+                      $endtime := 'date +%s'
+                      print "End time: $endtime"
+                      $actualruntime := "expr $endtime - $starttime"
+                      print "BURST run is preempted after $actualruntime seconds"
+                endif

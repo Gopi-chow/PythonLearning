@@ -1,0 +1,2 @@
+#AIE2 V3 hack
+print my_xsdb "mwr -force 0xfd1a0110 0x02000202"

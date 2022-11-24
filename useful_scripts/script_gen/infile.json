@@ -1,0 +1,25 @@
+{
+    "setup_name": "normal_setup",
+    "normal_setup": {
+        "project": "test",
+        "board": "test_board",
+        "si": "test_si",
+        "processor": "test_processor",
+        "pre-emptable": "",
+        "board_revision": "",
+        "daughter_card": "",
+        "clock": "",
+        "display_port": "",
+        "big-endian": "",
+        "ecc": ""
+    },
+    "pcie_setup": {
+        "project": "test",
+        "si": "test_si",
+        "processor": "test_processor",
+        "pre-emptable": "",
+        "root_complex": "test_rc",
+        "end_point": "test_ep",
+        "lane_count": "x1"
+    }
+}

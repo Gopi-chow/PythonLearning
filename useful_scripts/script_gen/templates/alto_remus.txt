@@ -1,0 +1,104 @@
+<::preemption_off:=: ::>
+serial baud = 115200
+
+$PROCESSOR = "<::proc::>"
+$PROJ_REMUS_BURST_DROP_VER= "ep_8.2_r46580_burstdrop20160915"
+$ECC_INIT_ELF= "<::ecc_elf::>"
+$BURST_KNOBS := 'echo $BURST_KNOBS | sed -e "s/,/;/g"'
+$DDR_INIT_DONE_FSBL = "YES"
+##ELF Path for BURST, FSBL
+$USER_BUP= "rem80bup_27c"
+$BURST_BUP= "/group/siv3/proj/ronaldo/tapeout/validation_4.0/burst/to0_regression/$PROJ_REMUS_BURST_DROP_VER/scripts/$USER_BUP/implementation/project_1.runs/impl_1/top.bit"
+$FSBL_ELF= "/group/siv2/proj/ronaldo/public/releases/$BURST_HW/elfs/fsbl/<::fsbl_elf::>"
+$BITSTREAM_PATH = "/group/siv2/proj/ronaldo/public/releases/$BURST_HW/bitstreams"
+$IOU_INIT_TCL = "/group/siv2/proj/ronaldo/public/releases/$BURST_HW/bin/iou_init.tcl"
+$dir1 = "$SYSTEST_HOST"
+run "mkdir -p $LOGPATH/$dir1"        
+$dir2 = "$logdate"
+run "mkdir -p $LOGPATH/$SYSTEST_HOST/$dir2"        
+$BURST_RESULTS = "$LOGPATH/$SYSTEST_HOST/$dir2"
+$LOGFILE = "$BURST_RESULTS/burst_serial_$SYSTEST_HOST.log"
+$WHICH_XSDB := "which xsdb"
+
+######################################################################
+
+#Enable CSU
+$HW_SERVER_SHOW_CSU="1"                
+module "clear yes"
+cleankeys
+power 0
+sleep 2                
+power 1
+sleep 2
+
+record serial "$LOGFILE"        
+debug "$BURST_RESULTS/burst_debug_$SYSTEST_HOST.log" 
+print "REMUS_ID_$logdate,$BURST_HW,$BURST_BUP,$BURST_ELF,$SYSTEST_HOST,$logdate1,$BURST_RUNTIME,xx,$PREEMPTABLE,IN_PROGRESS,TBD,$BURST_RESULTS,[$PROCESSOR]$BURST_HW.$BURST_BUP.$BURST_ELF.$SYSTEST_HOST.xx.TBD,$BURST_KNOBS"
+print "Zynq Version    :$BURST_HW"
+print "BUP Version     :$BURST_BUP"
+print "FSBL_ELF        :$FSBL_ELF"
+print "IOU INIT TCL    :$IOU_INIT_TCL"
+print "BOARD           :$SYSTEST_HOST"
+print "BURST elf       :$BURST_ELF"
+print "BITSTREAMS      :$BITSTREAM_PATH"
+print "BURST runtime   :$BURST_RUNTIME seconds"
+print "XSDB Version    :$WHICH_XSDB"
+print "Job ID          :$LSB_JOBID"
+
+if run "[ \"$SKIP_EMU_CONFIG\" == \"\" ]" then        
+	$SKIP_EMU_CONFIG="NO"
+endif        
+if run "[ \"$SKIP_EMU_CONFIG\" == \"NO\" ]" then        
+# Perform power and sleep sequencing
+	epversion "$BURST_HW"        
+	configure 5 "$BITSTREAM_PATH/config_si5338.bit"        
+	if run "[ \"$BURST_BUP\" != \"none\" ]" then        
+		$EP108_USER_BITSTREAM="$BURST_BUP"
+	endif        
+	cfgdir "$BITSTREAM_PATH"
+else        
+	epversion "$BURST_HW"
+	reset
+endif
+
+
+fork "xsdb" as my_xsdb
+my_xsdb echo = 1
+
+print my_xsdb "connect"         # Connect to hw server
+print my_xsdb "targets"  # List all cores
+print my_xsdb "targets -set -filter {name =~ \"PS8\"|| name =~ \"PSU\"}"   # Connect to DAP
+print my_xsdb "memmap -addr 0x00000000 -size 0x80000000 -flags 7"
+<::__SUB_TEMPLATE__a53_rst__:=:No::>
+<::__SUB_TEMPLATE__r5_rst__:=:No::>
+print my_xsdb "stop"
+print my_xsdb "targets"        
+
+# Check if DDR init is performed in FSBL/Standalone        
+if run "[ \"$DDR_INIT_DONE_FSBL\" == \"NO\" ]" then        
+	print my_xsdb "source $DDR_INIT_TCL"        
+	print my_xsdb "init_ddrc"
+else
+	print my_xsdb "dow $FSBL_ELF"        
+	print my_xsdb "con"
+	print my_xsdb "exec sleep 4"        
+	print my_xsdb "stop"
+	print my_xsdb "exec sleep 1"
+endif
+<::__SUB_TEMPLATE__remus_r5_ecc__:=:No::>
+<::__SUB_TEMPLATE__remus_a53_ecc__:=:No::>
+# Intialize IO
+print my_xsdb "source $IOU_INIT_TCL"        
+print my_xsdb "emmc0 ; sd1"
+
+# Download BURST            
+print my_xsdb "mrd 0x00100000 20"            
+print my_xsdb "dow $BURST_ELF"            
+print my_xsdb "mrd 0x00100000 20"
+print my_xsdb "mrd -force 0xFD0706A8"
+print my_xsdb "mrd -force 0xFD0706B0"
+print my_xsdb "mrd -force 0xFD090000"
+print my_xsdb "rrd"
+<::preemption_on:=: ::>            
+print my_xsdb "con"
+print my_xsdb "exit"

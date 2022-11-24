@@ -1,0 +1,8 @@
+-rc v7  -ep v7 -lc x4 -p mb  -si prod -pj virtex7 -brc axipcie -bep axipcie  -rt 3600
+#-rc k7  -ep k7 -lc x4 -p mb  -si prod -pj kintex7 -brc axipcie -bep axipcie -rt 3600
+#-rc k7  -ep k7 -lc x4 -p mb  -si prod -pj kintex7 -brc axipcie -bep nwlpcie -rt 3600
+#-rc k7  -ep k7 -lc x4 -p mb  -si prod -pj kintex7 -brc nwlpcie -bep axipcie -rt 3600
+-rc k7  -ep k7 -lc x4 -p mb  -si prod -pj kintex7 -brc nwlpcie -bep nwlpcie  -rt 3600
+-rc k7  -ep k7 -lc x4 -p mb  -si prod -pj kintex7 -brc nwlpcie -bep plb2pcie -rt 3600
+-rc x86 -ep k7 -lc x4 -p x86 -si prod -pj kintex7              -bep axipcie  -rt 3600
+-rc x86 -ep k7 -lc x4 -p x86 -si prod -pj kintex7              -bep nwlpcie  -rt 3600

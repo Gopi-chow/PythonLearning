@@ -1,0 +1,3 @@
+
+print my_xsdb "targets -set -filter {name =~ \"Cortex-A72 #0\"}"
+print my_xsdb "targets"

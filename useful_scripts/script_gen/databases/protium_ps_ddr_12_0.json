@@ -1,0 +1,2162 @@
+{
+    "protium_a72": {
+        "cmd": "-pj everest -si ps_ddr_12_0 -b protium --processor a72",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "spp_ps_ddr_12_0",
+                    "knobs": "",
+                    "preempt": "NO",
+                    "script_name": "protium_a72"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_bup_down__": "Yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_ecc_dow__": "no",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "image_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/noc_compiler_eb1989/images/boot.bin",
+                    "jtag_freq": "1500000",
+                    "proc": "a72",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "xsdb_ver": "/proj/xbuilds/2019.2_INT_0501_1/installs/lin64/SDK/HEAD/bin/xsdb",
+                    "xsdbrc_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/.xsdbrc"
+                },
+                "template_file": "everest_protium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_palladium__": "No",
+                    "__SUB_TEMPLATE__exit_protium__": "Yes",
+                    "com": "com0",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/ps_ddr_12_0/protium",
+        "script_num": 1
+    },
+    "protium_a72_be": {
+        "cmd": "-pj everest -si ps_ddr_12_0 -b protium --processor a72 -be",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "spp_ps_ddr_12_0",
+                    "knobs": "",
+                    "preempt": "NO",
+                    "script_name": "protium_a72_be"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_bup_down__": "Yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_ecc_dow__": "no",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "image_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/noc_compiler_eb1989/images/boot.bin",
+                    "jtag_freq": "1500000",
+                    "proc": "a72",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "xsdb_ver": "/proj/xbuilds/2019.2_INT_0501_1/installs/lin64/SDK/HEAD/bin/xsdb",
+                    "xsdbrc_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/.xsdbrc"
+                },
+                "template_file": "everest_protium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_palladium__": "No",
+                    "__SUB_TEMPLATE__exit_protium__": "Yes",
+                    "com": "com0",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/ps_ddr_12_0/protium",
+        "script_num": 2
+    },
+    "protium_a72_be_bup": {
+        "cmd": "-pj everest -si ps_ddr_12_0 -b protium --processor a72 -be -bup",
+        "form": [
+            {
+                "keys": {
+                    "bup": "/group/siv4/proj/everest/public/releases/spp/spp_ps_ddr_12_0/user/FPGA_1D_bup/vivado/xcva_top_1_1D.bit",
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "spp_ps_ddr_12_0",
+                    "knobs": "",
+                    "preempt": "NO",
+                    "script_name": "protium_a72_be_bup"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_bup_down__": "Yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_ecc_dow__": "no",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "image_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/noc_compiler_eb1989/images/boot.bin",
+                    "jtag_freq": "1500000",
+                    "proc": "a72",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "xsdb_ver": "/proj/xbuilds/2019.2_INT_0501_1/installs/lin64/SDK/HEAD/bin/xsdb",
+                    "xsdbrc_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/.xsdbrc"
+                },
+                "template_file": "everest_protium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "Yes",
+                    "com": "com0",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/ps_ddr_12_0/protium",
+        "script_num": 3
+    },
+    "protium_a72_be_bup_preempt": {
+        "cmd": "-pj everest -si ps_ddr_12_0 -b protium --processor a72 -be -bup -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "bup": "/group/siv4/proj/everest/public/releases/spp/spp_ps_ddr_12_0/user/FPGA_1D_bup/vivado/xcva_top_1_1D.bit",
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "spp_ps_ddr_12_0",
+                    "knobs": "",
+                    "preempt": "YES",
+                    "script_name": "protium_a72_be_bup_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_bup_down__": "Yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_ecc_dow__": "no",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "image_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/noc_compiler_eb1989/images/boot.bin",
+                    "jtag_freq": "1500000",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "xsdb_ver": "/proj/xbuilds/2019.2_INT_0501_1/installs/lin64/SDK/HEAD/bin/xsdb",
+                    "xsdbrc_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/.xsdbrc"
+                },
+                "template_file": "everest_protium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "Yes",
+                    "com": "com0",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/ps_ddr_12_0/protium",
+        "script_num": 4
+    },
+    "protium_a72_be_ecc": {
+        "cmd": "-pj everest -si ps_ddr_12_0 -b protium --processor a72 -be -ecc",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "spp_ps_ddr_12_0",
+                    "knobs": "",
+                    "preempt": "NO",
+                    "script_name": "protium_a72_be_ecc"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_bup_down__": "Yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_ecc_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "image_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/noc_compiler_eb1989/images_ecc/boot.bin",
+                    "jtag_freq": "1500000",
+                    "proc": "a72",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "xsdb_ver": "/proj/xbuilds/2019.2_INT_0501_1/installs/lin64/SDK/HEAD/bin/xsdb",
+                    "xsdbrc_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/.xsdbrc"
+                },
+                "template_file": "everest_protium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_palladium__": "No",
+                    "__SUB_TEMPLATE__exit_protium__": "Yes",
+                    "com": "com0",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/ps_ddr_12_0/protium",
+        "script_num": 14
+    },
+    "protium_a72_be_ecc_bup": {
+        "cmd": "-pj everest -si ps_ddr_12_0 -b protium --processor a72 -be -ecc -bup",
+        "form": [
+            {
+                "keys": {
+                    "bup": "/group/siv4/proj/everest/public/releases/spp/spp_ps_ddr_12_0/user/FPGA_1D_bup/vivado/xcva_top_1_1D.bit",
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "spp_ps_ddr_12_0",
+                    "knobs": "",
+                    "preempt": "NO",
+                    "script_name": "protium_a72_be_ecc_bup"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_bup_down__": "Yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_ecc_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "image_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/noc_compiler_eb1989/images_ecc/boot.bin",
+                    "jtag_freq": "1500000",
+                    "proc": "a72",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "xsdb_ver": "/proj/xbuilds/2019.2_INT_0501_1/installs/lin64/SDK/HEAD/bin/xsdb",
+                    "xsdbrc_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/.xsdbrc"
+                },
+                "template_file": "everest_protium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "Yes",
+                    "com": "com0",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/ps_ddr_12_0/protium",
+        "script_num": 15
+    },
+    "protium_a72_be_ecc_bup_preempt": {
+        "cmd": "-pj everest -si ps_ddr_12_0 -b protium --processor a72 -be -ecc -bup -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "bup": "/group/siv4/proj/everest/public/releases/spp/spp_ps_ddr_12_0/user/FPGA_1D_bup/vivado/xcva_top_1_1D.bit",
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "spp_ps_ddr_12_0",
+                    "knobs": "",
+                    "preempt": "YES",
+                    "script_name": "protium_a72_be_ecc_bup_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_bup_down__": "Yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_ecc_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "image_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/noc_compiler_eb1989/images_ecc/boot.bin",
+                    "jtag_freq": "1500000",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "xsdb_ver": "/proj/xbuilds/2019.2_INT_0501_1/installs/lin64/SDK/HEAD/bin/xsdb",
+                    "xsdbrc_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/.xsdbrc"
+                },
+                "template_file": "everest_protium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "Yes",
+                    "com": "com0",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/ps_ddr_12_0/protium",
+        "script_num": 16
+    },
+    "protium_a72_be_ecc_preempt": {
+        "cmd": "-pj everest -si ps_ddr_12_0 -b protium --processor a72 -be -ecc -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "spp_ps_ddr_12_0",
+                    "knobs": "",
+                    "preempt": "YES",
+                    "script_name": "protium_a72_be_ecc_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_bup_down__": "Yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_ecc_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "image_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/noc_compiler_eb1989/images_ecc/boot.bin",
+                    "jtag_freq": "1500000",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "xsdb_ver": "/proj/xbuilds/2019.2_INT_0501_1/installs/lin64/SDK/HEAD/bin/xsdb",
+                    "xsdbrc_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/.xsdbrc"
+                },
+                "template_file": "everest_protium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_palladium__": "No",
+                    "__SUB_TEMPLATE__exit_protium__": "Yes",
+                    "com": "com0",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/ps_ddr_12_0/protium",
+        "script_num": 17
+    },
+    "protium_a72_be_ospi": {
+        "cmd": "-pj everest -si ps_ddr_12_0 -b protium --processor a72 -be -ospi",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "spp_ps_ddr_12_0",
+                    "knobs": "",
+                    "preempt": "NO",
+                    "script_name": "protium_a72_be_ospi"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_bup_down__": "Yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_ecc_dow__": "no",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "image_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/noc_compiler_eb1989/images_ospi/boot.bin",
+                    "jtag_freq": "1500000",
+                    "proc": "a72",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "xsdb_ver": "/proj/xbuilds/2019.2_INT_0501_1/installs/lin64/SDK/HEAD/bin/xsdb",
+                    "xsdbrc_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/.xsdbrc"
+                },
+                "template_file": "everest_protium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_palladium__": "No",
+                    "__SUB_TEMPLATE__exit_protium__": "Yes",
+                    "com": "com0",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/ps_ddr_12_0/protium",
+        "script_num": 26
+    },
+    "protium_a72_be_ospi_bup": {
+        "cmd": "-pj everest -si ps_ddr_12_0 -b protium --processor a72 -be -ospi -bup",
+        "form": [
+            {
+                "keys": {
+                    "bup": "/group/siv4/proj/everest/public/releases/spp/spp_ps_ddr_12_0/user/FPGA_1D_bup/vivado/xcva_top_1_1D.bit",
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "spp_ps_ddr_12_0",
+                    "knobs": "",
+                    "preempt": "NO",
+                    "script_name": "protium_a72_be_ospi_bup"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_bup_down__": "Yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_ecc_dow__": "no",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "image_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/noc_compiler_eb1989/images_ospi/boot.bin",
+                    "jtag_freq": "1500000",
+                    "proc": "a72",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "xsdb_ver": "/proj/xbuilds/2019.2_INT_0501_1/installs/lin64/SDK/HEAD/bin/xsdb",
+                    "xsdbrc_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/.xsdbrc"
+                },
+                "template_file": "everest_protium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "Yes",
+                    "com": "com0",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/ps_ddr_12_0/protium",
+        "script_num": 27
+    },
+    "protium_a72_be_ospi_bup_preempt": {
+        "cmd": "-pj everest -si ps_ddr_12_0 -b protium --processor a72 -be -ospi -bup -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "bup": "/group/siv4/proj/everest/public/releases/spp/spp_ps_ddr_12_0/user/FPGA_1D_bup/vivado/xcva_top_1_1D.bit",
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "spp_ps_ddr_12_0",
+                    "knobs": "",
+                    "preempt": "YES",
+                    "script_name": "protium_a72_be_ospi_bup_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_bup_down__": "Yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_ecc_dow__": "no",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "image_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/noc_compiler_eb1989/images_ospi/boot.bin",
+                    "jtag_freq": "1500000",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "xsdb_ver": "/proj/xbuilds/2019.2_INT_0501_1/installs/lin64/SDK/HEAD/bin/xsdb",
+                    "xsdbrc_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/.xsdbrc"
+                },
+                "template_file": "everest_protium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "Yes",
+                    "com": "com0",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/ps_ddr_12_0/protium",
+        "script_num": 28
+    },
+    "protium_a72_be_ospi_ecc": {
+        "cmd": "-pj everest -si ps_ddr_12_0 -b protium --processor a72 -be -ospi -ecc",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "spp_ps_ddr_12_0",
+                    "knobs": "",
+                    "preempt": "NO",
+                    "script_name": "protium_a72_be_ospi_ecc"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_bup_down__": "Yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_ecc_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "image_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/noc_compiler_eb1989/images_ospi_ecc/boot.bin",
+                    "jtag_freq": "1500000",
+                    "proc": "a72",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "xsdb_ver": "/proj/xbuilds/2019.2_INT_0501_1/installs/lin64/SDK/HEAD/bin/xsdb",
+                    "xsdbrc_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/.xsdbrc"
+                },
+                "template_file": "everest_protium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_palladium__": "No",
+                    "__SUB_TEMPLATE__exit_protium__": "Yes",
+                    "com": "com0",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/ps_ddr_12_0/protium",
+        "script_num": 38
+    },
+    "protium_a72_be_ospi_ecc_bup": {
+        "cmd": "-pj everest -si ps_ddr_12_0 -b protium --processor a72 -be -ospi -ecc -bup",
+        "form": [
+            {
+                "keys": {
+                    "bup": "/group/siv4/proj/everest/public/releases/spp/spp_ps_ddr_12_0/user/FPGA_1D_bup/vivado/xcva_top_1_1D.bit",
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "spp_ps_ddr_12_0",
+                    "knobs": "",
+                    "preempt": "NO",
+                    "script_name": "protium_a72_be_ospi_ecc_bup"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_bup_down__": "Yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_ecc_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "image_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/noc_compiler_eb1989/images_ospi_ecc/boot.bin",
+                    "jtag_freq": "1500000",
+                    "proc": "a72",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "xsdb_ver": "/proj/xbuilds/2019.2_INT_0501_1/installs/lin64/SDK/HEAD/bin/xsdb",
+                    "xsdbrc_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/.xsdbrc"
+                },
+                "template_file": "everest_protium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "Yes",
+                    "com": "com0",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/ps_ddr_12_0/protium",
+        "script_num": 39
+    },
+    "protium_a72_be_ospi_ecc_bup_preempt": {
+        "cmd": "-pj everest -si ps_ddr_12_0 -b protium --processor a72 -be -ospi -ecc -bup -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "bup": "/group/siv4/proj/everest/public/releases/spp/spp_ps_ddr_12_0/user/FPGA_1D_bup/vivado/xcva_top_1_1D.bit",
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "spp_ps_ddr_12_0",
+                    "knobs": "",
+                    "preempt": "YES",
+                    "script_name": "protium_a72_be_ospi_ecc_bup_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_bup_down__": "Yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_ecc_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "image_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/noc_compiler_eb1989/images_ospi_ecc/boot.bin",
+                    "jtag_freq": "1500000",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "xsdb_ver": "/proj/xbuilds/2019.2_INT_0501_1/installs/lin64/SDK/HEAD/bin/xsdb",
+                    "xsdbrc_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/.xsdbrc"
+                },
+                "template_file": "everest_protium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "Yes",
+                    "com": "com0",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/ps_ddr_12_0/protium",
+        "script_num": 40
+    },
+    "protium_a72_be_ospi_ecc_preempt": {
+        "cmd": "-pj everest -si ps_ddr_12_0 -b protium --processor a72 -be -ospi -ecc -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "spp_ps_ddr_12_0",
+                    "knobs": "",
+                    "preempt": "YES",
+                    "script_name": "protium_a72_be_ospi_ecc_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_bup_down__": "Yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_ecc_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "image_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/noc_compiler_eb1989/images_ospi_ecc/boot.bin",
+                    "jtag_freq": "1500000",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "xsdb_ver": "/proj/xbuilds/2019.2_INT_0501_1/installs/lin64/SDK/HEAD/bin/xsdb",
+                    "xsdbrc_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/.xsdbrc"
+                },
+                "template_file": "everest_protium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_palladium__": "No",
+                    "__SUB_TEMPLATE__exit_protium__": "Yes",
+                    "com": "com0",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/ps_ddr_12_0/protium",
+        "script_num": 41
+    },
+    "protium_a72_be_ospi_preempt": {
+        "cmd": "-pj everest -si ps_ddr_12_0 -b protium --processor a72 -be -ospi -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "spp_ps_ddr_12_0",
+                    "knobs": "",
+                    "preempt": "YES",
+                    "script_name": "protium_a72_be_ospi_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_bup_down__": "Yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_ecc_dow__": "no",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "image_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/noc_compiler_eb1989/images_ospi/boot.bin",
+                    "jtag_freq": "1500000",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "xsdb_ver": "/proj/xbuilds/2019.2_INT_0501_1/installs/lin64/SDK/HEAD/bin/xsdb",
+                    "xsdbrc_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/.xsdbrc"
+                },
+                "template_file": "everest_protium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_palladium__": "No",
+                    "__SUB_TEMPLATE__exit_protium__": "Yes",
+                    "com": "com0",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/ps_ddr_12_0/protium",
+        "script_num": 29
+    },
+    "protium_a72_be_preempt": {
+        "cmd": "-pj everest -si ps_ddr_12_0 -b protium --processor a72 -be -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "spp_ps_ddr_12_0",
+                    "knobs": "",
+                    "preempt": "YES",
+                    "script_name": "protium_a72_be_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_bup_down__": "Yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_ecc_dow__": "no",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "image_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/noc_compiler_eb1989/images/boot.bin",
+                    "jtag_freq": "1500000",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "xsdb_ver": "/proj/xbuilds/2019.2_INT_0501_1/installs/lin64/SDK/HEAD/bin/xsdb",
+                    "xsdbrc_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/.xsdbrc"
+                },
+                "template_file": "everest_protium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_palladium__": "No",
+                    "__SUB_TEMPLATE__exit_protium__": "Yes",
+                    "com": "com0",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/ps_ddr_12_0/protium",
+        "script_num": 5
+    },
+    "protium_a72_bup": {
+        "cmd": "-pj everest -si ps_ddr_12_0 -b protium --processor a72 -bup",
+        "form": [
+            {
+                "keys": {
+                    "bup": "/group/siv4/proj/everest/public/releases/spp/spp_ps_ddr_12_0/user/FPGA_1D_bup/vivado/xcva_top_1_1D.bit",
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "spp_ps_ddr_12_0",
+                    "knobs": "",
+                    "preempt": "NO",
+                    "script_name": "protium_a72_bup"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_bup_down__": "Yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_ecc_dow__": "no",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "image_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/noc_compiler_eb1989/images/boot.bin",
+                    "jtag_freq": "1500000",
+                    "proc": "a72",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "xsdb_ver": "/proj/xbuilds/2019.2_INT_0501_1/installs/lin64/SDK/HEAD/bin/xsdb",
+                    "xsdbrc_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/.xsdbrc"
+                },
+                "template_file": "everest_protium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "Yes",
+                    "com": "com0",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/ps_ddr_12_0/protium",
+        "script_num": 6
+    },
+    "protium_a72_bup_preempt": {
+        "cmd": "-pj everest -si ps_ddr_12_0 -b protium --processor a72 -bup -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "bup": "/group/siv4/proj/everest/public/releases/spp/spp_ps_ddr_12_0/user/FPGA_1D_bup/vivado/xcva_top_1_1D.bit",
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "spp_ps_ddr_12_0",
+                    "knobs": "",
+                    "preempt": "YES",
+                    "script_name": "protium_a72_bup_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_bup_down__": "Yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_ecc_dow__": "no",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "image_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/noc_compiler_eb1989/images/boot.bin",
+                    "jtag_freq": "1500000",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "xsdb_ver": "/proj/xbuilds/2019.2_INT_0501_1/installs/lin64/SDK/HEAD/bin/xsdb",
+                    "xsdbrc_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/.xsdbrc"
+                },
+                "template_file": "everest_protium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "Yes",
+                    "com": "com0",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/ps_ddr_12_0/protium",
+        "script_num": 7
+    },
+    "protium_a72_ecc": {
+        "cmd": "-pj everest -si ps_ddr_12_0 -b protium --processor a72 -ecc",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "spp_ps_ddr_12_0",
+                    "knobs": "",
+                    "preempt": "NO",
+                    "script_name": "protium_a72_ecc"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_bup_down__": "Yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_ecc_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "image_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/noc_compiler_eb1989/images_ecc/boot.bin",
+                    "jtag_freq": "1500000",
+                    "proc": "a72",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "xsdb_ver": "/proj/xbuilds/2019.2_INT_0501_1/installs/lin64/SDK/HEAD/bin/xsdb",
+                    "xsdbrc_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/.xsdbrc"
+                },
+                "template_file": "everest_protium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_palladium__": "No",
+                    "__SUB_TEMPLATE__exit_protium__": "Yes",
+                    "com": "com0",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/ps_ddr_12_0/protium",
+        "script_num": 13
+    },
+    "protium_a72_ecc_bup": {
+        "cmd": "-pj everest -si ps_ddr_12_0 -b protium --processor a72 -ecc -bup",
+        "form": [
+            {
+                "keys": {
+                    "bup": "/group/siv4/proj/everest/public/releases/spp/spp_ps_ddr_12_0/user/FPGA_1D_bup/vivado/xcva_top_1_1D.bit",
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "spp_ps_ddr_12_0",
+                    "knobs": "",
+                    "preempt": "NO",
+                    "script_name": "protium_a72_ecc_bup"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_bup_down__": "Yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_ecc_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "image_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/noc_compiler_eb1989/images_ecc/boot.bin",
+                    "jtag_freq": "1500000",
+                    "proc": "a72",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "xsdb_ver": "/proj/xbuilds/2019.2_INT_0501_1/installs/lin64/SDK/HEAD/bin/xsdb",
+                    "xsdbrc_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/.xsdbrc"
+                },
+                "template_file": "everest_protium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "Yes",
+                    "com": "com0",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/ps_ddr_12_0/protium",
+        "script_num": 18
+    },
+    "protium_a72_ecc_bup_preempt": {
+        "cmd": "-pj everest -si ps_ddr_12_0 -b protium --processor a72 -ecc -bup -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "bup": "/group/siv4/proj/everest/public/releases/spp/spp_ps_ddr_12_0/user/FPGA_1D_bup/vivado/xcva_top_1_1D.bit",
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "spp_ps_ddr_12_0",
+                    "knobs": "",
+                    "preempt": "YES",
+                    "script_name": "protium_a72_ecc_bup_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_bup_down__": "Yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_ecc_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "image_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/noc_compiler_eb1989/images_ecc/boot.bin",
+                    "jtag_freq": "1500000",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "xsdb_ver": "/proj/xbuilds/2019.2_INT_0501_1/installs/lin64/SDK/HEAD/bin/xsdb",
+                    "xsdbrc_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/.xsdbrc"
+                },
+                "template_file": "everest_protium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "Yes",
+                    "com": "com0",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/ps_ddr_12_0/protium",
+        "script_num": 19
+    },
+    "protium_a72_ecc_preempt": {
+        "cmd": "-pj everest -si ps_ddr_12_0 -b protium --processor a72 -ecc -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "spp_ps_ddr_12_0",
+                    "knobs": "",
+                    "preempt": "YES",
+                    "script_name": "protium_a72_ecc_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_bup_down__": "Yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_ecc_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "image_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/noc_compiler_eb1989/images_ecc/boot.bin",
+                    "jtag_freq": "1500000",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "xsdb_ver": "/proj/xbuilds/2019.2_INT_0501_1/installs/lin64/SDK/HEAD/bin/xsdb",
+                    "xsdbrc_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/.xsdbrc"
+                },
+                "template_file": "everest_protium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_palladium__": "No",
+                    "__SUB_TEMPLATE__exit_protium__": "Yes",
+                    "com": "com0",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/ps_ddr_12_0/protium",
+        "script_num": 20
+    },
+    "protium_a72_ospi": {
+        "cmd": "-pj everest -si ps_ddr_12_0 -b protium --processor a72 -ospi",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "spp_ps_ddr_12_0",
+                    "knobs": "",
+                    "preempt": "NO",
+                    "script_name": "protium_a72_ospi"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_bup_down__": "Yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_ecc_dow__": "no",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "image_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/noc_compiler_eb1989/images_ospi/boot.bin",
+                    "jtag_freq": "1500000",
+                    "proc": "a72",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "xsdb_ver": "/proj/xbuilds/2019.2_INT_0501_1/installs/lin64/SDK/HEAD/bin/xsdb",
+                    "xsdbrc_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/.xsdbrc"
+                },
+                "template_file": "everest_protium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_palladium__": "No",
+                    "__SUB_TEMPLATE__exit_protium__": "Yes",
+                    "com": "com0",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/ps_ddr_12_0/protium",
+        "script_num": 25
+    },
+    "protium_a72_ospi_bup": {
+        "cmd": "-pj everest -si ps_ddr_12_0 -b protium --processor a72 -ospi -bup",
+        "form": [
+            {
+                "keys": {
+                    "bup": "/group/siv4/proj/everest/public/releases/spp/spp_ps_ddr_12_0/user/FPGA_1D_bup/vivado/xcva_top_1_1D.bit",
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "spp_ps_ddr_12_0",
+                    "knobs": "",
+                    "preempt": "NO",
+                    "script_name": "protium_a72_ospi_bup"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_bup_down__": "Yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_ecc_dow__": "no",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "image_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/noc_compiler_eb1989/images_ospi/boot.bin",
+                    "jtag_freq": "1500000",
+                    "proc": "a72",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "xsdb_ver": "/proj/xbuilds/2019.2_INT_0501_1/installs/lin64/SDK/HEAD/bin/xsdb",
+                    "xsdbrc_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/.xsdbrc"
+                },
+                "template_file": "everest_protium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "Yes",
+                    "com": "com0",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/ps_ddr_12_0/protium",
+        "script_num": 30
+    },
+    "protium_a72_ospi_bup_preempt": {
+        "cmd": "-pj everest -si ps_ddr_12_0 -b protium --processor a72 -ospi -bup -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "bup": "/group/siv4/proj/everest/public/releases/spp/spp_ps_ddr_12_0/user/FPGA_1D_bup/vivado/xcva_top_1_1D.bit",
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "spp_ps_ddr_12_0",
+                    "knobs": "",
+                    "preempt": "YES",
+                    "script_name": "protium_a72_ospi_bup_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_bup_down__": "Yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_ecc_dow__": "no",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "image_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/noc_compiler_eb1989/images_ospi/boot.bin",
+                    "jtag_freq": "1500000",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "xsdb_ver": "/proj/xbuilds/2019.2_INT_0501_1/installs/lin64/SDK/HEAD/bin/xsdb",
+                    "xsdbrc_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/.xsdbrc"
+                },
+                "template_file": "everest_protium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "Yes",
+                    "com": "com0",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/ps_ddr_12_0/protium",
+        "script_num": 31
+    },
+    "protium_a72_ospi_ecc": {
+        "cmd": "-pj everest -si ps_ddr_12_0 -b protium --processor a72 -ospi -ecc",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "spp_ps_ddr_12_0",
+                    "knobs": "",
+                    "preempt": "NO",
+                    "script_name": "protium_a72_ospi_ecc"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_bup_down__": "Yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_ecc_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "image_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/noc_compiler_eb1989/images_ospi_ecc/boot.bin",
+                    "jtag_freq": "1500000",
+                    "proc": "a72",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "xsdb_ver": "/proj/xbuilds/2019.2_INT_0501_1/installs/lin64/SDK/HEAD/bin/xsdb",
+                    "xsdbrc_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/.xsdbrc"
+                },
+                "template_file": "everest_protium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_palladium__": "No",
+                    "__SUB_TEMPLATE__exit_protium__": "Yes",
+                    "com": "com0",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/ps_ddr_12_0/protium",
+        "script_num": 37
+    },
+    "protium_a72_ospi_ecc_bup": {
+        "cmd": "-pj everest -si ps_ddr_12_0 -b protium --processor a72 -ospi -ecc -bup",
+        "form": [
+            {
+                "keys": {
+                    "bup": "/group/siv4/proj/everest/public/releases/spp/spp_ps_ddr_12_0/user/FPGA_1D_bup/vivado/xcva_top_1_1D.bit",
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "spp_ps_ddr_12_0",
+                    "knobs": "",
+                    "preempt": "NO",
+                    "script_name": "protium_a72_ospi_ecc_bup"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_bup_down__": "Yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_ecc_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "image_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/noc_compiler_eb1989/images_ospi_ecc/boot.bin",
+                    "jtag_freq": "1500000",
+                    "proc": "a72",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "xsdb_ver": "/proj/xbuilds/2019.2_INT_0501_1/installs/lin64/SDK/HEAD/bin/xsdb",
+                    "xsdbrc_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/.xsdbrc"
+                },
+                "template_file": "everest_protium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "Yes",
+                    "com": "com0",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/ps_ddr_12_0/protium",
+        "script_num": 42
+    },
+    "protium_a72_ospi_ecc_bup_preempt": {
+        "cmd": "-pj everest -si ps_ddr_12_0 -b protium --processor a72 -ospi -ecc -bup -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "bup": "/group/siv4/proj/everest/public/releases/spp/spp_ps_ddr_12_0/user/FPGA_1D_bup/vivado/xcva_top_1_1D.bit",
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "spp_ps_ddr_12_0",
+                    "knobs": "",
+                    "preempt": "YES",
+                    "script_name": "protium_a72_ospi_ecc_bup_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_bup_down__": "Yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_ecc_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "image_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/noc_compiler_eb1989/images_ospi_ecc/boot.bin",
+                    "jtag_freq": "1500000",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "xsdb_ver": "/proj/xbuilds/2019.2_INT_0501_1/installs/lin64/SDK/HEAD/bin/xsdb",
+                    "xsdbrc_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/.xsdbrc"
+                },
+                "template_file": "everest_protium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "Yes",
+                    "com": "com0",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/ps_ddr_12_0/protium",
+        "script_num": 43
+    },
+    "protium_a72_ospi_ecc_preempt": {
+        "cmd": "-pj everest -si ps_ddr_12_0 -b protium --processor a72 -ospi -ecc -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "spp_ps_ddr_12_0",
+                    "knobs": "",
+                    "preempt": "YES",
+                    "script_name": "protium_a72_ospi_ecc_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_bup_down__": "Yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_ecc_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "image_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/noc_compiler_eb1989/images_ospi_ecc/boot.bin",
+                    "jtag_freq": "1500000",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "xsdb_ver": "/proj/xbuilds/2019.2_INT_0501_1/installs/lin64/SDK/HEAD/bin/xsdb",
+                    "xsdbrc_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/.xsdbrc"
+                },
+                "template_file": "everest_protium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_palladium__": "No",
+                    "__SUB_TEMPLATE__exit_protium__": "Yes",
+                    "com": "com0",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/ps_ddr_12_0/protium",
+        "script_num": 44
+    },
+    "protium_a72_ospi_preempt": {
+        "cmd": "-pj everest -si ps_ddr_12_0 -b protium --processor a72 -ospi -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "spp_ps_ddr_12_0",
+                    "knobs": "",
+                    "preempt": "YES",
+                    "script_name": "protium_a72_ospi_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_bup_down__": "Yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_ecc_dow__": "no",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "image_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/noc_compiler_eb1989/images_ospi/boot.bin",
+                    "jtag_freq": "1500000",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "xsdb_ver": "/proj/xbuilds/2019.2_INT_0501_1/installs/lin64/SDK/HEAD/bin/xsdb",
+                    "xsdbrc_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/.xsdbrc"
+                },
+                "template_file": "everest_protium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_palladium__": "No",
+                    "__SUB_TEMPLATE__exit_protium__": "Yes",
+                    "com": "com0",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/ps_ddr_12_0/protium",
+        "script_num": 32
+    },
+    "protium_a72_preempt": {
+        "cmd": "-pj everest -si ps_ddr_12_0 -b protium --processor a72 -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "spp_ps_ddr_12_0",
+                    "knobs": "",
+                    "preempt": "YES",
+                    "script_name": "protium_a72_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_bup_down__": "Yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_ecc_dow__": "no",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "image_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/noc_compiler_eb1989/images/boot.bin",
+                    "jtag_freq": "1500000",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "xsdb_ver": "/proj/xbuilds/2019.2_INT_0501_1/installs/lin64/SDK/HEAD/bin/xsdb",
+                    "xsdbrc_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/.xsdbrc"
+                },
+                "template_file": "everest_protium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_palladium__": "No",
+                    "__SUB_TEMPLATE__exit_protium__": "Yes",
+                    "com": "com0",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/ps_ddr_12_0/protium",
+        "script_num": 8
+    },
+    "protium_r5": {
+        "cmd": "-pj everest -si ps_ddr_12_0 -b protium --processor r5",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "spp_ps_ddr_12_0",
+                    "knobs": "",
+                    "preempt": "NO",
+                    "script_name": "protium_r5"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "no",
+                    "__SUB_TEMPLATE__spp_bup_down__": "Yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_ecc_dow__": "no",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "yes",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "image_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/noc_compiler_eb1989/images/boot.bin",
+                    "jtag_freq": "1500000",
+                    "proc": "r5",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "xsdb_ver": "/proj/xbuilds/2019.2_INT_0501_1/installs/lin64/SDK/HEAD/bin/xsdb",
+                    "xsdbrc_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/.xsdbrc"
+                },
+                "template_file": "everest_protium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_palladium__": "No",
+                    "__SUB_TEMPLATE__exit_protium__": "Yes",
+                    "com": "com0",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/ps_ddr_12_0/protium",
+        "script_num": 9
+    },
+    "protium_r5_bup": {
+        "cmd": "-pj everest -si ps_ddr_12_0 -b protium --processor r5 -bup",
+        "form": [
+            {
+                "keys": {
+                    "bup": "/group/siv4/proj/everest/public/releases/spp/spp_ps_ddr_12_0/user/FPGA_1D_bup/vivado/xcva_top_1_1D.bit",
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "spp_ps_ddr_12_0",
+                    "knobs": "",
+                    "preempt": "NO",
+                    "script_name": "protium_r5_bup"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "no",
+                    "__SUB_TEMPLATE__spp_bup_down__": "Yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_ecc_dow__": "no",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "yes",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "image_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/noc_compiler_eb1989/images/boot.bin",
+                    "jtag_freq": "1500000",
+                    "proc": "r5",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "xsdb_ver": "/proj/xbuilds/2019.2_INT_0501_1/installs/lin64/SDK/HEAD/bin/xsdb",
+                    "xsdbrc_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/.xsdbrc"
+                },
+                "template_file": "everest_protium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "Yes",
+                    "com": "com0",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/ps_ddr_12_0/protium",
+        "script_num": 10
+    },
+    "protium_r5_bup_preempt": {
+        "cmd": "-pj everest -si ps_ddr_12_0 -b protium --processor r5 -bup -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "bup": "/group/siv4/proj/everest/public/releases/spp/spp_ps_ddr_12_0/user/FPGA_1D_bup/vivado/xcva_top_1_1D.bit",
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "spp_ps_ddr_12_0",
+                    "knobs": "",
+                    "preempt": "YES",
+                    "script_name": "protium_r5_bup_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "no",
+                    "__SUB_TEMPLATE__spp_bup_down__": "Yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_ecc_dow__": "no",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "yes",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "image_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/noc_compiler_eb1989/images/boot.bin",
+                    "jtag_freq": "1500000",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "r5",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "xsdb_ver": "/proj/xbuilds/2019.2_INT_0501_1/installs/lin64/SDK/HEAD/bin/xsdb",
+                    "xsdbrc_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/.xsdbrc"
+                },
+                "template_file": "everest_protium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "Yes",
+                    "com": "com0",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/ps_ddr_12_0/protium",
+        "script_num": 11
+    },
+    "protium_r5_ecc": {
+        "cmd": "-pj everest -si ps_ddr_12_0 -b protium --processor r5 -ecc",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "spp_ps_ddr_12_0",
+                    "knobs": "",
+                    "preempt": "NO",
+                    "script_name": "protium_r5_ecc"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "no",
+                    "__SUB_TEMPLATE__spp_bup_down__": "Yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_ecc_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "yes",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "image_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/noc_compiler_eb1989/images_ecc/boot.bin",
+                    "jtag_freq": "1500000",
+                    "proc": "r5",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "xsdb_ver": "/proj/xbuilds/2019.2_INT_0501_1/installs/lin64/SDK/HEAD/bin/xsdb",
+                    "xsdbrc_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/.xsdbrc"
+                },
+                "template_file": "everest_protium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_palladium__": "No",
+                    "__SUB_TEMPLATE__exit_protium__": "Yes",
+                    "com": "com0",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/ps_ddr_12_0/protium",
+        "script_num": 21
+    },
+    "protium_r5_ecc_bup": {
+        "cmd": "-pj everest -si ps_ddr_12_0 -b protium --processor r5 -ecc -bup",
+        "form": [
+            {
+                "keys": {
+                    "bup": "/group/siv4/proj/everest/public/releases/spp/spp_ps_ddr_12_0/user/FPGA_1D_bup/vivado/xcva_top_1_1D.bit",
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "spp_ps_ddr_12_0",
+                    "knobs": "",
+                    "preempt": "NO",
+                    "script_name": "protium_r5_ecc_bup"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "no",
+                    "__SUB_TEMPLATE__spp_bup_down__": "Yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_ecc_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "yes",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "image_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/noc_compiler_eb1989/images_ecc/boot.bin",
+                    "jtag_freq": "1500000",
+                    "proc": "r5",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "xsdb_ver": "/proj/xbuilds/2019.2_INT_0501_1/installs/lin64/SDK/HEAD/bin/xsdb",
+                    "xsdbrc_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/.xsdbrc"
+                },
+                "template_file": "everest_protium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "Yes",
+                    "com": "com0",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/ps_ddr_12_0/protium",
+        "script_num": 22
+    },
+    "protium_r5_ecc_bup_preempt": {
+        "cmd": "-pj everest -si ps_ddr_12_0 -b protium --processor r5 -ecc -bup -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "bup": "/group/siv4/proj/everest/public/releases/spp/spp_ps_ddr_12_0/user/FPGA_1D_bup/vivado/xcva_top_1_1D.bit",
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "spp_ps_ddr_12_0",
+                    "knobs": "",
+                    "preempt": "YES",
+                    "script_name": "protium_r5_ecc_bup_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "no",
+                    "__SUB_TEMPLATE__spp_bup_down__": "Yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_ecc_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "yes",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "image_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/noc_compiler_eb1989/images_ecc/boot.bin",
+                    "jtag_freq": "1500000",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "r5",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "xsdb_ver": "/proj/xbuilds/2019.2_INT_0501_1/installs/lin64/SDK/HEAD/bin/xsdb",
+                    "xsdbrc_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/.xsdbrc"
+                },
+                "template_file": "everest_protium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "Yes",
+                    "com": "com0",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/ps_ddr_12_0/protium",
+        "script_num": 23
+    },
+    "protium_r5_ecc_preempt": {
+        "cmd": "-pj everest -si ps_ddr_12_0 -b protium --processor r5 -ecc -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "spp_ps_ddr_12_0",
+                    "knobs": "",
+                    "preempt": "YES",
+                    "script_name": "protium_r5_ecc_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "no",
+                    "__SUB_TEMPLATE__spp_bup_down__": "Yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_ecc_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "yes",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "image_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/noc_compiler_eb1989/images_ecc/boot.bin",
+                    "jtag_freq": "1500000",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "r5",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "xsdb_ver": "/proj/xbuilds/2019.2_INT_0501_1/installs/lin64/SDK/HEAD/bin/xsdb",
+                    "xsdbrc_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/.xsdbrc"
+                },
+                "template_file": "everest_protium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_palladium__": "No",
+                    "__SUB_TEMPLATE__exit_protium__": "Yes",
+                    "com": "com0",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/ps_ddr_12_0/protium",
+        "script_num": 24
+    },
+    "protium_r5_ospi": {
+        "cmd": "-pj everest -si ps_ddr_12_0 -b protium --processor r5 -ospi",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "spp_ps_ddr_12_0",
+                    "knobs": "",
+                    "preempt": "NO",
+                    "script_name": "protium_r5_ospi"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "no",
+                    "__SUB_TEMPLATE__spp_bup_down__": "Yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_ecc_dow__": "no",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "yes",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "image_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/noc_compiler_eb1989/images_ospi/boot.bin",
+                    "jtag_freq": "1500000",
+                    "proc": "r5",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "xsdb_ver": "/proj/xbuilds/2019.2_INT_0501_1/installs/lin64/SDK/HEAD/bin/xsdb",
+                    "xsdbrc_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/.xsdbrc"
+                },
+                "template_file": "everest_protium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_palladium__": "No",
+                    "__SUB_TEMPLATE__exit_protium__": "Yes",
+                    "com": "com0",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/ps_ddr_12_0/protium",
+        "script_num": 33
+    },
+    "protium_r5_ospi_bup": {
+        "cmd": "-pj everest -si ps_ddr_12_0 -b protium --processor r5 -ospi -bup",
+        "form": [
+            {
+                "keys": {
+                    "bup": "/group/siv4/proj/everest/public/releases/spp/spp_ps_ddr_12_0/user/FPGA_1D_bup/vivado/xcva_top_1_1D.bit",
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "spp_ps_ddr_12_0",
+                    "knobs": "",
+                    "preempt": "NO",
+                    "script_name": "protium_r5_ospi_bup"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "no",
+                    "__SUB_TEMPLATE__spp_bup_down__": "Yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_ecc_dow__": "no",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "yes",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "image_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/noc_compiler_eb1989/images_ospi/boot.bin",
+                    "jtag_freq": "1500000",
+                    "proc": "r5",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "xsdb_ver": "/proj/xbuilds/2019.2_INT_0501_1/installs/lin64/SDK/HEAD/bin/xsdb",
+                    "xsdbrc_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/.xsdbrc"
+                },
+                "template_file": "everest_protium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "Yes",
+                    "com": "com0",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/ps_ddr_12_0/protium",
+        "script_num": 34
+    },
+    "protium_r5_ospi_bup_preempt": {
+        "cmd": "-pj everest -si ps_ddr_12_0 -b protium --processor r5 -ospi -bup -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "bup": "/group/siv4/proj/everest/public/releases/spp/spp_ps_ddr_12_0/user/FPGA_1D_bup/vivado/xcva_top_1_1D.bit",
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "spp_ps_ddr_12_0",
+                    "knobs": "",
+                    "preempt": "YES",
+                    "script_name": "protium_r5_ospi_bup_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "no",
+                    "__SUB_TEMPLATE__spp_bup_down__": "Yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_ecc_dow__": "no",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "yes",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "image_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/noc_compiler_eb1989/images_ospi/boot.bin",
+                    "jtag_freq": "1500000",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "r5",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "xsdb_ver": "/proj/xbuilds/2019.2_INT_0501_1/installs/lin64/SDK/HEAD/bin/xsdb",
+                    "xsdbrc_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/.xsdbrc"
+                },
+                "template_file": "everest_protium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "Yes",
+                    "com": "com0",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/ps_ddr_12_0/protium",
+        "script_num": 35
+    },
+    "protium_r5_ospi_ecc": {
+        "cmd": "-pj everest -si ps_ddr_12_0 -b protium --processor r5 -ospi -ecc",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "spp_ps_ddr_12_0",
+                    "knobs": "",
+                    "preempt": "NO",
+                    "script_name": "protium_r5_ospi_ecc"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "no",
+                    "__SUB_TEMPLATE__spp_bup_down__": "Yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_ecc_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "yes",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "image_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/noc_compiler_eb1989/images_ospi_ecc/boot.bin",
+                    "jtag_freq": "1500000",
+                    "proc": "r5",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "xsdb_ver": "/proj/xbuilds/2019.2_INT_0501_1/installs/lin64/SDK/HEAD/bin/xsdb",
+                    "xsdbrc_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/.xsdbrc"
+                },
+                "template_file": "everest_protium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_palladium__": "No",
+                    "__SUB_TEMPLATE__exit_protium__": "Yes",
+                    "com": "com0",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/ps_ddr_12_0/protium",
+        "script_num": 45
+    },
+    "protium_r5_ospi_ecc_bup": {
+        "cmd": "-pj everest -si ps_ddr_12_0 -b protium --processor r5 -ospi -ecc -bup",
+        "form": [
+            {
+                "keys": {
+                    "bup": "/group/siv4/proj/everest/public/releases/spp/spp_ps_ddr_12_0/user/FPGA_1D_bup/vivado/xcva_top_1_1D.bit",
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "spp_ps_ddr_12_0",
+                    "knobs": "",
+                    "preempt": "NO",
+                    "script_name": "protium_r5_ospi_ecc_bup"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "no",
+                    "__SUB_TEMPLATE__spp_bup_down__": "Yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_ecc_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "yes",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "image_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/noc_compiler_eb1989/images_ospi_ecc/boot.bin",
+                    "jtag_freq": "1500000",
+                    "proc": "r5",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "xsdb_ver": "/proj/xbuilds/2019.2_INT_0501_1/installs/lin64/SDK/HEAD/bin/xsdb",
+                    "xsdbrc_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/.xsdbrc"
+                },
+                "template_file": "everest_protium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "Yes",
+                    "com": "com0",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/ps_ddr_12_0/protium",
+        "script_num": 46
+    },
+    "protium_r5_ospi_ecc_bup_preempt": {
+        "cmd": "-pj everest -si ps_ddr_12_0 -b protium --processor r5 -ospi -ecc -bup -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "bup": "/group/siv4/proj/everest/public/releases/spp/spp_ps_ddr_12_0/user/FPGA_1D_bup/vivado/xcva_top_1_1D.bit",
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "spp_ps_ddr_12_0",
+                    "knobs": "",
+                    "preempt": "YES",
+                    "script_name": "protium_r5_ospi_ecc_bup_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "no",
+                    "__SUB_TEMPLATE__spp_bup_down__": "Yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_ecc_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "yes",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "image_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/noc_compiler_eb1989/images_ospi_ecc/boot.bin",
+                    "jtag_freq": "1500000",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "r5",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "xsdb_ver": "/proj/xbuilds/2019.2_INT_0501_1/installs/lin64/SDK/HEAD/bin/xsdb",
+                    "xsdbrc_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/.xsdbrc"
+                },
+                "template_file": "everest_protium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "Yes",
+                    "com": "com0",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/ps_ddr_12_0/protium",
+        "script_num": 47
+    },
+    "protium_r5_ospi_ecc_preempt": {
+        "cmd": "-pj everest -si ps_ddr_12_0 -b protium --processor r5 -ospi -ecc -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "spp_ps_ddr_12_0",
+                    "knobs": "",
+                    "preempt": "YES",
+                    "script_name": "protium_r5_ospi_ecc_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "no",
+                    "__SUB_TEMPLATE__spp_bup_down__": "Yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_ecc_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "yes",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "image_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/noc_compiler_eb1989/images_ospi_ecc/boot.bin",
+                    "jtag_freq": "1500000",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "r5",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "xsdb_ver": "/proj/xbuilds/2019.2_INT_0501_1/installs/lin64/SDK/HEAD/bin/xsdb",
+                    "xsdbrc_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/.xsdbrc"
+                },
+                "template_file": "everest_protium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_palladium__": "No",
+                    "__SUB_TEMPLATE__exit_protium__": "Yes",
+                    "com": "com0",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/ps_ddr_12_0/protium",
+        "script_num": 48
+    },
+    "protium_r5_ospi_preempt": {
+        "cmd": "-pj everest -si ps_ddr_12_0 -b protium --processor r5 -ospi -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "spp_ps_ddr_12_0",
+                    "knobs": "",
+                    "preempt": "YES",
+                    "script_name": "protium_r5_ospi_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "no",
+                    "__SUB_TEMPLATE__spp_bup_down__": "Yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_ecc_dow__": "no",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "yes",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "image_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/noc_compiler_eb1989/images_ospi/boot.bin",
+                    "jtag_freq": "1500000",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "r5",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "xsdb_ver": "/proj/xbuilds/2019.2_INT_0501_1/installs/lin64/SDK/HEAD/bin/xsdb",
+                    "xsdbrc_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/.xsdbrc"
+                },
+                "template_file": "everest_protium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_palladium__": "No",
+                    "__SUB_TEMPLATE__exit_protium__": "Yes",
+                    "com": "com0",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/ps_ddr_12_0/protium",
+        "script_num": 36
+    },
+    "protium_r5_preempt": {
+        "cmd": "-pj everest -si ps_ddr_12_0 -b protium --processor r5 -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "spp_ps_ddr_12_0",
+                    "knobs": "",
+                    "preempt": "YES",
+                    "script_name": "protium_r5_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "no",
+                    "__SUB_TEMPLATE__spp_bup_down__": "Yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_ecc_dow__": "no",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "yes",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "image_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/noc_compiler_eb1989/images/boot.bin",
+                    "jtag_freq": "1500000",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "r5",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "xsdb_ver": "/proj/xbuilds/2019.2_INT_0501_1/installs/lin64/SDK/HEAD/bin/xsdb",
+                    "xsdbrc_path": "/group/siv_burst/proj/everest/releases/spp/spp_ps_ddr_12.0/.xsdbrc"
+                },
+                "template_file": "everest_protium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_palladium__": "No",
+                    "__SUB_TEMPLATE__exit_protium__": "Yes",
+                    "com": "com0",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/ps_ddr_12_0/protium",
+        "script_num": 12
+    }
+}

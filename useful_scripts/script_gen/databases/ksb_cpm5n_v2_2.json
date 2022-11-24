@@ -1,0 +1,514 @@
+{
+    "cpm5n_rc_cpm5n_ep_c0c1epegress_x4_a72": {
+        "cmd": "-pj ksb -si cpm5n_ipp_v2_2 -rc cpm5n -ep cpm5n --cpm_mode c0c1epegress --lane_count x4 --processor a72",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "N60_HAPS_CPM5N_V2_2",
+                    "burst_runtime": "10800",
+                    "knobs": "Cpm5n_rc_egress = 0;",
+                    "preempt": "NO",
+                    "script_name": "cpm5n_rc_cpm5n_ep_c0c1epegress_x4_a72"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__h20_ipp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__r5_ta_sel__": "no",
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__vcc_aux_test__": "yes",
+                    "attribelf_path": "/group/siv_burst/proj/ksb/cpm5n/releases/attrb_elf/ipp_cpm5n_2.2/v2.2.3/022522_linkup_v2_2_3_c0c1/src/022522_linkup_v2_2_3_c0c1.elf",
+                    "com": "com1",
+                    "image_path": "/group/siv_burst/proj/ksb/cpm5n/releases/bup/ipp_cpm5n_2.2/v2.2/vck190_Final_updated_HAH_slow_2021_2_rel_0_625Mhz_ocm_highmem/tenzing_se1_sivdef_ddr4single_hbm/tenzing_se1_sivdef_ddr4single_hbm.runs/impl_1",
+                    "proc": "a72",
+                    "xsdb_ver": "/everest/sivhw_bkup/tools/xilinx/2021.2_INT_0727_0226/installs/lin64/Vitis/2021.2/bin/xsdb",
+                    "xsdbrc_path": ""
+                },
+                "template_file": "keystoneb_cpm5n_haps.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__ksb_cpm5n_exit__": "yes",
+                    "burst_com_inactv_t": "1800",
+                    "com": "com1",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "ksb/cpm5n_ipp_v2_2/pcie",
+        "script_num": 3
+    },
+    "cpm5n_rc_cpm5n_ep_c0c1epegress_x4_a72_preempt": {
+        "cmd": "-pj ksb -si cpm5n_ipp_v2_2 -rc cpm5n -ep cpm5n --cpm_mode c0c1epegress --lane_count x4 --processor a72 -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "N60_HAPS_CPM5N_V2_2",
+                    "burst_runtime": "10800",
+                    "knobs": "Cpm5n_rc_egress = 0;",
+                    "preempt": "YES",
+                    "script_name": "cpm5n_rc_cpm5n_ep_c0c1epegress_x4_a72_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__h20_ipp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__r5_ta_sel__": "no",
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__vcc_aux_test__": "yes",
+                    "attribelf_path": "/group/siv_burst/proj/ksb/cpm5n/releases/attrb_elf/ipp_cpm5n_2.2/v2.2.3/022522_linkup_v2_2_3_c0c1/src/022522_linkup_v2_2_3_c0c1.elf",
+                    "com": "com1",
+                    "image_path": "/group/siv_burst/proj/ksb/cpm5n/releases/bup/ipp_cpm5n_2.2/v2.2/vck190_Final_updated_HAH_slow_2021_2_rel_0_625Mhz_ocm_highmem/tenzing_se1_sivdef_ddr4single_hbm/tenzing_se1_sivdef_ddr4single_hbm.runs/impl_1",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "xsdb_ver": "/everest/sivhw_bkup/tools/xilinx/2021.2_INT_0727_0226/installs/lin64/Vitis/2021.2/bin/xsdb",
+                    "xsdbrc_path": ""
+                },
+                "template_file": "keystoneb_cpm5n_haps.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__ksb_cpm5n_exit__": "yes",
+                    "burst_com_inactv_t": "1800",
+                    "com": "com1",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "ksb/cpm5n_ipp_v2_2/pcie",
+        "script_num": 4
+    },
+    "cpm5n_rc_cpm5n_ep_c0c1epegressqdma_x4_a72": {
+        "cmd": "-pj ksb -si cpm5n_ipp_v2_2 -rc cpm5n -ep cpm5n --cpm_mode c0c1epegressqdma --lane_count x4 --processor a72",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "N60_HAPS_CPM5N_V2_2",
+                    "burst_runtime": "10800",
+                    "knobs": "Cdx_qdma_disable = 0;Cpm5n_rc_egress = 0;Axiex_ignore_all_func = 0xffffffff;Mem_check_pattern = 0;Qdma_max_txns = 1;Qdma_max_txn_size = 0x40;Prob_qdma_ep_enable_interrupts = 0;Prob_qdma_pick_h2c = 0;",
+                    "preempt": "NO",
+                    "script_name": "cpm5n_rc_cpm5n_ep_c0c1epegressqdma_x4_a72"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__h20_ipp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__r5_ta_sel__": "no",
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__vcc_aux_test__": "yes",
+                    "attribelf_path": "/group/siv_burst/proj/ksb/cpm5n/releases/attrb_elf/ipp_cpm5n_2.2/v2.2.4/030922_linkup_v2_2_4_c0c1/src/030922_linkup_v2_2_4_c0c1.elf",
+                    "com": "com1",
+                    "image_path": "/group/siv_burst/proj/ksb/cpm5n/releases/bup/ipp_cpm5n_2.2/v2.2/vck190_Final_updated_HAH_slow_2021_2_rel_0_625Mhz_ocm_highmem/tenzing_se1_sivdef_ddr4single_hbm/tenzing_se1_sivdef_ddr4single_hbm.runs/impl_1",
+                    "proc": "a72",
+                    "xsdb_ver": "/everest/sivhw_bkup/tools/xilinx/2021.2_INT_0727_0226/installs/lin64/Vitis/2021.2/bin/xsdb",
+                    "xsdbrc_path": ""
+                },
+                "template_file": "keystoneb_cpm5n_haps.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__ksb_cpm5n_exit__": "yes",
+                    "burst_com_inactv_t": "1800",
+                    "com": "com1",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "ksb/cpm5n_ipp_v2_2/pcie",
+        "script_num": 9
+    },
+    "cpm5n_rc_cpm5n_ep_c0c1epegressqdma_x4_a72_preempt": {
+        "cmd": "-pj ksb -si cpm5n_ipp_v2_2 -rc cpm5n -ep cpm5n --cpm_mode c0c1epegressqdma --lane_count x4 --processor a72 -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "N60_HAPS_CPM5N_V2_2",
+                    "burst_runtime": "10800",
+                    "knobs": "Cdx_qdma_disable = 0;Cpm5n_rc_egress = 0;Axiex_ignore_all_func = 0xffffffff;Mem_check_pattern = 0;Qdma_max_txns = 1;Qdma_max_txn_size = 0x40;Prob_qdma_ep_enable_interrupts = 0;Prob_qdma_pick_h2c = 0;",
+                    "preempt": "NO",
+                    "script_name": "cpm5n_rc_cpm5n_ep_c0c1epegressqdma_x4_a72_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__h20_ipp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__r5_ta_sel__": "no",
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__vcc_aux_test__": "yes",
+                    "attribelf_path": "/group/siv_burst/proj/ksb/cpm5n/releases/attrb_elf/ipp_cpm5n_2.2/v2.2.4/030922_linkup_v2_2_4_c0c1/src/030922_linkup_v2_2_4_c0c1.elf",
+                    "com": "com1",
+                    "image_path": "/group/siv_burst/proj/ksb/cpm5n/releases/bup/ipp_cpm5n_2.2/v2.2/vck190_Final_updated_HAH_slow_2021_2_rel_0_625Mhz_ocm_highmem/tenzing_se1_sivdef_ddr4single_hbm/tenzing_se1_sivdef_ddr4single_hbm.runs/impl_1",
+                    "proc": "a72",
+                    "xsdb_ver": "/everest/sivhw_bkup/tools/xilinx/2021.2_INT_0727_0226/installs/lin64/Vitis/2021.2/bin/xsdb",
+                    "xsdbrc_path": ""
+                },
+                "template_file": "keystoneb_cpm5n_haps.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__ksb_cpm5n_exit__": "yes",
+                    "burst_com_inactv_t": "1800",
+                    "com": "com1",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "ksb/cpm5n_ipp_v2_2/pcie",
+        "script_num": 10
+    },
+    "cpm5n_rc_cpm5n_ep_c0c1rcegress_x4_a72": {
+        "cmd": "-pj ksb -si cpm5n_ipp_v2_2 -rc cpm5n -ep cpm5n --cpm_mode c0c1rcegress --lane_count x4 --processor a72",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "N60_HAPS_CPM5N_V2_2",
+                    "burst_runtime": "10800",
+                    "knobs": "",
+                    "preempt": "NO",
+                    "script_name": "cpm5n_rc_cpm5n_ep_c0c1rcegress_x4_a72"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__h20_ipp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__r5_ta_sel__": "no",
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__vcc_aux_test__": "yes",
+                    "attribelf_path": "/group/siv_burst/proj/ksb/cpm5n/releases/attrb_elf/ipp_cpm5n_2.2/v2.2.3/022522_linkup_v2_2_3_c0c1/src/022522_linkup_v2_2_3_c0c1.elf",
+                    "com": "com1",
+                    "image_path": "/group/siv_burst/proj/ksb/cpm5n/releases/bup/ipp_cpm5n_2.2/v2.2/vck190_Final_updated_HAH_slow_2021_2_rel_0_625Mhz_ocm_highmem/tenzing_se1_sivdef_ddr4single_hbm/tenzing_se1_sivdef_ddr4single_hbm.runs/impl_1",
+                    "proc": "a72",
+                    "xsdb_ver": "/everest/sivhw_bkup/tools/xilinx/2021.2_INT_0727_0226/installs/lin64/Vitis/2021.2/bin/xsdb",
+                    "xsdbrc_path": ""
+                },
+                "template_file": "keystoneb_cpm5n_haps.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__ksb_cpm5n_exit__": "yes",
+                    "burst_com_inactv_t": "1800",
+                    "com": "com1",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "ksb/cpm5n_ipp_v2_2/pcie",
+        "script_num": 1
+    },
+    "cpm5n_rc_cpm5n_ep_c0c1rcegress_x4_a72_preempt": {
+        "cmd": "-pj ksb -si cpm5n_ipp_v2_2 -rc cpm5n -ep cpm5n --cpm_mode c0c1rcegress --lane_count x4 --processor a72 -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "N60_HAPS_CPM5N_V2_2",
+                    "burst_runtime": "10800",
+                    "knobs": "",
+                    "preempt": "YES",
+                    "script_name": "cpm5n_rc_cpm5n_ep_c0c1rcegress_x4_a72_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__h20_ipp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__r5_ta_sel__": "no",
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__vcc_aux_test__": "yes",
+                    "attribelf_path": "/group/siv_burst/proj/ksb/cpm5n/releases/attrb_elf/ipp_cpm5n_2.2/v2.2.3/022522_linkup_v2_2_3_c0c1/src/022522_linkup_v2_2_3_c0c1.elf",
+                    "com": "com1",
+                    "image_path": "/group/siv_burst/proj/ksb/cpm5n/releases/bup/ipp_cpm5n_2.2/v2.2/vck190_Final_updated_HAH_slow_2021_2_rel_0_625Mhz_ocm_highmem/tenzing_se1_sivdef_ddr4single_hbm/tenzing_se1_sivdef_ddr4single_hbm.runs/impl_1",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "xsdb_ver": "/everest/sivhw_bkup/tools/xilinx/2021.2_INT_0727_0226/installs/lin64/Vitis/2021.2/bin/xsdb",
+                    "xsdbrc_path": ""
+                },
+                "template_file": "keystoneb_cpm5n_haps.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__ksb_cpm5n_exit__": "yes",
+                    "burst_com_inactv_t": "1800",
+                    "com": "com1",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "ksb/cpm5n_ipp_v2_2/pcie",
+        "script_num": 2
+    },
+    "cpm5n_rc_cpm5n_ep_c2c3epegress_x4_a72": {
+        "cmd": "-pj ksb -si cpm5n_ipp_v2_2 -rc cpm5n -ep cpm5n --cpm_mode c2c3epegress --lane_count x4 --processor a72",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "N60_HAPS_CPM5N_V2_2",
+                    "burst_runtime": "10800",
+                    "knobs": "Cpm5n_rc_egress = 0;",
+                    "preempt": "NO",
+                    "script_name": "cpm5n_rc_cpm5n_ep_c2c3epegress_x4_a72"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__h20_ipp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__r5_ta_sel__": "no",
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__vcc_aux_test__": "yes",
+                    "attribelf_path": "/group/siv_burst/proj/ksb/cpm5n/releases/attrb_elf/ipp_cpm5n_2.2/v2.2.3/022522_linkup_v2_2_3_c2c3/src/022522_linkup_v2_2_3_c2c3.elf",
+                    "com": "com1",
+                    "image_path": "/group/siv_burst/proj/ksb/cpm5n/releases/bup/ipp_cpm5n_2.2/v2.2/vck190_Final_updated_HAH_slow_2021_2_rel_0_625Mhz_ocm_highmem/tenzing_se1_sivdef_ddr4single_hbm/tenzing_se1_sivdef_ddr4single_hbm.runs/impl_1",
+                    "proc": "a72",
+                    "xsdb_ver": "/everest/sivhw_bkup/tools/xilinx/2021.2_INT_0727_0226/installs/lin64/Vitis/2021.2/bin/xsdb",
+                    "xsdbrc_path": ""
+                },
+                "template_file": "keystoneb_cpm5n_haps.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__ksb_cpm5n_exit__": "yes",
+                    "burst_com_inactv_t": "1800",
+                    "com": "com1",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "ksb/cpm5n_ipp_v2_2/pcie",
+        "script_num": 7
+    },
+    "cpm5n_rc_cpm5n_ep_c2c3epegress_x4_a72_preempt": {
+        "cmd": "-pj ksb -si cpm5n_ipp_v2_2 -rc cpm5n -ep cpm5n --cpm_mode c2c3epegress --lane_count x4 --processor a72 -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "N60_HAPS_CPM5N_V2_2",
+                    "burst_runtime": "10800",
+                    "knobs": "Cpm5n_rc_egress = 0;",
+                    "preempt": "YES",
+                    "script_name": "cpm5n_rc_cpm5n_ep_c2c3epegress_x4_a72_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__h20_ipp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__r5_ta_sel__": "no",
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__vcc_aux_test__": "yes",
+                    "attribelf_path": "/group/siv_burst/proj/ksb/cpm5n/releases/attrb_elf/ipp_cpm5n_2.2/v2.2.3/022522_linkup_v2_2_3_c2c3/src/022522_linkup_v2_2_3_c2c3.elf",
+                    "com": "com1",
+                    "image_path": "/group/siv_burst/proj/ksb/cpm5n/releases/bup/ipp_cpm5n_2.2/v2.2/vck190_Final_updated_HAH_slow_2021_2_rel_0_625Mhz_ocm_highmem/tenzing_se1_sivdef_ddr4single_hbm/tenzing_se1_sivdef_ddr4single_hbm.runs/impl_1",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "xsdb_ver": "/everest/sivhw_bkup/tools/xilinx/2021.2_INT_0727_0226/installs/lin64/Vitis/2021.2/bin/xsdb",
+                    "xsdbrc_path": ""
+                },
+                "template_file": "keystoneb_cpm5n_haps.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__ksb_cpm5n_exit__": "yes",
+                    "burst_com_inactv_t": "1800",
+                    "com": "com1",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "ksb/cpm5n_ipp_v2_2/pcie",
+        "script_num": 8
+    },
+    "cpm5n_rc_cpm5n_ep_c2c3epegressqdma_x4_a72": {
+        "cmd": "-pj ksb -si cpm5n_ipp_v2_2 -rc cpm5n -ep cpm5n --cpm_mode c2c3epegressqdma --lane_count x4 --processor a72",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "N60_HAPS_CPM5N_V2_2",
+                    "burst_runtime": "10800",
+                    "knobs": "Cdx_qdma_disable = 0;Cpm5n_rc_egress = 0;Axiex_ignore_all_func = 0xffffffff;Mem_check_pattern = 0;Qdma_max_txns = 1;Qdma_max_txn_size = 0x40;Prob_qdma_ep_enable_interrupts = 0;Prob_qdma_pick_h2c = 0;",
+                    "preempt": "NO",
+                    "script_name": "cpm5n_rc_cpm5n_ep_c2c3epegressqdma_x4_a72"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__h20_ipp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__r5_ta_sel__": "no",
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__vcc_aux_test__": "yes",
+                    "attribelf_path": "/group/siv_burst/proj/ksb/cpm5n/releases/attrb_elf/ipp_cpm5n_2.2/v2.2.4/030922_linkup_v2_2_4_c2c3/src/030922_linkup_v2_2_4_c2c3.elf",
+                    "com": "com1",
+                    "image_path": "/group/siv_burst/proj/ksb/cpm5n/releases/bup/ipp_cpm5n_2.2/v2.2/vck190_Final_updated_HAH_slow_2021_2_rel_0_625Mhz_ocm_highmem/tenzing_se1_sivdef_ddr4single_hbm/tenzing_se1_sivdef_ddr4single_hbm.runs/impl_1",
+                    "proc": "a72",
+                    "xsdb_ver": "/everest/sivhw_bkup/tools/xilinx/2021.2_INT_0727_0226/installs/lin64/Vitis/2021.2/bin/xsdb",
+                    "xsdbrc_path": ""
+                },
+                "template_file": "keystoneb_cpm5n_haps.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__ksb_cpm5n_exit__": "yes",
+                    "burst_com_inactv_t": "1800",
+                    "com": "com1",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "ksb/cpm5n_ipp_v2_2/pcie",
+        "script_num": 11
+    },
+    "cpm5n_rc_cpm5n_ep_c2c3epegressqdma_x4_a72_preempt": {
+        "cmd": "-pj ksb -si cpm5n_ipp_v2_2 -rc cpm5n -ep cpm5n --cpm_mode c2c3epegressqdma --lane_count x4 --processor a72 -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "N60_HAPS_CPM5N_V2_2",
+                    "burst_runtime": "10800",
+                    "knobs": "Cdx_qdma_disable = 0;Cpm5n_rc_egress = 0;Axiex_ignore_all_func = 0xffffffff;Mem_check_pattern = 0;Qdma_max_txns = 1;Qdma_max_txn_size = 0x40;Prob_qdma_ep_enable_interrupts = 0;Prob_qdma_pick_h2c = 0;",
+                    "preempt": "NO",
+                    "script_name": "cpm5n_rc_cpm5n_ep_c2c3epegressqdma_x4_a72_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__h20_ipp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__r5_ta_sel__": "no",
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__vcc_aux_test__": "yes",
+                    "attribelf_path": "/group/siv_burst/proj/ksb/cpm5n/releases/attrb_elf/ipp_cpm5n_2.2/v2.2.4/030922_linkup_v2_2_4_c2c3/src/030922_linkup_v2_2_4_c2c3.elf",
+                    "com": "com1",
+                    "image_path": "/group/siv_burst/proj/ksb/cpm5n/releases/bup/ipp_cpm5n_2.2/v2.2/vck190_Final_updated_HAH_slow_2021_2_rel_0_625Mhz_ocm_highmem/tenzing_se1_sivdef_ddr4single_hbm/tenzing_se1_sivdef_ddr4single_hbm.runs/impl_1",
+                    "proc": "a72",
+                    "xsdb_ver": "/everest/sivhw_bkup/tools/xilinx/2021.2_INT_0727_0226/installs/lin64/Vitis/2021.2/bin/xsdb",
+                    "xsdbrc_path": ""
+                },
+                "template_file": "keystoneb_cpm5n_haps.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__ksb_cpm5n_exit__": "yes",
+                    "burst_com_inactv_t": "1800",
+                    "com": "com1",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "ksb/cpm5n_ipp_v2_2/pcie",
+        "script_num": 12
+    },
+    "cpm5n_rc_cpm5n_ep_c2c3rcegress_x4_a72": {
+        "cmd": "-pj ksb -si cpm5n_ipp_v2_2 -rc cpm5n -ep cpm5n --cpm_mode c2c3rcegress --lane_count x4 --processor a72",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "N60_HAPS_CPM5N_V2_2",
+                    "burst_runtime": "10800",
+                    "knobs": "",
+                    "preempt": "NO",
+                    "script_name": "cpm5n_rc_cpm5n_ep_c2c3rcegress_x4_a72"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__h20_ipp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__r5_ta_sel__": "no",
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__vcc_aux_test__": "yes",
+                    "attribelf_path": "/group/siv_burst/proj/ksb/cpm5n/releases/attrb_elf/ipp_cpm5n_2.2/v2.2.3/022522_linkup_v2_2_3_c2c3/src/022522_linkup_v2_2_3_c2c3.elf",
+                    "com": "com1",
+                    "image_path": "/group/siv_burst/proj/ksb/cpm5n/releases/bup/ipp_cpm5n_2.2/v2.2/vck190_Final_updated_HAH_slow_2021_2_rel_0_625Mhz_ocm_highmem/tenzing_se1_sivdef_ddr4single_hbm/tenzing_se1_sivdef_ddr4single_hbm.runs/impl_1",
+                    "proc": "a72",
+                    "xsdb_ver": "/everest/sivhw_bkup/tools/xilinx/2021.2_INT_0727_0226/installs/lin64/Vitis/2021.2/bin/xsdb",
+                    "xsdbrc_path": ""
+                },
+                "template_file": "keystoneb_cpm5n_haps.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__ksb_cpm5n_exit__": "yes",
+                    "burst_com_inactv_t": "1800",
+                    "com": "com1",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "ksb/cpm5n_ipp_v2_2/pcie",
+        "script_num": 5
+    },
+    "cpm5n_rc_cpm5n_ep_c2c3rcegress_x4_a72_preempt": {
+        "cmd": "-pj ksb -si cpm5n_ipp_v2_2 -rc cpm5n -ep cpm5n --cpm_mode c2c3rcegress --lane_count x4 --processor a72 -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "N60_HAPS_CPM5N_V2_2",
+                    "burst_runtime": "10800",
+                    "knobs": "",
+                    "preempt": "YES",
+                    "script_name": "cpm5n_rc_cpm5n_ep_c2c3rcegress_x4_a72_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__h20_ipp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__r5_ta_sel__": "no",
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__vcc_aux_test__": "yes",
+                    "attribelf_path": "/group/siv_burst/proj/ksb/cpm5n/releases/attrb_elf/ipp_cpm5n_2.2/v2.2.3/022522_linkup_v2_2_3_c2c3/src/022522_linkup_v2_2_3_c2c3.elf",
+                    "com": "com1",
+                    "image_path": "/group/siv_burst/proj/ksb/cpm5n/releases/bup/ipp_cpm5n_2.2/v2.2/vck190_Final_updated_HAH_slow_2021_2_rel_0_625Mhz_ocm_highmem/tenzing_se1_sivdef_ddr4single_hbm/tenzing_se1_sivdef_ddr4single_hbm.runs/impl_1",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "xsdb_ver": "/everest/sivhw_bkup/tools/xilinx/2021.2_INT_0727_0226/installs/lin64/Vitis/2021.2/bin/xsdb",
+                    "xsdbrc_path": ""
+                },
+                "template_file": "keystoneb_cpm5n_haps.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__ksb_cpm5n_exit__": "yes",
+                    "burst_com_inactv_t": "1800",
+                    "com": "com1",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "ksb/cpm5n_ipp_v2_2/pcie",
+        "script_num": 6
+    }
+}

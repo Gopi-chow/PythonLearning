@@ -1,0 +1,101 @@
+if run "[ -f \"/exports/burst86 \" ]" then
+  run "rm /exports/burst86"
+endif
+<::preemption_off:=: ::>
+power 0
+sleep 2
+power 1
+sleep 2
+
+#x86 settings
+<::x86_cmd:=: ::>
+
+$EP_PDI_IMAGE = "<::image_path:=:None::>"
+$EP_BITSTREAM="<::ep_bit:=:None::>"
+$EP_BIT="<::ep_bup:=:None::>"
+
+# Create log directories for host
+$logdate_time := 'date +%Y%m%d_%H%M'
+$dir1 = "$SYSTEST_HOST"
+run "mkdir -p $LOGPATH/$dir1"
+$dir2 = "$logdate_time"
+run "mkdir -p $LOGPATH/$SYSTEST_HOST/$dir2"
+$BURST_RESULTS = "$LOGPATH/$SYSTEST_HOST/$dir2"
+$SERIAL_LOG = "$BURST_RESULTS/burst_serial_$SYSTEST_HOST.log"
+$DEBUG_LOG = "$BURST_RESULTS/burst_debug_$SYSTEST_HOST.log"
+$BAUD_RATE = <::baud_rate:=:115200::>
+<::com:=:serial::> baud = $BAUD_RATE
+record <::com:=:serial::> append $SERIAL_LOG
+debug append $DEBUG_LOG
+$WHICH_XSDB := "which xsdb"
+
+#Echo all paths and configurations
+print "Printing all launch information..."
+print "Everest_$logdate,$BURST_HW,None,$EP_PDI_IMAGE,None,$EP_BITSTREAM,None,None,$BURST_ELF,$SYSTEST_HOST,$logdate1,$BURST_RUNTIME,xx,$PREEMPTABLE,IN_PROGRESS,TBD,$BURST_RESULTS,$BURST_KNOBS"
+
+print "DA Version	:$BURST_HW"
+print "EP_PDI Image	:$EP_PDI_IMAGE"
+print "BOARD		:$SYSTEST_HOST"
+print "BURST KNOBS	:$BURST_KNOBS"
+print "BURST elf	:$BURST_ELF"
+print "BURST runtime	:$BURST_RUNTIME seconds"
+print "BURST results	:$BURST_RESULTS"
+print "XSDB Version	:$WHICH_XSDB"
+print "Job ID		:$LSB_JOBID" 
+
+<::bd_serial:=: ::>
+
+sleep 1
+<::__SUB_TEMPLATE__vcc_aux_test__:=:No::>
+
+
+
+# launch xsdb
+fork "xsdb" as my_xsdb
+my_xsdb echo = 1
+
+test
+	sleep 5
+	wait
+	when my_xsdb matches "xsdb%"
+		print "Forking xsdb completed"
+		continue
+	end
+	after 2 minutes
+		print "FAILURE: Forking xsdb failed"
+                close
+		exit
+	end
+endtest
+
+print my_xsdb "connect"
+print my_xsdb "targets"       # List all cores
+sleep 2
+<::__SUB_TEMPLATE__everest_es1_cpm_ep_dow__:=:No::>
+
+print "INTCPM_CONFIG register dump!!!!!"
+print my_xsdb "puts [mrd -force 0xFCB40100 5]"
+print "Reading XPIPE"
+print my_xsdb "puts [mrd -force 0xF7230000 10]"
+print "Reading GTs"
+print my_xsdb "puts [mrd -force 0xF7213000 960]"
+print "Reading others"
+print my_xsdb "puts [mrd -force 0xFE600014 2]"
+print my_xsdb "puts [mrd -force 0xF1260020 1]"
+<::preemption_on:=: ::>
+sleep 5
+
+print my_xsdb "exit"
+
+tftpd
+tftpd_burst
+sleep 5
+
+run "cp $BURST_ELF /exports/"
+run "chmod 777 /exports/burst86"
+
+sleep 10
+reset_rc
+
+
+

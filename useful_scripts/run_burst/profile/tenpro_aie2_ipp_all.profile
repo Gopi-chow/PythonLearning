@@ -1,0 +1,8 @@
+-b tenpro -bt reserved-burst -si aie2_vdu_ipp_5_0 -p a72
+-b tenpro -bt reserved-burst -si aie2_vdu_ipp_5_0 -p a72 -be
+-b tenpro -bt reserved-burst -si aie2_vdu_ipp_5_0 -p a72     -k "Me_core_enable=0,"
+-b tenpro -bt reserved-burst -si aie2_vdu_ipp_5_0 -p a72 -be -k "Me_core_enable=0,"
+-b tenpro -bt reserved-burst -si aie2_vdu_ipp_5_0 -p a72     -k "Me_tiledma_dual_ch_enable=0,Me_core_enable=0,"
+-b tenpro -bt reserved-burst -si aie2_vdu_ipp_5_0 -p a72 -be -k "Me_tiledma_dual_ch_enable=0,Me_core_enable=0,"
+-b tenpro -bt reserved-burst -si aie2_vdu_ipp_5_0 -p a72 -be -k "Me_shimdma_dual_ch_enable=0,"
+-b tenpro -bt reserved-burst -si aie2_vdu_ipp_5_0 -p a72 -be -k "Aie2_memtiledma_multi_ch_enable=0,"

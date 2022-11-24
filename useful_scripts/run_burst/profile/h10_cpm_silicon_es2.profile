@@ -1,0 +1,10 @@
+-rc h10 -ep h10     -si h10_es2_cpmrc -pj everest -cm aximmc0 -lc x16  -pg g4 -p a72
+-rc h10 -ep h10     -si h10_es2_cpmrc -pj everest -cm aximmc0 -lc x8   -pg g5 -p a72
+-rc h10 -ep vpk120  -si h10_es2_cpmrc -pj everest -cm aximmc0 -lc x16  -pg g4 -p a72
+-rc h10 -ep vpk120  -si h10_es2_cpmrc -pj everest -cm aximmc0 -lc x8   -pg g5 -p a72
+-rc h10 -ep h10     -si h10_es2_cpmrc -pj everest -cm aximmc1 -lc x8   -pg g5 -p a72
+-rc h10 -ep vpk120  -si h10_es2_cpmrc -pj everest -cm aximmc1 -lc x8   -pg g5 -p a72
+-rc x86 -ep h10     -si h10_es2_cpmep -pj everest -cm aximm1  -lc x8   -pg g5 -p x86
+-rc x86 -ep vpk120  -si h10_es2_cpmep -pj everest -cm aximm1  -lc x8   -pg g5 -p x86
+-rc h10 -ep k7      -si h10_es2_cpmrc -pj everest -dm 3ddr    -lc x4   -pg g2 -p a72 -bep plb2pcie
+-rc h10 -ep k7      -si h10_es2_cpmrc -pj everest -dm 3ddr    -lc x4   -pg g2 -p a72 -bep nwlpcie

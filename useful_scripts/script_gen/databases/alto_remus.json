@@ -1,0 +1,914 @@
+{
+    "remus_a53": {
+        "cmd": "-pj alto -si remus -b ep108 --processor a53",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "ep_8.2_r46580",
+                    "knobs": "",
+                    "preempt": "No",
+                    "script_name": "remus_a53"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_rst__": "Yes",
+                    "__SUB_TEMPLATE__r5_rst__": "No",
+                    "__SUB_TEMPLATE__remus_a53_ecc__": "No",
+                    "__SUB_TEMPLATE__remus_r5_ecc__": "No",
+                    "ecc_elf": "",
+                    "fsbl_elf": "ron_a53_fsbl.elf",
+                    "preemption_on": "",
+                    "proc": "A53"
+                },
+                "template_file": "alto_remus.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "alto/remus/ep108",
+        "script_num": 1
+    },
+    "remus_a53_be": {
+        "cmd": "-pj alto -si remus -b ep108 --processor a53 -be",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "ep_8.2_r46580",
+                    "knobs": "",
+                    "preempt": "No",
+                    "script_name": "remus_a53_be"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_rst__": "Yes",
+                    "__SUB_TEMPLATE__r5_rst__": "No",
+                    "__SUB_TEMPLATE__remus_a53_ecc__": "No",
+                    "__SUB_TEMPLATE__remus_r5_ecc__": "No",
+                    "ecc_elf": "",
+                    "fsbl_elf": "ron_a53_fsbl.elf",
+                    "preemption_on": "",
+                    "proc": "A53"
+                },
+                "template_file": "alto_remus.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "alto/remus/ep108",
+        "script_num": 2
+    },
+    "remus_a53_be_dp": {
+        "cmd": "-pj alto -si remus -b ep108 --processor a53 -be -dp",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "ep_8.2_r46580",
+                    "knobs": "Dp_enable_vidgen_cores_only=1;",
+                    "preempt": "No",
+                    "script_name": "remus_a53_be_dp"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_rst__": "Yes",
+                    "__SUB_TEMPLATE__r5_rst__": "No",
+                    "__SUB_TEMPLATE__remus_a53_ecc__": "No",
+                    "__SUB_TEMPLATE__remus_r5_ecc__": "No",
+                    "ecc_elf": "",
+                    "fsbl_elf": "ron_a53_fsbl.elf",
+                    "preemption_on": "",
+                    "proc": "A53"
+                },
+                "template_file": "alto_remus.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "alto/remus/ep108",
+        "script_num": 3
+    },
+    "remus_a53_be_dp_preempt": {
+        "cmd": "-pj alto -si remus -b ep108 --processor a53 -be -dp -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "ep_8.2_r46580",
+                    "knobs": "Dp_enable_vidgen_cores_only=1;",
+                    "preempt": "Yes",
+                    "script_name": "remus_a53_be_dp_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_rst__": "Yes",
+                    "__SUB_TEMPLATE__r5_rst__": "No",
+                    "__SUB_TEMPLATE__remus_a53_ecc__": "No",
+                    "__SUB_TEMPLATE__remus_r5_ecc__": "No",
+                    "ecc_elf": "",
+                    "fsbl_elf": "ron_a53_fsbl.elf",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "A53"
+                },
+                "template_file": "alto_remus.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "alto/remus/ep108",
+        "script_num": 4
+    },
+    "remus_a53_be_ecc": {
+        "cmd": "-pj alto -si remus -b ep108 --processor a53 -be -ecc",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "ep_8.2_r46580",
+                    "knobs": "Ronaldo_upper_mem_size=0;",
+                    "preempt": "No",
+                    "script_name": "remus_a53_be_ecc"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_rst__": "Yes",
+                    "__SUB_TEMPLATE__r5_rst__": "No",
+                    "__SUB_TEMPLATE__remus_a53_ecc__": "Yes",
+                    "__SUB_TEMPLATE__remus_r5_ecc__": "No",
+                    "ecc_elf": "/group/siv3/proj/ronaldo/tapeout/validation_4.0/burst/to0_regression/$PROJ_REMUS_BURST_DROP_VER/scripts/ecc_init_elf/apu_ps_ddr_init/ctest-bare",
+                    "fsbl_elf": "fsbl_a53_64_ecc.elf",
+                    "preemption_on": "",
+                    "proc": "A53"
+                },
+                "template_file": "alto_remus.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "burst_com_inactv_t": "1800",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "alto/remus/ep108",
+        "script_num": 5
+    },
+    "remus_a53_be_ecc_dp": {
+        "cmd": "-pj alto -si remus -b ep108 --processor a53 -be -ecc -dp",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "ep_8.2_r46580",
+                    "knobs": "Dp_enable_vidgen_cores_only=1;",
+                    "preempt": "No",
+                    "script_name": "remus_a53_be_ecc_dp"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_rst__": "Yes",
+                    "__SUB_TEMPLATE__r5_rst__": "No",
+                    "__SUB_TEMPLATE__remus_a53_ecc__": "Yes",
+                    "__SUB_TEMPLATE__remus_r5_ecc__": "No",
+                    "ecc_elf": "/group/siv3/proj/ronaldo/tapeout/validation_4.0/burst/to0_regression/$PROJ_REMUS_BURST_DROP_VER/scripts/ecc_init_elf/apu_ps_ddr_init/ctest-bare",
+                    "fsbl_elf": "fsbl_a53_64_ecc.elf",
+                    "preemption_on": "",
+                    "proc": "A53"
+                },
+                "template_file": "alto_remus.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "burst_com_inactv_t": "1800",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "alto/remus/ep108",
+        "script_num": 6
+    },
+    "remus_a53_be_ecc_dp_preempt": {
+        "cmd": "-pj alto -si remus -b ep108 --processor a53 -be -ecc -dp -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "ep_8.2_r46580",
+                    "knobs": "Dp_enable_vidgen_cores_only=1;",
+                    "preempt": "Yes",
+                    "script_name": "remus_a53_be_ecc_dp_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_rst__": "Yes",
+                    "__SUB_TEMPLATE__r5_rst__": "No",
+                    "__SUB_TEMPLATE__remus_a53_ecc__": "Yes",
+                    "__SUB_TEMPLATE__remus_r5_ecc__": "No",
+                    "ecc_elf": "/group/siv3/proj/ronaldo/tapeout/validation_4.0/burst/to0_regression/$PROJ_REMUS_BURST_DROP_VER/scripts/ecc_init_elf/apu_ps_ddr_init/ctest-bare",
+                    "fsbl_elf": "fsbl_a53_64_ecc.elf",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "A53"
+                },
+                "template_file": "alto_remus.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "burst_com_inactv_t": "1800",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "alto/remus/ep108",
+        "script_num": 7
+    },
+    "remus_a53_be_ecc_preempt": {
+        "cmd": "-pj alto -si remus -b ep108 --processor a53 -be -ecc -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "ep_8.2_r46580",
+                    "knobs": "Ronaldo_upper_mem_size=0;",
+                    "preempt": "Yes",
+                    "script_name": "remus_a53_be_ecc_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_rst__": "Yes",
+                    "__SUB_TEMPLATE__r5_rst__": "No",
+                    "__SUB_TEMPLATE__remus_a53_ecc__": "Yes",
+                    "__SUB_TEMPLATE__remus_r5_ecc__": "No",
+                    "ecc_elf": "/group/siv3/proj/ronaldo/tapeout/validation_4.0/burst/to0_regression/$PROJ_REMUS_BURST_DROP_VER/scripts/ecc_init_elf/apu_ps_ddr_init/ctest-bare",
+                    "fsbl_elf": "fsbl_a53_64_ecc.elf",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "A53"
+                },
+                "template_file": "alto_remus.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "burst_com_inactv_t": "1800",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "alto/remus/ep108",
+        "script_num": 8
+    },
+    "remus_a53_be_preempt": {
+        "cmd": "-pj alto -si remus -b ep108 --processor a53 -be -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "ep_8.2_r46580",
+                    "knobs": "",
+                    "preempt": "Yes",
+                    "script_name": "remus_a53_be_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_rst__": "Yes",
+                    "__SUB_TEMPLATE__r5_rst__": "No",
+                    "__SUB_TEMPLATE__remus_a53_ecc__": "No",
+                    "__SUB_TEMPLATE__remus_r5_ecc__": "No",
+                    "ecc_elf": "",
+                    "fsbl_elf": "ron_a53_fsbl.elf",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "A53"
+                },
+                "template_file": "alto_remus.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "alto/remus/ep108",
+        "script_num": 9
+    },
+    "remus_a53_dp": {
+        "cmd": "-pj alto -si remus -b ep108 --processor a53 -dp",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "ep_8.2_r46580",
+                    "knobs": "Dp_enable_vidgen_cores_only=1;",
+                    "preempt": "No",
+                    "script_name": "remus_a53_dp"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_rst__": "Yes",
+                    "__SUB_TEMPLATE__r5_rst__": "No",
+                    "__SUB_TEMPLATE__remus_a53_ecc__": "No",
+                    "__SUB_TEMPLATE__remus_r5_ecc__": "No",
+                    "ecc_elf": "",
+                    "fsbl_elf": "ron_a53_fsbl.elf",
+                    "preemption_on": "",
+                    "proc": "A53"
+                },
+                "template_file": "alto_remus.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "alto/remus/ep108",
+        "script_num": 10
+    },
+    "remus_a53_dp_preempt": {
+        "cmd": "-pj alto -si remus -b ep108 --processor a53 -dp -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "ep_8.2_r46580",
+                    "knobs": "Dp_enable_vidgen_cores_only=1;",
+                    "preempt": "Yes",
+                    "script_name": "remus_a53_dp_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_rst__": "Yes",
+                    "__SUB_TEMPLATE__r5_rst__": "No",
+                    "__SUB_TEMPLATE__remus_a53_ecc__": "No",
+                    "__SUB_TEMPLATE__remus_r5_ecc__": "No",
+                    "ecc_elf": "",
+                    "fsbl_elf": "ron_a53_fsbl.elf",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "A53"
+                },
+                "template_file": "alto_remus.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "alto/remus/ep108",
+        "script_num": 11
+    },
+    "remus_a53_ecc": {
+        "cmd": "-pj alto -si remus -b ep108 --processor a53 -ecc",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "ep_8.2_r46580",
+                    "knobs": "Ronaldo_upper_mem_size=0;",
+                    "preempt": "No",
+                    "script_name": "remus_a53_ecc"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_rst__": "Yes",
+                    "__SUB_TEMPLATE__r5_rst__": "No",
+                    "__SUB_TEMPLATE__remus_a53_ecc__": "Yes",
+                    "__SUB_TEMPLATE__remus_r5_ecc__": "No",
+                    "ecc_elf": "/group/siv3/proj/ronaldo/tapeout/validation_4.0/burst/to0_regression/$PROJ_REMUS_BURST_DROP_VER/scripts/ecc_init_elf/apu_ps_ddr_init/ctest-bare",
+                    "fsbl_elf": "fsbl_a53_64_ecc.elf",
+                    "preemption_on": "",
+                    "proc": "A53"
+                },
+                "template_file": "alto_remus.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "burst_com_inactv_t": "1800",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "alto/remus/ep108",
+        "script_num": 12
+    },
+    "remus_a53_ecc_dp": {
+        "cmd": "-pj alto -si remus -b ep108 --processor a53 -ecc -dp",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "ep_8.2_r46580",
+                    "knobs": "Dp_enable_vidgen_cores_only=1;",
+                    "preempt": "No",
+                    "script_name": "remus_a53_ecc_dp"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_rst__": "Yes",
+                    "__SUB_TEMPLATE__r5_rst__": "No",
+                    "__SUB_TEMPLATE__remus_a53_ecc__": "Yes",
+                    "__SUB_TEMPLATE__remus_r5_ecc__": "No",
+                    "ecc_elf": "/group/siv3/proj/ronaldo/tapeout/validation_4.0/burst/to0_regression/$PROJ_REMUS_BURST_DROP_VER/scripts/ecc_init_elf/apu_ps_ddr_init/ctest-bare",
+                    "fsbl_elf": "fsbl_a53_64_ecc.elf",
+                    "preemption_on": "",
+                    "proc": "A53"
+                },
+                "template_file": "alto_remus.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "burst_com_inactv_t": "1800",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "alto/remus/ep108",
+        "script_num": 13
+    },
+    "remus_a53_ecc_dp_preempt": {
+        "cmd": "-pj alto -si remus -b ep108 --processor a53 -ecc -dp -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "ep_8.2_r46580",
+                    "knobs": "Dp_enable_vidgen_cores_only=1;",
+                    "preempt": "Yes",
+                    "script_name": "remus_a53_ecc_dp_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_rst__": "Yes",
+                    "__SUB_TEMPLATE__r5_rst__": "No",
+                    "__SUB_TEMPLATE__remus_a53_ecc__": "Yes",
+                    "__SUB_TEMPLATE__remus_r5_ecc__": "No",
+                    "ecc_elf": "/group/siv3/proj/ronaldo/tapeout/validation_4.0/burst/to0_regression/$PROJ_REMUS_BURST_DROP_VER/scripts/ecc_init_elf/apu_ps_ddr_init/ctest-bare",
+                    "fsbl_elf": "fsbl_a53_64_ecc.elf",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "A53"
+                },
+                "template_file": "alto_remus.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "burst_com_inactv_t": "1800",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "alto/remus/ep108",
+        "script_num": 14
+    },
+    "remus_a53_ecc_preempt": {
+        "cmd": "-pj alto -si remus -b ep108 --processor a53 -ecc -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "ep_8.2_r46580",
+                    "knobs": "Ronaldo_upper_mem_size=0;",
+                    "preempt": "Yes",
+                    "script_name": "remus_a53_ecc_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_rst__": "Yes",
+                    "__SUB_TEMPLATE__r5_rst__": "No",
+                    "__SUB_TEMPLATE__remus_a53_ecc__": "Yes",
+                    "__SUB_TEMPLATE__remus_r5_ecc__": "No",
+                    "ecc_elf": "/group/siv3/proj/ronaldo/tapeout/validation_4.0/burst/to0_regression/$PROJ_REMUS_BURST_DROP_VER/scripts/ecc_init_elf/apu_ps_ddr_init/ctest-bare",
+                    "fsbl_elf": "fsbl_a53_64_ecc.elf",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "A53"
+                },
+                "template_file": "alto_remus.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "burst_com_inactv_t": "1800",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "alto/remus/ep108",
+        "script_num": 15
+    },
+    "remus_a53_preempt": {
+        "cmd": "-pj alto -si remus -b ep108 --processor a53 -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "ep_8.2_r46580",
+                    "knobs": "",
+                    "preempt": "Yes",
+                    "script_name": "remus_a53_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_rst__": "Yes",
+                    "__SUB_TEMPLATE__r5_rst__": "No",
+                    "__SUB_TEMPLATE__remus_a53_ecc__": "No",
+                    "__SUB_TEMPLATE__remus_r5_ecc__": "No",
+                    "ecc_elf": "",
+                    "fsbl_elf": "ron_a53_fsbl.elf",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "A53"
+                },
+                "template_file": "alto_remus.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "alto/remus/ep108",
+        "script_num": 16
+    },
+    "remus_r5": {
+        "cmd": "-pj alto -si remus -b ep108 --processor r5",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "ep_8.2_r46580",
+                    "knobs": "",
+                    "preempt": "No",
+                    "script_name": "remus_r5"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_rst__": "No",
+                    "__SUB_TEMPLATE__r5_rst__": "Yes",
+                    "__SUB_TEMPLATE__remus_a53_ecc__": "No",
+                    "__SUB_TEMPLATE__remus_r5_ecc__": "No",
+                    "ecc_elf": "",
+                    "fsbl_elf": "ron_r5_fsbl.elf",
+                    "preemption_on": "",
+                    "proc": "R5"
+                },
+                "template_file": "alto_remus.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "alto/remus/ep108",
+        "script_num": 17
+    },
+    "remus_r5_dp": {
+        "cmd": "-pj alto -si remus -b ep108 --processor r5 -dp",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "ep_8.2_r46580",
+                    "knobs": "Dp_enable_vidgen_cores_only=1;",
+                    "preempt": "No",
+                    "script_name": "remus_r5_dp"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_rst__": "No",
+                    "__SUB_TEMPLATE__r5_rst__": "Yes",
+                    "__SUB_TEMPLATE__remus_a53_ecc__": "No",
+                    "__SUB_TEMPLATE__remus_r5_ecc__": "No",
+                    "ecc_elf": "",
+                    "fsbl_elf": "ron_r5_fsbl.elf",
+                    "preemption_on": "",
+                    "proc": "R5"
+                },
+                "template_file": "alto_remus.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "alto/remus/ep108",
+        "script_num": 18
+    },
+    "remus_r5_dp_preempt": {
+        "cmd": "-pj alto -si remus -b ep108 --processor r5 -dp -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "ep_8.2_r46580",
+                    "knobs": "Dp_enable_vidgen_cores_only=1;",
+                    "preempt": "Yes",
+                    "script_name": "remus_r5_dp_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_rst__": "No",
+                    "__SUB_TEMPLATE__r5_rst__": "Yes",
+                    "__SUB_TEMPLATE__remus_a53_ecc__": "No",
+                    "__SUB_TEMPLATE__remus_r5_ecc__": "No",
+                    "ecc_elf": "",
+                    "fsbl_elf": "ron_r5_fsbl.elf",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "R5"
+                },
+                "template_file": "alto_remus.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "alto/remus/ep108",
+        "script_num": 19
+    },
+    "remus_r5_ecc": {
+        "cmd": "-pj alto -si remus -b ep108 --processor r5 -ecc",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "ep_8.2_r46580",
+                    "knobs": "",
+                    "preempt": "No",
+                    "script_name": "remus_r5_ecc"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_rst__": "No",
+                    "__SUB_TEMPLATE__r5_rst__": "Yes",
+                    "__SUB_TEMPLATE__remus_a53_ecc__": "No",
+                    "__SUB_TEMPLATE__remus_r5_ecc__": "Yes",
+                    "ecc_elf": "/group/siv3/proj/ronaldo/tapeout/validation_4.0/burst/to0_regression/$PROJ_REMUS_BURST_DROP_VER/scripts/ecc_init_elf/apu_ps_ddr_init/ctest-bare",
+                    "fsbl_elf": "fsbl_r5_ecc.elf",
+                    "preemption_on": "",
+                    "proc": "R5"
+                },
+                "template_file": "alto_remus.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "burst_com_inactv_t": "1800",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "alto/remus/ep108",
+        "script_num": 20
+    },
+    "remus_r5_ecc_dp": {
+        "cmd": "-pj alto -si remus -b ep108 --processor r5 -ecc -dp",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "ep_8.2_r46580",
+                    "knobs": "Dp_enable_vidgen_cores_only=1;Dpdma_stream1_num_descrs=1;",
+                    "preempt": "No",
+                    "script_name": "remus_r5_ecc_dp"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_rst__": "No",
+                    "__SUB_TEMPLATE__r5_rst__": "Yes",
+                    "__SUB_TEMPLATE__remus_a53_ecc__": "No",
+                    "__SUB_TEMPLATE__remus_r5_ecc__": "Yes",
+                    "ecc_elf": "/group/siv3/proj/ronaldo/tapeout/validation_4.0/burst/to0_regression/$PROJ_REMUS_BURST_DROP_VER/scripts/ecc_init_elf/apu_ps_ddr_init/ctest-bare",
+                    "fsbl_elf": "fsbl_r5_ecc.elf",
+                    "preemption_on": "",
+                    "proc": "R5"
+                },
+                "template_file": "alto_remus.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "burst_com_inactv_t": "1800",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "alto/remus/ep108",
+        "script_num": 21
+    },
+    "remus_r5_ecc_dp_preempt": {
+        "cmd": "-pj alto -si remus -b ep108 --processor r5 -ecc -dp -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "ep_8.2_r46580",
+                    "knobs": "Dp_enable_vidgen_cores_only=1;Dpdma_stream1_num_descrs=1;",
+                    "preempt": "Yes",
+                    "script_name": "remus_r5_ecc_dp_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_rst__": "No",
+                    "__SUB_TEMPLATE__r5_rst__": "Yes",
+                    "__SUB_TEMPLATE__remus_a53_ecc__": "No",
+                    "__SUB_TEMPLATE__remus_r5_ecc__": "Yes",
+                    "ecc_elf": "/group/siv3/proj/ronaldo/tapeout/validation_4.0/burst/to0_regression/$PROJ_REMUS_BURST_DROP_VER/scripts/ecc_init_elf/apu_ps_ddr_init/ctest-bare",
+                    "fsbl_elf": "fsbl_r5_ecc.elf",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "R5"
+                },
+                "template_file": "alto_remus.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "burst_com_inactv_t": "1800",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "alto/remus/ep108",
+        "script_num": 22
+    },
+    "remus_r5_ecc_preempt": {
+        "cmd": "-pj alto -si remus -b ep108 --processor r5 -ecc -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "ep_8.2_r46580",
+                    "knobs": "",
+                    "preempt": "Yes",
+                    "script_name": "remus_r5_ecc_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_rst__": "No",
+                    "__SUB_TEMPLATE__r5_rst__": "Yes",
+                    "__SUB_TEMPLATE__remus_a53_ecc__": "No",
+                    "__SUB_TEMPLATE__remus_r5_ecc__": "Yes",
+                    "ecc_elf": "/group/siv3/proj/ronaldo/tapeout/validation_4.0/burst/to0_regression/$PROJ_REMUS_BURST_DROP_VER/scripts/ecc_init_elf/apu_ps_ddr_init/ctest-bare",
+                    "fsbl_elf": "fsbl_r5_ecc.elf",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "R5"
+                },
+                "template_file": "alto_remus.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "burst_com_inactv_t": "1800",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "alto/remus/ep108",
+        "script_num": 23
+    },
+    "remus_r5_preempt": {
+        "cmd": "-pj alto -si remus -b ep108 --processor r5 -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "ep_8.2_r46580",
+                    "knobs": "",
+                    "preempt": "Yes",
+                    "script_name": "remus_r5_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_rst__": "No",
+                    "__SUB_TEMPLATE__r5_rst__": "Yes",
+                    "__SUB_TEMPLATE__remus_a53_ecc__": "No",
+                    "__SUB_TEMPLATE__remus_r5_ecc__": "No",
+                    "ecc_elf": "",
+                    "fsbl_elf": "ron_r5_fsbl.elf",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "R5"
+                },
+                "template_file": "alto_remus.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "alto/remus/ep108",
+        "script_num": 24
+    }
+}

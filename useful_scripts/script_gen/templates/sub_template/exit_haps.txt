@@ -1,0 +1,9 @@
+
+			#Prevents HAPS from being exiting in the case
+			#NO_HAPS_DOWNLOAD is not default ""		
+			if run "[ \"$NO_HAPS_DOWNLOAD\" == \"n\" ]" then
+				#clearing the FPGA's
+				print my_haps "exit"
+			endif
+			#Changing the current working directory
+			cd "$BURST_HOME"

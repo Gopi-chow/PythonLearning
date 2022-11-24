@@ -1,0 +1,197 @@
+
+$logdate := 'date +%Y%m%d_%H%M'
+$logdate1 := 'date +"%D"'
+com0 baud=<::baud_rate::>
+com0 txdelay=<::tx_delay::>
+
+# Check if all paths are accessible
+if run "[ ! -f $BURST_ELF ]" then
+	fail "ERROR: Cannot find file: $BURST_ELF"
+endif
+
+if run "[ ! -f $DDR_INIT_TCL ]" run "[ \"$USE_FSBL\" == \"NO\" ]" then
+	fail "ERROR: Cannot find file: $DDR_INIT_TCL"
+endif
+
+if run "[ ! -f $BUP_BITSTREAM ]" then
+	fail "ERROR: Cannot find file: $BUP_BITSTREAM"
+endif
+
+if run "[ ! -f $BUP_ELF ]" run "[ \"$USE_VIRTUALMB\" == \"YES\" ]" then
+	fail "ERROR: Cannot find file: $BUP_ELF"
+endif
+
+# Create log directories for host
+$dir1 = "$SYSTEST_HOST"
+run "mkdir -p $LOGPATH/$dir1"
+$dir2 = "$logdate"
+run "mkdir -p $LOGPATH/$SYSTEST_HOST/$dir2"
+cd "$LOGPATH/$SYSTEST_HOST/$dir2"
+$BURST_RESULTS = "$LOGPATH/$SYSTEST_HOST/$logdate"
+$WHICH_XSDB := "which xsdb"
+
+$com0log = "$BURST_RESULTS/burst_serial_$SYSTEST_HOST.log"
+debug append "$BURST_RESULTS/burst_debug_$SYSTEST_HOST.log"
+
+# Echo all paths and configurations
+print "Printing all launch information..."
+print "ZYNQ_ID_$logdate,$BURST_HW,$BURST_BUP,$BURST_DROP,$SYSTEST_HOST,$logdate1,$BURST_RUNTIME,xx,NO,IN_PROGRESS,TBD,$BURST_RESULTS,[ZYNQ VNC3.1]$BURST_HW.$BURST_BUP.$BURST_DROP.$SYSTEST_HOST.xx.TBD,$BURST_KNOBS"
+print "Zynq Version          :$BURST_HW"
+print "BUP Version           :$BURST_BUP"
+print "BURST DROP            :$BURST_DROP"
+print "BOARD                 :$SYSTEST_HOST"
+print "BURST ZYNQ INIT elf   :$BURST_ZYNQ_INIT_ELF"
+print "BURST elf             :$BURST_ELF"
+print "BUP                   :$BUP_BITSTREAM"
+print "XSDB Version          :$WHICH_XSDB"
+print "Job ID                :$LSB_JOBID"
+
+if run "[ \"$USE_FSBL\" == \"NO\" ]" then
+	 print"Path of DDR_INIT	:$DDR_INIT_TCL"
+endif
+if run "[ \"$USE_VIRTUALMB\" == \"YES\" ]" then
+	print "Path of BUP ELF	:$BUP_ELF"
+endif
+
+module "clear yes"
+
+# Perform power and sleep sequencing
+cleankeys
+power 0
+sleep 2
+power 1
+sleep 2
+
+record com0 append $com0log
+
+$burst_started = 0
+$burst_message = ""
+$dumping_trace = 0
+$burst_hang = 0
+$starttime = 0
+$endtime = 0
+$trace_for_hang = 0
+
+#Launch XSDB
+if run "[ \"$USE_TOOLS_VER\" != \"latest\" ]" then
+	fork "$USE_TOOLS_VER/xsdb" as my_xsdb
+else
+	fork "xsdb" as my_xsdb
+endif
+my_xsdb echo = 1
+
+# Perform initialsing process for all cores
+print my_xsdb "connect"				# connect to hw server
+print my_xsdb "targets -set -filter {name =~ \"*Cortex-A9*0\"}"				# List all cores
+
+print my_xsdb "mwr 0xf8000008 0xdf0d"
+print my_xsdb "mwr 0xf8000900 0xf"
+print my_xsdb "mwr 0xf8000240 0x0"
+print my_xsdb "dow $BURST_ZYNQ_INIT_ELF"
+print my_xsdb "con"
+print my_xsdb "exec sleep 1"
+print my_xsdb "stop"
+print my_xsdb "exec sleep 1"
+
+
+# Check if DDR init is performed in FSBL/Standalone and load bitstream
+if run "[ \"$USE_FSBL\" == \"NO\" ]" then
+	print my_xsdb "source $DDR_INIT_TCL"
+endif
+$HOME = $SYSTEST_TEMP
+
+# Download BUP
+print my_xsdb "fpga -f $BUP_BITSTREAM"
+
+# Check if virtual Micro-blaze is implemented in PL
+if run "[ \"$USE_VIRTUALMB\" == \"YES\" ]" then
+	print my_xsdb "targets -set -filter {name =~ \"MicroBlaze*0\"}"
+	print my_xsdb "dow $BUP_ELF"
+	print my_xsdb "con"
+endif
+
+print my_xsdb "targets -set -filter {name =~ \"*Cortex-A9*0\"}"
+print my_xsdb "dow $BURST_ELF"
+print my_xsdb "con"
+print my_xsdb "exec sleep 1"
+print my_xsdb "exit"
+
+# The test construct now has new 'event' blocks.
+test
+	# wait here until an event runs either 'fail' or 'continue'
+	wait
+
+	# This event is fired when the com0 sees the regex in the string
+	when com0 matches "Press a key in 5 seconds"
+		if run "[ \"$burst_started\" == \"0\" ]" then
+			print com0 "" "$BURST_KNOBS" ""
+			print "BURST started."
+			$burst_started = 1
+			$starttime := 'date +%s'
+		endif
+	end
+
+	#Check if we need to press ctrl-c to get the trace for the hang
+	when com0 matches "Filling memory with pattern now"
+		if run "[ \"$trace_for_hang\" != \"0\" ]" then
+			print com0 "^C"
+		endif
+	end
+
+	# You can have as many "matches" events as you like
+	# The special varialbe $0 has the contents of the match
+	when com0 matches "Failing at test: \\S+ seed \\S+ Run: \\S+"
+		print "$0"
+		$burst_message = $0
+		$dumping_trace = 1
+		$endtime := 'date +%s'
+		$actualruntime := "expr $endtime - $starttime"
+		print "BURST failed, run time is $actualruntime seconds"
+	end
+
+	when com0 matches "Type 'h' for help"
+		print "Dumping trace."
+		print com0 "T"
+	end
+
+	when com0 matches "Start time: \\S+, end: \\S+, diff: \\S+"
+		fail "BURST failed: $burst_message"
+	end
+
+	when com0 matches "PLBMON dev 00 is out of range"
+		fail "BURST failed: $burst_message"
+	end
+
+	# This event is called when there's inactivity. It can only run once.
+	when com0 inactive 5 minutes
+		$burst_hang = 1
+		if run "[ \"$burst_started\" != \"1\" ]" then
+			fail "BURST never started."
+		else
+			run "echo burst hung >> $com0log"
+			run "echo burst hung. Restarting to dump trace >> $com0log"
+			print "BURST hang detected.Restarting to dump trace"
+			$endtime := 'date +%s'
+			$actualruntime := "expr $endtime - $starttime"
+			$dumping_trace = 1
+			fail "BURST hung. runtime is $actualruntime seconds"
+		endif
+	end
+
+	# This event is called after a fixed time.
+	after $BURST_RUNTIME seconds
+		if run "[ \"$dumping_trace\" != \"1\" ]" then
+			print "BURST run of $BURST_RUNTIME seconds complete!"
+			continue
+		endif
+	end
+
+	on failure
+		print "FAILURE: $0"
+	end
+
+	always
+		close
+	end
+
+endtest

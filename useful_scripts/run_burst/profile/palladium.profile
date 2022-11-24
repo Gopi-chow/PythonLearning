@@ -1,0 +1,10 @@
+#-b palladium-2 -si ps_ddr_12_0 -p a72 -pj everest -s 0
+#-b palladium-2 -si ps_ddr_12_0 -p r5 -pj everest -s 0
+#-b palladium-1 -si ps_me_12_0 -p a72 -pj everest -s 0
+#-b palladium-1 -si ps_cpm_12_0 -p a72 -pj everest -s 0
+#-b palladium-1 -si ps_cpm_12_0 -p r5 -pj everest -s 0
+#-b palladium-2 -si ps_ddr_12_0 -p a72 -pj everest -s 1
+#-b palladium-2 -si ps_ddr_12_0 -p r5 -pj everest -s 1
+#-b palladium-1 -si ps_me_12_0 -p a72 -pj everest -s 1
+#-b palladium-1 -si ps_cpm_12_0 -p a72 -pj everest -s 1
+#-b palladium-1 -si ps_cpm_12_0 -p r5 -pj everest -s 1

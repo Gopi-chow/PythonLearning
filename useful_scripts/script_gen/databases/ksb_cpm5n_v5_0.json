@@ -1,0 +1,342 @@
+{
+    "cpm5n_rc_cpm5n_ep_c0c1_x4_a72": {
+        "cmd": "-pj ksb -si cpm5n_ipp_v5_0 -rc cpm5n -ep cpm5n --cpm_mode c0c1 --lane_count x4 --processor a72",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "N60_HAPS_CPM5N_V5_0",
+                    "burst_runtime": "10800",
+                    "knobs": "",
+                    "preempt": "NO",
+                    "script_name": "cpm5n_rc_cpm5n_ep_c0c1_x4_a72"
+                },
+                "template_file": "parameters_toggle_reset.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__h20_ipp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__r5_ta_sel__": "no",
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__vcc_aux_test__": "yes",
+                    "attribelf_path": "/group/siv_burst/proj/ksb/cpm5n/releases/attrb_elf/ipp_cpm5n_5.0/v5.1/07072022_cpm5n_ipp_v5_1_c0rc_c1ep/src/07072022_cpm5n_ipp_v5_1_c0rc_c1ep.elf",
+                    "com": "com1",
+                    "image_path": "/group/siv_burst/proj/ksb/cpm5n/releases/bup/ipp_cpm5n_5.0/v5.1/gui_vck190_multiID_100Mhz_2022_1_released_v5_1/gui_vck190_multiID_100Mhz_2022_1_released_v5_1/gui_vck190_multiID_100Mhz_2022_1_released_v5_1.runs/impl_1/gui_vck190_multiID_100Mhz_2022_1_released_v5_1_wrapper.pdi",
+                    "proc": "a72",
+                    "xsdb_ver": "/everest/sivhw_bkup/tools/xilinx/2021.2_INT_0727_0226/installs/lin64/Vitis/2021.2/bin/xsdb",
+                    "xsdbrc_path": ""
+                },
+                "template_file": "keystoneb_cpm5n_haps_toggle.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__ksb_cpm5n_exit__": "yes",
+                    "burst_com_inactv_t": "1800",
+                    "com": "com1",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "ksb/cpm5n_ipp_v5_0/pcie",
+        "script_num": 1
+    },
+    "cpm5n_rc_cpm5n_ep_c0c1_x4_a72_preempt": {
+        "cmd": "-pj ksb -si cpm5n_ipp_v5_0 -rc cpm5n -ep cpm5n --cpm_mode c0c1 --lane_count x4 --processor a72 -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "N60_HAPS_CPM5N_V5_0",
+                    "burst_runtime": "10800",
+                    "knobs": "",
+                    "preempt": "YES",
+                    "script_name": "cpm5n_rc_cpm5n_ep_c0c1_x4_a72_preempt"
+                },
+                "template_file": "parameters_toggle_reset.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__h20_ipp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__r5_ta_sel__": "no",
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__vcc_aux_test__": "yes",
+                    "attribelf_path": "/group/siv_burst/proj/ksb/cpm5n/releases/attrb_elf/ipp_cpm5n_5.0/v5.1/07072022_cpm5n_ipp_v5_1_c0rc_c1ep/src/07072022_cpm5n_ipp_v5_1_c0rc_c1ep.elf",
+                    "com": "com1",
+                    "image_path": "/group/siv_burst/proj/ksb/cpm5n/releases/bup/ipp_cpm5n_5.0/v5.1/gui_vck190_multiID_100Mhz_2022_1_released_v5_1/gui_vck190_multiID_100Mhz_2022_1_released_v5_1/gui_vck190_multiID_100Mhz_2022_1_released_v5_1.runs/impl_1/gui_vck190_multiID_100Mhz_2022_1_released_v5_1_wrapper.pdi",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "xsdb_ver": "/everest/sivhw_bkup/tools/xilinx/2021.2_INT_0727_0226/installs/lin64/Vitis/2021.2/bin/xsdb",
+                    "xsdbrc_path": ""
+                },
+                "template_file": "keystoneb_cpm5n_haps_toggle.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__ksb_cpm5n_exit__": "yes",
+                    "burst_com_inactv_t": "1800",
+                    "com": "com1",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "ksb/cpm5n_ipp_v5_0/pcie",
+        "script_num": 2
+    },
+    "cpm5n_rc_cpm5n_ep_c1c0_x4_a72": {
+        "cmd": "-pj ksb -si cpm5n_ipp_v5_0 -rc cpm5n -ep cpm5n --cpm_mode c1c0 --lane_count x4 --processor a72",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "N60_HAPS_CPM5N_V5_0",
+                    "burst_runtime": "10800",
+                    "knobs": "",
+                    "preempt": "NO",
+                    "script_name": "cpm5n_rc_cpm5n_ep_c1c0_x4_a72"
+                },
+                "template_file": "parameters_toggle_reset.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__h20_ipp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__r5_ta_sel__": "no",
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__vcc_aux_test__": "yes",
+                    "attribelf_path": "/group/siv_burst/proj/ksb/cpm5n/releases/attrb_elf/ipp_cpm5n_5.0/v5.1/07072022_cpm5n_ipp_v5_1_c1rc_c0ep/src/07072022_cpm5n_ipp_v5_1_c1rc_c0ep.elf",
+                    "com": "com1",
+                    "image_path": "/group/siv_burst/proj/ksb/cpm5n/releases/bup/ipp_cpm5n_5.0/v5.1/gui_vck190_multiID_100Mhz_2022_1_released_v5_1/gui_vck190_multiID_100Mhz_2022_1_released_v5_1/gui_vck190_multiID_100Mhz_2022_1_released_v5_1.runs/impl_1/gui_vck190_multiID_100Mhz_2022_1_released_v5_1_wrapper.pdi",
+                    "proc": "a72",
+                    "xsdb_ver": "/everest/sivhw_bkup/tools/xilinx/2021.2_INT_0727_0226/installs/lin64/Vitis/2021.2/bin/xsdb",
+                    "xsdbrc_path": ""
+                },
+                "template_file": "keystoneb_cpm5n_haps_toggle.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__ksb_cpm5n_exit__": "yes",
+                    "burst_com_inactv_t": "1800",
+                    "com": "com1",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "ksb/cpm5n_ipp_v5_0/pcie",
+        "script_num": 5
+    },
+    "cpm5n_rc_cpm5n_ep_c1c0_x4_a72_preempt": {
+        "cmd": "-pj ksb -si cpm5n_ipp_v5_0 -rc cpm5n -ep cpm5n --cpm_mode c1c0 --lane_count x4 --processor a72 -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "N60_HAPS_CPM5N_V5_0",
+                    "burst_runtime": "10800",
+                    "knobs": "",
+                    "preempt": "YES",
+                    "script_name": "cpm5n_rc_cpm5n_ep_c1c0_x4_a72_preempt"
+                },
+                "template_file": "parameters_toggle_reset.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__h20_ipp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__r5_ta_sel__": "no",
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__vcc_aux_test__": "yes",
+                    "attribelf_path": "/group/siv_burst/proj/ksb/cpm5n/releases/attrb_elf/ipp_cpm5n_5.0/v5.1/07072022_cpm5n_ipp_v5_1_c1rc_c0ep/src/07072022_cpm5n_ipp_v5_1_c1rc_c0ep.elf",
+                    "com": "com1",
+                    "image_path": "/group/siv_burst/proj/ksb/cpm5n/releases/bup/ipp_cpm5n_5.0/v5.1/gui_vck190_multiID_100Mhz_2022_1_released_v5_1/gui_vck190_multiID_100Mhz_2022_1_released_v5_1/gui_vck190_multiID_100Mhz_2022_1_released_v5_1.runs/impl_1/gui_vck190_multiID_100Mhz_2022_1_released_v5_1_wrapper.pdi",
+                    "proc": "a72",
+                    "xsdb_ver": "/everest/sivhw_bkup/tools/xilinx/2021.2_INT_0727_0226/installs/lin64/Vitis/2021.2/bin/xsdb",
+                    "xsdbrc_path": ""
+                },
+                "template_file": "keystoneb_cpm5n_haps_toggle.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__ksb_cpm5n_exit__": "yes",
+                    "burst_com_inactv_t": "1800",
+                    "com": "com1",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "ksb/cpm5n_ipp_v5_0/pcie",
+        "script_num": 6
+    },
+    "cpm5n_rc_cpm5n_ep_c2c3_x4_a72": {
+        "cmd": "-pj ksb -si cpm5n_ipp_v5_0 -rc cpm5n -ep cpm5n --cpm_mode c2c3 --lane_count x4 --processor a72",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "N60_HAPS_CPM5N_V5_0",
+                    "burst_runtime": "10800",
+                    "knobs": "",
+                    "preempt": "NO",
+                    "script_name": "cpm5n_rc_cpm5n_ep_c2c3_x4_a72"
+                },
+                "template_file": "parameters_toggle_reset.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__h20_ipp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__r5_ta_sel__": "no",
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__vcc_aux_test__": "yes",
+                    "attribelf_path": "/group/siv_burst/proj/ksb/cpm5n/releases/attrb_elf/ipp_cpm5n_5.0/v5.1/07072022_cpm5n_ipp_v5_1_c2rc_c3ep/src/07072022_cpm5n_ipp_v5_1_c2rc_c3ep.elf",
+                    "com": "com1",
+                    "image_path": "/group/siv_burst/proj/ksb/cpm5n/releases/bup/ipp_cpm5n_5.0/v5.1/gui_vck190_multiID_100Mhz_2022_1_released_v5_1/gui_vck190_multiID_100Mhz_2022_1_released_v5_1/gui_vck190_multiID_100Mhz_2022_1_released_v5_1.runs/impl_1/gui_vck190_multiID_100Mhz_2022_1_released_v5_1_wrapper.pdi",
+                    "proc": "a72",
+                    "xsdb_ver": "/everest/sivhw_bkup/tools/xilinx/2021.2_INT_0727_0226/installs/lin64/Vitis/2021.2/bin/xsdb",
+                    "xsdbrc_path": ""
+                },
+                "template_file": "keystoneb_cpm5n_haps_toggle.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__ksb_cpm5n_exit__": "yes",
+                    "burst_com_inactv_t": "1800",
+                    "com": "com1",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "ksb/cpm5n_ipp_v5_0/pcie",
+        "script_num": 3
+    },
+    "cpm5n_rc_cpm5n_ep_c2c3_x4_a72_preempt": {
+        "cmd": "-pj ksb -si cpm5n_ipp_v5_0 -rc cpm5n -ep cpm5n --cpm_mode c2c3 --lane_count x4 --processor a72 -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "N60_HAPS_CPM5N_V5_0",
+                    "burst_runtime": "10800",
+                    "knobs": "",
+                    "preempt": "YES",
+                    "script_name": "cpm5n_rc_cpm5n_ep_c2c3_x4_a72_preempt"
+                },
+                "template_file": "parameters_toggle_reset.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__h20_ipp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__r5_ta_sel__": "no",
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__vcc_aux_test__": "yes",
+                    "attribelf_path": "/group/siv_burst/proj/ksb/cpm5n/releases/attrb_elf/ipp_cpm5n_5.0/v5.1/07072022_cpm5n_ipp_v5_1_c2rc_c3ep/src/07072022_cpm5n_ipp_v5_1_c2rc_c3ep.elf",
+                    "com": "com1",
+                    "image_path": "/group/siv_burst/proj/ksb/cpm5n/releases/bup/ipp_cpm5n_5.0/v5.1/gui_vck190_multiID_100Mhz_2022_1_released_v5_1/gui_vck190_multiID_100Mhz_2022_1_released_v5_1/gui_vck190_multiID_100Mhz_2022_1_released_v5_1.runs/impl_1/gui_vck190_multiID_100Mhz_2022_1_released_v5_1_wrapper.pdi",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "xsdb_ver": "/everest/sivhw_bkup/tools/xilinx/2021.2_INT_0727_0226/installs/lin64/Vitis/2021.2/bin/xsdb",
+                    "xsdbrc_path": ""
+                },
+                "template_file": "keystoneb_cpm5n_haps_toggle.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__ksb_cpm5n_exit__": "yes",
+                    "burst_com_inactv_t": "1800",
+                    "com": "com1",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "ksb/cpm5n_ipp_v5_0/pcie",
+        "script_num": 4
+    },
+    "cpm5n_rc_cpm5n_ep_c3c2_x4_a72": {
+        "cmd": "-pj ksb -si cpm5n_ipp_v5_0 -rc cpm5n -ep cpm5n --cpm_mode c3c2 --lane_count x4 --processor a72",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "N60_HAPS_CPM5N_V5_0",
+                    "burst_runtime": "10800",
+                    "knobs": "",
+                    "preempt": "NO",
+                    "script_name": "cpm5n_rc_cpm5n_ep_c3c2_x4_a72"
+                },
+                "template_file": "parameters_toggle_reset.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__h20_ipp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__r5_ta_sel__": "no",
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__vcc_aux_test__": "yes",
+                    "attribelf_path": "/group/siv_burst/proj/ksb/cpm5n/releases/attrb_elf/ipp_cpm5n_5.0/v5.1/07072022_cpm5n_ipp_v5_1_c3rc_c2ep/src/07072022_cpm5n_ipp_v5_1_c3rc_c2ep.elf",
+                    "com": "com1",
+                    "image_path": "/group/siv_burst/proj/ksb/cpm5n/releases/bup/ipp_cpm5n_5.0/v5.1/gui_vck190_multiID_100Mhz_2022_1_released_v5_1/gui_vck190_multiID_100Mhz_2022_1_released_v5_1/gui_vck190_multiID_100Mhz_2022_1_released_v5_1.runs/impl_1/gui_vck190_multiID_100Mhz_2022_1_released_v5_1_wrapper.pdi",
+                    "proc": "a72",
+                    "xsdb_ver": "/everest/sivhw_bkup/tools/xilinx/2021.2_INT_0727_0226/installs/lin64/Vitis/2021.2/bin/xsdb",
+                    "xsdbrc_path": ""
+                },
+                "template_file": "keystoneb_cpm5n_haps_toggle.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__ksb_cpm5n_exit__": "yes",
+                    "burst_com_inactv_t": "1800",
+                    "com": "com1",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "ksb/cpm5n_ipp_v5_0/pcie",
+        "script_num": 7
+    },
+    "cpm5n_rc_cpm5n_ep_c3c2_x4_a72_preempt": {
+        "cmd": "-pj ksb -si cpm5n_ipp_v5_0 -rc cpm5n -ep cpm5n --cpm_mode c3c2 --lane_count x4 --processor a72 -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "N60_HAPS_CPM5N_V5_0",
+                    "burst_runtime": "10800",
+                    "knobs": "",
+                    "preempt": "YES",
+                    "script_name": "cpm5n_rc_cpm5n_ep_c3c2_x4_a72_preempt"
+                },
+                "template_file": "parameters_toggle_reset.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__h20_ipp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__r5_ta_sel__": "no",
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__vcc_aux_test__": "yes",
+                    "attribelf_path": "/group/siv_burst/proj/ksb/cpm5n/releases/attrb_elf/ipp_cpm5n_5.0/v5.1/07072022_cpm5n_ipp_v5_1_c3rc_c2ep/src/07072022_cpm5n_ipp_v5_1_c3rc_c2ep.elf",
+                    "com": "com1",
+                    "image_path": "/group/siv_burst/proj/ksb/cpm5n/releases/bup/ipp_cpm5n_5.0/v5.1/gui_vck190_multiID_100Mhz_2022_1_released_v5_1/gui_vck190_multiID_100Mhz_2022_1_released_v5_1/gui_vck190_multiID_100Mhz_2022_1_released_v5_1.runs/impl_1/gui_vck190_multiID_100Mhz_2022_1_released_v5_1_wrapper.pdi",
+                    "proc": "a72",
+                    "xsdb_ver": "/everest/sivhw_bkup/tools/xilinx/2021.2_INT_0727_0226/installs/lin64/Vitis/2021.2/bin/xsdb",
+                    "xsdbrc_path": ""
+                },
+                "template_file": "keystoneb_cpm5n_haps_toggle.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__ksb_cpm5n_exit__": "yes",
+                    "burst_com_inactv_t": "1800",
+                    "com": "com1",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "ksb/cpm5n_ipp_v5_0/pcie",
+        "script_num": 8
+    }
+}

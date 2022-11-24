@@ -1,0 +1,2 @@
+print my_xsdb "targets -set -filter {name =~ \"Cortex-A72 #0\" && jtag_cable_name =~ \"*VC-P-A2197*\"}"
+print my_xsdb "targets"

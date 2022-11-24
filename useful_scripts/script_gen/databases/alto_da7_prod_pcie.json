@@ -1,0 +1,1106 @@
+{
+    "alto_rc_alto_ep_be_x4_a53": {
+        "cmd": "-pj alto -si da7_prod -rc alto -ep alto --lane_count x4 --processor a53 -be",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Pele_sd_enable=0;Bus2pcie_check_link_width=0;",
+                    "preempt": "No",
+                    "script_name": "alto_rc_alto_ep_be_x4_a53"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_rst_digilent__": "Yes",
+                    "__SUB_TEMPLATE__a53_rst_platform__": "Yes",
+                    "__SUB_TEMPLATE__r5_rst_digilent__": "No",
+                    "__SUB_TEMPLATE__r5_rst_platform__": "No",
+                    "ep_fsbl_elf": "fsbl_da7_eg_zcu112_1.0_burst_zcu112pcie_av_sd100_schm_ddr4_2133_11142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "preemption_on": "",
+                    "proc": "A53",
+                    "rc_fsbl_elf": "fsbl_da7_eg_zcu102_1.0_burst_zcu102pcie_av_sd100_schm_ddr4_2133_11142019/fsbl_a53_64/fsbl_a53_64.elf"
+                },
+                "template_file": "alto_rc_alto_ep.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "alto/da7_prod/pcie",
+        "script_num": 5
+    },
+    "alto_rc_alto_ep_be_x4_a53_preempt": {
+        "cmd": "-pj alto -si da7_prod -rc alto -ep alto --lane_count x4 --processor a53 -be -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Pele_sd_enable=0;Bus2pcie_check_link_width=0;",
+                    "preempt": "Yes",
+                    "script_name": "alto_rc_alto_ep_be_x4_a53_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_rst_digilent__": "Yes",
+                    "__SUB_TEMPLATE__a53_rst_platform__": "Yes",
+                    "__SUB_TEMPLATE__r5_rst_digilent__": "No",
+                    "__SUB_TEMPLATE__r5_rst_platform__": "No",
+                    "ep_fsbl_elf": "fsbl_da7_eg_zcu112_1.0_burst_zcu112pcie_av_sd100_schm_ddr4_2133_11142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "A53",
+                    "rc_fsbl_elf": "fsbl_da7_eg_zcu102_1.0_burst_zcu102pcie_av_sd100_schm_ddr4_2133_11142019/fsbl_a53_64/fsbl_a53_64.elf"
+                },
+                "template_file": "alto_rc_alto_ep.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "alto/da7_prod/pcie",
+        "script_num": 6
+    },
+    "alto_rc_alto_ep_x1_a53": {
+        "cmd": "-pj alto -si da7_prod -rc alto -ep alto --lane_count x1 --processor a53",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Dp_enable_vidgen_cores_only=1;Pele_sd_enable=0;Bus2pcie_check_link_width=0;",
+                    "preempt": "no",
+                    "script_name": "alto_rc_alto_ep_x1_a53"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_rst_digilent__": "Yes",
+                    "__SUB_TEMPLATE__a53_rst_platform__": "Yes",
+                    "__SUB_TEMPLATE__r5_rst_digilent__": "No",
+                    "__SUB_TEMPLATE__r5_rst_platform__": "No",
+                    "ep_fsbl_elf": "fsbl_da7_eg_zcu112_1.0_burst_zcu112pcie_av_sd100_schm_ddr4_2133_11142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "preemption_on": "",
+                    "proc": "A53",
+                    "rc_fsbl_elf": "fsbl_da7_eg_zcu102_1.0_burst_zcu102_gt1110pcie_av_sd100_schm_ddr4_2133_11142019/fsbl_a53_64/fsbl_a53_64.elf"
+                },
+                "template_file": "alto_rc_alto_ep.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "alto/da7_prod/pcie",
+        "script_num": 1
+    },
+    "alto_rc_alto_ep_x1_a53_preempt": {
+        "cmd": "-pj alto -si da7_prod -rc alto -ep alto --lane_count x1 --processor a53 -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Dp_enable_vidgen_cores_only=1;Pele_sd_enable=0;Bus2pcie_check_link_width=0;",
+                    "preempt": "Yes",
+                    "script_name": "alto_rc_alto_ep_x1_a53_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_rst_digilent__": "Yes",
+                    "__SUB_TEMPLATE__a53_rst_platform__": "Yes",
+                    "__SUB_TEMPLATE__r5_rst_digilent__": "No",
+                    "__SUB_TEMPLATE__r5_rst_platform__": "No",
+                    "ep_fsbl_elf": "fsbl_da7_eg_zcu112_1.0_burst_zcu112pcie_av_sd100_schm_ddr4_2133_11142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "A53",
+                    "rc_fsbl_elf": "fsbl_da7_eg_zcu102_1.0_burst_zcu102_gt1110pcie_av_sd100_schm_ddr4_2133_11142019/fsbl_a53_64/fsbl_a53_64.elf"
+                },
+                "template_file": "alto_rc_alto_ep.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "alto/da7_prod/pcie",
+        "script_num": 2
+    },
+    "alto_rc_alto_ep_x1_r5": {
+        "cmd": "-pj alto -si da7_prod -rc alto -ep alto --lane_count x1 --processor r5",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Pele_sd_enable=0;Bus2pcie_check_link_width=0;Dp_enable=0;",
+                    "preempt": "No",
+                    "script_name": "alto_rc_alto_ep_x1_r5"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_rst_digilent__": "No",
+                    "__SUB_TEMPLATE__a53_rst_platform__": "No",
+                    "__SUB_TEMPLATE__r5_rst_digilent__": "Yes",
+                    "__SUB_TEMPLATE__r5_rst_platform__": "Yes",
+                    "ep_fsbl_elf": "fsbl_da7_eg_zcu112_1.0_burst_zcu112pcie_av_sd100_schm_ddr4_2133_11142019/fsbl_r5_32/fsbl_r5_32.elf",
+                    "preemption_on": "",
+                    "proc": "R5",
+                    "rc_fsbl_elf": "fsbl_da7_eg_zcu102_1.0_burst_zcu102_gt1110pcie_av_sd100_schm_ddr4_2133_11142019/fsbl_r5_32/fsbl_r5_32.elf"
+                },
+                "template_file": "alto_rc_alto_ep.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "alto/da7_prod/pcie",
+        "script_num": 3
+    },
+    "alto_rc_alto_ep_x1_r5_preempt": {
+        "cmd": "-pj alto -si da7_prod -rc alto -ep alto --lane_count x1 --processor r5 -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Pele_sd_enable=0;Bus2pcie_check_link_width=0;Dp_enable=0;",
+                    "preempt": "Yes",
+                    "script_name": "alto_rc_alto_ep_x1_r5_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_rst_digilent__": "No",
+                    "__SUB_TEMPLATE__a53_rst_platform__": "No",
+                    "__SUB_TEMPLATE__r5_rst_digilent__": "Yes",
+                    "__SUB_TEMPLATE__r5_rst_platform__": "Yes",
+                    "ep_fsbl_elf": "fsbl_da7_eg_zcu112_1.0_burst_zcu112pcie_av_sd100_schm_ddr4_2133_11142019/fsbl_r5_32/fsbl_r5_32.elf",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "R5",
+                    "rc_fsbl_elf": "fsbl_da7_eg_zcu102_1.0_burst_zcu102_gt1110pcie_av_sd100_schm_ddr4_2133_11142019/fsbl_r5_32/fsbl_r5_32.elf"
+                },
+                "template_file": "alto_rc_alto_ep.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "alto/da7_prod/pcie",
+        "script_num": 4
+    },
+    "alto_rc_alto_ep_x4_a53": {
+        "cmd": "-pj alto -si da7_prod -rc alto -ep alto --lane_count x4 --processor a53",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Pele_sd_enable=0;Bus2pcie_check_link_width=0;",
+                    "preempt": "No",
+                    "script_name": "alto_rc_alto_ep_x4_a53"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_rst_digilent__": "Yes",
+                    "__SUB_TEMPLATE__a53_rst_platform__": "Yes",
+                    "__SUB_TEMPLATE__r5_rst_digilent__": "No",
+                    "__SUB_TEMPLATE__r5_rst_platform__": "No",
+                    "ep_fsbl_elf": "fsbl_da7_eg_zcu112_1.0_burst_zcu112pcie_av_sd100_schm_ddr4_2133_11142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "preemption_on": "",
+                    "proc": "A53",
+                    "rc_fsbl_elf": "fsbl_da7_eg_zcu102_1.0_burst_zcu102pcie_av_sd100_schm_ddr4_2133_11142019/fsbl_a53_64/fsbl_a53_64.elf"
+                },
+                "template_file": "alto_rc_alto_ep.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "alto/da7_prod/pcie",
+        "script_num": 5
+    },
+    "alto_rc_alto_ep_x4_a53_preempt": {
+        "cmd": "-pj alto -si da7_prod -rc alto -ep alto --lane_count x4 --processor a53 -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Pele_sd_enable=0;Bus2pcie_check_link_width=0;",
+                    "preempt": "Yes",
+                    "script_name": "alto_rc_alto_ep_x4_a53_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_rst_digilent__": "Yes",
+                    "__SUB_TEMPLATE__a53_rst_platform__": "Yes",
+                    "__SUB_TEMPLATE__r5_rst_digilent__": "No",
+                    "__SUB_TEMPLATE__r5_rst_platform__": "No",
+                    "ep_fsbl_elf": "fsbl_da7_eg_zcu112_1.0_burst_zcu112pcie_av_sd100_schm_ddr4_2133_11142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "A53",
+                    "rc_fsbl_elf": "fsbl_da7_eg_zcu102_1.0_burst_zcu102pcie_av_sd100_schm_ddr4_2133_11142019/fsbl_a53_64/fsbl_a53_64.elf"
+                },
+                "template_file": "alto_rc_alto_ep.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "alto/da7_prod/pcie",
+        "script_num": 6
+    },
+    "alto_rc_alto_ep_x4_r5": {
+        "cmd": "-pj alto -si da7_prod -rc alto -ep alto --lane_count x4 --processor r5",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Pele_sd_enable=0;Bus2pcie_check_link_width=0;",
+                    "preempt": "No",
+                    "script_name": "alto_rc_alto_ep_x4_r5"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_rst_digilent__": "No",
+                    "__SUB_TEMPLATE__a53_rst_platform__": "No",
+                    "__SUB_TEMPLATE__r5_rst_digilent__": "Yes",
+                    "__SUB_TEMPLATE__r5_rst_platform__": "Yes",
+                    "ep_fsbl_elf": "fsbl_da7_eg_zcu112_1.0_burst_zcu112pcie_av_sd100_schm_ddr4_2133_11142019/fsbl_r5_32/fsbl_r5_32.elf",
+                    "preemption_on": "",
+                    "proc": "R5",
+                    "rc_fsbl_elf": "fsbl_da7_eg_zcu102_1.0_burst_zcu102pcie_av_sd100_schm_ddr4_2133_11142019/fsbl_r5_32/fsbl_r5_32.elf"
+                },
+                "template_file": "alto_rc_alto_ep.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "alto/da7_prod/pcie",
+        "script_num": 7
+    },
+    "alto_rc_alto_ep_x4_r5_preempt": {
+        "cmd": "-pj alto -si da7_prod -rc alto -ep alto --lane_count x4 --processor r5 -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Pele_sd_enable=0;Bus2pcie_check_link_width=0;",
+                    "preempt": "Yes",
+                    "script_name": "alto_rc_alto_ep_x4_r5_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_rst_digilent__": "No",
+                    "__SUB_TEMPLATE__a53_rst_platform__": "No",
+                    "__SUB_TEMPLATE__r5_rst_digilent__": "Yes",
+                    "__SUB_TEMPLATE__r5_rst_platform__": "Yes",
+                    "ep_fsbl_elf": "fsbl_da7_eg_zcu112_1.0_burst_zcu112pcie_av_sd100_schm_ddr4_2133_11142019/fsbl_r5_32/fsbl_r5_32.elf",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "R5",
+                    "rc_fsbl_elf": "fsbl_da7_eg_zcu102_1.0_burst_zcu102pcie_av_sd100_schm_ddr4_2133_11142019/fsbl_r5_32/fsbl_r5_32.elf"
+                },
+                "template_file": "alto_rc_alto_ep.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "alto/da7_prod/pcie",
+        "script_num": 8
+    },
+    "alto_rc_k7_ep_nwlpcie_be_x4_a53": {
+        "cmd": "-pj alto -si da7_prod -rc alto -ep k7 --bridge_ep nwlpcie --lane_count x4 --processor a53 -be",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Pele_sd_enable=0;Bus2pcie_check_link_width=0;Prob_axiex_enable_interrupts=0;",
+                    "preempt": "No",
+                    "script_name": "alto_rc_k7_ep_nwlpcie_be_x4_a53"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_rst_digilent__": "Yes",
+                    "__SUB_TEMPLATE__r5_rst_digilent__": "No",
+                    "k7_ep_bit": "/group/siv_burst/proj/kc705/ep/nwlpcie/pcie705nwlv_8a_x4g1/implementation/project_1.runs/impl_1/top.bit",
+                    "preemption_on": "",
+                    "proc": "A53",
+                    "rc_fsbl_elf": "fsbl_da7_eg_zcu102_1.0_burst_zcu102pcie_av_sd100_schm_ddr4_2133_11142019/fsbl_a53_64/fsbl_a53_64.elf"
+                },
+                "template_file": "alto_rc_k7_ep.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "alto/da7_prod/pcie",
+        "script_num": 9
+    },
+    "alto_rc_k7_ep_nwlpcie_be_x4_a53_preempt": {
+        "cmd": "-pj alto -si da7_prod -rc alto -ep k7 --bridge_ep nwlpcie --lane_count x4 --processor a53 -be -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Pele_sd_enable=0;Bus2pcie_check_link_width=0;Prob_axiex_enable_interrupts=0;",
+                    "preempt": "Yes",
+                    "script_name": "alto_rc_k7_ep_nwlpcie_be_x4_a53_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_rst_digilent__": "Yes",
+                    "__SUB_TEMPLATE__r5_rst_digilent__": "No",
+                    "k7_ep_bit": "/group/siv_burst/proj/kc705/ep/nwlpcie/pcie705nwlv_8a_x4g1/implementation/project_1.runs/impl_1/top.bit",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "A53",
+                    "rc_fsbl_elf": "fsbl_da7_eg_zcu102_1.0_burst_zcu102pcie_av_sd100_schm_ddr4_2133_11142019/fsbl_a53_64/fsbl_a53_64.elf"
+                },
+                "template_file": "alto_rc_k7_ep.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "alto/da7_prod/pcie",
+        "script_num": 10
+    },
+    "alto_rc_k7_ep_nwlpcie_x4_a53": {
+        "cmd": "-pj alto -si da7_prod -rc alto -ep k7 --bridge_ep nwlpcie --lane_count x4 --processor a53",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Pele_sd_enable=0;Bus2pcie_check_link_width=0;Prob_axiex_enable_interrupts=0;",
+                    "preempt": "No",
+                    "script_name": "alto_rc_k7_ep_nwlpcie_x4_a53"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_rst_digilent__": "Yes",
+                    "__SUB_TEMPLATE__r5_rst_digilent__": "No",
+                    "k7_ep_bit": "/group/siv_burst/proj/kc705/ep/nwlpcie/pcie705nwlv_8a_x4g1/implementation/project_1.runs/impl_1/top.bit",
+                    "preemption_on": "",
+                    "proc": "A53",
+                    "rc_fsbl_elf": "fsbl_da7_eg_zcu102_1.0_burst_zcu102pcie_av_sd100_schm_ddr4_2133_11142019/fsbl_a53_64/fsbl_a53_64.elf"
+                },
+                "template_file": "alto_rc_k7_ep.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "alto/da7_prod/pcie",
+        "script_num": 9
+    },
+    "alto_rc_k7_ep_nwlpcie_x4_a53_preempt": {
+        "cmd": "-pj alto -si da7_prod -rc alto -ep k7 --bridge_ep nwlpcie --lane_count x4 --processor a53 -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Pele_sd_enable=0;Bus2pcie_check_link_width=0;Prob_axiex_enable_interrupts=0;",
+                    "preempt": "Yes",
+                    "script_name": "alto_rc_k7_ep_nwlpcie_x4_a53_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_rst_digilent__": "Yes",
+                    "__SUB_TEMPLATE__r5_rst_digilent__": "No",
+                    "k7_ep_bit": "/group/siv_burst/proj/kc705/ep/nwlpcie/pcie705nwlv_8a_x4g1/implementation/project_1.runs/impl_1/top.bit",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "A53",
+                    "rc_fsbl_elf": "fsbl_da7_eg_zcu102_1.0_burst_zcu102pcie_av_sd100_schm_ddr4_2133_11142019/fsbl_a53_64/fsbl_a53_64.elf"
+                },
+                "template_file": "alto_rc_k7_ep.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "alto/da7_prod/pcie",
+        "script_num": 10
+    },
+    "alto_rc_k7_ep_nwlpcie_x4_r5": {
+        "cmd": "-pj alto -si da7_prod -rc alto -ep k7 --bridge_ep nwlpcie --lane_count x4 --processor r5",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Pele_sd_enable=0;Bus2pcie_check_link_width=0;Prob_axiex_enable_interrupts=0;",
+                    "preempt": "No",
+                    "script_name": "alto_rc_k7_ep_nwlpcie_x4_r5"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_rst_digilent__": "No",
+                    "__SUB_TEMPLATE__r5_rst_digilent__": "Yes",
+                    "k7_ep_bit": "/group/siv_burst/proj/kc705/ep/nwlpcie/pcie705nwlv_8a_x4g1/implementation/project_1.runs/impl_1/top.bit",
+                    "preemption_on": "",
+                    "proc": "R5",
+                    "rc_fsbl_elf": "fsbl_da7_eg_zcu102_1.0_burst_zcu102pcie_av_sd100_schm_ddr4_2133_11142019/fsbl_r5_32/fsbl_r5_32.elf"
+                },
+                "template_file": "alto_rc_k7_ep.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "alto/da7_prod/pcie",
+        "script_num": 15
+    },
+    "alto_rc_k7_ep_nwlpcie_x4_r5_preempt": {
+        "cmd": "-pj alto -si da7_prod -rc alto -ep k7 --bridge_ep nwlpcie --lane_count x4 --processor r5 -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Pele_sd_enable=0;Bus2pcie_check_link_width=0;Prob_axiex_enable_interrupts=0;",
+                    "preempt": "Yes",
+                    "script_name": "alto_rc_k7_ep_nwlpcie_x4_r5_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_rst_digilent__": "No",
+                    "__SUB_TEMPLATE__r5_rst_digilent__": "Yes",
+                    "k7_ep_bit": "/group/siv_burst/proj/kc705/ep/nwlpcie/pcie705nwlv_8a_x4g1/implementation/project_1.runs/impl_1/top.bit",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "R5",
+                    "rc_fsbl_elf": "fsbl_da7_eg_zcu102_1.0_burst_zcu102pcie_av_sd100_schm_ddr4_2133_11142019/fsbl_r5_32/fsbl_r5_32.elf"
+                },
+                "template_file": "alto_rc_k7_ep.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "alto/da7_prod/pcie",
+        "script_num": 16
+    },
+    "alto_rc_k7_ep_plb2pcie_be_x4_a53": {
+        "cmd": "-pj alto -si da7_prod -rc alto -ep k7 --bridge_ep plb2pcie --lane_count x4 --processor a53 -be",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Pele_sd_enable=0;Bus2pcie_check_link_width=0;",
+                    "preempt": "No",
+                    "script_name": "alto_rc_k7_ep_plb2pcie_be_x4_a53"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_rst_digilent__": "Yes",
+                    "__SUB_TEMPLATE__r5_rst_digilent__": "No",
+                    "k7_ep_bit": "/group/siv_burst/proj/kc705/ep/plb2pcie/pcie705_18_X_x4g2/implementation/download.bit",
+                    "preemption_on": "",
+                    "proc": "A53",
+                    "rc_fsbl_elf": "fsbl_da7_eg_zcu102_1.0_burst_zcu102pcie_av_sd100_schm_ddr4_2133_11142019/fsbl_a53_64/fsbl_a53_64.elf"
+                },
+                "template_file": "alto_rc_k7_ep.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "alto/da7_prod/pcie",
+        "script_num": 13
+    },
+    "alto_rc_k7_ep_plb2pcie_be_x4_a53_preempt": {
+        "cmd": "-pj alto -si da7_prod -rc alto -ep k7 --bridge_ep plb2pcie --lane_count x4 --processor a53 -be -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Pele_sd_enable=0;Bus2pcie_check_link_width=0;",
+                    "preempt": "Yes",
+                    "script_name": "alto_rc_k7_ep_plb2pcie_be_x4_a53_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_rst_digilent__": "Yes",
+                    "__SUB_TEMPLATE__r5_rst_digilent__": "No",
+                    "k7_ep_bit": "/group/siv_burst/proj/kc705/ep/plb2pcie/pcie705_18_X_x4g2/implementation/download.bit",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "A53",
+                    "rc_fsbl_elf": "fsbl_da7_eg_zcu102_1.0_burst_zcu102pcie_av_sd100_schm_ddr4_2133_11142019/fsbl_a53_64/fsbl_a53_64.elf"
+                },
+                "template_file": "alto_rc_k7_ep.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "alto/da7_prod/pcie",
+        "script_num": 14
+    },
+    "alto_rc_k7_ep_plb2pcie_x1_a53": {
+        "cmd": "-pj alto -si da7_prod -rc alto -ep k7 --bridge_ep plb2pcie --lane_count x1 --processor a53",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Dp_enable_vidgen_cores_only=1;Pele_sd_enable=0;Bus2pcie_check_link_width=0;",
+                    "preempt": "No",
+                    "script_name": "alto_rc_k7_ep_plb2pcie_x1_a53"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_rst_digilent__": "Yes",
+                    "__SUB_TEMPLATE__r5_rst_digilent__": "No",
+                    "k7_ep_bit": "/group/siv_burst/proj/kc705/ep/plb2pcie/pcie705_18_X_x4g2/implementation/download.bit",
+                    "preemption_on": "",
+                    "proc": "A53",
+                    "rc_fsbl_elf": "fsbl_da7_eg_zcu102_1.0_burst_zcu102_gt1110pcie_av_sd100_schm_ddr4_2133_11142019/fsbl_a53_64/fsbl_a53_64.elf"
+                },
+                "template_file": "alto_rc_k7_ep.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "alto/da7_prod/pcie",
+        "script_num": 9
+    },
+    "alto_rc_k7_ep_plb2pcie_x1_a53_preempt": {
+        "cmd": "-pj alto -si da7_prod -rc alto -ep k7 --bridge_ep plb2pcie --lane_count x1 --processor a53 -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Dp_enable_vidgen_cores_only=1;Pele_sd_enable=0;Bus2pcie_check_link_width=0;",
+                    "preempt": "Yes",
+                    "script_name": "alto_rc_k7_ep_plb2pcie_x1_a53_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_rst_digilent__": "Yes",
+                    "__SUB_TEMPLATE__r5_rst_digilent__": "No",
+                    "k7_ep_bit": "/group/siv_burst/proj/kc705/ep/plb2pcie/pcie705_18_X_x4g2/implementation/download.bit",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "A53",
+                    "rc_fsbl_elf": "fsbl_da7_eg_zcu102_1.0_burst_zcu102_gt1110pcie_av_sd100_schm_ddr4_2133_11142019/fsbl_a53_64/fsbl_a53_64.elf"
+                },
+                "template_file": "alto_rc_k7_ep.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "alto/da7_prod/pcie",
+        "script_num": 10
+    },
+    "alto_rc_k7_ep_plb2pcie_x1_r5": {
+        "cmd": "-pj alto -si da7_prod -rc alto -ep k7 --bridge_ep plb2pcie --lane_count x1 --processor r5",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Dp_enable_vidgen_cores_only=1;Pele_sd_enable=0;Bus2pcie_check_link_width=0;",
+                    "preempt": "No",
+                    "script_name": "alto_rc_k7_ep_plb2pcie_x1_r5"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_rst_digilent__": "No",
+                    "__SUB_TEMPLATE__r5_rst_digilent__": "Yes",
+                    "k7_ep_bit": "/group/siv_burst/proj/kc705/ep/plb2pcie/pcie705_18_X_x4g2/implementation/download.bit",
+                    "preemption_on": "",
+                    "proc": "R5",
+                    "rc_fsbl_elf": "fsbl_da7_eg_zcu102_1.0_burst_zcu102_gt1110pcie_av_sd100_schm_ddr4_2133_11142019/fsbl_r5_32/fsbl_r5_32.elf"
+                },
+                "template_file": "alto_rc_k7_ep.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "alto/da7_prod/pcie",
+        "script_num": 11
+    },
+    "alto_rc_k7_ep_plb2pcie_x1_r5_preempt": {
+        "cmd": "-pj alto -si da7_prod -rc alto -ep k7 --bridge_ep plb2pcie --lane_count x1 --processor r5 -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Dp_enable_vidgen_cores_only=1;Pele_sd_enable=0;Bus2pcie_check_link_width=0;",
+                    "preempt": "Yes",
+                    "script_name": "alto_rc_k7_ep_plb2pcie_x1_r5_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_rst_digilent__": "No",
+                    "__SUB_TEMPLATE__r5_rst_digilent__": "Yes",
+                    "k7_ep_bit": "/group/siv_burst/proj/kc705/ep/plb2pcie/pcie705_18_X_x4g2/implementation/download.bit",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "R5",
+                    "rc_fsbl_elf": "fsbl_da7_eg_zcu102_1.0_burst_zcu102_gt1110pcie_av_sd100_schm_ddr4_2133_11142019/fsbl_r5_32/fsbl_r5_32.elf"
+                },
+                "template_file": "alto_rc_k7_ep.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "alto/da7_prod/pcie",
+        "script_num": 12
+    },
+    "alto_rc_k7_ep_plb2pcie_x4_a53": {
+        "cmd": "-pj alto -si da7_prod -rc alto -ep k7 --bridge_ep plb2pcie --lane_count x4 --processor a53",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Pele_sd_enable=0;Bus2pcie_check_link_width=0;",
+                    "preempt": "No",
+                    "script_name": "alto_rc_k7_ep_plb2pcie_x4_a53"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_rst_digilent__": "Yes",
+                    "__SUB_TEMPLATE__r5_rst_digilent__": "No",
+                    "k7_ep_bit": "/group/siv_burst/proj/kc705/ep/plb2pcie/pcie705_18_X_x4g2/implementation/download.bit",
+                    "preemption_on": "",
+                    "proc": "A53",
+                    "rc_fsbl_elf": "fsbl_da7_eg_zcu102_1.0_burst_zcu102pcie_av_sd100_schm_ddr4_2133_11142019/fsbl_a53_64/fsbl_a53_64.elf"
+                },
+                "template_file": "alto_rc_k7_ep.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "alto/da7_prod/pcie",
+        "script_num": 13
+    },
+    "alto_rc_k7_ep_plb2pcie_x4_a53_preempt": {
+        "cmd": "-pj alto -si da7_prod -rc alto -ep k7 --bridge_ep plb2pcie --lane_count x4 --processor a53 -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Pele_sd_enable=0;Bus2pcie_check_link_width=0;",
+                    "preempt": "Yes",
+                    "script_name": "alto_rc_k7_ep_plb2pcie_x4_a53_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_rst_digilent__": "Yes",
+                    "__SUB_TEMPLATE__r5_rst_digilent__": "No",
+                    "k7_ep_bit": "/group/siv_burst/proj/kc705/ep/plb2pcie/pcie705_18_X_x4g2/implementation/download.bit",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "A53",
+                    "rc_fsbl_elf": "fsbl_da7_eg_zcu102_1.0_burst_zcu102pcie_av_sd100_schm_ddr4_2133_11142019/fsbl_a53_64/fsbl_a53_64.elf"
+                },
+                "template_file": "alto_rc_k7_ep.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "alto/da7_prod/pcie",
+        "script_num": 14
+    },
+    "alto_rc_k7_ep_plb2pcie_x4_r5": {
+        "cmd": "-pj alto -si da7_prod -rc alto -ep k7 --bridge_ep plb2pcie --lane_count x4 --processor r5",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Pele_sd_enable=0;Bus2pcie_check_link_width=0;",
+                    "preempt": "No",
+                    "script_name": "alto_rc_k7_ep_plb2pcie_x4_r5"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_rst_digilent__": "No",
+                    "__SUB_TEMPLATE__r5_rst_digilent__": "Yes",
+                    "k7_ep_bit": "/group/siv_burst/proj/kc705/ep/plb2pcie/pcie705_18_X_x4g2/implementation/download.bit",
+                    "preemption_on": "",
+                    "proc": "R5",
+                    "rc_fsbl_elf": "fsbl_da7_eg_zcu102_1.0_burst_zcu102pcie_av_sd100_schm_ddr4_2133_11142019/fsbl_r5_32/fsbl_r5_32.elf"
+                },
+                "template_file": "alto_rc_k7_ep.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "alto/da7_prod/pcie",
+        "script_num": 15
+    },
+    "alto_rc_k7_ep_plb2pcie_x4_r5_preempt": {
+        "cmd": "-pj alto -si da7_prod -rc alto -ep k7 --bridge_ep plb2pcie --lane_count x4 --processor r5 -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Pele_sd_enable=0;Bus2pcie_check_link_width=0;",
+                    "preempt": "Yes",
+                    "script_name": "alto_rc_k7_ep_plb2pcie_x4_r5_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_rst_digilent__": "No",
+                    "__SUB_TEMPLATE__r5_rst_digilent__": "Yes",
+                    "k7_ep_bit": "/group/siv_burst/proj/kc705/ep/plb2pcie/pcie705_18_X_x4g2/implementation/download.bit",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "R5",
+                    "rc_fsbl_elf": "fsbl_da7_eg_zcu102_1.0_burst_zcu102pcie_av_sd100_schm_ddr4_2133_11142019/fsbl_r5_32/fsbl_r5_32.elf"
+                },
+                "template_file": "alto_rc_k7_ep.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "alto/da7_prod/pcie",
+        "script_num": 16
+    },
+    "k7_rc_nwlpcie_alto_ep_x4_mb": {
+        "cmd": "-pj alto -si da7_prod -rc k7 --bridge_rc nwlpcie -ep alto --lane_count x4 --processor mb",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstmble.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Prob_bus2pcie_pm_d3_endpoint=0;Prob_plb2pcie_inject_errs=0;Prob_bus2pcie_change_link=0;",
+                    "preempt": "No",
+                    "script_name": "k7_rc_nwlpcie_alto_ep_x4_mb"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "ep_fsbl_elf": "fsbl_da7_eg_zcu112_1.0_burst_zcu112pcie_av_sd100_schm_ddr4_2133_11142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "preemption_on": "",
+                    "proc": "K7"
+                },
+                "template_file": "k7_rc_alto_ep.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "alto/da7_prod/pcie",
+        "script_num": 17
+    },
+    "k7_rc_nwlpcie_alto_ep_x4_mb_preempt": {
+        "cmd": "-pj alto -si da7_prod -rc k7 --bridge_rc nwlpcie -ep alto --lane_count x4 --processor mb -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstmble.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Prob_bus2pcie_pm_d3_endpoint=0;Prob_plb2pcie_inject_errs=0;Prob_bus2pcie_change_link=0;",
+                    "preempt": "Yes",
+                    "script_name": "k7_rc_nwlpcie_alto_ep_x4_mb_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "ep_fsbl_elf": "fsbl_da7_eg_zcu112_1.0_burst_zcu112pcie_av_sd100_schm_ddr4_2133_11142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "K7"
+                },
+                "template_file": "k7_rc_alto_ep.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "alto/da7_prod/pcie",
+        "script_num": 18
+    },
+    "x86_rc_alto_ep_x4_x86": {
+        "cmd": "-pj alto -si da7_prod -rc x86 -ep alto --lane_count x4 --processor x86",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burst86",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Aximon_ep0_sel=0x0330;Aximon_ep1_sel=0x0330;Prob_bus2pcie_change_link=0;Nwl_pcie_ignore_ddr=1;",
+                    "preempt": "No",
+                    "script_name": "x86_rc_alto_ep_x4_x86"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "ep_fsbl_elf": "fsbl_da7_eg_zcu112_1.0_burst_zcu112pcie_av_sd100_schm_ddr4_2133_11142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "preemption_on": "",
+                    "proc": "X86"
+                },
+                "template_file": "x86_rc_alto_ep.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "Yes",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "alto/da7_prod/pcie",
+        "script_num": -1
+    },
+    "x86_rc_alto_ep_x4_x86_preempt": {
+        "cmd": "-pj alto -si da7_prod -rc x86 -ep alto --lane_count x4 --processor x86 -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burst86",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Aximon_ep0_sel=0x0330;Aximon_ep1_sel=0x0330;Prob_bus2pcie_change_link=0;Nwl_pcie_ignore_ddr=1;",
+                    "preempt": "Yes",
+                    "script_name": "x86_rc_alto_ep_x4_x86_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "ep_fsbl_elf": "fsbl_da7_eg_zcu112_1.0_burst_zcu112pcie_av_sd100_schm_ddr4_2133_11142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "X86"
+                },
+                "template_file": "x86_rc_alto_ep.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "Yes",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on"
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "alto/da7_prod/pcie",
+        "script_num": -1
+    }
+}

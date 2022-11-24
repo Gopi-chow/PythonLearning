@@ -1,0 +1,218 @@
+{
+    "ph1760_a72_be_bup": {
+        "cmd": "-pj everest -si jamling_es1 -b ph1760 --processor a72 -be -bup",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "jamling_es1",
+                    "knobs": "Me_enable=2,System_type_override=0x9230c609,",
+                    "preempt": "NO",
+                    "script_name": "ph1760_a72_be_bup"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "__SUB_TEMPLATE__tenzing_pdi_images_dow__": "yes",
+                    "com": "com0",
+                    "image_path": "/everest/set_vnc_bkup/vnc/sv60/es1/results/burst/designs/Phase3_vnoc_axidma/project_2.runs/impl_1/project_1_wrapper.pdi",
+                    "proc": "a72",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "everest_ph1760.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit__": "Yes",
+                    "com": "com0"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/jamling_es1/ph1760",
+        "script_num": 1
+    },
+    "ph1760_a72_be_bup_preempt": {
+        "cmd": "-pj everest -si jamling_es1 -b ph1760 --processor a72 -be -bup -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "jamling_es1",
+                    "knobs": "Me_enable=2,System_type_override=0x9230c609,",
+                    "preempt": "YES",
+                    "script_name": "ph1760_a72_be_bup_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "__SUB_TEMPLATE__tenzing_pdi_images_dow__": "yes",
+                    "com": "com0",
+                    "image_path": "/everest/set_vnc_bkup/vnc/sv60/es1/results/burst/designs/Phase3_vnoc_axidma/project_2.runs/impl_1/project_1_wrapper.pdi",
+                    "proc": "a72",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "everest_ph1760.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit__": "Yes",
+                    "com": "com0"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/jamling_es1/ph1760",
+        "script_num": 2
+    },
+    "ph1760_a72_bup": {
+        "cmd": "-pj everest -si jamling_es1 -b ph1760 --processor a72 -bup",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "jamling_es1",
+                    "knobs": "Me_enable=2,System_type_override=0x9230c609,",
+                    "preempt": "YES",
+                    "script_name": "ph1760_a72_bup"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "__SUB_TEMPLATE__tenzing_pdi_images_dow__": "yes",
+                    "com": "com0",
+                    "image_path": "/everest/set_vnc_bkup/vnc/sv60/es1/results/burst/designs/Phase3_vnoc_axidma/project_2.runs/impl_1/project_1_wrapper.pdi",
+                    "proc": "a72",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "everest_ph1760.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit__": "Yes",
+                    "com": "com0"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/jamling_es1/ph1760",
+        "script_num": 3
+    },
+    "ph1760_a72_bup_preempt": {
+        "cmd": "-pj everest -si jamling_es1 -b ph1760 --processor a72 -bup -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "jamling_es1",
+                    "knobs": "Me_enable=2,System_type_override=0x9230c609,",
+                    "preempt": "YES",
+                    "script_name": "ph1760_a72_bup_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "__SUB_TEMPLATE__tenzing_pdi_images_dow__": "yes",
+                    "com": "com0",
+                    "image_path": "/everest/set_vnc_bkup/vnc/sv60/es1/results/burst/designs/Phase3_vnoc_axidma/project_2.runs/impl_1/project_1_wrapper.pdi",
+                    "proc": "a72",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "everest_ph1760.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit__": "Yes",
+                    "com": "com0"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/jamling_es1/ph1760",
+        "script_num": 4
+    },
+    "ph1760_r5_bup": {
+        "cmd": "-pj everest -si jamling_es1 -b ph1760 --processor r5 -bup",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "jamling_es1",
+                    "knobs": "Me_enable=2,System_type_override=0x9230c609,",
+                    "preempt": "NO",
+                    "script_name": "ph1760_r5_bup"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "no",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__tenzing_pdi_images_dow__": "yes",
+                    "com": "com0",
+                    "image_path": "/everest/set_vnc_bkup/vnc/sv60/es1/results/burst/designs/Phase3_vnoc_axidma/project_2.runs/impl_1/project_1_wrapper.pdi",
+                    "proc": "r5",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "everest_ph1760.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit__": "Yes",
+                    "com": "com0"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/jamling_es1/ph1760",
+        "script_num": 5
+    },
+    "ph1760_r5_bup_preempt": {
+        "cmd": "-pj everest -si jamling_es1 -b ph1760 --processor r5 -bup -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "jamling_es1",
+                    "knobs": "Me_enable=2,System_type_override=0x9230c609,",
+                    "preempt": "YES",
+                    "script_name": "ph1760_r5_bup_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "no",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__tenzing_pdi_images_dow__": "yes",
+                    "com": "com0",
+                    "image_path": "/everest/set_vnc_bkup/vnc/sv60/es1/results/burst/designs/Phase3_vnoc_axidma/project_2.runs/impl_1/project_1_wrapper.pdi",
+                    "proc": "r5",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "everest_ph1760.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit__": "Yes",
+                    "com": "com0"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/jamling_es1/ph1760",
+        "script_num": 6
+    }
+}

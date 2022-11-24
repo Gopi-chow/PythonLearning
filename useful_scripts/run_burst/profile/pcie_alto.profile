@@ -1,0 +1,11 @@
+-rc alto -ep alto -lc x1 -p a53 -si da7_prod -rt 3600
+-rc alto -ep alto -lc x1 -p r5  -si da7_prod -rt 3600
+-rc alto -ep alto -lc x4 -p a53 -si da7_prod -rt 3600
+-rc alto -ep alto -lc x4 -p r5  -si da7_prod -rt 3600
+-rc alto -ep k7   -lc x1 -p a53 -bep plb2pcie -si da7_prod -rt 3600
+-rc alto -ep k7   -lc x1 -p r5  -bep plb2pcie -si da7_prod -rt 3600
+-rc alto -ep k7   -lc x4 -p a53 -bep nwlpcie  -si da7_prod -rt 3600
+-rc alto -ep k7   -lc x4 -p a53 -bep plb2pcie -si da7_prod -rt 3600
+-rc alto -ep k7   -lc x4 -p r5  -bep nwlpcie  -si da7_prod -rt 3600
+-rc alto -ep k7   -lc x4 -p r5  -bep plb2pcie -si da7_prod -rt 3600
+-rc k7   -ep alto -lc x4 -p mb  -brc nwlpcie  -si da7_prod -rt 3600

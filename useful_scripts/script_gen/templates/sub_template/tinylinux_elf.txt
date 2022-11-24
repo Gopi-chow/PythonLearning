@@ -1,0 +1,5 @@
+	when serial matches ".* Systest TinyLinux .*"
+        	print "Tinylinux started..."
+	        download "$BURST_ELF"
+        end
+

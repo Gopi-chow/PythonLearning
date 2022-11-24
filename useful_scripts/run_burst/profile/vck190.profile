@@ -1,0 +1,6 @@
+-b vck190 -si es2_pscon4 -dm sddr -bup    -p a72
+-b vck190 -si es2_pscon4 -dm sddr -bup    -p a72 -be
+-b vck190 -si es2_pscon4 -dm sddr -bup    -p r5
+-b vck190 -si es2_pscon4 -dm sddr -bupcoh -p a72     -ospi
+-b vck190 -si es2_pscon4 -dm sddr -bupcoh -p a72 -be -ospi
+-b vck190 -si es2_pscon4 -dm sddr -bupcoh -p r5      -ospi

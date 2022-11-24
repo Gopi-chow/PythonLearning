@@ -1,0 +1,248 @@
+{
+    "protium_a78_be_bup": {
+        "cmd": "-pj ksb -si psxl_ipp_v1_1 -b protium --processor a78 -be -bup",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "ipp_psxl_v1_1",
+                    "knobs": "",
+                    "preempt": "NO",
+                    "script_name": "protium_a78_be_bup"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__psx_ipp_a78_core_rst__": "yes",
+                    "__SUB_TEMPLATE__psx_ipp_r52_core_rst__": "no",
+                    "com": "serial",
+                    "dwn_burst_wait": "1",
+                    "proc": "a78",
+                    "reserve_count": "4",
+                    "run_script": "run_outer.tcl",
+                    "unlock_cmd": "unlock_4"
+                },
+                "template_file": "keystoneb_protium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": {
+                        "unlock_cmd": "unlock_4"
+                    },
+                    "com": "serial",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "ksb/psxl_ipp_v1_1/protium",
+        "script_num": 1
+    },
+    "protium_a78_be_bup_preempt": {
+        "cmd": "-pj ksb -si psxl_ipp_v1_1 -b protium --processor a78 -be -bup -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "ipp_psxl_v1_1",
+                    "knobs": "",
+                    "preempt": "YES",
+                    "script_name": "protium_a78_be_bup_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__psx_ipp_a78_core_rst__": "yes",
+                    "__SUB_TEMPLATE__psx_ipp_r52_core_rst__": "no",
+                    "com": "serial",
+                    "dwn_burst_wait": "1",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a78",
+                    "reserve_count": "4",
+                    "run_script": "run_outer.tcl",
+                    "unlock_cmd": "unlock_4"
+                },
+                "template_file": "keystoneb_protium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": {
+                        "unlock_cmd": "unlock_4"
+                    },
+                    "com": "serial",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "ksb/psxl_ipp_v1_1/protium",
+        "script_num": 2
+    },
+    "protium_a78_bup": {
+        "cmd": "-pj ksb -si psxl_ipp_v1_1 -b protium --processor a78 -bup",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "ipp_psxl_v1_1",
+                    "knobs": "",
+                    "preempt": "NO",
+                    "script_name": "protium_a78_bup"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__psx_ipp_a78_core_rst__": "yes",
+                    "__SUB_TEMPLATE__psx_ipp_r52_core_rst__": "no",
+                    "com": "serial",
+                    "dwn_burst_wait": "1",
+                    "proc": "a78",
+                    "reserve_count": "4",
+                    "run_script": "run_outer.tcl",
+                    "unlock_cmd": "unlock_4"
+                },
+                "template_file": "keystoneb_protium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": {
+                        "unlock_cmd": "unlock_4"
+                    },
+                    "com": "serial",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "ksb/psxl_ipp_v1_1/protium",
+        "script_num": 5
+    },
+    "protium_a78_bup_preempt": {
+        "cmd": "-pj ksb -si psxl_ipp_v1_1 -b protium --processor a78 -bup -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "ipp_psxl_v1_1",
+                    "knobs": "",
+                    "preempt": "YES",
+                    "script_name": "protium_a78_bup_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__psx_ipp_a78_core_rst__": "yes",
+                    "__SUB_TEMPLATE__psx_ipp_r52_core_rst__": "no",
+                    "com": "serial",
+                    "dwn_burst_wait": "1",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a78",
+                    "reserve_count": "4",
+                    "run_script": "run_outer.tcl",
+                    "unlock_cmd": "unlock_4"
+                },
+                "template_file": "keystoneb_protium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": {
+                        "unlock_cmd": "unlock_4"
+                    },
+                    "com": "serial",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "ksb/psxl_ipp_v1_1/protium",
+        "script_num": 6
+    },
+    "protium_r52_bup": {
+        "cmd": "-pj ksb -si psxl_ipp_v1_1 -b protium --processor r52 -bup",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "ipp_psxl_v1_1",
+                    "knobs": "",
+                    "preempt": "NO",
+                    "script_name": "protium_r52_bup"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__psx_ipp_a78_core_rst__": "no",
+                    "__SUB_TEMPLATE__psx_ipp_r52_core_rst__": "yes",
+                    "com": "serial",
+                    "dwn_burst_wait": "1",
+                    "proc": "r52",
+                    "reserve_count": "4",
+                    "run_script": "run_outer.tcl",
+                    "unlock_cmd": "unlock_4"
+                },
+                "template_file": "keystoneb_protium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": {
+                        "unlock_cmd": "unlock_4"
+                    },
+                    "com": "serial",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "ksb/psxl_ipp_v1_1/protium",
+        "script_num": 9
+    },
+    "protium_r52_bup_preempt": {
+        "cmd": "-pj ksb -si psxl_ipp_v1_1 -b protium --processor r52 -bup -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "ipp_psxl_v1_1",
+                    "knobs": "",
+                    "preempt": "YES",
+                    "script_name": "protium_r52_bup_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__psx_ipp_a78_core_rst__": "no",
+                    "__SUB_TEMPLATE__psx_ipp_r52_core_rst__": "yes",
+                    "com": "serial",
+                    "dwn_burst_wait": "1",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "r52",
+                    "reserve_count": "4",
+                    "run_script": "run_outer.tcl",
+                    "unlock_cmd": "unlock_4"
+                },
+                "template_file": "keystoneb_protium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": {
+                        "unlock_cmd": "unlock_4"
+                    },
+                    "com": "serial",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "ksb/psxl_ipp_v1_1/protium",
+        "script_num": 10
+    }
+}

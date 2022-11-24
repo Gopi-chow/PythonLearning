@@ -1,0 +1,1044 @@
+{
+    "cpm5_rc_cpm5_ep_epchi1_x4_a72": {
+        "cmd": "-pj everest -si h10_cpm5_es1_6_0 -rc cpm5 -ep cpm5 --cpm_mode epchi1 --lane_count x4 --processor a72",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "spp_ps_cpm5_h10_v6_0",
+                    "burst_runtime": "7200",
+                    "knobs": "Ronaldo_virtr5_enable=0;g_is_cpm_ep=0x8;Ccix_en_h10_chi1=1;System_type_override=0x80240409;Ccix_pcie_force_firmware=1;Everest_force_enable_aximon=0;Everest_avoid_ps_component_cpm5 = 1;Prob_axiex_enable_interrupts = 0;ArmA53_cache_avoid_mask=-1;Everest_cpmrc_disable_smmu=0;",
+                    "preempt": "NO",
+                    "script_name": "cpm5_rc_cpm5_ep_epchi1_x4_a72"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "build_dir": "/group/siv4/proj/everest/public/releases/spp/spp_ps_cpm5_h10_v6_0/",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "h10_es2": "false",
+                    "image_path": "/group/siv4/proj/everest/public/releases/spp/spp_ps_cpm5_h10_v6_0/plm_dir/output_dir/plm_chi/design_1_wrapper.bin",
+                    "jtag_freq": "600000",
+                    "proc": "a72",
+                    "ptm_ver": "module \"switch protium/19.11.175.s002_200527-141721.p1\"",
+                    "reserve_count": "4",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "unlock_cmd": "unlock_4",
+                    "xsdb_ver": "/proj/xbuilds/2020.2_weekly_latest/installs/lin64/Vivado/2020.2/bin/xsdb",
+                    "xsdbrc_path": "/group/siv4/proj/everest/public/releases/spp/spp_ps_cpm5_h10_v6_0/.xsdbrc"
+                },
+                "template_file": "cpm5_rc_cpm5_ep_spp.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": {
+                        "unlock_cmd": "unlock_4"
+                    },
+                    "__SUB_TEMPLATE__spp_h10_noc_reg_dump__": "yes",
+                    "burst_com_inactv_t": "900",
+                    "com": "com0",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "everest/h10_cpm5_es1_6_0/pcie",
+        "script_num": 17
+    },
+    "cpm5_rc_cpm5_ep_epchi1_x4_a72_preempt": {
+        "cmd": "-pj everest -si h10_cpm5_es1_6_0 -rc cpm5 -ep cpm5 --cpm_mode epchi1 --lane_count x4 --processor a72 -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "spp_ps_cpm5_h10_v6_0",
+                    "burst_runtime": "7200",
+                    "knobs": "Ronaldo_virtr5_enable=0;g_is_cpm_ep=0x8;Ccix_en_h10_chi1=1;System_type_override=0x80240409;Ccix_pcie_force_firmware=1;Everest_force_enable_aximon=0;Everest_avoid_ps_component_cpm5 = 1;Prob_axiex_enable_interrupts = 0;ArmA53_cache_avoid_mask=-1;Everest_cpmrc_disable_smmu=0;",
+                    "preempt": "NO",
+                    "script_name": "cpm5_rc_cpm5_ep_epchi1_x4_a72_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "build_dir": "/group/siv4/proj/everest/public/releases/spp/spp_ps_cpm5_h10_v6_0/",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "h10_es2": "false",
+                    "image_path": "/group/siv4/proj/everest/public/releases/spp/spp_ps_cpm5_h10_v6_0/plm_dir/output_dir/plm_chi/design_1_wrapper.bin",
+                    "jtag_freq": "600000",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "ptm_ver": "module \"switch protium/19.11.175.s002_200527-141721.p1\"",
+                    "reserve_count": "4",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "unlock_cmd": "unlock_4",
+                    "xsdb_ver": "/proj/xbuilds/2020.2_weekly_latest/installs/lin64/Vivado/2020.2/bin/xsdb",
+                    "xsdbrc_path": "/group/siv4/proj/everest/public/releases/spp/spp_ps_cpm5_h10_v6_0/.xsdbrc"
+                },
+                "template_file": "cpm5_rc_cpm5_ep_spp.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": {
+                        "unlock_cmd": "unlock_4"
+                    },
+                    "__SUB_TEMPLATE__spp_h10_noc_reg_dump__": "yes",
+                    "burst_com_inactv_t": "900",
+                    "com": "com0",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "everest/h10_cpm5_es1_6_0/pcie",
+        "script_num": 18
+    },
+    "cpm5_rc_cpm5_ep_epchi1opttlp_x4_a72": {
+        "cmd": "-pj everest -si h10_cpm5_es1_6_0 -rc cpm5 -ep cpm5 --cpm_mode epchi1opttlp --lane_count x4 --processor a72",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "spp_ps_cpm5_h10_v6_0",
+                    "burst_runtime": "7200",
+                    "knobs": "Ronaldo_virtr5_enable=0;Ccix_en_h10_opt_tlp=1;g_is_cpm_ep=0x8;Ccix_en_h10_chi1=1;System_type_override=0x80240409;Ccix_pcie_force_firmware=1;Everest_force_enable_aximon=0;Everest_avoid_ps_component_cpm5 = 1;Prob_axiex_enable_interrupts = 0;ArmA53_cache_avoid_mask=-1;Everest_cpmrc_disable_smmu=0;",
+                    "preempt": "NO",
+                    "script_name": "cpm5_rc_cpm5_ep_epchi1opttlp_x4_a72"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "build_dir": "/group/siv4/proj/everest/public/releases/spp/spp_ps_cpm5_h10_v6_0/",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "h10_es2": "false",
+                    "image_path": "/group/siv4/proj/everest/public/releases/spp/spp_ps_cpm5_h10_v6_0/plm_dir/output_dir/plm_chi_opt_tlp/design_1_wrapper.bin",
+                    "jtag_freq": "600000",
+                    "proc": "a72",
+                    "ptm_ver": "module \"switch protium/19.11.175.s002_200527-141721.p1\"",
+                    "reserve_count": "4",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "unlock_cmd": "unlock_4",
+                    "xsdb_ver": "/proj/xbuilds/2020.2_weekly_latest/installs/lin64/Vivado/2020.2/bin/xsdb",
+                    "xsdbrc_path": "/group/siv4/proj/everest/public/releases/spp/spp_ps_cpm5_h10_v6_0/.xsdbrc"
+                },
+                "template_file": "cpm5_rc_cpm5_ep_spp.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": {
+                        "unlock_cmd": "unlock_4"
+                    },
+                    "__SUB_TEMPLATE__spp_h10_noc_reg_dump__": "yes",
+                    "burst_com_inactv_t": "900",
+                    "com": "com0",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "everest/h10_cpm5_es1_6_0/pcie",
+        "script_num": 19
+    },
+    "cpm5_rc_cpm5_ep_epchi1opttlp_x4_a72_preempt": {
+        "cmd": "-pj everest -si h10_cpm5_es1_6_0 -rc cpm5 -ep cpm5 --cpm_mode epchi1opttlp --lane_count x4 --processor a72 -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "spp_ps_cpm5_h10_v6_0",
+                    "burst_runtime": "7200",
+                    "knobs": "Ronaldo_virtr5_enable=0;Ccix_en_h10_opt_tlp=1;g_is_cpm_ep=0x8;Ccix_en_h10_chi1=1;System_type_override=0x80240409;Ccix_pcie_force_firmware=1;Everest_force_enable_aximon=0;Everest_avoid_ps_component_cpm5 = 1;Prob_axiex_enable_interrupts = 0;ArmA53_cache_avoid_mask=-1;Everest_cpmrc_disable_smmu=0;",
+                    "preempt": "NO",
+                    "script_name": "cpm5_rc_cpm5_ep_epchi1opttlp_x4_a72_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "build_dir": "/group/siv4/proj/everest/public/releases/spp/spp_ps_cpm5_h10_v6_0/",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "h10_es2": "false",
+                    "image_path": "/group/siv4/proj/everest/public/releases/spp/spp_ps_cpm5_h10_v6_0/plm_dir/output_dir/plm_chi_opt_tlp/design_1_wrapper.bin",
+                    "jtag_freq": "600000",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "ptm_ver": "module \"switch protium/19.11.175.s002_200527-141721.p1\"",
+                    "reserve_count": "4",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "unlock_cmd": "unlock_4",
+                    "xsdb_ver": "/proj/xbuilds/2020.2_weekly_latest/installs/lin64/Vivado/2020.2/bin/xsdb",
+                    "xsdbrc_path": "/group/siv4/proj/everest/public/releases/spp/spp_ps_cpm5_h10_v6_0/.xsdbrc"
+                },
+                "template_file": "cpm5_rc_cpm5_ep_spp.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": {
+                        "unlock_cmd": "unlock_4"
+                    },
+                    "__SUB_TEMPLATE__spp_h10_noc_reg_dump__": "yes",
+                    "burst_com_inactv_t": "900",
+                    "com": "com0",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "everest/h10_cpm5_es1_6_0/pcie",
+        "script_num": 20
+    },
+    "cpm5_rc_cpm5_ep_epcxs_x4_a72": {
+        "cmd": "-pj everest -si h10_cpm5_es1_6_0 -rc cpm5 -ep cpm5 --cpm_mode epcxs --lane_count x4 --processor a72",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "spp_ps_cpm5_h10_v6_0",
+                    "burst_runtime": "7200",
+                    "knobs": "Ronaldo_virtr5_enable=0;g_is_cpm_ep=0x8;System_type_override=0x80240409;Ccix_pcie_force_firmware=1;Everest_force_enable_aximon=0;Everest_avoid_ps_component_cpm5=1;Prob_axiex_enable_interrupts = 0;ArmA53_cache_avoid_mask=-1;Everest_cpmrc_disable_smmu=0;",
+                    "preempt": "NO",
+                    "script_name": "cpm5_rc_cpm5_ep_epcxs_x4_a72"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "build_dir": "/group/siv4/proj/everest/public/releases/spp/spp_ps_cpm5_h10_v6_0/",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "h10_es2": "false",
+                    "image_path": "/group/siv4/proj/everest/public/releases/spp/spp_ps_cpm5_h10_v6_0/plm_dir/output_dir/plm_cxs/design_1_wrapper.bin",
+                    "jtag_freq": "600000",
+                    "proc": "a72",
+                    "ptm_ver": "module \"switch protium/19.11.175.s002_200527-141721.p1\"",
+                    "reserve_count": "4",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "unlock_cmd": "unlock_4",
+                    "xsdb_ver": "/proj/xbuilds/2020.2_weekly_latest/installs/lin64/Vivado/2020.2/bin/xsdb",
+                    "xsdbrc_path": "/group/siv4/proj/everest/public/releases/spp/spp_ps_cpm5_h10_v6_0/.xsdbrc"
+                },
+                "template_file": "cpm5_rc_cpm5_ep_spp.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": {
+                        "unlock_cmd": "unlock_4"
+                    },
+                    "__SUB_TEMPLATE__spp_h10_noc_reg_dump__": "yes",
+                    "burst_com_inactv_t": "900",
+                    "com": "com0",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "everest/h10_cpm5_es1_6_0/pcie",
+        "script_num": 15
+    },
+    "cpm5_rc_cpm5_ep_epcxs_x4_a72_preempt": {
+        "cmd": "-pj everest -si h10_cpm5_es1_6_0 -rc cpm5 -ep cpm5 --cpm_mode epcxs --lane_count x4 --processor a72 -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "spp_ps_cpm5_h10_v6_0",
+                    "burst_runtime": "7200",
+                    "knobs": "Ronaldo_virtr5_enable=0;g_is_cpm_ep=0x8;System_type_override=0x80240409;Ccix_pcie_force_firmware=1;Everest_force_enable_aximon=0;Everest_avoid_ps_component_cpm5=1;Prob_axiex_enable_interrupts = 0;ArmA53_cache_avoid_mask=-1;Everest_cpmrc_disable_smmu=0;",
+                    "preempt": "NO",
+                    "script_name": "cpm5_rc_cpm5_ep_epcxs_x4_a72_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "build_dir": "/group/siv4/proj/everest/public/releases/spp/spp_ps_cpm5_h10_v6_0/",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "h10_es2": "false",
+                    "image_path": "/group/siv4/proj/everest/public/releases/spp/spp_ps_cpm5_h10_v6_0/plm_dir/output_dir/plm_cxs/design_1_wrapper.bin",
+                    "jtag_freq": "600000",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "ptm_ver": "module \"switch protium/19.11.175.s002_200527-141721.p1\"",
+                    "reserve_count": "4",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "unlock_cmd": "unlock_4",
+                    "xsdb_ver": "/proj/xbuilds/2020.2_weekly_latest/installs/lin64/Vivado/2020.2/bin/xsdb",
+                    "xsdbrc_path": "/group/siv4/proj/everest/public/releases/spp/spp_ps_cpm5_h10_v6_0/.xsdbrc"
+                },
+                "template_file": "cpm5_rc_cpm5_ep_spp.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": {
+                        "unlock_cmd": "unlock_4"
+                    },
+                    "__SUB_TEMPLATE__spp_h10_noc_reg_dump__": "yes",
+                    "burst_com_inactv_t": "900",
+                    "com": "com0",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "everest/h10_cpm5_es1_6_0/pcie",
+        "script_num": 16
+    },
+    "cpm5_rc_cpm5_ep_plst_x4_a72": {
+        "cmd": "-pj everest -si h10_cpm5_es1_6_0 -rc cpm5 -ep cpm5 --cpm_mode plst --lane_count x4 --processor a72",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "spp_ps_cpm5_h10_v6_0",
+                    "burst_runtime": "7200",
+                    "knobs": "Ronaldo_virtr5_enable=0;g_is_cpm_ep=8;Everest_force_enable_aximon=0;System_type_override=0x80040409;Mem_check_pattern=0;Prob_ronaldo_secure_xppu_range=0;Everest_cpmrc_disable_smmu=0;",
+                    "preempt": "NO",
+                    "script_name": "cpm5_rc_cpm5_ep_plst_x4_a72"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "build_dir": "/group/siv4/proj/everest/public/releases/spp/spp_ps_cpm5_h10_v6_0/",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "h10_es2": "false",
+                    "image_path": "/group/siv4/proj/everest/public/releases/spp/spp_ps_cpm5_h10_v6_0/plm_dir/output_dir/plm_cxs/design_1_wrapper.bin",
+                    "jtag_freq": "600000",
+                    "proc": "a72",
+                    "ptm_ver": "module \"switch protium/19.11.175.s002_200527-141721.p1\"",
+                    "reserve_count": "4",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "unlock_cmd": "unlock_4",
+                    "xsdb_ver": "/proj/xbuilds/2020.2_weekly_latest/installs/lin64/Vivado/2020.2/bin/xsdb",
+                    "xsdbrc_path": "/group/siv4/proj/everest/public/releases/spp/spp_ps_cpm5_h10_v6_0/.xsdbrc"
+                },
+                "template_file": "cpm5_rc_cpm5_ep_spp.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": {
+                        "unlock_cmd": "unlock_4"
+                    },
+                    "__SUB_TEMPLATE__spp_h10_noc_reg_dump__": "yes",
+                    "burst_com_inactv_t": "900",
+                    "com": "com0",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "everest/h10_cpm5_es1_6_0/pcie",
+        "script_num": 7
+    },
+    "cpm5_rc_cpm5_ep_plst_x4_a72_preempt": {
+        "cmd": "-pj everest -si h10_cpm5_es1_6_0 -rc cpm5 -ep cpm5 --cpm_mode plst --lane_count x4 --processor a72 -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "spp_ps_cpm5_h10_v6_0",
+                    "burst_runtime": "7200",
+                    "knobs": "Ronaldo_virtr5_enable=0;g_is_cpm_ep=8;Everest_force_enable_aximon=0;System_type_override=0x80040409;Mem_check_pattern=0;Prob_ronaldo_secure_xppu_range=0;Everest_cpmrc_disable_smmu=0;",
+                    "preempt": "NO",
+                    "script_name": "cpm5_rc_cpm5_ep_plst_x4_a72_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "build_dir": "/group/siv4/proj/everest/public/releases/spp/spp_ps_cpm5_h10_v6_0/",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "h10_es2": "false",
+                    "image_path": "/group/siv4/proj/everest/public/releases/spp/spp_ps_cpm5_h10_v6_0/plm_dir/output_dir/plm_cxs/design_1_wrapper.bin",
+                    "jtag_freq": "600000",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "ptm_ver": "module \"switch protium/19.11.175.s002_200527-141721.p1\"",
+                    "reserve_count": "4",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "unlock_cmd": "unlock_4",
+                    "xsdb_ver": "/proj/xbuilds/2020.2_weekly_latest/installs/lin64/Vivado/2020.2/bin/xsdb",
+                    "xsdbrc_path": "/group/siv4/proj/everest/public/releases/spp/spp_ps_cpm5_h10_v6_0/.xsdbrc"
+                },
+                "template_file": "cpm5_rc_cpm5_ep_spp.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": {
+                        "unlock_cmd": "unlock_4"
+                    },
+                    "__SUB_TEMPLATE__spp_h10_noc_reg_dump__": "yes",
+                    "burst_com_inactv_t": "900",
+                    "com": "com0",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "everest/h10_cpm5_es1_6_0/pcie",
+        "script_num": 8
+    },
+    "cpm5_rc_cpm5_ep_psccix_x4_a72": {
+        "cmd": "-pj everest -si h10_cpm5_es1_6_0 -rc cpm5 -ep cpm5 --cpm_mode psccix --lane_count x4 --processor a72",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "spp_ps_cpm5_h10_v6_0",
+                    "burst_runtime": "7200",
+                    "knobs": "Ronaldo_virtr5_enable=0;g_is_cpm_ep=0x8;Ccix_en_h10_ps_ccix=1;System_type_override=0x80240409;Xdma_pcie_card_bdtype_override=0x80000000;Ccix_pcie_force_firmware=1;Everest_force_enable_aximon=0;Everest_avoid_ps_component_cpm5 = 1;Prob_axiex_enable_interrupts = 0;ArmA53_cache_avoid_mask=-1;Everest_cpmrc_disable_smmu=0;",
+                    "preempt": "NO",
+                    "script_name": "cpm5_rc_cpm5_ep_psccix_x4_a72"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "build_dir": "/group/siv4/proj/everest/public/releases/spp/spp_ps_cpm5_h10_v6_0/",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "h10_es2": "false",
+                    "image_path": "/group/siv4/proj/everest/public/releases/spp/spp_ps_cpm5_h10_v6_0/plm_dir/output_dir/plm_chi/design_1_wrapper.bin",
+                    "jtag_freq": "600000",
+                    "proc": "a72",
+                    "ptm_ver": "module \"switch protium/19.11.175.s002_200527-141721.p1\"",
+                    "reserve_count": "4",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "unlock_cmd": "unlock_4",
+                    "xsdb_ver": "/proj/xbuilds/2020.2_weekly_latest/installs/lin64/Vivado/2020.2/bin/xsdb",
+                    "xsdbrc_path": "/group/siv4/proj/everest/public/releases/spp/spp_ps_cpm5_h10_v6_0/.xsdbrc"
+                },
+                "template_file": "cpm5_rc_cpm5_ep_spp.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": {
+                        "unlock_cmd": "unlock_4"
+                    },
+                    "__SUB_TEMPLATE__spp_h10_noc_reg_dump__": "yes",
+                    "burst_com_inactv_t": "900",
+                    "com": "com0",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "everest/h10_cpm5_es1_6_0/pcie",
+        "script_num": 21
+    },
+    "cpm5_rc_cpm5_ep_psccix_x4_a72_preempt": {
+        "cmd": "-pj everest -si h10_cpm5_es1_6_0 -rc cpm5 -ep cpm5 --cpm_mode psccix --lane_count x4 --processor a72 -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "spp_ps_cpm5_h10_v6_0",
+                    "burst_runtime": "7200",
+                    "knobs": "Ronaldo_virtr5_enable=0;g_is_cpm_ep=0x8;Ccix_en_h10_ps_ccix=1;System_type_override=0x80240409;Xdma_pcie_card_bdtype_override=0x80000000;Ccix_pcie_force_firmware=1;Everest_force_enable_aximon=0;Everest_avoid_ps_component_cpm5 = 1;Prob_axiex_enable_interrupts = 0;ArmA53_cache_avoid_mask=-1;Everest_cpmrc_disable_smmu=0;",
+                    "preempt": "NO",
+                    "script_name": "cpm5_rc_cpm5_ep_psccix_x4_a72_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "build_dir": "/group/siv4/proj/everest/public/releases/spp/spp_ps_cpm5_h10_v6_0/",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "h10_es2": "false",
+                    "image_path": "/group/siv4/proj/everest/public/releases/spp/spp_ps_cpm5_h10_v6_0/plm_dir/output_dir/plm_chi/design_1_wrapper.bin",
+                    "jtag_freq": "600000",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "ptm_ver": "module \"switch protium/19.11.175.s002_200527-141721.p1\"",
+                    "reserve_count": "4",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "unlock_cmd": "unlock_4",
+                    "xsdb_ver": "/proj/xbuilds/2020.2_weekly_latest/installs/lin64/Vivado/2020.2/bin/xsdb",
+                    "xsdbrc_path": "/group/siv4/proj/everest/public/releases/spp/spp_ps_cpm5_h10_v6_0/.xsdbrc"
+                },
+                "template_file": "cpm5_rc_cpm5_ep_spp.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": {
+                        "unlock_cmd": "unlock_4"
+                    },
+                    "__SUB_TEMPLATE__spp_h10_noc_reg_dump__": "yes",
+                    "burst_com_inactv_t": "900",
+                    "com": "com0",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "everest/h10_cpm5_es1_6_0/pcie",
+        "script_num": 22
+    },
+    "cpm5_rc_cpm5_ep_qdma_x4_a72": {
+        "cmd": "-pj everest -si h10_cpm5_es1_6_0 -rc cpm5 -ep cpm5 --cpm_mode qdma --lane_count x4 --processor a72",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "spp_ps_cpm5_h10_v6_0",
+                    "burst_runtime": "7200",
+                    "knobs": "Ronaldo_virtr5_enable=0;Xdma_pcie_card_bdtype_override=0x83105020;Everest_qspi_base_addr=0;System_type_override=0x80b40449;Everest_force_enable_aximon=0;Pele_usb_enable=0;Df_gem_enable=0;Xcanfd_enable=0;Pele_sd_enable=0;Everest_cpm_lpd_avoid_tbu0=1;Axiex_force_cohtype_40_mask=0x1e1;Axiex_ignore_all_func=0x20cb;Ronaldo_ddr_mem_upper_override=0x1;Everest_upper_mem_size=0x20000000;Mem_check_pattern = 0;",
+                    "preempt": "NO",
+                    "script_name": "cpm5_rc_cpm5_ep_qdma_x4_a72"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_cpm5_a72_bme__": "no",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "build_dir": "/group/siv4/proj/everest/public/releases/spp/spp_ps_cpm5_h10_v6_0/",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "h10_es2": "false",
+                    "image_path": "/group/siv4/proj/everest/public/releases/spp/spp_ps_cpm5_h10_v6_0/iplb_plm_dir_qdma/output_dir/plm_plaxi0_qdma_c_ps_0/design_1_wrapper.bin",
+                    "jtag_freq": "600000",
+                    "proc": "a72",
+                    "ptm_ver": "module \"switch protium/19.11.175.s002_200527-141721.p1\"",
+                    "reserve_count": "4",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "unlock_cmd": "unlock_4",
+                    "xsdb_ver": "/proj/xbuilds/2020.2_weekly_latest/installs/lin64/Vivado/2020.2/bin/xsdb",
+                    "xsdbrc_path": "/group/siv4/proj/everest/public/releases/spp/spp_ps_cpm5_h10_v6_0/.xsdbrc"
+                },
+                "template_file": "cpm5_rc_cpm5_ep_spp.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": {
+                        "unlock_cmd": "unlock_4"
+                    },
+                    "__SUB_TEMPLATE__spp_h10_noc_reg_dump__": "yes",
+                    "burst_com_inactv_t": "900",
+                    "com": "com0",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "everest/h10_cpm5_es1_6_0/pcie",
+        "script_num": 13
+    },
+    "cpm5_rc_cpm5_ep_qdma_x4_a72_preempt": {
+        "cmd": "-pj everest -si h10_cpm5_es1_6_0 -rc cpm5 -ep cpm5 --cpm_mode qdma --lane_count x4 --processor a72 -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "spp_ps_cpm5_h10_v6_0",
+                    "burst_runtime": "7200",
+                    "knobs": "Ronaldo_virtr5_enable=0;Xdma_pcie_card_bdtype_override=0x83105020;Everest_qspi_base_addr=0;System_type_override=0x80b40449;Everest_force_enable_aximon=0;Pele_usb_enable=0;Df_gem_enable=0;Xcanfd_enable=0;Pele_sd_enable=0;Everest_cpm_lpd_avoid_tbu0=1;Axiex_force_cohtype_40_mask=0x1e1;Axiex_ignore_all_func=0x20cb;Ronaldo_ddr_mem_upper_override=0x1;Everest_upper_mem_size=0x20000000;Mem_check_pattern = 0;",
+                    "preempt": "NO",
+                    "script_name": "cpm5_rc_cpm5_ep_qdma_x4_a72_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_cpm5_a72_bme__": "no",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "build_dir": "/group/siv4/proj/everest/public/releases/spp/spp_ps_cpm5_h10_v6_0/",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "h10_es2": "false",
+                    "image_path": "/group/siv4/proj/everest/public/releases/spp/spp_ps_cpm5_h10_v6_0/iplb_plm_dir_qdma/output_dir/plm_plaxi0_qdma_c_ps_0/design_1_wrapper.bin",
+                    "jtag_freq": "600000",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "ptm_ver": "module \"switch protium/19.11.175.s002_200527-141721.p1\"",
+                    "reserve_count": "4",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "unlock_cmd": "unlock_4",
+                    "xsdb_ver": "/proj/xbuilds/2020.2_weekly_latest/installs/lin64/Vivado/2020.2/bin/xsdb",
+                    "xsdbrc_path": "/group/siv4/proj/everest/public/releases/spp/spp_ps_cpm5_h10_v6_0/.xsdbrc"
+                },
+                "template_file": "cpm5_rc_cpm5_ep_spp.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": {
+                        "unlock_cmd": "unlock_4"
+                    },
+                    "__SUB_TEMPLATE__spp_h10_noc_reg_dump__": "yes",
+                    "burst_com_inactv_t": "900",
+                    "com": "com0",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "everest/h10_cpm5_es1_6_0/pcie",
+        "script_num": 14
+    },
+    "cpm5_rc_cpm5_ep_rccxs_x4_a72": {
+        "cmd": "-pj everest -si h10_cpm5_es1_6_0 -rc cpm5 -ep cpm5 --cpm_mode rccxs --lane_count x4 --processor a72",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "spp_ps_cpm5_h10_v6_0",
+                    "burst_runtime": "7200",
+                    "knobs": "g_is_hood_rc=2;g_is_cpm_ep=0x8;g_cpm_mode=0x40;Ccix_pcie_force_firmware=1;Ccix_en_h10_rc_cxs=1;Xdma_pcie_card_bdtype_override=0x80a00100;System_type_override=0x80340449;Axiex_ignore_all_func=0xF9FF;Prob_cmn_hnf_power_cycle=0;Prob_cmn_randomize=0;Pele_sd_enable=0;Everest_cpmrc_disable_smmu=0;",
+                    "preempt": "NO",
+                    "script_name": "cpm5_rc_cpm5_ep_rccxs_x4_a72"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "build_dir": "/group/siv4/proj/everest/public/releases/spp/spp_ps_cpm5_h10_v5_0_rc_hood_cxs1024/",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "h10_es2": "false",
+                    "image_path": "/group/siv4/proj/everest/public/releases/spp/spp_ps_cpm5_h10_v5_0_rc_hood_cxs1024/plm_dir/output_dir/plm_cxs_0/design_1_wrapper.bin",
+                    "jtag_freq": "600000",
+                    "proc": "a72",
+                    "ptm_ver": "module \"switch protium/19.11.175.s002_200527-141721.p1\"",
+                    "reserve_count": "4",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "unlock_cmd": "unlock_4",
+                    "xsdb_ver": "/proj/xbuilds/2020.2_weekly_latest/installs/lin64/Vivado/2020.2/bin/xsdb",
+                    "xsdbrc_path": "/group/siv4/proj/everest/public/releases/spp/spp_ps_cpm5_h10_v6_0/.xsdbrc"
+                },
+                "template_file": "cpm5_rc_cpm5_ep_spp.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": {
+                        "unlock_cmd": "unlock_4"
+                    },
+                    "__SUB_TEMPLATE__spp_h10_noc_reg_dump__": "yes",
+                    "burst_com_inactv_t": "900",
+                    "com": "com0",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "everest/h10_cpm5_es1_6_0/pcie",
+        "script_num": 15
+    },
+    "cpm5_rc_cpm5_ep_rccxs_x4_a72_preempt": {
+        "cmd": "-pj everest -si h10_cpm5_es1_6_0 -rc cpm5 -ep cpm5 --cpm_mode rccxs --lane_count x4 --processor a72 -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "spp_ps_cpm5_h10_v6_0",
+                    "burst_runtime": "7200",
+                    "knobs": "g_is_hood_rc=2;g_is_cpm_ep=0x8;g_cpm_mode=0x40;Ccix_pcie_force_firmware=1;Ccix_en_h10_rc_cxs=1;Xdma_pcie_card_bdtype_override=0x80a00100;System_type_override=0x80340449;Axiex_ignore_all_func=0xF9FF;Prob_cmn_hnf_power_cycle=0;Prob_cmn_randomize=0;Pele_sd_enable=0;Everest_cpmrc_disable_smmu=0;",
+                    "preempt": "NO",
+                    "script_name": "cpm5_rc_cpm5_ep_rccxs_x4_a72_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "build_dir": "/group/siv4/proj/everest/public/releases/spp/spp_ps_cpm5_h10_v5_0_rc_hood_cxs1024/",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "h10_es2": "false",
+                    "image_path": "/group/siv4/proj/everest/public/releases/spp/spp_ps_cpm5_h10_v5_0_rc_hood_cxs1024/plm_dir/output_dir/plm_cxs_0/design_1_wrapper.bin",
+                    "jtag_freq": "600000",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "ptm_ver": "module \"switch protium/19.11.175.s002_200527-141721.p1\"",
+                    "reserve_count": "4",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "unlock_cmd": "unlock_4",
+                    "xsdb_ver": "/proj/xbuilds/2020.2_weekly_latest/installs/lin64/Vivado/2020.2/bin/xsdb",
+                    "xsdbrc_path": "/group/siv4/proj/everest/public/releases/spp/spp_ps_cpm5_h10_v6_0/.xsdbrc"
+                },
+                "template_file": "cpm5_rc_cpm5_ep_spp.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": {
+                        "unlock_cmd": "unlock_4"
+                    },
+                    "__SUB_TEMPLATE__spp_h10_noc_reg_dump__": "yes",
+                    "burst_com_inactv_t": "900",
+                    "com": "com0",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "everest/h10_cpm5_es1_6_0/pcie",
+        "script_num": 16
+    },
+    "protium_a72_be_bup": {
+        "cmd": "-pj everest -si h10_cpm5_es1_6_0 -b protium --processor a72 -be -bup",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "spp_ps_cpm5_h10_v6_0",
+                    "burst_runtime": "7200",
+                    "knobs": "Ronaldo_virtr5_enable=0;Everest_axiex0_base_addr=0x90000000;g_is_h10_ps_only=1;System_type_override=0x80340449;Everest_force_enable_aximon=0;Axiex_ignore_all_func=0x80;Axiex_force_cohtype_40_mask=0x1e1;",
+                    "preempt": "NO",
+                    "script_name": "protium_a72_be_bup"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "build_dir": "/group/siv4/proj/everest/public/releases/spp/spp_ps_cpm5_h10_v6_0/",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "h10_es2": "false",
+                    "image_path": "/group/siv4/proj/everest/public/releases/spp/spp_ps_cpm5_h10_v6_0/plm_dir/output_dir/plm_plaxi0_c_ps_0/design_1_wrapper.bin",
+                    "jtag_freq": "600000",
+                    "proc": "a72",
+                    "ptm_ver": "module \"switch protium/19.11.175.s002_200527-141721.p1\"",
+                    "reserve_count": "4",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "unlock_cmd": "unlock_4",
+                    "xsdb_ver": "/proj/xbuilds/2020.2_weekly_latest/installs/lin64/Vivado/2020.2/bin/xsdb",
+                    "xsdbrc_path": "/group/siv4/proj/everest/public/releases/spp/spp_ps_cpm5_h10_v6_0/.xsdbrc"
+                },
+                "template_file": "cpm5_rc_cpm5_ep_spp.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": {
+                        "unlock_cmd": "unlock_4"
+                    },
+                    "__SUB_TEMPLATE__spp_h10_noc_reg_dump__": "yes",
+                    "burst_com_inactv_t": "900",
+                    "com": "com0",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/h10_cpm5_es1_6_0/protium",
+        "script_num": 3
+    },
+    "protium_a72_be_bup_preempt": {
+        "cmd": "-pj everest -si h10_cpm5_es1_6_0 -b protium --processor a72 -be -bup -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "spp_ps_cpm5_h10_v6_0",
+                    "burst_runtime": "7200",
+                    "knobs": "Ronaldo_virtr5_enable=0;Everest_axiex0_base_addr=0x90000000;g_is_h10_ps_only=1;System_type_override=0x80340449;Everest_force_enable_aximon=0;Axiex_ignore_all_func=0x80;Axiex_force_cohtype_40_mask=0x1e1;",
+                    "preempt": "NO",
+                    "script_name": "protium_a72_be_bup_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "build_dir": "/group/siv4/proj/everest/public/releases/spp/spp_ps_cpm5_h10_v6_0/",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "h10_es2": "false",
+                    "image_path": "/group/siv4/proj/everest/public/releases/spp/spp_ps_cpm5_h10_v6_0/plm_dir/output_dir/plm_plaxi0_c_ps_0/design_1_wrapper.bin",
+                    "jtag_freq": "600000",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "ptm_ver": "module \"switch protium/19.11.175.s002_200527-141721.p1\"",
+                    "reserve_count": "4",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "unlock_cmd": "unlock_4",
+                    "xsdb_ver": "/proj/xbuilds/2020.2_weekly_latest/installs/lin64/Vivado/2020.2/bin/xsdb",
+                    "xsdbrc_path": "/group/siv4/proj/everest/public/releases/spp/spp_ps_cpm5_h10_v6_0/.xsdbrc"
+                },
+                "template_file": "cpm5_rc_cpm5_ep_spp.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": {
+                        "unlock_cmd": "unlock_4"
+                    },
+                    "__SUB_TEMPLATE__spp_h10_noc_reg_dump__": "yes",
+                    "burst_com_inactv_t": "900",
+                    "com": "com0",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/h10_cpm5_es1_6_0/protium",
+        "script_num": 4
+    },
+    "protium_a72_bup": {
+        "cmd": "-pj everest -si h10_cpm5_es1_6_0 -b protium --processor a72 -bup",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "spp_ps_cpm5_h10_v6_0",
+                    "burst_runtime": "7200",
+                    "knobs": "Ronaldo_virtr5_enable=0;Everest_axiex0_base_addr=0x90000000;g_is_h10_ps_only=1;System_type_override=0x80340449;Everest_force_enable_aximon=0;Axiex_ignore_all_func=0x80;Axiex_force_cohtype_40_mask=0x1e1;",
+                    "preempt": "NO",
+                    "script_name": "protium_a72_bup"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "build_dir": "/group/siv4/proj/everest/public/releases/spp/spp_ps_cpm5_h10_v6_0/",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "h10_es2": "false",
+                    "image_path": "/group/siv4/proj/everest/public/releases/spp/spp_ps_cpm5_h10_v6_0/plm_dir/output_dir/plm_plaxi0_c_ps_0/design_1_wrapper.bin",
+                    "jtag_freq": "600000",
+                    "proc": "a72",
+                    "ptm_ver": "module \"switch protium/19.11.175.s002_200527-141721.p1\"",
+                    "reserve_count": "4",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "unlock_cmd": "unlock_4",
+                    "xsdb_ver": "/proj/xbuilds/2020.2_weekly_latest/installs/lin64/Vivado/2020.2/bin/xsdb",
+                    "xsdbrc_path": "/group/siv4/proj/everest/public/releases/spp/spp_ps_cpm5_h10_v6_0/.xsdbrc"
+                },
+                "template_file": "cpm5_rc_cpm5_ep_spp.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": {
+                        "unlock_cmd": "unlock_4"
+                    },
+                    "__SUB_TEMPLATE__spp_h10_noc_reg_dump__": "yes",
+                    "burst_com_inactv_t": "900",
+                    "com": "com0",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/h10_cpm5_es1_6_0/protium",
+        "script_num": 1
+    },
+    "protium_a72_bup_preempt": {
+        "cmd": "-pj everest -si h10_cpm5_es1_6_0 -b protium --processor a72 -bup -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "spp_ps_cpm5_h10_v6_0",
+                    "burst_runtime": "7200",
+                    "knobs": "Ronaldo_virtr5_enable=0;Everest_axiex0_base_addr=0x90000000;g_is_h10_ps_only=1;System_type_override=0x80340449;Everest_force_enable_aximon=0;Axiex_ignore_all_func=0x80;Axiex_force_cohtype_40_mask=0x1e1;",
+                    "preempt": "NO",
+                    "script_name": "protium_a72_bup_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "build_dir": "/group/siv4/proj/everest/public/releases/spp/spp_ps_cpm5_h10_v6_0/",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "h10_es2": "false",
+                    "image_path": "/group/siv4/proj/everest/public/releases/spp/spp_ps_cpm5_h10_v6_0/plm_dir/output_dir/plm_plaxi0_c_ps_0/design_1_wrapper.bin",
+                    "jtag_freq": "600000",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "ptm_ver": "module \"switch protium/19.11.175.s002_200527-141721.p1\"",
+                    "reserve_count": "4",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "unlock_cmd": "unlock_4",
+                    "xsdb_ver": "/proj/xbuilds/2020.2_weekly_latest/installs/lin64/Vivado/2020.2/bin/xsdb",
+                    "xsdbrc_path": "/group/siv4/proj/everest/public/releases/spp/spp_ps_cpm5_h10_v6_0/.xsdbrc"
+                },
+                "template_file": "cpm5_rc_cpm5_ep_spp.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": {
+                        "unlock_cmd": "unlock_4"
+                    },
+                    "__SUB_TEMPLATE__spp_h10_noc_reg_dump__": "yes",
+                    "burst_com_inactv_t": "900",
+                    "com": "com0",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/h10_cpm5_es1_6_0/protium",
+        "script_num": 2
+    },
+    "protium_r5_bup": {
+        "cmd": "-pj everest -si h10_cpm5_es1_6_0 -b protium --processor r5 -bup",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "spp_ps_cpm5_h10_v6_0",
+                    "burst_runtime": "7200",
+                    "knobs": "Ronaldo_virtr5_enable=0;Everest_axiex0_base_addr=0x90000000;g_is_h10_ps_only=1;System_type_override=0x80340449;Everest_force_enable_aximon=0;Axiex_ignore_all_func=0x80;Axiex_force_cohtype_40_mask=0x1e1;",
+                    "preempt": "NO",
+                    "script_name": "protium_r5_bup"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "no",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "yes",
+                    "build_dir": "/group/siv4/proj/everest/public/releases/spp/spp_ps_cpm5_h10_v6_0/",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "h10_es2": "false",
+                    "image_path": "/group/siv4/proj/everest/public/releases/spp/spp_ps_cpm5_h10_v6_0/plm_dir/output_dir/plm_plaxi0_c_ps_0/design_1_wrapper.bin",
+                    "jtag_freq": "600000",
+                    "proc": "r5",
+                    "ptm_ver": "module \"switch protium/19.11.175.s002_200527-141721.p1\"",
+                    "reserve_count": "4",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "unlock_cmd": "unlock_4",
+                    "xsdb_ver": "/proj/xbuilds/2020.2_weekly_latest/installs/lin64/Vivado/2020.2/bin/xsdb",
+                    "xsdbrc_path": "/group/siv4/proj/everest/public/releases/spp/spp_ps_cpm5_h10_v6_0/.xsdbrc"
+                },
+                "template_file": "cpm5_rc_cpm5_ep_spp.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": {
+                        "unlock_cmd": "unlock_4"
+                    },
+                    "__SUB_TEMPLATE__spp_h10_noc_reg_dump__": "yes",
+                    "burst_com_inactv_t": "900",
+                    "com": "com0",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/h10_cpm5_es1_6_0/protium",
+        "script_num": 5
+    },
+    "protium_r5_bup_preempt": {
+        "cmd": "-pj everest -si h10_cpm5_es1_6_0 -b protium --processor r5 -bup -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "spp_ps_cpm5_h10_v6_0",
+                    "burst_runtime": "7200",
+                    "knobs": "Ronaldo_virtr5_enable=0;Everest_axiex0_base_addr=0x90000000;g_is_h10_ps_only=1;System_type_override=0x80340449;Everest_force_enable_aximon=0;Axiex_ignore_all_func=0x80;Axiex_force_cohtype_40_mask=0x1e1;",
+                    "preempt": "NO",
+                    "script_name": "protium_r5_bup_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "no",
+                    "__SUB_TEMPLATE__spp_noc_compiler_dow__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "yes",
+                    "build_dir": "/group/siv4/proj/everest/public/releases/spp/spp_ps_cpm5_h10_v6_0/",
+                    "com": "com0",
+                    "dwn_burst_wait": "1",
+                    "h10_es2": "false",
+                    "image_path": "/group/siv4/proj/everest/public/releases/spp/spp_ps_cpm5_h10_v6_0/plm_dir/output_dir/plm_plaxi0_c_ps_0/design_1_wrapper.bin",
+                    "jtag_freq": "600000",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "r5",
+                    "ptm_ver": "module \"switch protium/19.11.175.s002_200527-141721.p1\"",
+                    "reserve_count": "4",
+                    "rst_type": "rst -proc -skip-activate-subsystem",
+                    "unlock_cmd": "unlock_4",
+                    "xsdb_ver": "/proj/xbuilds/2020.2_weekly_latest/installs/lin64/Vivado/2020.2/bin/xsdb",
+                    "xsdbrc_path": "/group/siv4/proj/everest/public/releases/spp/spp_ps_cpm5_h10_v6_0/.xsdbrc"
+                },
+                "template_file": "cpm5_rc_cpm5_ep_spp.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": {
+                        "unlock_cmd": "unlock_4"
+                    },
+                    "__SUB_TEMPLATE__spp_h10_noc_reg_dump__": "yes",
+                    "burst_com_inactv_t": "900",
+                    "com": "com0",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/h10_cpm5_es1_6_0/protium",
+        "script_num": 6
+    }
+}

@@ -1,0 +1,3 @@
+
+print my_xsdb "targets -set -filter {name =~ \"Cortex-R5 #0\" && jtag_device_index =~ \"0\" }"
+print my_xsdb "targets"

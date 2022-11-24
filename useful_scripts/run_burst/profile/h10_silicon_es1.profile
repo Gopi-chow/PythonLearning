@@ -1,0 +1,6 @@
+-b xa2785  -si h10_es1_ps  -pj everest   -p a72 -bup            -msg "BURST ps dev regr"
+-b xa2785  -si h10_es1_ps  -pj everest   -p a72 -bup -be        -msg "BURST ps dev regr"
+-b xa2785  -si h10_es1_ps  -pj everest   -p r5  -bup            -msg "BURST ps dev regr"
+#-b xa2785  -si h10_es1_ps  -pj everest   -p a72 -bup     -ecc   -msg "BURST ps dev regr"
+#-b xa2785  -si h10_es1_ps  -pj everest   -p a72 -bup -be -ecc   -msg "BURST ps dev regr"
+#-b xa2785  -si h10_es1_ps  -pj everest   -p r5  -bup     -ecc   -msg "BURST ps dev regr"

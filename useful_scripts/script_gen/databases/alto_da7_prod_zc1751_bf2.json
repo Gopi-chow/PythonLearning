@@ -1,0 +1,3890 @@
+{
+    "zc1751_dc1_a53_av": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc1 --processor a53 --clock av -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "",
+                    "preempt": "No",
+                    "script_name": "zc1751_dc1_a53_av"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "No",
+                    "ecc_elf": "",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc1_av_sd100_schm_ddr4_2133_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "gt_clock": "DC1",
+                    "preemption_on": "",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc1",
+        "script_num": 1
+    },
+    "zc1751_dc1_a53_av_preempt": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc1 --processor a53 --clock av -pm 1 -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "",
+                    "preempt": "Yes",
+                    "script_name": "zc1751_dc1_a53_av_preempt"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "No",
+                    "ecc_elf": "",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc1_av_sd100_schm_ddr4_2133_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "gt_clock": "DC1",
+                    "preemption_off": "default.preemption_off()",
+                    "preemption_on": "default.preemption_on()",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "default.preemption_off()",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc1",
+        "script_num": 2
+    },
+    "zc1751_dc1_a53_be_av": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc1 --processor a53 --clock av -be -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "",
+                    "preempt": "No",
+                    "script_name": "zc1751_dc1_a53_be_av"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "No",
+                    "ecc_elf": "",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc1_av_sd100_schm_ddr4_2133_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "gt_clock": "DC1",
+                    "preemption_on": "",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc1",
+        "script_num": 3
+    },
+    "zc1751_dc1_a53_be_av_preempt": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc1 --processor a53 --clock av -be -pm 1 -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "",
+                    "preempt": "Yes",
+                    "script_name": "zc1751_dc1_a53_be_av_preempt"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "No",
+                    "ecc_elf": "",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc1_av_sd100_schm_ddr4_2133_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "gt_clock": "DC1",
+                    "preemption_off": "default.preemption_off()",
+                    "preemption_on": "default.preemption_on()",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "default.preemption_off()",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc1",
+        "script_num": 4
+    },
+    "zc1751_dc1_a53_be_dp_av": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc1 --processor a53 --clock av -be -dp -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Dp_enable_vidgen_cores_only=1;",
+                    "preempt": "No",
+                    "script_name": "zc1751_dc1_a53_be_dp_av"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "No",
+                    "ecc_elf": "",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc1_dp_av_sd100_schm_ddr4_2133_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "gt_clock": "DC1",
+                    "preemption_on": "",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc1",
+        "script_num": 5
+    },
+    "zc1751_dc1_a53_be_dp_av_preempt": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc1 --processor a53 --clock av -be -dp -pm 1 -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Dp_enable_vidgen_cores_only=1;",
+                    "preempt": "Yes",
+                    "script_name": "zc1751_dc1_a53_be_dp_av_preempt"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "No",
+                    "ecc_elf": "",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc1_dp_av_sd100_schm_ddr4_2133_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "gt_clock": "DC1",
+                    "preemption_off": "default.preemption_off()",
+                    "preemption_on": "default.preemption_on()",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "default.preemption_off()",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc1",
+        "script_num": 6
+    },
+    "zc1751_dc1_a53_be_dp_sivdef": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc1 --processor a53 --clock sivdef -be -dp -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Dp_enable_vidgen_cores_only=1;",
+                    "preempt": "No",
+                    "script_name": "zc1751_dc1_a53_be_dp_sivdef"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "No",
+                    "ecc_elf": "",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc1_dp_sivdef3_ddr4_2133_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "gt_clock": "DC1",
+                    "preemption_on": "",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc1",
+        "script_num": 7
+    },
+    "zc1751_dc1_a53_be_dp_sivdef_preempt": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc1 --processor a53 --clock sivdef -be -dp -pm 1 -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Dp_enable_vidgen_cores_only=1;",
+                    "preempt": "Yes",
+                    "script_name": "zc1751_dc1_a53_be_dp_sivdef_preempt"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "No",
+                    "ecc_elf": "",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc1_dp_sivdef3_ddr4_2133_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "gt_clock": "DC1",
+                    "preemption_off": "default.preemption_off()",
+                    "preemption_on": "default.preemption_on()",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "default.preemption_off()",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc1",
+        "script_num": 8
+    },
+    "zc1751_dc1_a53_be_ecc_av": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc1 --processor a53 --clock av -be -ecc -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "",
+                    "preempt": "No",
+                    "script_name": "zc1751_dc1_a53_be_ecc_av"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "Yes",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "No",
+                    "ecc_elf": "/group/siv3/proj/ronaldo/vnc/1.0/da7/results/burst/first_silicon/ddrc_init/zc1751_dc2/DDRC_ECC_memInit/20151007_chk0/build/ronaldo/apu_ps_ddr_init/ctest-bare",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc1_av_sd100_schm_ddr4_2133_ecc_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "gt_clock": "DC1",
+                    "preemption_on": "",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc1",
+        "script_num": 9
+    },
+    "zc1751_dc1_a53_be_ecc_av_preempt": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc1 --processor a53 --clock av -be -ecc -pm 1 -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "",
+                    "preempt": "Yes",
+                    "script_name": "zc1751_dc1_a53_be_ecc_av_preempt"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "Yes",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "No",
+                    "ecc_elf": "/group/siv3/proj/ronaldo/vnc/1.0/da7/results/burst/first_silicon/ddrc_init/zc1751_dc2/DDRC_ECC_memInit/20151007_chk0/build/ronaldo/apu_ps_ddr_init/ctest-bare",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc1_av_sd100_schm_ddr4_2133_ecc_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "gt_clock": "DC1",
+                    "preemption_off": "default.preemption_off()",
+                    "preemption_on": "default.preemption_on()",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "default.preemption_off()",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc1",
+        "script_num": 10
+    },
+    "zc1751_dc1_a53_be_ecc_dp_av": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc1 --processor a53 --clock av -be -ecc -dp -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Dp_enable_vidgen_cores_only=1;Dp_max_resolutions=1;",
+                    "preempt": "No",
+                    "script_name": "zc1751_dc1_a53_be_ecc_dp_av"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "Yes",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "No",
+                    "ecc_elf": "/group/siv3/proj/ronaldo/vnc/1.0/da7/results/burst/first_silicon/ddrc_init/zc1751_dc2/DDRC_ECC_memInit/20151007_chk0/build/ronaldo/apu_ps_ddr_init/ctest-bare",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc1_dp_av_sd100_schm_ddr4_2133_ecc_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "gt_clock": "DC1",
+                    "preemption_on": "",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc1",
+        "script_num": 11
+    },
+    "zc1751_dc1_a53_be_ecc_dp_av_preempt": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc1 --processor a53 --clock av -be -ecc -dp -pm 1 -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Dp_enable_vidgen_cores_only=1;Dp_max_resolutions=1;",
+                    "preempt": "Yes",
+                    "script_name": "zc1751_dc1_a53_be_ecc_dp_av_preempt"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "Yes",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "No",
+                    "ecc_elf": "/group/siv3/proj/ronaldo/vnc/1.0/da7/results/burst/first_silicon/ddrc_init/zc1751_dc2/DDRC_ECC_memInit/20151007_chk0/build/ronaldo/apu_ps_ddr_init/ctest-bare",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc1_dp_av_sd100_schm_ddr4_2133_ecc_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "gt_clock": "DC1",
+                    "preemption_off": "default.preemption_off()",
+                    "preemption_on": "default.preemption_on()",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "default.preemption_off()",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc1",
+        "script_num": 12
+    },
+    "zc1751_dc1_a53_be_ecc_dp_sivdef": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc1 --processor a53 --clock sivdef -be -ecc -dp -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Dp_enable_vidgen_cores_only=1;Dp_max_resolutions=1;",
+                    "preempt": "No",
+                    "script_name": "zc1751_dc1_a53_be_ecc_dp_sivdef"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "Yes",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "No",
+                    "ecc_elf": "/group/siv3/proj/ronaldo/vnc/1.0/da7/results/burst/first_silicon/ddrc_init/zc1751_dc2/DDRC_ECC_memInit/20151007_chk0/build/ronaldo/apu_ps_ddr_init/ctest-bare",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc1_dp_sivdef3_ddr4_2133_ecc_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "gt_clock": "DC1",
+                    "preemption_on": "",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc1",
+        "script_num": 13
+    },
+    "zc1751_dc1_a53_be_ecc_dp_sivdef_preempt": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc1 --processor a53 --clock sivdef -be -ecc -dp -pm 1 -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Dp_enable_vidgen_cores_only=1;Dp_max_resolutions=1;",
+                    "preempt": "Yes",
+                    "script_name": "zc1751_dc1_a53_be_ecc_dp_sivdef_preempt"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "Yes",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "No",
+                    "ecc_elf": "/group/siv3/proj/ronaldo/vnc/1.0/da7/results/burst/first_silicon/ddrc_init/zc1751_dc2/DDRC_ECC_memInit/20151007_chk0/build/ronaldo/apu_ps_ddr_init/ctest-bare",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc1_dp_sivdef3_ddr4_2133_ecc_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "gt_clock": "DC1",
+                    "preemption_off": "default.preemption_off()",
+                    "preemption_on": "default.preemption_on()",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "default.preemption_off()",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc1",
+        "script_num": 14
+    },
+    "zc1751_dc1_a53_be_ecc_sivdef": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc1 --processor a53 --clock sivdef -be -ecc -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "",
+                    "preempt": "No",
+                    "script_name": "zc1751_dc1_a53_be_ecc_sivdef"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "Yes",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "No",
+                    "ecc_elf": "/group/siv3/proj/ronaldo/vnc/1.0/da7/results/burst/first_silicon/ddrc_init/zc1751_dc2/DDRC_ECC_memInit/20151007_chk0/build/ronaldo/apu_ps_ddr_init/ctest-bare",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc1_sivdef3_ddr4_2133_ecc_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "gt_clock": "DC1",
+                    "preemption_on": "",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc1",
+        "script_num": 15
+    },
+    "zc1751_dc1_a53_be_ecc_sivdef_preempt": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc1 --processor a53 --clock sivdef -be -ecc -pm 1 -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "",
+                    "preempt": "Yes",
+                    "script_name": "zc1751_dc1_a53_be_ecc_sivdef_preempt"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "Yes",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "No",
+                    "ecc_elf": "/group/siv3/proj/ronaldo/vnc/1.0/da7/results/burst/first_silicon/ddrc_init/zc1751_dc2/DDRC_ECC_memInit/20151007_chk0/build/ronaldo/apu_ps_ddr_init/ctest-bare",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc1_sivdef3_ddr4_2133_ecc_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "gt_clock": "DC1",
+                    "preemption_off": "default.preemption_off()",
+                    "preemption_on": "default.preemption_on()",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "default.preemption_off()",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc1",
+        "script_num": 16
+    },
+    "zc1751_dc1_a53_be_sivdef": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc1 --processor a53 --clock sivdef -be -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "",
+                    "preempt": "No",
+                    "script_name": "zc1751_dc1_a53_be_sivdef"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "No",
+                    "ecc_elf": "",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc1_sivdef3_ddr4_2133_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "gt_clock": "DC1",
+                    "preemption_on": "",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc1",
+        "script_num": 17
+    },
+    "zc1751_dc1_a53_be_sivdef_preempt": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc1 --processor a53 --clock sivdef -be -pm 1 -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "",
+                    "preempt": "Yes",
+                    "script_name": "zc1751_dc1_a53_be_sivdef_preempt"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "No",
+                    "ecc_elf": "",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc1_sivdef3_ddr4_2133_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "gt_clock": "DC1",
+                    "preemption_off": "default.preemption_off()",
+                    "preemption_on": "default.preemption_on()",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "default.preemption_off()",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc1",
+        "script_num": 18
+    },
+    "zc1751_dc1_a53_dp_av": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc1 --processor a53 --clock av -dp -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Dp_enable_vidgen_cores_only=1;",
+                    "preempt": "No",
+                    "script_name": "zc1751_dc1_a53_dp_av"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "No",
+                    "ecc_elf": "",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc1_dp_av_sd100_schm_ddr4_2133_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "gt_clock": "DC1",
+                    "preemption_on": "",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc1",
+        "script_num": 19
+    },
+    "zc1751_dc1_a53_dp_av_preempt": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc1 --processor a53 --clock av -dp -pm 1 -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Dp_enable_vidgen_cores_only=1;",
+                    "preempt": "Yes",
+                    "script_name": "zc1751_dc1_a53_dp_av_preempt"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "No",
+                    "ecc_elf": "",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc1_dp_av_sd100_schm_ddr4_2133_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "gt_clock": "DC1",
+                    "preemption_off": "default.preemption_off()",
+                    "preemption_on": "default.preemption_on()",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "default.preemption_off()",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc1",
+        "script_num": 20
+    },
+    "zc1751_dc1_a53_dp_sivdef": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc1 --processor a53 --clock sivdef -dp -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Dp_enable_vidgen_cores_only=1;",
+                    "preempt": "No",
+                    "script_name": "zc1751_dc1_a53_dp_sivdef"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "No",
+                    "ecc_elf": "",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc1_dp_sivdef3_ddr4_2133_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "gt_clock": "DC1",
+                    "preemption_on": "",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc1",
+        "script_num": 21
+    },
+    "zc1751_dc1_a53_dp_sivdef_preempt": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc1 --processor a53 --clock sivdef -dp -pm 1 -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Dp_enable_vidgen_cores_only=1;",
+                    "preempt": "Yes",
+                    "script_name": "zc1751_dc1_a53_dp_sivdef_preempt"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "No",
+                    "ecc_elf": "",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc1_dp_sivdef3_ddr4_2133_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "gt_clock": "DC1",
+                    "preemption_off": "default.preemption_off()",
+                    "preemption_on": "default.preemption_on()",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "default.preemption_off()",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc1",
+        "script_num": 22
+    },
+    "zc1751_dc1_a53_ecc_av": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc1 --processor a53 --clock av -ecc -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "",
+                    "preempt": "No",
+                    "script_name": "zc1751_dc1_a53_ecc_av"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "Yes",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "No",
+                    "ecc_elf": "/group/siv3/proj/ronaldo/vnc/1.0/da7/results/burst/first_silicon/ddrc_init/zc1751_dc2/DDRC_ECC_memInit/20151007_chk0/build/ronaldo/apu_ps_ddr_init/ctest-bare",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc1_av_sd100_schm_ddr4_2133_ecc_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "gt_clock": "DC1",
+                    "preemption_on": "",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc1",
+        "script_num": 23
+    },
+    "zc1751_dc1_a53_ecc_av_preempt": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc1 --processor a53 --clock av -ecc -pm 1 -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "",
+                    "preempt": "Yes",
+                    "script_name": "zc1751_dc1_a53_ecc_av_preempt"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "Yes",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "No",
+                    "ecc_elf": "/group/siv3/proj/ronaldo/vnc/1.0/da7/results/burst/first_silicon/ddrc_init/zc1751_dc2/DDRC_ECC_memInit/20151007_chk0/build/ronaldo/apu_ps_ddr_init/ctest-bare",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc1_av_sd100_schm_ddr4_2133_ecc_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "gt_clock": "DC1",
+                    "preemption_off": "default.preemption_off()",
+                    "preemption_on": "default.preemption_on()",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "default.preemption_off()",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc1",
+        "script_num": 24
+    },
+    "zc1751_dc1_a53_ecc_dp_av": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc1 --processor a53 --clock av -ecc -dp -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Dp_enable_vidgen_cores_only=1;Dp_max_resolutions=1;",
+                    "preempt": "No",
+                    "script_name": "zc1751_dc1_a53_ecc_dp_av"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "Yes",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "No",
+                    "ecc_elf": "/group/siv3/proj/ronaldo/vnc/1.0/da7/results/burst/first_silicon/ddrc_init/zc1751_dc2/DDRC_ECC_memInit/20151007_chk0/build/ronaldo/apu_ps_ddr_init/ctest-bare",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc1_dp_av_sd100_schm_ddr4_2133_ecc_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "gt_clock": "DC1",
+                    "preemption_on": "",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc1",
+        "script_num": 25
+    },
+    "zc1751_dc1_a53_ecc_dp_av_preempt": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc1 --processor a53 --clock av -ecc -dp -pm 1 -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Dp_enable_vidgen_cores_only=1;Dp_max_resolutions=1;",
+                    "preempt": "Yes",
+                    "script_name": "zc1751_dc1_a53_ecc_dp_av_preempt"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "Yes",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "No",
+                    "ecc_elf": "/group/siv3/proj/ronaldo/vnc/1.0/da7/results/burst/first_silicon/ddrc_init/zc1751_dc2/DDRC_ECC_memInit/20151007_chk0/build/ronaldo/apu_ps_ddr_init/ctest-bare",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc1_dp_av_sd100_schm_ddr4_2133_ecc_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "gt_clock": "DC1",
+                    "preemption_off": "default.preemption_off()",
+                    "preemption_on": "default.preemption_on()",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "default.preemption_off()",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc1",
+        "script_num": 26
+    },
+    "zc1751_dc1_a53_ecc_dp_sivdef": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc1 --processor a53 --clock sivdef -ecc -dp -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Dp_enable_vidgen_cores_only=1;Dp_max_resolutions=1;",
+                    "preempt": "No",
+                    "script_name": "zc1751_dc1_a53_ecc_dp_sivdef"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "Yes",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "No",
+                    "ecc_elf": "/group/siv3/proj/ronaldo/vnc/1.0/da7/results/burst/first_silicon/ddrc_init/zc1751_dc2/DDRC_ECC_memInit/20151007_chk0/build/ronaldo/apu_ps_ddr_init/ctest-bare",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc1_dp_sivdef3_ddr4_2133_ecc_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "gt_clock": "DC1",
+                    "preemption_on": "",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc1",
+        "script_num": 27
+    },
+    "zc1751_dc1_a53_ecc_dp_sivdef_preempt": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc1 --processor a53 --clock sivdef -ecc -dp -pm 1 -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Dp_enable_vidgen_cores_only=1;Dp_max_resolutions=1;",
+                    "preempt": "Yes",
+                    "script_name": "zc1751_dc1_a53_ecc_dp_sivdef_preempt"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "Yes",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "No",
+                    "ecc_elf": "/group/siv3/proj/ronaldo/vnc/1.0/da7/results/burst/first_silicon/ddrc_init/zc1751_dc2/DDRC_ECC_memInit/20151007_chk0/build/ronaldo/apu_ps_ddr_init/ctest-bare",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc1_dp_sivdef3_ddr4_2133_ecc_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "gt_clock": "DC1",
+                    "preemption_off": "default.preemption_off()",
+                    "preemption_on": "default.preemption_on()",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "default.preemption_off()",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc1",
+        "script_num": 28
+    },
+    "zc1751_dc1_a53_ecc_sivdef": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc1 --processor a53 --clock sivdef -ecc -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "",
+                    "preempt": "No",
+                    "script_name": "zc1751_dc1_a53_ecc_sivdef"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "Yes",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "No",
+                    "ecc_elf": "/group/siv3/proj/ronaldo/vnc/1.0/da7/results/burst/first_silicon/ddrc_init/zc1751_dc2/DDRC_ECC_memInit/20151007_chk0/build/ronaldo/apu_ps_ddr_init/ctest-bare",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc1_sivdef3_ddr4_2133_ecc_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "gt_clock": "DC1",
+                    "preemption_on": "",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc1",
+        "script_num": 29
+    },
+    "zc1751_dc1_a53_ecc_sivdef_preempt": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc1 --processor a53 --clock sivdef -ecc -pm 1 -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "",
+                    "preempt": "Yes",
+                    "script_name": "zc1751_dc1_a53_ecc_sivdef_preempt"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "Yes",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "No",
+                    "ecc_elf": "/group/siv3/proj/ronaldo/vnc/1.0/da7/results/burst/first_silicon/ddrc_init/zc1751_dc2/DDRC_ECC_memInit/20151007_chk0/build/ronaldo/apu_ps_ddr_init/ctest-bare",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc1_sivdef3_ddr4_2133_ecc_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "gt_clock": "DC1",
+                    "preemption_off": "default.preemption_off()",
+                    "preemption_on": "default.preemption_on()",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "default.preemption_off()",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc1",
+        "script_num": 30
+    },
+    "zc1751_dc1_a53_sivdef": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc1 --processor a53 --clock sivdef -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "",
+                    "preempt": "No",
+                    "script_name": "zc1751_dc1_a53_sivdef"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "No",
+                    "ecc_elf": "",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc1_sivdef3_ddr4_2133_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "gt_clock": "DC1",
+                    "preemption_on": "",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc1",
+        "script_num": 31
+    },
+    "zc1751_dc1_a53_sivdef_preempt": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc1 --processor a53 --clock sivdef -pm 1 -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "",
+                    "preempt": "Yes",
+                    "script_name": "zc1751_dc1_a53_sivdef_preempt"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "No",
+                    "ecc_elf": "",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc1_sivdef3_ddr4_2133_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "gt_clock": "DC1",
+                    "preemption_off": "default.preemption_off()",
+                    "preemption_on": "default.preemption_on()",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "default.preemption_off()",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc1",
+        "script_num": 32
+    },
+    "zc1751_dc1_r5_av": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc1 --processor r5 --clock av -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "",
+                    "preempt": "No",
+                    "script_name": "zc1751_dc1_r5_av"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "Yes",
+                    "ecc_elf": "",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc1_av_sd100_schm_ddr4_2133_02142019/fsbl_r5_32/fsbl_r5_32.elf",
+                    "gt_clock": "DC1",
+                    "preemption_on": "",
+                    "proc": "R5"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc1",
+        "script_num": 33
+    },
+    "zc1751_dc1_r5_av_preempt": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc1 --processor r5 --clock av -pm 1 -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "",
+                    "preempt": "Yes",
+                    "script_name": "zc1751_dc1_r5_av_preempt"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "Yes",
+                    "ecc_elf": "",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc1_av_sd100_schm_ddr4_2133_02142019/fsbl_r5_32/fsbl_r5_32.elf",
+                    "gt_clock": "DC1",
+                    "preemption_off": "default.preemption_off()",
+                    "preemption_on": "default.preemption_on()",
+                    "proc": "R5"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "default.preemption_off()",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc1",
+        "script_num": 34
+    },
+    "zc1751_dc1_r5_dp_av": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc1 --processor r5 --clock av -dp -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Dp_enable_vidgen_cores_only=1;",
+                    "preempt": "No",
+                    "script_name": "zc1751_dc1_r5_dp_av"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "Yes",
+                    "ecc_elf": "",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc1_dp_av_sd100_schm_ddr4_2133_02142019/fsbl_r5_32/fsbl_r5_32.elf",
+                    "gt_clock": "DC1",
+                    "preemption_on": "",
+                    "proc": "R5"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc1",
+        "script_num": 35
+    },
+    "zc1751_dc1_r5_dp_av_preempt": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc1 --processor r5 --clock av -dp -pm 1 -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Dp_enable_vidgen_cores_only=1;",
+                    "preempt": "Yes",
+                    "script_name": "zc1751_dc1_r5_dp_av_preempt"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "Yes",
+                    "ecc_elf": "",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc1_dp_av_sd100_schm_ddr4_2133_02142019/fsbl_r5_32/fsbl_r5_32.elf",
+                    "gt_clock": "DC1",
+                    "preemption_off": "default.preemption_off()",
+                    "preemption_on": "default.preemption_on()",
+                    "proc": "R5"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "default.preemption_off()",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc1",
+        "script_num": 36
+    },
+    "zc1751_dc1_r5_dp_sivdef": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc1 --processor r5 --clock sivdef -dp -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Dp_enable_vidgen_cores_only=1;",
+                    "preempt": "No",
+                    "script_name": "zc1751_dc1_r5_dp_sivdef"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "Yes",
+                    "ecc_elf": "",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc1_dp_sivdef3_ddr4_2133_02142019/fsbl_r5_32/fsbl_r5_32.elf",
+                    "gt_clock": "DC1",
+                    "preemption_on": "",
+                    "proc": "R5"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc1",
+        "script_num": 37
+    },
+    "zc1751_dc1_r5_dp_sivdef_preempt": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc1 --processor r5 --clock sivdef -dp -pm 1 -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Dp_enable_vidgen_cores_only=1;",
+                    "preempt": "Yes",
+                    "script_name": "zc1751_dc1_r5_dp_sivdef_preempt"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "Yes",
+                    "ecc_elf": "",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc1_dp_sivdef3_ddr4_2133_02142019/fsbl_r5_32/fsbl_r5_32.elf",
+                    "gt_clock": "DC1",
+                    "preemption_off": "default.preemption_off()",
+                    "preemption_on": "default.preemption_on()",
+                    "proc": "R5"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "default.preemption_off()",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc1",
+        "script_num": 38
+    },
+    "zc1751_dc1_r5_ecc_av": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc1 --processor r5 --clock av -ecc -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "",
+                    "preempt": "No",
+                    "script_name": "zc1751_dc1_r5_ecc_av"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__ecc_bf2__": "Yes",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "Yes",
+                    "ecc_elf": "/group/siv3/proj/ronaldo/vnc/1.0/da7/results/burst/first_silicon/ddrc_init/zc1751_dc2/DDRC_ECC_memInit/20151007_chk0/build/ronaldo/apu_ps_ddr_init/ctest-bare",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc1_av_sd100_schm_ddr4_2133_ecc_02142019/fsbl_r5_32/fsbl_r5_32.elf",
+                    "gt_clock": "DC1",
+                    "preemption_on": "",
+                    "proc": "R5"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc1",
+        "script_num": 39
+    },
+    "zc1751_dc1_r5_ecc_av_preempt": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc1 --processor r5 --clock av -ecc -pm 1 -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "",
+                    "preempt": "Yes",
+                    "script_name": "zc1751_dc1_r5_ecc_av_preempt"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__ecc_bf2__": "Yes",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "Yes",
+                    "ecc_elf": "/group/siv3/proj/ronaldo/vnc/1.0/da7/results/burst/first_silicon/ddrc_init/zc1751_dc2/DDRC_ECC_memInit/20151007_chk0/build/ronaldo/apu_ps_ddr_init/ctest-bare",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc1_av_sd100_schm_ddr4_2133_ecc_02142019/fsbl_r5_32/fsbl_r5_32.elf",
+                    "gt_clock": "DC1",
+                    "preemption_off": "default.preemption_off()",
+                    "preemption_on": "default.preemption_on()",
+                    "proc": "R5"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "default.preemption_off()",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc1",
+        "script_num": 40
+    },
+    "zc1751_dc1_r5_ecc_dp_av": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc1 --processor r5 --clock av -ecc -dp -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Dp_enable_vidgen_cores_only=1;Dp_max_resolutions=1;",
+                    "preempt": "No",
+                    "script_name": "zc1751_dc1_r5_ecc_dp_av"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__ecc_bf2__": "Yes",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "Yes",
+                    "ecc_elf": "/group/siv3/proj/ronaldo/vnc/1.0/da7/results/burst/first_silicon/ddrc_init/zc1751_dc2/DDRC_ECC_memInit/20151007_chk0/build/ronaldo/apu_ps_ddr_init/ctest-bare",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc1_dp_av_sd100_schm_ddr4_2133_ecc_02142019/fsbl_r5_32/fsbl_r5_32.elf",
+                    "gt_clock": "DC1",
+                    "preemption_on": "",
+                    "proc": "R5"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc1",
+        "script_num": 41
+    },
+    "zc1751_dc1_r5_ecc_dp_av_preempt": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc1 --processor r5 --clock av -ecc -dp -pm 1 -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Dp_enable_vidgen_cores_only=1;Dp_max_resolutions=1;",
+                    "preempt": "Yes",
+                    "script_name": "zc1751_dc1_r5_ecc_dp_av_preempt"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__ecc_bf2__": "Yes",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "Yes",
+                    "ecc_elf": "/group/siv3/proj/ronaldo/vnc/1.0/da7/results/burst/first_silicon/ddrc_init/zc1751_dc2/DDRC_ECC_memInit/20151007_chk0/build/ronaldo/apu_ps_ddr_init/ctest-bare",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc1_dp_av_sd100_schm_ddr4_2133_ecc_02142019/fsbl_r5_32/fsbl_r5_32.elf",
+                    "gt_clock": "DC1",
+                    "preemption_off": "default.preemption_off()",
+                    "preemption_on": "default.preemption_on()",
+                    "proc": "R5"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "default.preemption_off()",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc1",
+        "script_num": 42
+    },
+    "zc1751_dc1_r5_ecc_dp_sivdef": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc1 --processor r5 --clock sivdef -ecc -dp -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Dp_enable_vidgen_cores_only=1;Dp_max_resolutions=1;",
+                    "preempt": "No",
+                    "script_name": "zc1751_dc1_r5_ecc_dp_sivdef"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__ecc_bf2__": "Yes",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "Yes",
+                    "ecc_elf": "/group/siv3/proj/ronaldo/vnc/1.0/da7/results/burst/first_silicon/ddrc_init/zc1751_dc2/DDRC_ECC_memInit/20151007_chk0/build/ronaldo/apu_ps_ddr_init/ctest-bare",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc1_dp_sivdef3_ddr4_2133_ecc_02142019/fsbl_r5_32/fsbl_r5_32.elf",
+                    "gt_clock": "DC1",
+                    "preemption_on": "",
+                    "proc": "R5"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc1",
+        "script_num": 43
+    },
+    "zc1751_dc1_r5_ecc_dp_sivdef_preempt": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc1 --processor r5 --clock sivdef -ecc -dp -pm 1 -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Dp_enable_vidgen_cores_only=1;Dp_max_resolutions=1;",
+                    "preempt": "Yes",
+                    "script_name": "zc1751_dc1_r5_ecc_dp_sivdef_preempt"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__ecc_bf2__": "Yes",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "Yes",
+                    "ecc_elf": "/group/siv3/proj/ronaldo/vnc/1.0/da7/results/burst/first_silicon/ddrc_init/zc1751_dc2/DDRC_ECC_memInit/20151007_chk0/build/ronaldo/apu_ps_ddr_init/ctest-bare",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc1_dp_sivdef3_ddr4_2133_ecc_02142019/fsbl_r5_32/fsbl_r5_32.elf",
+                    "gt_clock": "DC1",
+                    "preemption_off": "default.preemption_off()",
+                    "preemption_on": "default.preemption_on()",
+                    "proc": "R5"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "default.preemption_off()",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc1",
+        "script_num": 44
+    },
+    "zc1751_dc1_r5_ecc_sivdef": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc1 --processor r5 --clock sivdef -ecc -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "",
+                    "preempt": "No",
+                    "script_name": "zc1751_dc1_r5_ecc_sivdef"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__ecc_bf2__": "Yes",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "Yes",
+                    "ecc_elf": "/group/siv3/proj/ronaldo/vnc/1.0/da7/results/burst/first_silicon/ddrc_init/zc1751_dc2/DDRC_ECC_memInit/20151007_chk0/build/ronaldo/apu_ps_ddr_init/ctest-bare",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc1_sivdef3_ddr4_2133_ecc_02142019/fsbl_r5_32/fsbl_r5_32.elf",
+                    "gt_clock": "DC1",
+                    "preemption_on": "",
+                    "proc": "R5"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc1",
+        "script_num": 45
+    },
+    "zc1751_dc1_r5_ecc_sivdef_preempt": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc1 --processor r5 --clock sivdef -ecc -pm 1 -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "",
+                    "preempt": "Yes",
+                    "script_name": "zc1751_dc1_r5_ecc_sivdef_preempt"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__ecc_bf2__": "Yes",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "Yes",
+                    "ecc_elf": "/group/siv3/proj/ronaldo/vnc/1.0/da7/results/burst/first_silicon/ddrc_init/zc1751_dc2/DDRC_ECC_memInit/20151007_chk0/build/ronaldo/apu_ps_ddr_init/ctest-bare",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc1_sivdef3_ddr4_2133_ecc_02142019/fsbl_r5_32/fsbl_r5_32.elf",
+                    "gt_clock": "DC1",
+                    "preemption_off": "default.preemption_off()",
+                    "preemption_on": "default.preemption_on()",
+                    "proc": "R5"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "default.preemption_off()",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc1",
+        "script_num": 46
+    },
+    "zc1751_dc1_r5_sivdef": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc1 --processor r5 --clock sivdef -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "",
+                    "preempt": "No",
+                    "script_name": "zc1751_dc1_r5_sivdef"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "Yes",
+                    "ecc_elf": "",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc1_sivdef3_ddr4_2133_02142019/fsbl_r5_32/fsbl_r5_32.elf",
+                    "gt_clock": "DC1",
+                    "preemption_on": "",
+                    "proc": "R5"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc1",
+        "script_num": 47
+    },
+    "zc1751_dc1_r5_sivdef_preempt": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc1 --processor r5 --clock sivdef -pm 1 -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "",
+                    "preempt": "Yes",
+                    "script_name": "zc1751_dc1_r5_sivdef_preempt"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "Yes",
+                    "ecc_elf": "",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc1_sivdef3_ddr4_2133_02142019/fsbl_r5_32/fsbl_r5_32.elf",
+                    "gt_clock": "DC1",
+                    "preemption_off": "default.preemption_off()",
+                    "preemption_on": "default.preemption_on()",
+                    "proc": "R5"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "default.preemption_off()",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc1",
+        "script_num": 48
+    },
+    "zc1751_dc2_a53_av": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc2 --processor a53 --clock av -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "",
+                    "preempt": "No",
+                    "script_name": "zc1751_dc2_a53_av"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "No",
+                    "ecc_elf": "",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc2_av_sd100_schm_ddr4_2133_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "gt_clock": "DC2",
+                    "preemption_on": "",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc2",
+        "script_num": 49
+    },
+    "zc1751_dc2_a53_av_preempt": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc2 --processor a53 --clock av -pm 1 -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "",
+                    "preempt": "Yes",
+                    "script_name": "zc1751_dc2_a53_av_preempt"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "No",
+                    "ecc_elf": "",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc2_av_sd100_schm_ddr4_2133_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "gt_clock": "DC2",
+                    "preemption_off": "default.preemption_off()",
+                    "preemption_on": "default.preemption_on()",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "default.preemption_off()",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc2",
+        "script_num": 50
+    },
+    "zc1751_dc2_a53_be_av": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc2 --processor a53 --clock av -be -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "",
+                    "preempt": "No",
+                    "script_name": "zc1751_dc2_a53_be_av"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "No",
+                    "ecc_elf": "",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc2_av_sd100_schm_ddr4_2133_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "gt_clock": "DC2",
+                    "preemption_on": "",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc2",
+        "script_num": 51
+    },
+    "zc1751_dc2_a53_be_av_preempt": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc2 --processor a53 --clock av -be -pm 1 -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "",
+                    "preempt": "Yes",
+                    "script_name": "zc1751_dc2_a53_be_av_preempt"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "No",
+                    "ecc_elf": "",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc2_av_sd100_schm_ddr4_2133_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "gt_clock": "DC2",
+                    "preemption_off": "default.preemption_off()",
+                    "preemption_on": "default.preemption_on()",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "default.preemption_off()",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc2",
+        "script_num": 52
+    },
+    "zc1751_dc2_a53_be_dp_av": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc2 --processor a53 --clock av -be -dp -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Dp_enable_vidgen_cores_only=1;",
+                    "preempt": "No",
+                    "script_name": "zc1751_dc2_a53_be_dp_av"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "No",
+                    "ecc_elf": "",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc2_dp_av_sd100_schm_ddr4_2133_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "gt_clock": "DC2",
+                    "preemption_on": "",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc2",
+        "script_num": 53
+    },
+    "zc1751_dc2_a53_be_dp_av_preempt": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc2 --processor a53 --clock av -be -dp -pm 1 -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Dp_enable_vidgen_cores_only=1;",
+                    "preempt": "Yes",
+                    "script_name": "zc1751_dc2_a53_be_dp_av_preempt"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "No",
+                    "ecc_elf": "",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc2_dp_av_sd100_schm_ddr4_2133_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "gt_clock": "DC2",
+                    "preemption_off": "default.preemption_off()",
+                    "preemption_on": "default.preemption_on()",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "default.preemption_off()",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc2",
+        "script_num": 54
+    },
+    "zc1751_dc2_a53_be_dp_sivdef": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc2 --processor a53 --clock sivdef -be -dp -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Dp_enable_vidgen_cores_only=1;",
+                    "preempt": "No",
+                    "script_name": "zc1751_dc2_a53_be_dp_sivdef"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "No",
+                    "ecc_elf": "",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc2_dp_sivdef3_ddr4_2133_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "gt_clock": "DC2",
+                    "preemption_on": "",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc2",
+        "script_num": 55
+    },
+    "zc1751_dc2_a53_be_dp_sivdef_preempt": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc2 --processor a53 --clock sivdef -be -dp -pm 1 -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Dp_enable_vidgen_cores_only=1;",
+                    "preempt": "Yes",
+                    "script_name": "zc1751_dc2_a53_be_dp_sivdef_preempt"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "No",
+                    "ecc_elf": "",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc2_dp_sivdef3_ddr4_2133_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "gt_clock": "DC2",
+                    "preemption_off": "default.preemption_off()",
+                    "preemption_on": "default.preemption_on()",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "default.preemption_off()",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc2",
+        "script_num": 56
+    },
+    "zc1751_dc2_a53_be_ecc_av": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc2 --processor a53 --clock av -be -ecc -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "",
+                    "preempt": "No",
+                    "script_name": "zc1751_dc2_a53_be_ecc_av"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "Yes",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "No",
+                    "ecc_elf": "/group/siv3/proj/ronaldo/vnc/1.0/da7/results/burst/first_silicon/ddrc_init/zc1751_dc2/DDRC_ECC_memInit/20151007_chk0/build/ronaldo/apu_ps_ddr_init/ctest-bare",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc2_av_sd100_schm_ddr4_2133_ecc_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "gt_clock": "DC2",
+                    "preemption_on": "",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc2",
+        "script_num": 57
+    },
+    "zc1751_dc2_a53_be_ecc_av_preempt": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc2 --processor a53 --clock av -be -ecc -pm 1 -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "",
+                    "preempt": "Yes",
+                    "script_name": "zc1751_dc2_a53_be_ecc_av_preempt"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "Yes",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "No",
+                    "ecc_elf": "/group/siv3/proj/ronaldo/vnc/1.0/da7/results/burst/first_silicon/ddrc_init/zc1751_dc2/DDRC_ECC_memInit/20151007_chk0/build/ronaldo/apu_ps_ddr_init/ctest-bare",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc2_av_sd100_schm_ddr4_2133_ecc_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "gt_clock": "DC2",
+                    "preemption_off": "default.preemption_off()",
+                    "preemption_on": "default.preemption_on()",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "default.preemption_off()",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc2",
+        "script_num": 58
+    },
+    "zc1751_dc2_a53_be_ecc_dp_av": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc2 --processor a53 --clock av -be -ecc -dp -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Dp_enable_vidgen_cores_only=1;Dp_max_resolutions=1;",
+                    "preempt": "No",
+                    "script_name": "zc1751_dc2_a53_be_ecc_dp_av"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "Yes",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "No",
+                    "ecc_elf": "/group/siv3/proj/ronaldo/vnc/1.0/da7/results/burst/first_silicon/ddrc_init/zc1751_dc2/DDRC_ECC_memInit/20151007_chk0/build/ronaldo/apu_ps_ddr_init/ctest-bare",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc2_dp_av_sd100_schm_ddr4_2133_ecc_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "gt_clock": "DC2",
+                    "preemption_on": "",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc2",
+        "script_num": 59
+    },
+    "zc1751_dc2_a53_be_ecc_dp_av_preempt": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc2 --processor a53 --clock av -be -ecc -dp -pm 1 -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Dp_enable_vidgen_cores_only=1;Dp_max_resolutions=1;",
+                    "preempt": "Yes",
+                    "script_name": "zc1751_dc2_a53_be_ecc_dp_av_preempt"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "Yes",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "No",
+                    "ecc_elf": "/group/siv3/proj/ronaldo/vnc/1.0/da7/results/burst/first_silicon/ddrc_init/zc1751_dc2/DDRC_ECC_memInit/20151007_chk0/build/ronaldo/apu_ps_ddr_init/ctest-bare",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc2_dp_av_sd100_schm_ddr4_2133_ecc_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "gt_clock": "DC2",
+                    "preemption_off": "default.preemption_off()",
+                    "preemption_on": "default.preemption_on()",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "default.preemption_off()",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc2",
+        "script_num": 60
+    },
+    "zc1751_dc2_a53_be_ecc_dp_sivdef": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc2 --processor a53 --clock sivdef -be -ecc -dp -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Dp_enable_vidgen_cores_only=1;Dp_max_resolutions=1;",
+                    "preempt": "No",
+                    "script_name": "zc1751_dc2_a53_be_ecc_dp_sivdef"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "Yes",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "No",
+                    "ecc_elf": "/group/siv3/proj/ronaldo/vnc/1.0/da7/results/burst/first_silicon/ddrc_init/zc1751_dc2/DDRC_ECC_memInit/20151007_chk0/build/ronaldo/apu_ps_ddr_init/ctest-bare",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc2_dp_sivdef3_ddr4_2133_ecc_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "gt_clock": "DC2",
+                    "preemption_on": "",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc2",
+        "script_num": 61
+    },
+    "zc1751_dc2_a53_be_ecc_dp_sivdef_preempt": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc2 --processor a53 --clock sivdef -be -ecc -dp -pm 1 -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Dp_enable_vidgen_cores_only=1;Dp_max_resolutions=1;",
+                    "preempt": "Yes",
+                    "script_name": "zc1751_dc2_a53_be_ecc_dp_sivdef_preempt"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "Yes",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "No",
+                    "ecc_elf": "/group/siv3/proj/ronaldo/vnc/1.0/da7/results/burst/first_silicon/ddrc_init/zc1751_dc2/DDRC_ECC_memInit/20151007_chk0/build/ronaldo/apu_ps_ddr_init/ctest-bare",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc2_dp_sivdef3_ddr4_2133_ecc_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "gt_clock": "DC2",
+                    "preemption_off": "default.preemption_off()",
+                    "preemption_on": "default.preemption_on()",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "default.preemption_off()",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc2",
+        "script_num": 62
+    },
+    "zc1751_dc2_a53_be_ecc_sivdef": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc2 --processor a53 --clock sivdef -be -ecc -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "",
+                    "preempt": "No",
+                    "script_name": "zc1751_dc2_a53_be_ecc_sivdef"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "Yes",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "No",
+                    "ecc_elf": "/group/siv3/proj/ronaldo/vnc/1.0/da7/results/burst/first_silicon/ddrc_init/zc1751_dc2/DDRC_ECC_memInit/20151007_chk0/build/ronaldo/apu_ps_ddr_init/ctest-bare",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc2_sivdef3_ddr4_2133_ecc_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "gt_clock": "DC2",
+                    "preemption_on": "",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc2",
+        "script_num": 63
+    },
+    "zc1751_dc2_a53_be_ecc_sivdef_preempt": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc2 --processor a53 --clock sivdef -be -ecc -pm 1 -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "",
+                    "preempt": "Yes",
+                    "script_name": "zc1751_dc2_a53_be_ecc_sivdef_preempt"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "Yes",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "No",
+                    "ecc_elf": "/group/siv3/proj/ronaldo/vnc/1.0/da7/results/burst/first_silicon/ddrc_init/zc1751_dc2/DDRC_ECC_memInit/20151007_chk0/build/ronaldo/apu_ps_ddr_init/ctest-bare",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc2_sivdef3_ddr4_2133_ecc_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "gt_clock": "DC2",
+                    "preemption_off": "default.preemption_off()",
+                    "preemption_on": "default.preemption_on()",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "default.preemption_off()",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc2",
+        "script_num": 64
+    },
+    "zc1751_dc2_a53_be_sivdef": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc2 --processor a53 --clock sivdef -be -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "",
+                    "preempt": "No",
+                    "script_name": "zc1751_dc2_a53_be_sivdef"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "No",
+                    "ecc_elf": "",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc2_sivdef3_ddr4_2133_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "gt_clock": "DC2",
+                    "preemption_on": "",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc2",
+        "script_num": 65
+    },
+    "zc1751_dc2_a53_be_sivdef_preempt": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc2 --processor a53 --clock sivdef -be -pm 1 -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "",
+                    "preempt": "Yes",
+                    "script_name": "zc1751_dc2_a53_be_sivdef_preempt"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "No",
+                    "ecc_elf": "",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc2_sivdef3_ddr4_2133_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "gt_clock": "DC2",
+                    "preemption_off": "default.preemption_off()",
+                    "preemption_on": "default.preemption_on()",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "default.preemption_off()",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc2",
+        "script_num": 66
+    },
+    "zc1751_dc2_a53_dp_av": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc2 --processor a53 --clock av -dp -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Dp_enable_vidgen_cores_only=1;",
+                    "preempt": "No",
+                    "script_name": "zc1751_dc2_a53_dp_av"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "No",
+                    "ecc_elf": "",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc2_dp_av_sd100_schm_ddr4_2133_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "gt_clock": "DC2",
+                    "preemption_on": "",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc2",
+        "script_num": 67
+    },
+    "zc1751_dc2_a53_dp_av_preempt": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc2 --processor a53 --clock av -dp -pm 1 -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Dp_enable_vidgen_cores_only=1;",
+                    "preempt": "Yes",
+                    "script_name": "zc1751_dc2_a53_dp_av_preempt"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "No",
+                    "ecc_elf": "",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc2_dp_av_sd100_schm_ddr4_2133_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "gt_clock": "DC2",
+                    "preemption_off": "default.preemption_off()",
+                    "preemption_on": "default.preemption_on()",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "default.preemption_off()",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc2",
+        "script_num": 68
+    },
+    "zc1751_dc2_a53_dp_sivdef": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc2 --processor a53 --clock sivdef -dp -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Dp_enable_vidgen_cores_only=1;",
+                    "preempt": "No",
+                    "script_name": "zc1751_dc2_a53_dp_sivdef"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "No",
+                    "ecc_elf": "",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc2_dp_sivdef3_ddr4_2133_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "gt_clock": "DC2",
+                    "preemption_on": "",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc2",
+        "script_num": 69
+    },
+    "zc1751_dc2_a53_dp_sivdef_preempt": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc2 --processor a53 --clock sivdef -dp -pm 1 -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Dp_enable_vidgen_cores_only=1;",
+                    "preempt": "Yes",
+                    "script_name": "zc1751_dc2_a53_dp_sivdef_preempt"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "No",
+                    "ecc_elf": "",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc2_dp_sivdef3_ddr4_2133_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "gt_clock": "DC2",
+                    "preemption_off": "default.preemption_off()",
+                    "preemption_on": "default.preemption_on()",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "default.preemption_off()",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc2",
+        "script_num": 70
+    },
+    "zc1751_dc2_a53_ecc_av": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc2 --processor a53 --clock av -ecc -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "",
+                    "preempt": "No",
+                    "script_name": "zc1751_dc2_a53_ecc_av"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "Yes",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "No",
+                    "ecc_elf": "/group/siv3/proj/ronaldo/vnc/1.0/da7/results/burst/first_silicon/ddrc_init/zc1751_dc2/DDRC_ECC_memInit/20151007_chk0/build/ronaldo/apu_ps_ddr_init/ctest-bare",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc2_av_sd100_schm_ddr4_2133_ecc_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "gt_clock": "DC2",
+                    "preemption_on": "",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc2",
+        "script_num": 71
+    },
+    "zc1751_dc2_a53_ecc_av_preempt": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc2 --processor a53 --clock av -ecc -pm 1 -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "",
+                    "preempt": "Yes",
+                    "script_name": "zc1751_dc2_a53_ecc_av_preempt"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "Yes",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "No",
+                    "ecc_elf": "/group/siv3/proj/ronaldo/vnc/1.0/da7/results/burst/first_silicon/ddrc_init/zc1751_dc2/DDRC_ECC_memInit/20151007_chk0/build/ronaldo/apu_ps_ddr_init/ctest-bare",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc2_av_sd100_schm_ddr4_2133_ecc_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "gt_clock": "DC2",
+                    "preemption_off": "default.preemption_off()",
+                    "preemption_on": "default.preemption_on()",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "default.preemption_off()",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc2",
+        "script_num": 72
+    },
+    "zc1751_dc2_a53_ecc_dp_av": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc2 --processor a53 --clock av -ecc -dp -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Dp_enable_vidgen_cores_only=1;Dp_max_resolutions=1;",
+                    "preempt": "No",
+                    "script_name": "zc1751_dc2_a53_ecc_dp_av"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "Yes",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "No",
+                    "ecc_elf": "/group/siv3/proj/ronaldo/vnc/1.0/da7/results/burst/first_silicon/ddrc_init/zc1751_dc2/DDRC_ECC_memInit/20151007_chk0/build/ronaldo/apu_ps_ddr_init/ctest-bare",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc2_dp_av_sd100_schm_ddr4_2133_ecc_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "gt_clock": "DC2",
+                    "preemption_on": "",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc2",
+        "script_num": 73
+    },
+    "zc1751_dc2_a53_ecc_dp_av_preempt": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc2 --processor a53 --clock av -ecc -dp -pm 1 -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Dp_enable_vidgen_cores_only=1;Dp_max_resolutions=1;",
+                    "preempt": "Yes",
+                    "script_name": "zc1751_dc2_a53_ecc_dp_av_preempt"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "Yes",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "No",
+                    "ecc_elf": "/group/siv3/proj/ronaldo/vnc/1.0/da7/results/burst/first_silicon/ddrc_init/zc1751_dc2/DDRC_ECC_memInit/20151007_chk0/build/ronaldo/apu_ps_ddr_init/ctest-bare",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc2_dp_av_sd100_schm_ddr4_2133_ecc_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "gt_clock": "DC2",
+                    "preemption_off": "default.preemption_off()",
+                    "preemption_on": "default.preemption_on()",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "default.preemption_off()",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc2",
+        "script_num": 74
+    },
+    "zc1751_dc2_a53_ecc_dp_sivdef": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc2 --processor a53 --clock sivdef -ecc -dp -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Dp_enable_vidgen_cores_only=1;Dp_max_resolutions=1;",
+                    "preempt": "No",
+                    "script_name": "zc1751_dc2_a53_ecc_dp_sivdef"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "Yes",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "No",
+                    "ecc_elf": "/group/siv3/proj/ronaldo/vnc/1.0/da7/results/burst/first_silicon/ddrc_init/zc1751_dc2/DDRC_ECC_memInit/20151007_chk0/build/ronaldo/apu_ps_ddr_init/ctest-bare",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc2_dp_sivdef3_ddr4_2133_ecc_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "gt_clock": "DC2",
+                    "preemption_on": "",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc2",
+        "script_num": 75
+    },
+    "zc1751_dc2_a53_ecc_dp_sivdef_preempt": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc2 --processor a53 --clock sivdef -ecc -dp -pm 1 -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Dp_enable_vidgen_cores_only=1;Dp_max_resolutions=1;",
+                    "preempt": "Yes",
+                    "script_name": "zc1751_dc2_a53_ecc_dp_sivdef_preempt"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "Yes",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "No",
+                    "ecc_elf": "/group/siv3/proj/ronaldo/vnc/1.0/da7/results/burst/first_silicon/ddrc_init/zc1751_dc2/DDRC_ECC_memInit/20151007_chk0/build/ronaldo/apu_ps_ddr_init/ctest-bare",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc2_dp_sivdef3_ddr4_2133_ecc_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "gt_clock": "DC2",
+                    "preemption_off": "default.preemption_off()",
+                    "preemption_on": "default.preemption_on()",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "default.preemption_off()",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc2",
+        "script_num": 76
+    },
+    "zc1751_dc2_a53_ecc_sivdef": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc2 --processor a53 --clock sivdef -ecc -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "",
+                    "preempt": "No",
+                    "script_name": "zc1751_dc2_a53_ecc_sivdef"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "Yes",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "No",
+                    "ecc_elf": "/group/siv3/proj/ronaldo/vnc/1.0/da7/results/burst/first_silicon/ddrc_init/zc1751_dc2/DDRC_ECC_memInit/20151007_chk0/build/ronaldo/apu_ps_ddr_init/ctest-bare",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc2_sivdef3_ddr4_2133_ecc_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "gt_clock": "DC2",
+                    "preemption_on": "",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc2",
+        "script_num": 77
+    },
+    "zc1751_dc2_a53_ecc_sivdef_preempt": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc2 --processor a53 --clock sivdef -ecc -pm 1 -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "",
+                    "preempt": "Yes",
+                    "script_name": "zc1751_dc2_a53_ecc_sivdef_preempt"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "Yes",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "No",
+                    "ecc_elf": "/group/siv3/proj/ronaldo/vnc/1.0/da7/results/burst/first_silicon/ddrc_init/zc1751_dc2/DDRC_ECC_memInit/20151007_chk0/build/ronaldo/apu_ps_ddr_init/ctest-bare",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc2_sivdef3_ddr4_2133_ecc_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "gt_clock": "DC2",
+                    "preemption_off": "default.preemption_off()",
+                    "preemption_on": "default.preemption_on()",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "default.preemption_off()",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc2",
+        "script_num": 78
+    },
+    "zc1751_dc2_a53_sivdef": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc2 --processor a53 --clock sivdef -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "",
+                    "preempt": "No",
+                    "script_name": "zc1751_dc2_a53_sivdef"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "No",
+                    "ecc_elf": "",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc2_sivdef3_ddr4_2133_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "gt_clock": "DC2",
+                    "preemption_on": "",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc2",
+        "script_num": 79
+    },
+    "zc1751_dc2_a53_sivdef_preempt": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc2 --processor a53 --clock sivdef -pm 1 -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "",
+                    "preempt": "Yes",
+                    "script_name": "zc1751_dc2_a53_sivdef_preempt"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "No",
+                    "ecc_elf": "",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc2_sivdef3_ddr4_2133_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "gt_clock": "DC2",
+                    "preemption_off": "default.preemption_off()",
+                    "preemption_on": "default.preemption_on()",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "default.preemption_off()",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc2",
+        "script_num": 80
+    },
+    "zc1751_dc2_r5_av": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc2 --processor r5 --clock av -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "",
+                    "preempt": "No",
+                    "script_name": "zc1751_dc2_r5_av"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "Yes",
+                    "ecc_elf": "",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc2_av_sd100_schm_ddr4_2133_02142019/fsbl_r5_32/fsbl_r5_32.elf",
+                    "gt_clock": "DC2",
+                    "preemption_on": "",
+                    "proc": "R5"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc2",
+        "script_num": 81
+    },
+    "zc1751_dc2_r5_av_preempt": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc2 --processor r5 --clock av -pm 1 -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "",
+                    "preempt": "Yes",
+                    "script_name": "zc1751_dc2_r5_av_preempt"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "Yes",
+                    "ecc_elf": "",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc2_av_sd100_schm_ddr4_2133_02142019/fsbl_r5_32/fsbl_r5_32.elf",
+                    "gt_clock": "DC2",
+                    "preemption_off": "default.preemption_off()",
+                    "preemption_on": "default.preemption_on()",
+                    "proc": "R5"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "default.preemption_off()",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc2",
+        "script_num": 82
+    },
+    "zc1751_dc2_r5_dp_av": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc2 --processor r5 --clock av -dp -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Dp_enable_vidgen_cores_only=1;",
+                    "preempt": "No",
+                    "script_name": "zc1751_dc2_r5_dp_av"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "Yes",
+                    "ecc_elf": "",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc2_dp_av_sd100_schm_ddr4_2133_02142019/fsbl_r5_32/fsbl_r5_32.elf",
+                    "gt_clock": "DC2",
+                    "preemption_on": "",
+                    "proc": "R5"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc2",
+        "script_num": 83
+    },
+    "zc1751_dc2_r5_dp_av_preempt": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc2 --processor r5 --clock av -dp -pm 1 -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Dp_enable_vidgen_cores_only=1;",
+                    "preempt": "Yes",
+                    "script_name": "zc1751_dc2_r5_dp_av_preempt"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "Yes",
+                    "ecc_elf": "",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc2_dp_av_sd100_schm_ddr4_2133_02142019/fsbl_r5_32/fsbl_r5_32.elf",
+                    "gt_clock": "DC2",
+                    "preemption_off": "default.preemption_off()",
+                    "preemption_on": "default.preemption_on()",
+                    "proc": "R5"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "default.preemption_off()",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc2",
+        "script_num": 84
+    },
+    "zc1751_dc2_r5_dp_sivdef": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc2 --processor r5 --clock sivdef -dp -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Dp_enable_vidgen_cores_only=1;",
+                    "preempt": "No",
+                    "script_name": "zc1751_dc2_r5_dp_sivdef"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "Yes",
+                    "ecc_elf": "",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc2_dp_sivdef3_ddr4_2133_02142019/fsbl_r5_32/fsbl_r5_32.elf",
+                    "gt_clock": "DC2",
+                    "preemption_on": "",
+                    "proc": "R5"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc2",
+        "script_num": 85
+    },
+    "zc1751_dc2_r5_dp_sivdef_preempt": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc2 --processor r5 --clock sivdef -dp -pm 1 -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Dp_enable_vidgen_cores_only=1;",
+                    "preempt": "Yes",
+                    "script_name": "zc1751_dc2_r5_dp_sivdef_preempt"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "Yes",
+                    "ecc_elf": "",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc2_dp_sivdef3_ddr4_2133_02142019/fsbl_r5_32/fsbl_r5_32.elf",
+                    "gt_clock": "DC2",
+                    "preemption_off": "default.preemption_off()",
+                    "preemption_on": "default.preemption_on()",
+                    "proc": "R5"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "default.preemption_off()",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc2",
+        "script_num": 86
+    },
+    "zc1751_dc2_r5_ecc_av": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc2 --processor r5 --clock av -ecc -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "",
+                    "preempt": "No",
+                    "script_name": "zc1751_dc2_r5_ecc_av"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__ecc_bf2__": "Yes",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "Yes",
+                    "ecc_elf": "/group/siv3/proj/ronaldo/vnc/1.0/da7/results/burst/first_silicon/ddrc_init/zc1751_dc2/DDRC_ECC_memInit/20151007_chk0/build/ronaldo/apu_ps_ddr_init/ctest-bare",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc2_av_sd100_schm_ddr4_2133_ecc_02142019/fsbl_r5_32/fsbl_r5_32.elf",
+                    "gt_clock": "DC2",
+                    "preemption_on": "",
+                    "proc": "R5"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc2",
+        "script_num": 87
+    },
+    "zc1751_dc2_r5_ecc_av_preempt": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc2 --processor r5 --clock av -ecc -pm 1 -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "",
+                    "preempt": "Yes",
+                    "script_name": "zc1751_dc2_r5_ecc_av_preempt"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__ecc_bf2__": "Yes",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "Yes",
+                    "ecc_elf": "/group/siv3/proj/ronaldo/vnc/1.0/da7/results/burst/first_silicon/ddrc_init/zc1751_dc2/DDRC_ECC_memInit/20151007_chk0/build/ronaldo/apu_ps_ddr_init/ctest-bare",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc2_av_sd100_schm_ddr4_2133_ecc_02142019/fsbl_r5_32/fsbl_r5_32.elf",
+                    "gt_clock": "DC2",
+                    "preemption_off": "default.preemption_off()",
+                    "preemption_on": "default.preemption_on()",
+                    "proc": "R5"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "default.preemption_off()",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc2",
+        "script_num": 88
+    },
+    "zc1751_dc2_r5_ecc_dp_av": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc2 --processor r5 --clock av -ecc -dp -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Dp_enable_vidgen_cores_only=1;Dp_max_resolutions=1;",
+                    "preempt": "No",
+                    "script_name": "zc1751_dc2_r5_ecc_dp_av"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__ecc_bf2__": "Yes",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "Yes",
+                    "ecc_elf": "/group/siv3/proj/ronaldo/vnc/1.0/da7/results/burst/first_silicon/ddrc_init/zc1751_dc2/DDRC_ECC_memInit/20151007_chk0/build/ronaldo/apu_ps_ddr_init/ctest-bare",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc2_dp_av_sd100_schm_ddr4_2133_ecc_02142019/fsbl_r5_32/fsbl_r5_32.elf",
+                    "gt_clock": "DC2",
+                    "preemption_on": "",
+                    "proc": "R5"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc2",
+        "script_num": 89
+    },
+    "zc1751_dc2_r5_ecc_dp_av_preempt": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc2 --processor r5 --clock av -ecc -dp -pm 1 -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Dp_enable_vidgen_cores_only=1;Dp_max_resolutions=1;",
+                    "preempt": "Yes",
+                    "script_name": "zc1751_dc2_r5_ecc_dp_av_preempt"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__ecc_bf2__": "Yes",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "Yes",
+                    "ecc_elf": "/group/siv3/proj/ronaldo/vnc/1.0/da7/results/burst/first_silicon/ddrc_init/zc1751_dc2/DDRC_ECC_memInit/20151007_chk0/build/ronaldo/apu_ps_ddr_init/ctest-bare",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc2_dp_av_sd100_schm_ddr4_2133_ecc_02142019/fsbl_r5_32/fsbl_r5_32.elf",
+                    "gt_clock": "DC2",
+                    "preemption_off": "default.preemption_off()",
+                    "preemption_on": "default.preemption_on()",
+                    "proc": "R5"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "default.preemption_off()",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc2",
+        "script_num": 90
+    },
+    "zc1751_dc2_r5_ecc_dp_sivdef": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc2 --processor r5 --clock sivdef -ecc -dp -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Dp_enable_vidgen_cores_only=1;Dp_max_resolutions=1;",
+                    "preempt": "No",
+                    "script_name": "zc1751_dc2_r5_ecc_dp_sivdef"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__ecc_bf2__": "Yes",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "Yes",
+                    "ecc_elf": "/group/siv3/proj/ronaldo/vnc/1.0/da7/results/burst/first_silicon/ddrc_init/zc1751_dc2/DDRC_ECC_memInit/20151007_chk0/build/ronaldo/apu_ps_ddr_init/ctest-bare",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc2_dp_sivdef3_ddr4_2133_ecc_02142019/fsbl_r5_32/fsbl_r5_32.elf",
+                    "gt_clock": "DC2",
+                    "preemption_on": "",
+                    "proc": "R5"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc2",
+        "script_num": 91
+    },
+    "zc1751_dc2_r5_ecc_dp_sivdef_preempt": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc2 --processor r5 --clock sivdef -ecc -dp -pm 1 -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Dp_enable_vidgen_cores_only=1;Dp_max_resolutions=1;",
+                    "preempt": "Yes",
+                    "script_name": "zc1751_dc2_r5_ecc_dp_sivdef_preempt"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__ecc_bf2__": "Yes",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "Yes",
+                    "ecc_elf": "/group/siv3/proj/ronaldo/vnc/1.0/da7/results/burst/first_silicon/ddrc_init/zc1751_dc2/DDRC_ECC_memInit/20151007_chk0/build/ronaldo/apu_ps_ddr_init/ctest-bare",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc2_dp_sivdef3_ddr4_2133_ecc_02142019/fsbl_r5_32/fsbl_r5_32.elf",
+                    "gt_clock": "DC2",
+                    "preemption_off": "default.preemption_off()",
+                    "preemption_on": "default.preemption_on()",
+                    "proc": "R5"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "default.preemption_off()",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc2",
+        "script_num": 92
+    },
+    "zc1751_dc2_r5_ecc_sivdef": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc2 --processor r5 --clock sivdef -ecc -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "",
+                    "preempt": "No",
+                    "script_name": "zc1751_dc2_r5_ecc_sivdef"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__ecc_bf2__": "Yes",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "Yes",
+                    "ecc_elf": "/group/siv3/proj/ronaldo/vnc/1.0/da7/results/burst/first_silicon/ddrc_init/zc1751_dc2/DDRC_ECC_memInit/20151007_chk0/build/ronaldo/apu_ps_ddr_init/ctest-bare",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc2_sivdef3_ddr4_2133_ecc_02142019/fsbl_r5_32/fsbl_r5_32.elf",
+                    "gt_clock": "DC2",
+                    "preemption_on": "",
+                    "proc": "R5"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc2",
+        "script_num": 93
+    },
+    "zc1751_dc2_r5_ecc_sivdef_preempt": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc2 --processor r5 --clock sivdef -ecc -pm 1 -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "",
+                    "preempt": "Yes",
+                    "script_name": "zc1751_dc2_r5_ecc_sivdef_preempt"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__ecc_bf2__": "Yes",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "Yes",
+                    "ecc_elf": "/group/siv3/proj/ronaldo/vnc/1.0/da7/results/burst/first_silicon/ddrc_init/zc1751_dc2/DDRC_ECC_memInit/20151007_chk0/build/ronaldo/apu_ps_ddr_init/ctest-bare",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc2_sivdef3_ddr4_2133_ecc_02142019/fsbl_r5_32/fsbl_r5_32.elf",
+                    "gt_clock": "DC2",
+                    "preemption_off": "default.preemption_off()",
+                    "preemption_on": "default.preemption_on()",
+                    "proc": "R5"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "default.preemption_off()",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc2",
+        "script_num": 94
+    },
+    "zc1751_dc2_r5_sivdef": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc2 --processor r5 --clock sivdef -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "",
+                    "preempt": "No",
+                    "script_name": "zc1751_dc2_r5_sivdef"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "Yes",
+                    "ecc_elf": "",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc2_sivdef3_ddr4_2133_02142019/fsbl_r5_32/fsbl_r5_32.elf",
+                    "gt_clock": "DC2",
+                    "preemption_on": "",
+                    "proc": "R5"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc2",
+        "script_num": 95
+    },
+    "zc1751_dc2_r5_sivdef_preempt": {
+        "cmd": "-pj alto -si da7_prod -b zc1751 --daughter_card dc2 --processor r5 --clock sivdef -pm 1 -py",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "",
+                    "preempt": "Yes",
+                    "script_name": "zc1751_dc2_r5_sivdef_preempt"
+                },
+                "template_file": "parameters_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__a53_rst_bf2__": "No",
+                    "__SUB_TEMPLATE__ecc_bf2__": "No",
+                    "__SUB_TEMPLATE__r5_rst_bf2__": "Yes",
+                    "__SUB_TEMPLATE__r5_sleep2_bf2__": "Yes",
+                    "ecc_elf": "",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc1751_none_burst_dc2_sivdef3_ddr4_2133_02142019/fsbl_r5_32/fsbl_r5_32.elf",
+                    "gt_clock": "DC2",
+                    "preemption_off": "default.preemption_off()",
+                    "preemption_on": "default.preemption_on()",
+                    "proc": "R5"
+                },
+                "template_file": "alto_da7_prod_zc1751_bf2.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "preemption_off": "default.preemption_off()",
+                    "read_power": "b.readpower()"
+                },
+                "template_file": "run_test_bf2.txt"
+            }
+        ],
+        "script_location": "bf2/alto/da7_prod/zc1751_dc2",
+        "script_num": 96
+    }
+}

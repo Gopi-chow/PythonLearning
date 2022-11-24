@@ -1,0 +1,517 @@
+{
+    "xa2785_a72_be_bup": {
+        "cmd": "-pj everest -si h10_es1_ps -b xa2785 --processor a72 -be -bup",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "xa2785_ps",
+                    "knobs": "g_is_h10_ps_only=1;",
+                    "preempt": "NO",
+                    "script_name": "xa2785_a72_be_bup"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__h10_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__h10_r5_ta_sel__": "no",
+                    "__SUB_TEMPLATE__tenzing_pdi_images_dow__": "yes",
+                    "board_serial_num": "",
+                    "com": "com0",
+                    "dwn_burst_wait": "500",
+                    "image_path": "/everest/set_vnc_bkup/vnc/h10/es1/results/burst/bup/cpm5/2022.1_INT_1115_1/gui_xa2785_cpm5_2MHP_4x_aximm_rc_x8g5_2022.1_1115/h10_rc/h10_rc.runs/impl_1/h10_rc_wrapper.pdi",
+                    "proc": "a72",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "xa2785.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__h10_noc_reg_dump__": "yes",
+                    "com": "com0",
+                    "inactv_t": "300",
+                    "preemption_off": "",
+                    "read_power": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/h10_es1_ps/xa2785",
+        "script_num": 3
+    },
+    "xa2785_a72_be_bup_preempt": {
+        "cmd": "-pj everest -si h10_es1_ps -b xa2785 --processor a72 -be -bup -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "xa2785_ps",
+                    "knobs": "g_is_h10_ps_only=1;",
+                    "preempt": "YES",
+                    "script_name": "xa2785_a72_be_bup_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__h10_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__h10_r5_ta_sel__": "no",
+                    "__SUB_TEMPLATE__tenzing_pdi_images_dow__": "yes",
+                    "board_serial_num": "",
+                    "com": "com0",
+                    "dwn_burst_wait": "500",
+                    "image_path": "/everest/set_vnc_bkup/vnc/h10/es1/results/burst/bup/cpm5/2022.1_INT_1115_1/gui_xa2785_cpm5_2MHP_4x_aximm_rc_x8g5_2022.1_1115/h10_rc/h10_rc.runs/impl_1/h10_rc_wrapper.pdi",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "xa2785.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__h10_noc_reg_dump__": "yes",
+                    "com": "com0",
+                    "inactv_t": "300",
+                    "preemption_off": "preemption_off",
+                    "read_power": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/h10_es1_ps/xa2785",
+        "script_num": 4
+    },
+    "xa2785_a72_be_ecc_bup": {
+        "cmd": "-pj everest -si h10_es1_ps -b xa2785 --processor a72 -be -ecc -bup",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "xa2785_ps",
+                    "knobs": "g_is_h10_ps_only=1;",
+                    "preempt": "NO",
+                    "script_name": "xa2785_a72_be_ecc_bup"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__h10_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__h10_r5_ta_sel__": "no",
+                    "__SUB_TEMPLATE__tenzing_pdi_images_dow__": "yes",
+                    "board_serial_num": "",
+                    "com": "com0",
+                    "dwn_burst_wait": "500",
+                    "image_path": "/everest/set_vnc_bkup/vnc/h10/es1/results/burst/bup/ps/2021.2_INT_0708_1/ps0_xa2785q_2mp_lpddr_ecc_1x_0707/hwflow_project_1/project_1.runs/impl_1/project_1_wrapper.pdi",
+                    "proc": "a72",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "xa2785.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__h10_noc_reg_dump__": "yes",
+                    "com": "com0",
+                    "inactv_t": "300",
+                    "preemption_off": "",
+                    "read_power": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/h10_es1_ps/xa2785",
+        "script_num": -9
+    },
+    "xa2785_a72_be_ecc_bup_preempt": {
+        "cmd": "-pj everest -si h10_es1_ps -b xa2785 --processor a72 -be -ecc -bup -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "xa2785_ps",
+                    "knobs": "g_is_h10_ps_only=1;",
+                    "preempt": "YES",
+                    "script_name": "xa2785_a72_be_ecc_bup_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__h10_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__h10_r5_ta_sel__": "no",
+                    "__SUB_TEMPLATE__tenzing_pdi_images_dow__": "yes",
+                    "board_serial_num": "",
+                    "com": "com0",
+                    "dwn_burst_wait": "500",
+                    "image_path": "/everest/set_vnc_bkup/vnc/h10/es1/results/burst/bup/ps/2021.2_INT_0708_1/ps0_xa2785q_2mp_lpddr_ecc_1x_0707/hwflow_project_1/project_1.runs/impl_1/project_1_wrapper.pdi",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "xa2785.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__h10_noc_reg_dump__": "yes",
+                    "inactv_t": "300",
+                    "preemption_off": "preemption_off",
+                    "read_power": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/h10_es1_ps/xa2785",
+        "script_num": -10
+    },
+    "xa2785_a72_bup": {
+        "cmd": "-pj everest -si h10_es1_ps -b xa2785 --processor a72 -bup",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "xa2785_ps",
+                    "knobs": "g_is_h10_ps_only=1;",
+                    "preempt": "NO",
+                    "script_name": "xa2785_a72_bup"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__h10_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__h10_r5_ta_sel__": "no",
+                    "__SUB_TEMPLATE__tenzing_pdi_images_dow__": "yes",
+                    "board_serial_num": "",
+                    "com": "com0",
+                    "dwn_burst_wait": "500",
+                    "image_path": "/everest/set_vnc_bkup/vnc/h10/es1/results/burst/bup/cpm5/2022.1_INT_1115_1/gui_xa2785_cpm5_2MHP_4x_aximm_rc_x8g5_2022.1_1115/h10_rc/h10_rc.runs/impl_1/h10_rc_wrapper.pdi",
+                    "proc": "a72",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "xa2785.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__h10_noc_reg_dump__": "yes",
+                    "com": "com0",
+                    "inactv_t": "300",
+                    "preemption_off": "",
+                    "read_power": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/h10_es1_ps/xa2785",
+        "script_num": 1
+    },
+    "xa2785_a72_bup_preempt": {
+        "cmd": "-pj everest -si h10_es1_ps -b xa2785 --processor a72 -bup -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "xa2785_ps",
+                    "knobs": "g_is_h10_ps_only=1;",
+                    "preempt": "YES",
+                    "script_name": "xa2785_a72_bup_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__h10_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__h10_r5_ta_sel__": "no",
+                    "__SUB_TEMPLATE__tenzing_pdi_images_dow__": "yes",
+                    "board_serial_num": "",
+                    "com": "com0",
+                    "dwn_burst_wait": "500",
+                    "image_path": "/everest/set_vnc_bkup/vnc/h10/es1/results/burst/bup/cpm5/2022.1_INT_1115_1/gui_xa2785_cpm5_2MHP_4x_aximm_rc_x8g5_2022.1_1115/h10_rc/h10_rc.runs/impl_1/h10_rc_wrapper.pdi",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "xa2785.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__h10_noc_reg_dump__": "yes",
+                    "com": "com0",
+                    "inactv_t": "300",
+                    "preemption_off": "preemption_off",
+                    "read_power": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/h10_es1_ps/xa2785",
+        "script_num": 2
+    },
+    "xa2785_a72_ecc_bup": {
+        "cmd": "-pj everest -si h10_es1_ps -b xa2785 --processor a72 -ecc -bup",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "xa2785_ps",
+                    "knobs": "g_is_h10_ps_only=1;",
+                    "preempt": "NO",
+                    "script_name": "xa2785_a72_ecc_bup"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__h10_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__h10_r5_ta_sel__": "no",
+                    "__SUB_TEMPLATE__tenzing_pdi_images_dow__": "yes",
+                    "board_serial_num": "",
+                    "com": "com0",
+                    "dwn_burst_wait": "500",
+                    "image_path": "/everest/set_vnc_bkup/vnc/h10/es1/results/burst/bup/ps/2021.2_INT_0708_1/ps0_xa2785q_2mp_lpddr_ecc_1x_0707/hwflow_project_1/project_1.runs/impl_1/project_1_wrapper.pdi",
+                    "proc": "a72",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "xa2785.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__h10_noc_reg_dump__": "yes",
+                    "com": "com0",
+                    "inactv_t": "300",
+                    "preemption_off": "",
+                    "read_power": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/h10_es1_ps/xa2785",
+        "script_num": -7
+    },
+    "xa2785_a72_ecc_bup_preempt": {
+        "cmd": "-pj everest -si h10_es1_ps -b xa2785 --processor a72 -ecc -bup -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "xa2785_ps",
+                    "knobs": "g_is_h10_ps_only=1;",
+                    "preempt": "YES",
+                    "script_name": "xa2785_a72_ecc_bup_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__h10_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__h10_r5_ta_sel__": "no",
+                    "__SUB_TEMPLATE__tenzing_pdi_images_dow__": "yes",
+                    "board_serial_num": "",
+                    "com": "com0",
+                    "dwn_burst_wait": "500",
+                    "image_path": "/everest/set_vnc_bkup/vnc/h10/es1/results/burst/bup/ps/2021.2_INT_0708_1/ps0_xa2785q_2mp_lpddr_ecc_1x_0707/hwflow_project_1/project_1.runs/impl_1/project_1_wrapper.pdi",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "xa2785.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__h10_noc_reg_dump__": "yes",
+                    "com": "com0",
+                    "inactv_t": "300",
+                    "preemption_off": "preemption_off",
+                    "read_power": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/h10_es1_ps/xa2785",
+        "script_num": -8
+    },
+    "xa2785_r5_bup": {
+        "cmd": "-pj everest -si h10_es1_ps -b xa2785 --processor r5 -bup",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "xa2785_ps",
+                    "knobs": "g_is_h10_ps_only=1;",
+                    "preempt": "NO",
+                    "script_name": "xa2785_r5_bup"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__h10_a72_ta_sel__": "no",
+                    "__SUB_TEMPLATE__h10_r5_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__tenzing_pdi_images_dow__": "yes",
+                    "board_serial_num": "",
+                    "com": "com0",
+                    "dwn_burst_wait": "500",
+                    "image_path": "/everest/set_vnc_bkup/vnc/h10/es1/results/burst/bup/cpm5/2022.1_INT_1115_1/gui_xa2785_cpm5_2MHP_4x_aximm_rc_x8g5_2022.1_1115/h10_rc/h10_rc.runs/impl_1/h10_rc_wrapper.pdi",
+                    "proc": "r5",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "xa2785.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__h10_noc_reg_dump__": "yes",
+                    "com": "com0",
+                    "inactv_t": "300",
+                    "preemption_off": "",
+                    "read_power": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/h10_es1_ps/xa2785",
+        "script_num": 5
+    },
+    "xa2785_r5_bup_preempt": {
+        "cmd": "-pj everest -si h10_es1_ps -b xa2785 --processor r5 -bup -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "xa2785_ps",
+                    "knobs": "g_is_h10_ps_only=1;",
+                    "preempt": "YES",
+                    "script_name": "xa2785_r5_bup_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__h10_a72_ta_sel__": "no",
+                    "__SUB_TEMPLATE__h10_r5_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__tenzing_pdi_images_dow__": "yes",
+                    "board_serial_num": "",
+                    "com": "com0",
+                    "dwn_burst_wait": "500",
+                    "image_path": "/everest/set_vnc_bkup/vnc/h10/es1/results/burst/bup/cpm5/2022.1_INT_1115_1/gui_xa2785_cpm5_2MHP_4x_aximm_rc_x8g5_2022.1_1115/h10_rc/h10_rc.runs/impl_1/h10_rc_wrapper.pdi",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "r5",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "xa2785.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__h10_noc_reg_dump__": "yes",
+                    "com": "com0",
+                    "inactv_t": "300",
+                    "preemption_off": "preemption_off",
+                    "read_power": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/h10_es1_ps/xa2785",
+        "script_num": 6
+    },
+    "xa2785_r5_ecc_bup": {
+        "cmd": "-pj everest -si h10_es1_ps -b xa2785 --processor r5 -ecc -bup",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "xa2785_ps",
+                    "knobs": "g_is_h10_ps_only=1;",
+                    "preempt": "NO",
+                    "script_name": "xa2785_r5_ecc_bup"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__h10_a72_ta_sel__": "no",
+                    "__SUB_TEMPLATE__h10_r5_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__tenzing_pdi_images_dow__": "yes",
+                    "board_serial_num": "",
+                    "com": "com0",
+                    "dwn_burst_wait": "500",
+                    "image_path": "/everest/set_vnc_bkup/vnc/h10/es1/results/burst/bup/ps/2021.2_INT_0708_1/ps0_xa2785q_2mp_lpddr_ecc_1x_0707/hwflow_project_1/project_1.runs/impl_1/project_1_wrapper.pdi",
+                    "proc": "r5",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "xa2785.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__h10_noc_reg_dump__": "yes",
+                    "com": "com0",
+                    "inactv_t": "300",
+                    "preemption_off": "",
+                    "read_power": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/h10_es1_ps/xa2785",
+        "script_num": -11
+    },
+    "xa2785_r5_ecc_bup_preempt": {
+        "cmd": "-pj everest -si h10_es1_ps -b xa2785 --processor r5 -ecc -bup -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "xa2785_ps",
+                    "knobs": "g_is_h10_ps_only=1;",
+                    "preempt": "YES",
+                    "script_name": "xa2785_r5_ecc_bup_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__h10_a72_ta_sel__": "no",
+                    "__SUB_TEMPLATE__h10_r5_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__tenzing_pdi_images_dow__": "yes",
+                    "board_serial_num": "",
+                    "com": "com0",
+                    "dwn_burst_wait": "500",
+                    "image_path": "/everest/set_vnc_bkup/vnc/h10/es1/results/burst/bup/ps/2021.2_INT_0708_1/ps0_xa2785q_2mp_lpddr_ecc_1x_0707/hwflow_project_1/project_1.runs/impl_1/project_1_wrapper.pdi",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "r5",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "xa2785.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__h10_noc_reg_dump__": "yes",
+                    "com": "com0",
+                    "inactv_t": "300",
+                    "preemption_off": "preemption_off",
+                    "read_power": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/h10_es1_ps/xa2785",
+        "script_num": -12
+    }
+}

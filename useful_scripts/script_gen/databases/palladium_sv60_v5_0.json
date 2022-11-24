@@ -1,0 +1,37 @@
+{
+    "palladium_a72": {
+        "cmd": "-pj everest -si aie2_vdu_ipp_5_0 -b palladium --processor a72",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "EMU_PS_ME_SV60_V5_0",
+                    "knobs": "Me_enable=2,Zynq_clk_rand_mask_disable=0xffffffff,Everest_aximon0_base_addr=0xa4100000,Xcanfd_ref_clk_mhz=80,",
+                    "preempt": "NO",
+                    "script_name": "palladium_a72"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "baud_rate": "serial baud=4800",
+                    "build_dir": "/group/siv4/proj/everest/emu/EMU_PS_ME_SV60_V5_0",
+                    "run_script": "run_session_SV60.tcl"
+                },
+                "template_file": "sv60_palladium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_palladium__": "Yes",
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__preempt_time__": "No",
+                    "com": "serial",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test_palladium.txt"
+            }
+        ],
+        "script_location": "everest/aie2_vdu_ipp_5_0/palladium",
+        "script_num": 1
+    }
+}

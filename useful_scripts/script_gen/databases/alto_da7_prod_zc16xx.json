@@ -1,0 +1,630 @@
+{
+    "zc1650_a53_sivdef": {
+        "cmd": "-pj alto -si da7_prod -b zc1650 --processor a53 --clock sivdef",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Ronaldo_qspi_base_addr=0;Ronaldo_upper_mem_size=0;Dp_enable=0;Pele_sd_enable=0;Ams_check_mask_isr_0=0;Ronaldo_use_i2c_detect_zcu102=0;Ronaldo_rtc_base_addr=0;",
+                    "preempt": "No",
+                    "script_name": "zc1650_a53_sivdef"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_rst__": "Yes",
+                    "__SUB_TEMPLATE__r5_rst__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2__": "No",
+                    "ddr_init": "No",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc165x_none_burst_165x_sivdef3_lpddr3_1600_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "power_config": "include \"$CLUSTER_HOME/etc/zc1650_power\"",
+                    "preemption_on": "",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc165x.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "com": "serial",
+                    "preemption_off": "",
+                    "read_power": "readpower"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "alto/da7_prod/zc1650",
+        "script_num": 1
+    },
+    "zc1650_a53_sivdef_preempt": {
+        "cmd": "-pj alto -si da7_prod -b zc1650 --processor a53 --clock sivdef -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Ronaldo_qspi_base_addr=0;Ronaldo_upper_mem_size=0;Dp_enable=0;Pele_sd_enable=0;Ams_check_mask_isr_0=0;Ronaldo_use_i2c_detect_zcu102=0;Ronaldo_rtc_base_addr=0;",
+                    "preempt": "Yes",
+                    "script_name": "zc1650_a53_sivdef_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_rst__": "Yes",
+                    "__SUB_TEMPLATE__r5_rst__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2__": "No",
+                    "ddr_init": "No",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc165x_none_burst_165x_sivdef3_lpddr3_1600_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "power_config": "include \"$CLUSTER_HOME/etc/zc1650_power\"",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc165x.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "com": "serial",
+                    "preemption_off": "preemption_off",
+                    "read_power": "readpower"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "alto/da7_prod/zc1650",
+        "script_num": 2
+    },
+    "zc1650_r5_sivdef": {
+        "cmd": "-pj alto -si da7_prod -b zc1650 --processor r5 --clock sivdef",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Ronaldo_qspi_base_addr=0;Ronaldo_upper_mem_size=0;Dp_enable=0;Pele_sd_enable=0;Ams_check_mask_isr_0=0;Ronaldo_use_i2c_detect_zcu102=0;Ronaldo_rtc_base_addr=0;",
+                    "preempt": "No",
+                    "script_name": "zc1650_r5_sivdef"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_rst__": "No",
+                    "__SUB_TEMPLATE__r5_rst__": "Yes",
+                    "__SUB_TEMPLATE__r5_sleep2__": "Yes",
+                    "ddr_init": "No",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc165x_none_burst_165x_sivdef3_lpddr3_1600_02142019/fsbl_r5_32/fsbl_r5_32.elf",
+                    "power_config": "include \"$CLUSTER_HOME/etc/zc1650_power\"",
+                    "preemption_on": "",
+                    "proc": "R5"
+                },
+                "template_file": "alto_da7_prod_zc165x.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "com": "serial",
+                    "preemption_off": "",
+                    "read_power": "readpower"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "alto/da7_prod/zc1650",
+        "script_num": 3
+    },
+    "zc1650_r5_sivdef_preempt": {
+        "cmd": "-pj alto -si da7_prod -b zc1650 --processor r5 --clock sivdef -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Ronaldo_qspi_base_addr=0;Ronaldo_upper_mem_size=0;Dp_enable=0;Pele_sd_enable=0;Ams_check_mask_isr_0=0;Ronaldo_use_i2c_detect_zcu102=0;Ronaldo_rtc_base_addr=0;",
+                    "preempt": "Yes",
+                    "script_name": "zc1650_r5_sivdef_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_rst__": "No",
+                    "__SUB_TEMPLATE__r5_rst__": "Yes",
+                    "__SUB_TEMPLATE__r5_sleep2__": "Yes",
+                    "ddr_init": "No",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc165x_none_burst_165x_sivdef3_lpddr3_1600_02142019/fsbl_r5_32/fsbl_r5_32.elf",
+                    "power_config": "include \"$CLUSTER_HOME/etc/zc1650_power\"",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "R5"
+                },
+                "template_file": "alto_da7_prod_zc165x.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "com": "serial",
+                    "preemption_off": "preemption_off",
+                    "read_power": "readpower"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "alto/da7_prod/zc1650",
+        "script_num": 4
+    },
+    "zc1651_a53_sivdef": {
+        "cmd": "-pj alto -si da7_prod -b zc1651 --processor a53 --clock sivdef",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Ronaldo_qspi_base_addr=0;Ronaldo_upper_mem_size=0;Dp_enable=0;Pele_sd_enable=0;Ams_check_mask_isr_0=0;Ronaldo_use_i2c_detect_zcu102=0;Ronaldo_rtc_base_addr=0;",
+                    "preempt": "No",
+                    "script_name": "zc1651_a53_sivdef"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_rst__": "Yes",
+                    "__SUB_TEMPLATE__r5_rst__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2__": "No",
+                    "ddr_init": "No",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc165x_none_burst_165x_sivdef3_lpddr4_man2400_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "preemption_on": "",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc16xx.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "com": "serial",
+                    "preemption_off": "",
+                    "read_power": "readpower"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "alto/da7_prod/zc1651",
+        "script_num": 5
+    },
+    "zc1651_a53_sivdef_preempt": {
+        "cmd": "-pj alto -si da7_prod -b zc1651 --processor a53 --clock sivdef -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Ronaldo_qspi_base_addr=0;Ronaldo_upper_mem_size=0;Dp_enable=0;Pele_sd_enable=0;Ams_check_mask_isr_0=0;Ronaldo_use_i2c_detect_zcu102=0;Ronaldo_rtc_base_addr=0;",
+                    "preempt": "Yes",
+                    "script_name": "zc1651_a53_sivdef_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_rst__": "Yes",
+                    "__SUB_TEMPLATE__r5_rst__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2__": "No",
+                    "ddr_init": "No",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc165x_none_burst_165x_sivdef3_lpddr4_man2400_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc16xx.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "com": "serial",
+                    "preemption_off": "preemption_off",
+                    "read_power": "readpower"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "alto/da7_prod/zc1651",
+        "script_num": 6
+    },
+    "zc1651_r5_sivdef": {
+        "cmd": "-pj alto -si da7_prod -b zc1651 --processor r5 --clock sivdef",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Ronaldo_qspi_base_addr=0;Ronaldo_upper_mem_size=0;Dp_enable=0;Pele_sd_enable=0;Ams_check_mask_isr_0=0;Ronaldo_use_i2c_detect_zcu102=0;Ronaldo_rtc_base_addr=0;",
+                    "preempt": "No",
+                    "script_name": "zc1651_r5_sivdef"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_rst__": "No",
+                    "__SUB_TEMPLATE__r5_rst__": "Yes",
+                    "__SUB_TEMPLATE__r5_sleep2__": "Yes",
+                    "ddr_init": "No",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc165x_none_burst_165x_sivdef3_lpddr4_man2400_02142019/fsbl_r5_32/fsbl_r5_32.elf",
+                    "preemption_on": "",
+                    "proc": "R5"
+                },
+                "template_file": "alto_da7_prod_zc16xx.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "com": "serial",
+                    "preemption_off": "",
+                    "read_power": "readpower"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "alto/da7_prod/zc1651",
+        "script_num": 7
+    },
+    "zc1651_r5_sivdef_preempt": {
+        "cmd": "-pj alto -si da7_prod -b zc1651 --processor r5 --clock sivdef -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Ronaldo_qspi_base_addr=0;Ronaldo_upper_mem_size=0;Dp_enable=0;Pele_sd_enable=0;Ams_check_mask_isr_0=0;Ronaldo_use_i2c_detect_zcu102=0;Ronaldo_rtc_base_addr=0;",
+                    "preempt": "Yes",
+                    "script_name": "zc1651_r5_sivdef_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_rst__": "No",
+                    "__SUB_TEMPLATE__r5_rst__": "Yes",
+                    "__SUB_TEMPLATE__r5_sleep2__": "Yes",
+                    "ddr_init": "No",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc165x_none_burst_165x_sivdef3_lpddr4_man2400_02142019/fsbl_r5_32/fsbl_r5_32.elf",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "R5"
+                },
+                "template_file": "alto_da7_prod_zc16xx.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "com": "serial",
+                    "preemption_off": "preemption_off",
+                    "read_power": "readpower"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "alto/da7_prod/zc1651",
+        "script_num": 8
+    },
+    "zc165x_a53_av": {
+        "cmd": "-pj alto -si da7_prod -b zc165x --processor a53 --clock av",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Ronaldo_qspi_base_addr=0;Ronaldo_upper_mem_size=0;Dp_enable=0;Pele_sd_enable=0;Ams_check_mask_isr_0=0;Ronaldo_use_i2c_detect_zcu102=0;Ronaldo_rtc_base_addr=0;",
+                    "preempt": "No",
+                    "script_name": "zc165x_a53_av"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_rst__": "Yes",
+                    "__SUB_TEMPLATE__r5_rst__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2__": "No",
+                    "ddr_init": "No",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc165x_none_burst_165x_av_sd100_schm_ddr3_1866_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "power_config": "include \"$CLUSTER_HOME/etc/zc1655_power\"",
+                    "preemption_on": "",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc165x.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "com": "serial",
+                    "preemption_off": "",
+                    "read_power": "readpower"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "alto/da7_prod/zc165x",
+        "script_num": 9
+    },
+    "zc165x_a53_av_preempt": {
+        "cmd": "-pj alto -si da7_prod -b zc165x --processor a53 --clock av -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Ronaldo_qspi_base_addr=0;Ronaldo_upper_mem_size=0;Dp_enable=0;Pele_sd_enable=0;Ams_check_mask_isr_0=0;Ronaldo_use_i2c_detect_zcu102=0;Ronaldo_rtc_base_addr=0;",
+                    "preempt": "Yes",
+                    "script_name": "zc165x_a53_av_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_rst__": "Yes",
+                    "__SUB_TEMPLATE__r5_rst__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2__": "No",
+                    "ddr_init": "No",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc165x_none_burst_165x_av_sd100_schm_ddr3_1866_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "power_config": "include \"$CLUSTER_HOME/etc/zc1655_power\"",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc165x.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "com": "serial",
+                    "preemption_off": "preemption_off",
+                    "read_power": "readpower"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "alto/da7_prod/zc165x",
+        "script_num": 10
+    },
+    "zc165x_a53_sivdef": {
+        "cmd": "-pj alto -si da7_prod -b zc165x --processor a53 --clock sivdef",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Ronaldo_qspi_base_addr=0;Ronaldo_upper_mem_size=0;Dp_enable=0;Pele_sd_enable=0;Ams_check_mask_isr_0=0;Ronaldo_use_i2c_detect_zcu102=0;Ronaldo_rtc_base_addr=0;",
+                    "preempt": "No",
+                    "script_name": "zc165x_a53_sivdef"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_rst__": "Yes",
+                    "__SUB_TEMPLATE__r5_rst__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2__": "No",
+                    "ddr_init": "No",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc165x_none_burst_165x_sivdef3_ddr3_1866_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "power_config": "include \"$CLUSTER_HOME/etc/zc1655_power\"",
+                    "preemption_on": "",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc165x.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "com": "serial",
+                    "preemption_off": "",
+                    "read_power": "readpower"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "alto/da7_prod/zc165x",
+        "script_num": 11
+    },
+    "zc165x_a53_sivdef_preempt": {
+        "cmd": "-pj alto -si da7_prod -b zc165x --processor a53 --clock sivdef -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Ronaldo_qspi_base_addr=0;Ronaldo_upper_mem_size=0;Dp_enable=0;Pele_sd_enable=0;Ams_check_mask_isr_0=0;Ronaldo_use_i2c_detect_zcu102=0;Ronaldo_rtc_base_addr=0;",
+                    "preempt": "Yes",
+                    "script_name": "zc165x_a53_sivdef_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_rst__": "Yes",
+                    "__SUB_TEMPLATE__r5_rst__": "No",
+                    "__SUB_TEMPLATE__r5_sleep2__": "No",
+                    "ddr_init": "No",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc165x_none_burst_165x_sivdef3_ddr3_1866_02142019/fsbl_a53_64/fsbl_a53_64.elf",
+                    "power_config": "include \"$CLUSTER_HOME/etc/zc1655_power\"",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "A53"
+                },
+                "template_file": "alto_da7_prod_zc165x.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "com": "serial",
+                    "preemption_off": "preemption_off",
+                    "read_power": "readpower"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "alto/da7_prod/zc165x",
+        "script_num": 12
+    },
+    "zc165x_r5_av": {
+        "cmd": "-pj alto -si da7_prod -b zc165x --processor r5 --clock av",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Ronaldo_qspi_base_addr=0;Ronaldo_upper_mem_size=0;Dp_enable=0;Pele_sd_enable=0;Ams_check_mask_isr_0=0;Ronaldo_use_i2c_detect_zcu102=0;Ronaldo_rtc_base_addr=0;",
+                    "preempt": "No",
+                    "script_name": "zc165x_r5_av"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_rst__": "No",
+                    "__SUB_TEMPLATE__r5_rst__": "Yes",
+                    "__SUB_TEMPLATE__r5_sleep2__": "Yes",
+                    "ddr_init": "No",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc165x_none_burst_165x_av_sd100_schm_ddr3_1866_02142019/fsbl_r5_32/fsbl_r5_32.elf",
+                    "power_config": "include \"$CLUSTER_HOME/etc/zc1655_power\"",
+                    "preemption_on": "",
+                    "proc": "R5"
+                },
+                "template_file": "alto_da7_prod_zc165x.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "com": "serial",
+                    "preemption_off": "",
+                    "read_power": "readpower"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "alto/da7_prod/zc165x",
+        "script_num": 13
+    },
+    "zc165x_r5_av_preempt": {
+        "cmd": "-pj alto -si da7_prod -b zc165x --processor r5 --clock av -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Ronaldo_qspi_base_addr=0;Ronaldo_upper_mem_size=0;Dp_enable=0;Pele_sd_enable=0;Ams_check_mask_isr_0=0;Ronaldo_use_i2c_detect_zcu102=0;Ronaldo_rtc_base_addr=0;",
+                    "preempt": "Yes",
+                    "script_name": "zc165x_r5_av_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_rst__": "No",
+                    "__SUB_TEMPLATE__r5_rst__": "Yes",
+                    "__SUB_TEMPLATE__r5_sleep2__": "Yes",
+                    "ddr_init": "No",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc165x_none_burst_165x_av_sd100_schm_ddr3_1866_02142019/fsbl_r5_32/fsbl_r5_32.elf",
+                    "power_config": "include \"$CLUSTER_HOME/etc/zc1655_power\"",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "R5"
+                },
+                "template_file": "alto_da7_prod_zc165x.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "com": "serial",
+                    "preemption_off": "preemption_off",
+                    "read_power": "readpower"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "alto/da7_prod/zc165x",
+        "script_num": 14
+    },
+    "zc165x_r5_sivdef": {
+        "cmd": "-pj alto -si da7_prod -b zc165x --processor r5 --clock sivdef",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Ronaldo_qspi_base_addr=0;Ronaldo_upper_mem_size=0;Dp_enable=0;Pele_sd_enable=0;Ams_check_mask_isr_0=0;Ronaldo_use_i2c_detect_zcu102=0;Ronaldo_rtc_base_addr=0;",
+                    "preempt": "No",
+                    "script_name": "zc165x_r5_sivdef"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_rst__": "No",
+                    "__SUB_TEMPLATE__r5_rst__": "Yes",
+                    "__SUB_TEMPLATE__r5_sleep2__": "Yes",
+                    "ddr_init": "No",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc165x_none_burst_165x_sivdef3_ddr3_1866_02142019/fsbl_r5_32/fsbl_r5_32.elf",
+                    "power_config": "include \"$CLUSTER_HOME/etc/zc1655_power\"",
+                    "preemption_on": "",
+                    "proc": "R5"
+                },
+                "template_file": "alto_da7_prod_zc165x.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "com": "serial",
+                    "preemption_off": "",
+                    "read_power": "readpower"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "alto/da7_prod/zc165x",
+        "script_num": 15
+    },
+    "zc165x_r5_sivdef_preempt": {
+        "cmd": "-pj alto -si da7_prod -b zc165x --processor r5 --clock sivdef -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "DA7_4.0",
+                    "knobs": "Ronaldo_qspi_base_addr=0;Ronaldo_upper_mem_size=0;Dp_enable=0;Pele_sd_enable=0;Ams_check_mask_isr_0=0;Ronaldo_use_i2c_detect_zcu102=0;Ronaldo_rtc_base_addr=0;",
+                    "preempt": "Yes",
+                    "script_name": "zc165x_r5_sivdef_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__a53_rst__": "No",
+                    "__SUB_TEMPLATE__r5_rst__": "Yes",
+                    "__SUB_TEMPLATE__r5_sleep2__": "Yes",
+                    "ddr_init": "No",
+                    "fsbl_elf": "2018.3_released/fsbl_da7_eg_zc165x_none_burst_165x_sivdef3_ddr3_1866_02142019/fsbl_r5_32/fsbl_r5_32.elf",
+                    "power_config": "include \"$CLUSTER_HOME/etc/zc1655_power\"",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "R5"
+                },
+                "template_file": "alto_da7_prod_zc165x.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "com": "serial",
+                    "preemption_off": "preemption_off",
+                    "read_power": "readpower"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "alto/da7_prod/zc165x",
+        "script_num": 16
+    }
+}

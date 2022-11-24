@@ -1,0 +1,4 @@
+-b xhd-tenpro-5 -si h20_ipp_4_0 -pj everest -p a72  -rt 86400  -msg "H20-HBM"
+-b xhd-tenpro-8 -si h20_ipp_4_0 -pj everest -p a72  -rt 86400  -msg "H20-HBM"
+-b xhd-tenpro-10 -si h20_ipp_4_0 -pj everest -p a72  -rt 86400 -msg "H20-HBM"
+-b xhd-tenpro-12 -si h20_ipp_4_0 -pj everest -p a72  -rt 86400 -msg "H20-HBM"

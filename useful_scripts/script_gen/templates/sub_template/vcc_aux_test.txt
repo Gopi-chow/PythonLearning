@@ -1,0 +1,6 @@
+# check for board workaround VCCAUX/VCCRAM
+if run "[ \"$XSDB_RESULT\" == \"1\" ]" then
+	print "FAILURE: VCC_RAM is not enabled!"
+	close
+	exit
+endif

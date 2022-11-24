@@ -1,0 +1,95 @@
+$PALLADIUM_BUILD = "<::build_dir::>"
+$RUN_SESSION_SCRIPT = "<::run_script:=:run_session.tcl::>"
+
+$PALLADIUM_DATABASE = "$PWD"
+
+if run "[ -d $PALLADIUM_BUILD/ecc_files ]" then
+        run "cp -rf $PALLADIUM_BUILD/ecc_files/* $PALLADIUM_DATABASE"
+endif
+
+run "cp -f $PALLADIUM_BUILD/palladium_SV60.tcl $PALLADIUM_DATABASE"
+run "cp -f $PALLADIUM_BUILD/$RUN_SESSION_SCRIPT $PALLADIUM_DATABASE"
+
+# Check if  palladium_SV60.tcl file is present
+if run "[ ! -f $PALLADIUM_DATABASE/palladium_SV60.tcl ]" then
+        fail "ERROR: Cannot find file: $PALLADIUM_DATABASE/palladium_SV60.tcl"
+endif
+
+# Check if  run_session tcl file is present
+if run "[ ! -f $PALLADIUM_DATABASE/$RUN_SESSION_SCRIPT ]" then
+        fail "ERROR: Cannot find file: $PALLADIUM_DATABASE/$RUN_SESSION_SCRIPT"
+endif
+
+<::baud_rate:=:serial baud=4800::>
+<::com:=:serial::> txdelay=100
+$seed := "perl -e 'printf \"%08x\", int(rand 4294967295)'"
+
+$MONARCH_SEED = "Monarch_seed=0x$seed;"
+$BURST_KNOBS = "$MONARCH_SEED$BURST_KNOBS"
+
+#Check if all paths are accessible
+if run "[ ! -f $BURST_ELF ]" then
+  fail "ERROR: Cannot find file: $BURST_ELF"
+endif
+
+$dir1 = "$SYSTEST_HOST"
+run "mkdir -p $LOGPATH/$dir1"
+$dir2 = "$logdate"
+run "mkdir $LOGPATH/$SYSTEST_HOST/$dir2"
+cd "$LOGPATH/$SYSTEST_HOST/$dir2"
+$BURST_RESULTS = "$LOGPATH/$SYSTEST_HOST/$dir2"
+$WHICH_XSDB := "which xsdb"
+
+
+$SERIAL_LOG = "$BURST_RESULTS/burst_serial_$SYSTEST_HOST.log"
+debug append "$BURST_RESULTS/burst_debug_$SYSTEST_HOST.log"
+
+# Echo all paths and configurations
+print "Printing all launch information..."
+print "PALLADIUM_ID_$logdate,$BURST_HW,$BURST_BUP,$BURST_ELF,$SYSTEST_HOST,$logdate1,$BURST_RUNTIME,xx,$PREEMPTABLE,IN_PROGRESS,TBD,$BURST_RESULTS,[A72]$BURST_HW.$BURST_BUP.$BURST_ELF.$SYSTEST_HOST.xx.TBD,$BURST_KNOBS"
+print "Palladium Build          :$BURST_HW"
+print "BOARD                    :$SYSTEST_HOST"
+print "BURST elf                :$BURST_ELF"
+print "Palladium Build path     :$PALLADIUM_BUILD"
+print "Palladium session        :$PALLADIUM_SESSION"
+print "XSDB Version             :$WHICH_XSDB"
+print "Job ID                   :$LSB_JOBID"
+
+<::__SUB_TEMPLATE__module_switch__:=:No::>
+record <::com:=:serial::> append $SERIAL_LOG
+
+if running my_pall then
+        kill my_pall
+        sleep 1
+endif
+
+module "unload incisive"
+module "unload xcelium"
+module "load xcelium/19.09.009"
+unset $XCELIUM_INCISIVE_COMPATIBILITY_MODE
+module "use /everest/sivhw_bkup/tools/modulefiles"
+module "unload palladium"
+module "unload protium"
+module "load palladium/19.1.0.003"
+
+module "unload ixcom"
+module "load ixcom/20.05.s005"
+module "unload hdlice"
+module "load hdlice/20.05.s005"
+
+fork "/everest/sivhw_bkup/tools/palladium/palladium_19.1.0.003/bin/xeDebug --xmsim -sv_lib /everest/sivhw_bkup/tools/palladium/MMP2006.000.s000_201221-203053_201030/utils/cdn_mmp_utils/lib/64bit/libMMP_utils.so -sv_lib /everest/sivhw_bkup/tools/ixcom/ixcom_20.05.s005/tools.lnx86/lib/64bit/libxcrt.so" as my_pall
+
+#Requires certain time to create tmp and xe.msg files
+sleep 10 
+my_pall echo = 1
+
+$ptm_exit_time := "expr $BURST_RUNTIME / 60 + 30"
+print my_pall "xeset idleExit $ptm_exit_time"
+
+print my_pall "cd \"$PALLADIUM_DATABASE\""
+sleep 2
+
+print my_pall "set argv [list $BURST_ELF]"
+
+print my_pall "source $RUN_SESSION_SCRIPT"
+

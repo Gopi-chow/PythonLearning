@@ -1,0 +1,25 @@
+
+test
+        sleep 5
+	wait
+	when serial matches "Mem Fill completed"
+		sleep 20
+		continue
+	end	
+        when serial inactive 20 minutes
+                fail "DDR ECC initialization is taking more than 20min"
+        end
+        on failure
+                print "FAILURE: $0"
+                #Clearing the FPGA's
+                print my_ptm "clear"
+                sleep 3
+                print my_ptm "exit"
+                <::unlock_cmd:=:unlock::>
+                #Changing the current working directory
+                cd "$BURST_HOME"
+                close
+                exit
+        end
+
+endtest

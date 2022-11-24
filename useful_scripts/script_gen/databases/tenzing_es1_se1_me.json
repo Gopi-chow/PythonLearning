@@ -1,0 +1,830 @@
+{
+    "tenzing_se1_a72_be_dddr_bup": {
+        "cmd": "-pj everest -si es1_me -b tenzing --daughter_card se1 --processor a72 --ddr_mode dddr -be -bup",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "tenzing_es1_me",
+                    "knobs": "Me_enable=1;Ronaldo_ddr_mem_size_override=0x40000000;Axiex_disable_interrupts_mask=1;Axidma_len_align_bits_me=4;",
+                    "preempt": "NO",
+                    "script_name": "tenzing_se1_a72_be_dddr_bup"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__everest_es1_workaround__": {
+                        "tenzing_se1_wrk": "1"
+                    },
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "__SUB_TEMPLATE__tenzing_pdi_images_dow__": "yes",
+                    "__SUB_TEMPLATE__vcc_aux_test__": "Yes",
+                    "board_serial_num": "getsn",
+                    "com": "serial",
+                    "dwn_burst_wait": "500",
+                    "image_path": "/everest/set_vnc_bkup/vnc/s80/es1/results/burst/bup/me/2020.1_int_0422_1/hwflow_me5_se1q_sivdef_dddr_3x_0422/me5_se1q_sivdef_dddr_3x_0422.runs/impl_1/me5_se1q_sivdef_dddr_3x_0422_wrapper.pdi",
+                    "proc": "a72",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "everest_es1.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__noc_reg_dump__": "Yes",
+                    "com": "serial",
+                    "preemption_off": "",
+                    "read_power": "readpower"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/es1_me/tenzing_se1",
+        "script_num": -1
+    },
+    "tenzing_se1_a72_be_dddr_bup_preempt": {
+        "cmd": "-pj everest -si es1_me -b tenzing --daughter_card se1 --processor a72 --ddr_mode dddr -be -bup -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "tenzing_es1_me",
+                    "knobs": "Me_enable=1;Ronaldo_ddr_mem_size_override=0x40000000;Axiex_disable_interrupts_mask=1;Axidma_len_align_bits_me=4;",
+                    "preempt": "YES",
+                    "script_name": "tenzing_se1_a72_be_dddr_bup_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__everest_es1_workaround__": {
+                        "tenzing_se1_wrk": "1"
+                    },
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "__SUB_TEMPLATE__tenzing_pdi_images_dow__": "yes",
+                    "__SUB_TEMPLATE__vcc_aux_test__": "Yes",
+                    "board_serial_num": "getsn",
+                    "com": "serial",
+                    "dwn_burst_wait": "500",
+                    "image_path": "/everest/set_vnc_bkup/vnc/s80/es1/results/burst/bup/me/2020.1_int_0422_1/hwflow_me5_se1q_sivdef_dddr_3x_0422/me5_se1q_sivdef_dddr_3x_0422.runs/impl_1/me5_se1q_sivdef_dddr_3x_0422_wrapper.pdi",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "everest_es1.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__noc_reg_dump__": "Yes",
+                    "com": "serial",
+                    "preemption_off": "preemption_off",
+                    "read_power": "readpower"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/es1_me/tenzing_se1",
+        "script_num": -2
+    },
+    "tenzing_se1_a72_be_lpddr_bup": {
+        "cmd": "-pj everest -si es1_me -b tenzing --daughter_card se1 --processor a72 --ddr_mode lpddr -be -bup",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "tenzing_es1_me",
+                    "knobs": "Me_enable=1;Ronaldo_ddr_mem_size_override=0x40000000;Axiex_disable_interrupts_mask=1;Axidma_len_align_bits_me=4;",
+                    "preempt": "NO",
+                    "script_name": "tenzing_se1_a72_be_lpddr_bup"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__everest_es1_workaround__": {
+                        "tenzing_se1_wrk": "1"
+                    },
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "__SUB_TEMPLATE__tenzing_pdi_images_dow__": "yes",
+                    "__SUB_TEMPLATE__vcc_aux_test__": "Yes",
+                    "board_serial_num": "getsn",
+                    "com": "serial",
+                    "dwn_burst_wait": "500",
+                    "image_path": "/everest/set_vnc_bkup/vnc/s80/es1/results/burst/bup/me/2020.1_int_0422_1/hwflow_me5_se1q_sivdef_lpddr_3x_0422/me5_se1q_sivdef_lpddr_3x_0422.runs/impl_1/me5_se1q_sivdef_lpddr_3x_0422_wrapper.pdi",
+                    "proc": "a72",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "everest_es1.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__noc_reg_dump__": "Yes",
+                    "com": "serial",
+                    "preemption_off": "",
+                    "read_power": "readpower"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/es1_me/tenzing_se1",
+        "script_num": -13
+    },
+    "tenzing_se1_a72_be_lpddr_bup_preempt": {
+        "cmd": "-pj everest -si es1_me -b tenzing --daughter_card se1 --processor a72 --ddr_mode lpddr -be -bup -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "tenzing_es1_me",
+                    "knobs": "Me_enable=1;Ronaldo_ddr_mem_size_override=0x40000000;Axiex_disable_interrupts_mask=1;Axidma_len_align_bits_me=4;",
+                    "preempt": "YES",
+                    "script_name": "tenzing_se1_a72_be_lpddr_bup_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__everest_es1_workaround__": {
+                        "tenzing_se1_wrk": "1"
+                    },
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "__SUB_TEMPLATE__tenzing_pdi_images_dow__": "yes",
+                    "__SUB_TEMPLATE__vcc_aux_test__": "Yes",
+                    "board_serial_num": "getsn",
+                    "com": "serial",
+                    "dwn_burst_wait": "500",
+                    "image_path": "/everest/set_vnc_bkup/vnc/s80/es1/results/burst/bup/me/2020.1_int_0422_1/hwflow_me5_se1q_sivdef_lpddr_3x_0422/me5_se1q_sivdef_lpddr_3x_0422.runs/impl_1/me5_se1q_sivdef_lpddr_3x_0422_wrapper.pdi",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "everest_es1.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__noc_reg_dump__": "Yes",
+                    "com": "serial",
+                    "preemption_off": "preemption_off",
+                    "read_power": "readpower"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/es1_me/tenzing_se1",
+        "script_num": -14
+    },
+    "tenzing_se1_a72_be_sddr_bup": {
+        "cmd": "-pj everest -si es1_me -b tenzing --daughter_card se1 --processor a72 --ddr_mode sddr -be -bup",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "tenzing_es1_me",
+                    "knobs": "Me_enable=1;Ronaldo_ddr_mem_size_override=0x40000000;Axiex_disable_interrupts_mask=1;Axidma_len_align_bits_me=4;",
+                    "preempt": "NO",
+                    "script_name": "tenzing_se1_a72_be_sddr_bup"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__everest_es1_workaround__": {
+                        "tenzing_se1_wrk": "1"
+                    },
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "__SUB_TEMPLATE__tenzing_pdi_images_dow__": "yes",
+                    "__SUB_TEMPLATE__vcc_aux_test__": "Yes",
+                    "board_serial_num": "getsn",
+                    "com": "serial",
+                    "dwn_burst_wait": "500",
+                    "image_path": "/everest/set_vnc_bkup/vnc/s80/es1/results/burst/bup/me/2020.1_int_0422_1/hwflow_me5_se1q_sivdef_sddr_3x_0422/me5_se1q_sivdef_sddr_3x_0422.runs/impl_1/me5_se1q_sivdef_sddr_3x_0422_wrapper.pdi",
+                    "proc": "a72",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "everest_es1.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__noc_reg_dump__": "Yes",
+                    "com": "serial",
+                    "preemption_off": "",
+                    "read_power": "readpower"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/es1_me/tenzing_se1",
+        "script_num": -7
+    },
+    "tenzing_se1_a72_be_sddr_bup_preempt": {
+        "cmd": "-pj everest -si es1_me -b tenzing --daughter_card se1 --processor a72 --ddr_mode sddr -be -bup -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "tenzing_es1_me",
+                    "knobs": "Me_enable=1;Ronaldo_ddr_mem_size_override=0x40000000;Axiex_disable_interrupts_mask=1;Axidma_len_align_bits_me=4;",
+                    "preempt": "YES",
+                    "script_name": "tenzing_se1_a72_be_sddr_bup_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__everest_es1_workaround__": {
+                        "tenzing_se1_wrk": "1"
+                    },
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "__SUB_TEMPLATE__tenzing_pdi_images_dow__": "yes",
+                    "__SUB_TEMPLATE__vcc_aux_test__": "Yes",
+                    "board_serial_num": "getsn",
+                    "com": "serial",
+                    "dwn_burst_wait": "500",
+                    "image_path": "/everest/set_vnc_bkup/vnc/s80/es1/results/burst/bup/me/2020.1_int_0422_1/hwflow_me5_se1q_sivdef_sddr_3x_0422/me5_se1q_sivdef_sddr_3x_0422.runs/impl_1/me5_se1q_sivdef_sddr_3x_0422_wrapper.pdi",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "everest_es1.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__noc_reg_dump__": "Yes",
+                    "com": "serial",
+                    "preemption_off": "preemption_off",
+                    "read_power": "readpower"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/es1_me/tenzing_se1",
+        "script_num": -8
+    },
+    "tenzing_se1_a72_dddr_bup": {
+        "cmd": "-pj everest -si es1_me -b tenzing --daughter_card se1 --processor a72 --ddr_mode dddr -bup",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "tenzing_es1_me",
+                    "knobs": "Me_enable=1;Ronaldo_ddr_mem_size_override=0x40000000;Axiex_disable_interrupts_mask=1;Axidma_len_align_bits_me=4;",
+                    "preempt": "NO",
+                    "script_name": "tenzing_se1_a72_dddr_bup"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__everest_es1_workaround__": {
+                        "tenzing_se1_wrk": "1"
+                    },
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "__SUB_TEMPLATE__tenzing_pdi_images_dow__": "yes",
+                    "__SUB_TEMPLATE__vcc_aux_test__": "Yes",
+                    "board_serial_num": "getsn",
+                    "com": "serial",
+                    "dwn_burst_wait": "500",
+                    "image_path": "/everest/set_vnc_bkup/vnc/s80/es1/results/burst/bup/me/2020.1_int_0422_1/hwflow_me5_se1q_sivdef_dddr_3x_0422/me5_se1q_sivdef_dddr_3x_0422.runs/impl_1/me5_se1q_sivdef_dddr_3x_0422_wrapper.pdi",
+                    "proc": "a72",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "everest_es1.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__noc_reg_dump__": "Yes",
+                    "com": "serial",
+                    "preemption_off": "",
+                    "read_power": "readpower"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/es1_me/tenzing_se1",
+        "script_num": -3
+    },
+    "tenzing_se1_a72_dddr_bup_preempt": {
+        "cmd": "-pj everest -si es1_me -b tenzing --daughter_card se1 --processor a72 --ddr_mode dddr -bup -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "tenzing_es1_me",
+                    "knobs": "Me_enable=1;Ronaldo_ddr_mem_size_override=0x40000000;Axiex_disable_interrupts_mask=1;Axidma_len_align_bits_me=4;",
+                    "preempt": "YES",
+                    "script_name": "tenzing_se1_a72_dddr_bup_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__everest_es1_workaround__": {
+                        "tenzing_se1_wrk": "1"
+                    },
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "__SUB_TEMPLATE__tenzing_pdi_images_dow__": "yes",
+                    "__SUB_TEMPLATE__vcc_aux_test__": "Yes",
+                    "board_serial_num": "getsn",
+                    "com": "serial",
+                    "dwn_burst_wait": "500",
+                    "image_path": "/everest/set_vnc_bkup/vnc/s80/es1/results/burst/bup/me/2020.1_int_0422_1/hwflow_me5_se1q_sivdef_dddr_3x_0422/me5_se1q_sivdef_dddr_3x_0422.runs/impl_1/me5_se1q_sivdef_dddr_3x_0422_wrapper.pdi",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "everest_es1.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__noc_reg_dump__": "Yes",
+                    "com": "serial",
+                    "preemption_off": "preemption_off",
+                    "read_power": "readpower"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/es1_me/tenzing_se1",
+        "script_num": -4
+    },
+    "tenzing_se1_a72_lpddr_bup": {
+        "cmd": "-pj everest -si es1_me -b tenzing --daughter_card se1 --processor a72 --ddr_mode lpddr -bup",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "tenzing_es1_me",
+                    "knobs": "Me_enable=1;Ronaldo_ddr_mem_size_override=0x40000000;Axiex_disable_interrupts_mask=1;Axidma_len_align_bits_me=4;",
+                    "preempt": "NO",
+                    "script_name": "tenzing_se1_a72_lpddr_bup"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__everest_es1_workaround__": {
+                        "tenzing_se1_wrk": "1"
+                    },
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "__SUB_TEMPLATE__tenzing_pdi_images_dow__": "yes",
+                    "__SUB_TEMPLATE__vcc_aux_test__": "Yes",
+                    "board_serial_num": "getsn",
+                    "com": "serial",
+                    "dwn_burst_wait": "500",
+                    "image_path": "/everest/set_vnc_bkup/vnc/s80/es1/results/burst/bup/me/2020.1_int_0422_1/hwflow_me5_se1q_sivdef_lpddr_3x_0422/me5_se1q_sivdef_lpddr_3x_0422.runs/impl_1/me5_se1q_sivdef_lpddr_3x_0422_wrapper.pdi",
+                    "proc": "a72",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "everest_es1.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__noc_reg_dump__": "Yes",
+                    "com": "serial",
+                    "preemption_off": "",
+                    "read_power": "readpower"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/es1_me/tenzing_se1",
+        "script_num": -15
+    },
+    "tenzing_se1_a72_lpddr_bup_preempt": {
+        "cmd": "-pj everest -si es1_me -b tenzing --daughter_card se1 --processor a72 --ddr_mode lpddr -bup -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "tenzing_es1_me",
+                    "knobs": "Me_enable=1;Ronaldo_ddr_mem_size_override=0x40000000;Axiex_disable_interrupts_mask=1;Axidma_len_align_bits_me=4;",
+                    "preempt": "YES",
+                    "script_name": "tenzing_se1_a72_lpddr_bup_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__everest_es1_workaround__": {
+                        "tenzing_se1_wrk": "1"
+                    },
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "__SUB_TEMPLATE__tenzing_pdi_images_dow__": "yes",
+                    "__SUB_TEMPLATE__vcc_aux_test__": "Yes",
+                    "board_serial_num": "getsn",
+                    "com": "serial",
+                    "dwn_burst_wait": "500",
+                    "image_path": "/everest/set_vnc_bkup/vnc/s80/es1/results/burst/bup/me/2020.1_int_0422_1/hwflow_me5_se1q_sivdef_lpddr_3x_0422/me5_se1q_sivdef_lpddr_3x_0422.runs/impl_1/me5_se1q_sivdef_lpddr_3x_0422_wrapper.pdi",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "everest_es1.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__noc_reg_dump__": "Yes",
+                    "com": "serial",
+                    "preemption_off": "preemption_off",
+                    "read_power": "readpower"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/es1_me/tenzing_se1",
+        "script_num": -16
+    },
+    "tenzing_se1_a72_sddr_bup": {
+        "cmd": "-pj everest -si es1_me -b tenzing --daughter_card se1 --processor a72 --ddr_mode sddr -bup",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "tenzing_es1_me",
+                    "knobs": "Me_enable=1;Ronaldo_ddr_mem_size_override=0x40000000;Axiex_disable_interrupts_mask=1;Axidma_len_align_bits_me=4;",
+                    "preempt": "NO",
+                    "script_name": "tenzing_se1_a72_sddr_bup"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__everest_es1_workaround__": {
+                        "tenzing_se1_wrk": "1"
+                    },
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "__SUB_TEMPLATE__tenzing_pdi_images_dow__": "yes",
+                    "__SUB_TEMPLATE__vcc_aux_test__": "Yes",
+                    "board_serial_num": "getsn",
+                    "com": "serial",
+                    "dwn_burst_wait": "500",
+                    "image_path": "/everest/set_vnc_bkup/vnc/s80/es1/results/burst/bup/me/2020.1_int_0422_1/hwflow_me5_se1q_sivdef_sddr_3x_0422/me5_se1q_sivdef_sddr_3x_0422.runs/impl_1/me5_se1q_sivdef_sddr_3x_0422_wrapper.pdi",
+                    "proc": "a72",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "everest_es1.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__noc_reg_dump__": "Yes",
+                    "com": "serial",
+                    "preemption_off": "",
+                    "read_power": "readpower"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/es1_me/tenzing_se1",
+        "script_num": -9
+    },
+    "tenzing_se1_a72_sddr_bup_preempt": {
+        "cmd": "-pj everest -si es1_me -b tenzing --daughter_card se1 --processor a72 --ddr_mode sddr -bup -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "tenzing_es1_me",
+                    "knobs": "Me_enable=1;Ronaldo_ddr_mem_size_override=0x40000000;Axiex_disable_interrupts_mask=1;Axidma_len_align_bits_me=4;",
+                    "preempt": "YES",
+                    "script_name": "tenzing_se1_a72_sddr_bup_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__everest_es1_workaround__": {
+                        "tenzing_se1_wrk": "1"
+                    },
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "no",
+                    "__SUB_TEMPLATE__tenzing_pdi_images_dow__": "yes",
+                    "__SUB_TEMPLATE__vcc_aux_test__": "Yes",
+                    "board_serial_num": "getsn",
+                    "com": "serial",
+                    "dwn_burst_wait": "500",
+                    "image_path": "/everest/set_vnc_bkup/vnc/s80/es1/results/burst/bup/me/2020.1_int_0422_1/hwflow_me5_se1q_sivdef_sddr_3x_0422/me5_se1q_sivdef_sddr_3x_0422.runs/impl_1/me5_se1q_sivdef_sddr_3x_0422_wrapper.pdi",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a72",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "everest_es1.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__noc_reg_dump__": "Yes",
+                    "com": "serial",
+                    "preemption_off": "preemption_off",
+                    "read_power": "readpower"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/es1_me/tenzing_se1",
+        "script_num": -10
+    },
+    "tenzing_se1_r5_dddr_bup": {
+        "cmd": "-pj everest -si es1_me -b tenzing --daughter_card se1 --processor r5 --ddr_mode dddr -bup",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "tenzing_es1_me",
+                    "knobs": "Me_enable=1;Ronaldo_ddr_mem_size_override=0x40000000;Axiex_disable_interrupts_mask=1;Axidma_len_align_bits_me=4;",
+                    "preempt": "NO",
+                    "script_name": "tenzing_se1_r5_dddr_bup"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__everest_es1_workaround__": {
+                        "tenzing_se1_wrk": "1"
+                    },
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "no",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__tenzing_pdi_images_dow__": "yes",
+                    "__SUB_TEMPLATE__vcc_aux_test__": "Yes",
+                    "board_serial_num": "getsn",
+                    "com": "serial",
+                    "dwn_burst_wait": "500",
+                    "image_path": "/everest/set_vnc_bkup/vnc/s80/es1/results/burst/bup/me/2020.1_int_0422_1/hwflow_me5_se1q_sivdef_dddr_3x_0422/me5_se1q_sivdef_dddr_3x_0422.runs/impl_1/me5_se1q_sivdef_dddr_3x_0422_wrapper.pdi",
+                    "proc": "r5",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "everest_es1.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__noc_reg_dump__": "Yes",
+                    "com": "serial",
+                    "preemption_off": "",
+                    "read_power": "readpower"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/es1_me/tenzing_se1",
+        "script_num": -5
+    },
+    "tenzing_se1_r5_dddr_bup_preempt": {
+        "cmd": "-pj everest -si es1_me -b tenzing --daughter_card se1 --processor r5 --ddr_mode dddr -bup -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "tenzing_es1_me",
+                    "knobs": "Me_enable=1;Ronaldo_ddr_mem_size_override=0x40000000;Axiex_disable_interrupts_mask=1;Axidma_len_align_bits_me=4;",
+                    "preempt": "YES",
+                    "script_name": "tenzing_se1_r5_dddr_bup_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__everest_es1_workaround__": {
+                        "tenzing_se1_wrk": "1"
+                    },
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "no",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__tenzing_pdi_images_dow__": "yes",
+                    "__SUB_TEMPLATE__vcc_aux_test__": "Yes",
+                    "board_serial_num": "getsn",
+                    "com": "serial",
+                    "dwn_burst_wait": "500",
+                    "image_path": "/everest/set_vnc_bkup/vnc/s80/es1/results/burst/bup/me/2020.1_int_0422_1/hwflow_me5_se1q_sivdef_dddr_3x_0422/me5_se1q_sivdef_dddr_3x_0422.runs/impl_1/me5_se1q_sivdef_dddr_3x_0422_wrapper.pdi",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "r5",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "everest_es1.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__noc_reg_dump__": "Yes",
+                    "com": "serial",
+                    "preemption_off": "preemption_off",
+                    "read_power": "readpower"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/es1_me/tenzing_se1",
+        "script_num": -6
+    },
+    "tenzing_se1_r5_lpddr_bup": {
+        "cmd": "-pj everest -si es1_me -b tenzing --daughter_card se1 --processor r5 --ddr_mode lpddr -bup",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "tenzing_es1_me",
+                    "knobs": "Me_enable=1;Ronaldo_ddr_mem_size_override=0x40000000;Axiex_disable_interrupts_mask=1;Axidma_len_align_bits_me=4;",
+                    "preempt": "NO",
+                    "script_name": "tenzing_se1_r5_lpddr_bup"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__everest_es1_workaround__": {
+                        "tenzing_se1_wrk": "1"
+                    },
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "no",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__tenzing_pdi_images_dow__": "yes",
+                    "__SUB_TEMPLATE__vcc_aux_test__": "Yes",
+                    "board_serial_num": "getsn",
+                    "com": "serial",
+                    "dwn_burst_wait": "500",
+                    "image_path": "/everest/set_vnc_bkup/vnc/s80/es1/results/burst/bup/me/2020.1_int_0422_1/hwflow_me5_se1q_sivdef_lpddr_3x_0422/me5_se1q_sivdef_lpddr_3x_0422.runs/impl_1/me5_se1q_sivdef_lpddr_3x_0422_wrapper.pdi",
+                    "proc": "r5",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "everest_es1.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__noc_reg_dump__": "Yes",
+                    "com": "serial",
+                    "preemption_off": "",
+                    "read_power": "readpower"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/es1_me/tenzing_se1",
+        "script_num": -17
+    },
+    "tenzing_se1_r5_lpddr_bup_preempt": {
+        "cmd": "-pj everest -si es1_me -b tenzing --daughter_card se1 --processor r5 --ddr_mode lpddr -bup -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "tenzing_es1_me",
+                    "knobs": "Me_enable=1;Ronaldo_ddr_mem_size_override=0x40000000;Axiex_disable_interrupts_mask=1;Axidma_len_align_bits_me=4;",
+                    "preempt": "YES",
+                    "script_name": "tenzing_se1_r5_lpddr_bup_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__everest_es1_workaround__": {
+                        "tenzing_se1_wrk": "1"
+                    },
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "no",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__tenzing_pdi_images_dow__": "yes",
+                    "__SUB_TEMPLATE__vcc_aux_test__": "Yes",
+                    "board_serial_num": "getsn",
+                    "com": "serial",
+                    "dwn_burst_wait": "500",
+                    "image_path": "/everest/set_vnc_bkup/vnc/s80/es1/results/burst/bup/me/2020.1_int_0422_1/hwflow_me5_se1q_sivdef_lpddr_3x_0422/me5_se1q_sivdef_lpddr_3x_0422.runs/impl_1/me5_se1q_sivdef_lpddr_3x_0422_wrapper.pdi",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "r5",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "everest_es1.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__noc_reg_dump__": "Yes",
+                    "com": "serial",
+                    "preemption_off": "preemption_off",
+                    "read_power": "readpower"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/es1_me/tenzing_se1",
+        "script_num": -18
+    },
+    "tenzing_se1_r5_sddr_bup": {
+        "cmd": "-pj everest -si es1_me -b tenzing --daughter_card se1 --processor r5 --ddr_mode sddr -bup",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "tenzing_es1_me",
+                    "knobs": "Me_enable=1;Ronaldo_ddr_mem_size_override=0x40000000;Axiex_disable_interrupts_mask=1;Axidma_len_align_bits_me=4;",
+                    "preempt": "NO",
+                    "script_name": "tenzing_se1_r5_sddr_bup"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__everest_es1_workaround__": {
+                        "tenzing_se1_wrk": "1"
+                    },
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "no",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__tenzing_pdi_images_dow__": "yes",
+                    "__SUB_TEMPLATE__vcc_aux_test__": "Yes",
+                    "board_serial_num": "getsn",
+                    "com": "serial",
+                    "dwn_burst_wait": "500",
+                    "image_path": "/everest/set_vnc_bkup/vnc/s80/es1/results/burst/bup/me/2020.1_int_0422_1/hwflow_me5_se1q_sivdef_sddr_3x_0422/me5_se1q_sivdef_sddr_3x_0422.runs/impl_1/me5_se1q_sivdef_sddr_3x_0422_wrapper.pdi",
+                    "proc": "r5",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "everest_es1.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__noc_reg_dump__": "Yes",
+                    "com": "serial",
+                    "preemption_off": "",
+                    "read_power": "readpower"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/es1_me/tenzing_se1",
+        "script_num": -11
+    },
+    "tenzing_se1_r5_sddr_bup_preempt": {
+        "cmd": "-pj everest -si es1_me -b tenzing --daughter_card se1 --processor r5 --ddr_mode sddr -bup -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "tenzing_es1_me",
+                    "knobs": "Me_enable=1;Ronaldo_ddr_mem_size_override=0x40000000;Axiex_disable_interrupts_mask=1;Axidma_len_align_bits_me=4;",
+                    "preempt": "YES",
+                    "script_name": "tenzing_se1_r5_sddr_bup_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__everest_es1_workaround__": {
+                        "tenzing_se1_wrk": "1"
+                    },
+                    "__SUB_TEMPLATE__spp_a72_ta_sel__": "no",
+                    "__SUB_TEMPLATE__spp_r5_ta_sel__": "yes",
+                    "__SUB_TEMPLATE__tenzing_pdi_images_dow__": "yes",
+                    "__SUB_TEMPLATE__vcc_aux_test__": "Yes",
+                    "board_serial_num": "getsn",
+                    "com": "serial",
+                    "dwn_burst_wait": "500",
+                    "image_path": "/everest/set_vnc_bkup/vnc/s80/es1/results/burst/bup/me/2020.1_int_0422_1/hwflow_me5_se1q_sivdef_sddr_3x_0422/me5_se1q_sivdef_sddr_3x_0422.runs/impl_1/me5_se1q_sivdef_sddr_3x_0422_wrapper.pdi",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "r5",
+                    "rst_type": "rst -proc"
+                },
+                "template_file": "everest_es1.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__noc_reg_dump__": "Yes",
+                    "com": "serial",
+                    "preemption_off": "preemption_off",
+                    "read_power": "readpower"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "everest/es1_me/tenzing_se1",
+        "script_num": -12
+    }
+}

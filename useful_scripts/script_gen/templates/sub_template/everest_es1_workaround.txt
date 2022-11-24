@@ -1,0 +1,15 @@
+$WORKAROUND_ENABLE = "<::tenzing_se1_wrk:=:0::>"
+if run "[ \"$WORKAROUND_ENABLE\" == \"1\" ]" then
+
+	#ROUTE ADMA THROUGH NOC
+	print my_xsdb "mwr -force 0xFE600014 0x0"
+	#ROUTE USB THROUGH NOC
+	print my_xsdb "mwr -force 0xFF080428 0x0"
+
+	$OSPI_WORKAROUND_ENABLE = "<::tenzing_se1_ospi_wrk:=:0::>"
+	if run "[ \"$OSPI_WORKAROUND_ENABLE\" == \"1\" ]" then
+		print my_xsdb "puts \"Increase drive and slew\""
+		print my_xsdb "mwr -force 0xf1060118 0xffffffff"
+		print my_xsdb "mwr -force 0xf1060120 0xffffffff"
+	endif
+endif

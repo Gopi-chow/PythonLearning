@@ -1,0 +1,139 @@
+$burst_started = 0
+$burst_message = ""
+$dumping_trace = 0
+$burst_hang = 0
+$actualruntime = 0
+$starttime := 'date +%s'
+$endtime = 0
+$trace_for_hang = 0
+$burst_com_inactv_t = <::burst_com_inactv_t:=:600::>
+$ctrl = 0
+$skip = 0
+$fat_knobs = 0
+
+test
+        # wait here until an event runs either 'fail' or 'continue'
+        sleep 2 
+        wait
+
+        when <::com:=:serial::> matches "Press a key in"
+                if run "[ \"$burst_started\" == \"0\" ]" then
+                        print <::com:=:serial::> "" "$BURST_KNOBS" ""
+                        print "BURST started."
+                        $burst_started = 1
+                        $starttime := 'date +%s'
+                        <::read_power:=: ::>
+                endif
+                if run "[ \"$fat_knobs\" == \"1\" ]" then
+                        print <::com:=:serial::> "$BURST_KNOBS_FAT" ""
+                        $fat_knobs = 0
+                endif
+        end
+
+        when <::com:=:serial::> matches "Cmd line knob lines: 0"
+                if run "[ \"$BURST_KNOBS\" != \"\" ]" then
+                        $burst_message = "Knobs didn't get passed"
+                        fail "BURST failed: $burst_message"
+                endif
+        end
+
+        #Check if we need to press ctrl-c to get the trace for the hang
+        when <::com:=:serial::> matches "Filling memory with pattern now"
+                if run "[ \"$trace_for_hang\" != \"0\" ]" then
+                        print <::com:=:serial::> "^C"
+                endif
+        end
+        when <::com:=:serial::> matches "Failing at test: \\S+ seed \\S+ Run: \\S+"
+                if run "[ \"$ctrl\" == \"0\" ]" then
+                        print "$0"
+                        $burst_message = $0
+                        $dumping_trace = 1
+                        $endtime := 'date +%s'
+                        $actualruntime := "expr $endtime - $starttime"
+                        print "BURST failed, run time is $actualruntime seconds"
+                        <::preemption_off:=: ::>
+                endif
+        end
+        when <::com:=:serial::> matches "WARN"
+                $skip = 1
+        end
+        when <::com:=:serial::> matches "Failing after test"
+                $skip = 1
+        end
+
+        when <::com:=:serial::> matches "Stopping due to initialization errors"
+                print "Failed during initialization"
+                fail "BURST failed: $burst_message"
+        end
+
+        when <::com:=:serial::> matches "Type 'h' for help"
+                if run "[ \"$ctrl\" == \"1\" ]" then
+	                continue
+	        endif
+        end
+
+        when <::com:=:serial::> matches "End of BURST dump"
+                fail "BURST failed: $burst_message"
+        end
+
+        when <::com:=:serial::> matches "PLBMON dev 00 is out of range"
+                fail "BURST failed: $burst_message"
+        end
+
+        # This event is called when there's inactivity. It can only run once.
+        when <::com:=:serial::> inactive $burst_com_inactv_t seconds
+                $burst_hang = 1
+                if run "[ \"$burst_started\" != \"1\" ]" then
+                        fail "BURST never started."
+                else
+                        print <::com:=:serial::> "\003"
+                        sleep 5
+                        print "ctrl+c is pressed after inactive time of $burst_com_inactv_t seconds is completed"
+                        $ctrl = 1
+                        run "echo burst hung >> $SERIAL_LOG"
+                        run "echo burst hung. Restarting to dump trace >> $SERIAL_LOG"
+                        print "BURST hang detected.Restarting to dump trace"
+                        $endtime := 'date +%s'
+                        $actualruntime := "expr $endtime - $starttime"
+                        $dumping_trace = 1
+                        fail "BURST hung. runtime is $actualruntime seconds"
+                endif
+        end
+
+        # This event is called after a fixed time.
+        after $BURST_RUNTIME seconds
+                if run "[ ! -z \"$BURST_KNOBS_FAT\" ]" then
+			$fat_knobs = 1
+                        print <::com:=:serial::> "C"
+	                print "C is pressed after runtime is completed to enter Fail_after_test knob"
+                elseif run "[ \"$dumping_trace\" != \"1\" ] && [ \"$ctrl\" == \"0\" ] && [ \"$skip\" == \"0\" ] && [ \"$fat_knobs\" == \"0\" ]" then
+	                print <::com:=:serial::> "\003"
+	                print "ctrl+c is pressed after runtime is completed"
+                        print "BURST run of $BURST_RUNTIME seconds complete!"
+	                $ctrl = 1
+                endif
+        end
+
+        on failure
+                <::__SUB_TEMPLATE__noc_reg_dump__:=:No::>
+		<::__SUB_TEMPLATE__spp_h10_noc_reg_dump__:=:No::>
+		<::__SUB_TEMPLATE__h10_noc_reg_dump__:=:No::>
+                <::read_power:=: ::>
+                print "FAILURE: $0"
+        end
+
+        always
+		if run "[ \"$actualruntime\" == \"0\" ] && [ \"$ctrl\" == \"0\" ] " then
+                       print <::com:=:serial::> "\003"
+                       $endtime := 'date +%s'
+                       $actualruntime := "expr $endtime - $starttime"
+                       print "ctrl+c is pressed before exiting"
+                        sleep 10
+                       print "BURST run is preempted/terminated after $actualruntime seconds"
+                endif
+                close
+		<::__SUB_TEMPLATE__exit_protium__:=:No::>
+		<::__SUB_TEMPLATE__exit_haps__:=:No::>
+		<::__SUB_TEMPLATE__exit__:=:No::>
+        end
+endtest

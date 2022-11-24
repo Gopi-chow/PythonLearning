@@ -1,0 +1,12 @@
+
+                #Clearing the FPGA's
+                print my_ptm "clear"
+                sleep 3
+
+                #Exiting from protium_dev fork
+                print my_ptm "exit"
+		sleep 4
+
+                <::unlock_cmd:=:unlock::>
+                #Changing the current working directory
+                cd "$BURST_HOME"

@@ -1,0 +1,11 @@
+# ECC related intialization                
+if run "[ -f $ECC_INIT_ELF ]" then                
+        print "ECC enabled DDR. Initializing ECC memory"                             
+        print my_xsdb "dow $ECC_INIT_ELF"                
+        print my_xsdb "con"
+        print my_xsdb "exec sleep 7600"                
+        print my_xsdb "stop"
+        print my_xsdb "exec sleep 1"                
+        # Clear all DDRC ECC error during intialization                
+        print my_xsdb "mwr 0xFD07007C 0xF"
+endif

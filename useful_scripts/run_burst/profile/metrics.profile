@@ -1,0 +1,8 @@
+--board zc1751 -dc dc1 -p a53 -clk sivdef -si da7_prod -k Fail_after_test=0x10000,
+--board zc1751 -dc dc1 -p r5  -clk sivdef -si da7_prod -k Fail_after_test=0x10000,
+-b tenzing -dc se1 -si es2_pscon4 -dm dddr -bup -p a72 -k Fail_after_test=0x10000,
+-b tenzing -dc se1 -si es2_pscon4 -dm dddr -bup -p r5  -k Fail_after_test=0x10000,
+-b tenzing -dc se1 -si es2_me     -dm dddr -bup -p a72 -k Fail_after_test=0x10000,
+-b tenzing -dc se1 -si es2_me     -dm dddr -bup -p r5 -k Fail_after_test=0x10000,
+-b protium -si ps_me_es2_5_0 -bup -p a72  -k Me_cardano_enable=1,Fail_after_test=0x100,
+-b protium -si ps_me_es2_5_0 -bup -p a72  -k Fail_after_test=0x100,

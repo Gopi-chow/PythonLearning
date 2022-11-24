@@ -1,0 +1,1 @@
+print my_xsdb "mwr -force 0xf1260330 0x0"

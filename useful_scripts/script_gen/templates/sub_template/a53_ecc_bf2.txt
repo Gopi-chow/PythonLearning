@@ -1,0 +1,9 @@
+if os.path.exists(ECC_INIT_ELF) :
+        print("Initializing ECC mem...")
+        b.execute("my_xsdb", f"dow {ECC_INIT_ELF}")
+        b.execute("my_xsdb", "con")
+        b.execute("my_xsdb", "exec sleep 100")
+        b.execute("my_xsdb", "stop")
+        b.execute("my_xsdb", "mwr -force 0xFD07007C 0xF")
+
+b.execute("my_xsdb", "rst -processor")

@@ -1,0 +1,17 @@
+
+$SIV2 = "/group/siv2/"
+if run "[ \"$XSITE\" == \"XHD\" ]" then
+    #use the XHD special mirror of XHD siv2
+    $SIV2 = "/group/siv2_xsj/"
+endif
+$BURST_ZYNQ_INIT_ELF = "<::init_elf_path::>"
+$BURST_BUP = "<::bup_name::>"
+$BUP_BITSTREAM = "<::bitstream::>"
+$DDR_INIT_TCL="<::ddr_init_tcl::>"
+$BURST_KNOBS := 'echo $BURST_KNOBS | sed -e "s/,/;/g"'
+$BURST_HW = "zynq3.1-7045-1G/667/125"
+$BURST_DROP = "burst.drop.20140908"
+$USE_VIRTUALMB = "NO"
+$USE_FSBL = "NO"
+$BUP_ELF = ""
+$USE_TOOLS_VER = "latest"

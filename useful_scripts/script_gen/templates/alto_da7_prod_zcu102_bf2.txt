@@ -1,0 +1,123 @@
+  <::preemption_off:=: ::>
+  
+  PREEMPTABLE = "<::pre_empt:=:NO::>"
+  PROCESSOR = "<::proc::>"
+  ECC_INIT_ELF = "<::ecc_elf:=: ::>"
+  BURST_BUP = "/group/siv_burst/proj/alto/vnc/4.0/da7/results/fourth_silicon/bup/zcu102_21X_PL100_AXIEX125_DP300/implementation/project_1.runs/impl_1/top.bit"
+  FSBL_ELF = "/group/siv3/proj/ronaldo/vnc/4.0/da7/results/burst/fourth_silicon/fsbl/<::fsbl_elf:=:20170418/fsbl_da7_zcu102_burst_zcu102Rev1.0_av_sd100_schm_ddr4_2133_04182017/fsbl_a53_64/fsbl_a53_64.elf::>"
+  DDR_INIT_TCL = "NO"
+  ######################################################################
+  
+  #Enable CSU
+  HW_SERVER_SHOW_CSU = "1"
+  default.module("clear yes")
+  default.cleankeys()
+  b.power(0)
+  time.sleep(2)
+  default.record('com2', LOGFILE)
+  b.power(1)
+  serial = default.SystestControl.get_device("com2")
+  default.kill("com2")
+  time.sleep(2)
+  
+  Systest.record_start(f"{BURST_RESULTS}/burst_debug_{SYSTEST_HOST}.log")
+  print(f"${{BURST_HW}}_ID_{logdate},${BURST_HW},{BURST_BUP},{BURST_ELF},{SYSTEST_HOST},{logdate1}1,{BURST_RUNTIME},xx,{PREEMPTABLE},IN_PROGRESS,TBD,{BURST_RESULTS},${BURST_HW}.{BURST_BUP}.{BURST_ELF}.{SYSTEST_HOST}.xx.TBD,{BURST_KNOBS}")
+  print(f"Zynq Version    :{BURST_HW}")
+  print(f"BUP Version     :{BURST_BUP}")
+  print(f"FSBL_ELF        :{FSBL_ELF}")
+  print(f"IOU INIT TCL    :{IOU_INIT_TCL}")
+  print(f"DDR INIT tcl    :{DDR_INIT_TCL}")
+  print(f"BOARD           :{SYSTEST_HOST}")
+  print(f"BURST elf       :{BURST_ELF}")
+  print(f"BURST runtime   :{BURST_RUNTIME} seconds")
+  print(f"XSDB Version    :{WHICH_XSDB}")
+  print(f"Job ID          :{os.environ['LSB_JOBID']}")
+  
+  default.read_dna()
+except Exception as e:
+    print(e)
+    b.close()
+    sys.exit(1)
+
+b.fork("xsdb", "my_xsdb")
+xsdb_handle = default.SystestControl.get_device("my_xsdb")
+b.execute("my_xsdb", "connect")
+
+try:
+    timestamp = time.time()
+    condition = 1
+    fail_flag = 0
+    while condition:
+    #time.sleep(5)
+      if re.search("xsdb%", str(xsdb_handle.get_response())):
+                print("Forking xsdb completed")
+                condition = 0
+      if ((time.time() - timestamp)/60) > float(2):
+                print("FAILURE: Forking xsdb failed")
+                b.close()
+                os._exit(0)
+except Exception as e:
+    print(e)
+#Perform initialising process for all cores
+b.execute("my_xsdb", "connect")
+b.execute("my_xsdb", "targets")
+
+# Take CPU's out of reset until fix
+b.execute("my_xsdb", "targets -set -filter {name =~ \"PS8\"|| name =~ \"PSU\"}")
+# Take A53-0 out of reset
+<::__SUB_TEMPLATE__a53_rst_bf2__:=:No::>
+<::__SUB_TEMPLATE__r5_rst_bf2__:=:No::>
+b.execute("my_xsdb", "stop")
+b.execute("my_xsdb", "targets")
+
+# Check if DDR init is performed in FSBL/Standalone
+b.execute("my_xsdb", f"dow {FSBL_ELF}")
+b.execute("my_xsdb", "con")
+b.execute("my_xsdb", "exec sleep 4")
+b.execute("my_xsdb", "stop")
+b.execute("my_xsdb", "exec sleep 1")
+
+if os.path.exists(BURST_BUP) :
+        # Connect to hw server
+        b.execute("my_xsdb", f"fpga -f {BURST_BUP}")
+else:
+        print(f"No BUP to download, path: {BURST_BUP}")
+
+if os.path.exists(DDR_INIT_TCL) :
+        b.execute("my_xsdb", f"source {DDR_INIT_TCL}")
+else:
+        print("FSBL will do DDR init")
+
+<::__SUB_TEMPLATE__ecc_bf2__:=:No::>
+<::__SUB_TEMPLATE__a53_ecc_bf2__:=:No::>
+<::__SUB_TEMPLATE__r5_sleep2_bf2__:=:No::>
+
+# Download BURST
+b.execute("my_xsdb", "mrd 0x00100000 20")
+b.execute("my_xsdb", f"dow {BURST_ELF}")
+
+try:
+    timestamp = time.time()
+    fail_flag = 0
+    while 1:
+    #time.sleep(5)
+      if re.search("Successfully downloaded .*burstarm.*", str(xsdb_handle.get_response())):
+                break
+      if re.search("Failed to download .*burstarm.*", str(xsdb_handle.get_response())):
+                print("FAILURE: BURST elf download failed")
+                fail_flag = 1
+                break
+      if xsdb_handle.inactivity(2, "min"):
+                print("FAILURE: BURST not started")
+                fail_flag = 1
+                break
+    if fail_flag:
+                os._exit(0)
+except Exception as e:
+    print(e)
+
+b.execute("my_xsdb", "mrd 0x00100000 20")
+b.execute("my_xsdb", "rrd")
+<::preemption_on:=: ::>
+b.execute("my_xsdb", "con")
+b.execute("my_xsdb", "exit")

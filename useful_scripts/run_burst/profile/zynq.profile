@@ -1,0 +1,2 @@
+--board zc702 -p a9 -si prod -k Fail_after_test=0x100000
+--board zc706 -p a9 -si prod -k Fail_after_test=0x100000

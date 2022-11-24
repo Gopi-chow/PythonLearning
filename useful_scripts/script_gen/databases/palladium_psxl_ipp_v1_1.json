@@ -1,0 +1,68 @@
+{
+    "palladium_a78": {
+        "cmd": "-pj ksb -si psxl_ipp_v1_1 -b palladium --processor a78",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "EMU_IPP_PSXL_1_1",
+                    "knobs": "",
+                    "preempt": "NO",
+                    "script_name": "palladium_a78"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "build_dir": "/group/siv_burst/proj/ksb/psxl/releases/emu/emu_psxl_ipp_1.1",
+                    "run_script": "run_session_a78.tcl"
+                },
+                "template_file": "keystoneb_palladium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_palladium__": "Yes",
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "com": "serial",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test_palladium.txt"
+            }
+        ],
+        "script_location": "ksb/psxl_ipp_v1_1/palladium",
+        "script_num": 1
+    },
+    "palladium_r52": {
+        "cmd": "-pj ksb -si psxl_ipp_v1_1 -b palladium --processor r52",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "EMU_IPP_PSXL_1_1",
+                    "knobs": "",
+                    "preempt": "NO",
+                    "script_name": "palladium_r52"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "build_dir": "/group/siv_burst/proj/ksb/psxl/releases/emu/emu_psxl_ipp_1.1",
+                    "run_script": "run_session_r52.tcl"
+                },
+                "template_file": "keystoneb_palladium.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_palladium__": "Yes",
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "com": "serial",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test_palladium.txt"
+            }
+        ],
+        "script_location": "ksb/psxl_ipp_v1_1/palladium",
+        "script_num": 2
+    }
+}

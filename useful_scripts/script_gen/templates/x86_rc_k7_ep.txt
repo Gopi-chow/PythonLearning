@@ -1,0 +1,68 @@
+<::preemption_off:=: ::>
+tftpd
+tinylinux
+power 0 
+sleep 2
+power 1
+sleep 2
+
+$logdate_time := 'date +%Y%m%d_%H%M'
+$dir1 = "$SYSTEST_HOST"
+run "mkdir -p $LOGPATH/$dir1"
+$dir2 = "$logdate_time"
+run "mkdir -p $LOGPATH/$SYSTEST_HOST/$dir2"
+$BURST_RESULTS = "$LOGPATH/$SYSTEST_HOST/$dir2"
+$WHICH_XSDB := "which xsdb"
+
+record serial "$BURST_RESULTS/burst_serial_$SYSTEST_HOST.log"
+debug "$BURST_RESULTS/burst_debug_$SYSTEST_HOST.log"
+
+$K7_EP_BIT = "<::ep_bup::>"
+if run "[ ! -f $K7_EP_BIT ]" then
+        fail "ERROR: Cannot find file: $K7_EP_BIT"
+endif
+
+#Echo all paths and configurations
+print "Printing all launch information..."
+print "Kintex_PCIe_$logdate,None,None,None,None,None,$K7_EP_BIT,None,$BURST_ELF,$SYSTEST_HOST,$logdate1,$BURST_RUNTIME,xx,$PREEMPTABLE,IN_PROGRESS,TBD,$BURST_RESULTS,$BURST_KNOBS"
+
+print "K7_EP_BIT       :$K7_EP_BIT"
+print "BOARD           :$SYSTEST_HOST"
+print "BURST KNOBS     :$BURST_KNOBS"
+print "BURST elf       :$BURST_ELF"
+print "BURST runtime   :$BURST_RUNTIME seconds"
+print "BURST results   :$BURST_RESULTS"
+print "XSDB Version    :$WHICH_XSDB"
+print "Job ID          :$LSB_JOBID"
+
+
+fork "xsdb" as my_xsdb
+my_xsdb echo = 1
+
+test
+	sleep 5
+	wait
+	when my_xsdb matches "xsdb%"
+		print "Forking xsdb completed"
+		continue
+	end
+	after 2 minutes
+		print "FAILURE: Forking xsdb failed"
+                close
+		exit
+	end
+endtest
+
+print my_xsdb "connect"		# Connect to hw server
+print my_xsdb "targets"		# List all cores
+
+# Take CPU's out of reset until fix
+print my_xsdb "targets -set -filter {name =~ \"xc7k325t\"}"	# Connect to DAP
+print my_xsdb "fpga -f $K7_EP_BIT"
+#print my_xsdb "after 9000"
+print my_xsdb "exit"
+
+run "sleep 25"
+print "Resetting PC..."
+warmboot
+<::preemption_on:=: ::>

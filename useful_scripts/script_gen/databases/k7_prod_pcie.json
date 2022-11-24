@@ -1,0 +1,543 @@
+{
+    "k7_rc_axipcie_k7_ep_axipcie_x4_mb": {
+        "cmd": "-pj kintex7 -si prod -rc k7 --bridge_rc axipcie -ep k7 --bridge_ep axipcie --lane_count x4 --processor mb",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstmble.elf",
+                    "burst_hw": "",
+                    "knobs": "",
+                    "preempt": "NO",
+                    "script_name": "k7_rc_axipcie_k7_ep_axipcie_x4_mb"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "ep_bup": "/group/siv_burst/proj/kc705/ep/axipcie/viv-axipcie705_8_X/implementation/project_1.runs/impl_1/burst_bd_wrapper.bit",
+                    "rc_bup": "/group/siv_burst/proj/kc705/rc/axipcie/viv_kc705axi_5_X_x4g2/top.bit"
+                },
+                "template_file": "k7_rc_k7_ep.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "com": "serial",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "kintex7/prod/pcie",
+        "script_num": -1
+    },
+    "k7_rc_axipcie_k7_ep_axipcie_x4_mb_preempt": {
+        "cmd": "-pj kintex7 -si prod -rc k7 --bridge_rc axipcie -ep k7 --bridge_ep axipcie --lane_count x4 --processor mb -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstmble.elf",
+                    "burst_hw": "",
+                    "knobs": "",
+                    "preempt": "YES",
+                    "script_name": "k7_rc_axipcie_k7_ep_axipcie_x4_mb_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "ep_bup": "/group/siv_burst/proj/kc705/ep/axipcie/viv-axipcie705_8_X/implementation/project_1.runs/impl_1/burst_bd_wrapper.bit",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "rc_bup": "/group/siv_burst/proj/kc705/rc/axipcie/viv_kc705axi_5_X_x4g2/top.bit"
+                },
+                "template_file": "k7_rc_k7_ep.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "com": "serial",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "kintex7/prod/pcie",
+        "script_num": -1
+    },
+    "k7_rc_axipcie_k7_ep_nwlpcie_x4_mb": {
+        "cmd": "-pj kintex7 -si prod -rc k7 --bridge_rc axipcie -ep k7 --bridge_ep nwlpcie --lane_count x4 --processor mb",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstmble.elf",
+                    "burst_hw": "",
+                    "knobs": "Prob_axiex_enable_interrupts=0;",
+                    "preempt": "NO",
+                    "script_name": "k7_rc_axipcie_k7_ep_nwlpcie_x4_mb"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "ep_bup": "/group/siv_burst/proj/kc705/ep/nwlpcie/pcie705nwlv_8a_x4g1/implementation/project_1.runs/impl_1/top.bit",
+                    "rc_bup": "/group/siv_burst/proj/kc705/rc/axipcie/viv_kc705axi_5_X_x4g2/top.bit"
+                },
+                "template_file": "k7_rc_k7_ep.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "com": "serial",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "kintex7/prod/pcie",
+        "script_num": -1
+    },
+    "k7_rc_axipcie_k7_ep_nwlpcie_x4_mb_preempt": {
+        "cmd": "-pj kintex7 -si prod -rc k7 --bridge_rc axipcie -ep k7 --bridge_ep nwlpcie --lane_count x4 --processor mb -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstmble.elf",
+                    "burst_hw": "",
+                    "knobs": "Prob_axiex_enable_interrupts=0;",
+                    "preempt": "YES",
+                    "script_name": "k7_rc_axipcie_k7_ep_nwlpcie_x4_mb_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "ep_bup": "/group/siv_burst/proj/kc705/ep/nwlpcie/pcie705nwlv_8a_x4g1/implementation/project_1.runs/impl_1/top.bit",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "rc_bup": "/group/siv_burst/proj/kc705/rc/axipcie/viv_kc705axi_5_X_x4g2/top.bit"
+                },
+                "template_file": "k7_rc_k7_ep.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "com": "serial",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "kintex7/prod/pcie",
+        "script_num": -1
+    },
+    "k7_rc_nwlpcie_k7_ep_axipcie_x4_mb": {
+        "cmd": "-pj kintex7 -si prod -rc k7 --bridge_rc nwlpcie -ep k7 --bridge_ep axipcie --lane_count x4 --processor mb",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstmble.elf",
+                    "burst_hw": "",
+                    "knobs": "Inst_weight_pcie_mem=0;",
+                    "preempt": "NO",
+                    "script_name": "k7_rc_nwlpcie_k7_ep_axipcie_x4_mb"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "ep_bup": "/group/siv_burst/proj/kc705/ep/axipcie/viv-axipcie705_8_X/implementation/project_1.runs/impl_1/burst_bd_wrapper.bit",
+                    "rc_bup": "/group/siv_burst/proj/kc705/rc/nwlpcie/kc705nwlv_4_x4g1/implementation/project_1.runs/impl_1/top.bit"
+                },
+                "template_file": "k7_rc_k7_ep.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "com": "serial",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "kintex7/prod/pcie",
+        "script_num": -1
+    },
+    "k7_rc_nwlpcie_k7_ep_axipcie_x4_mb_preempt": {
+        "cmd": "-pj kintex7 -si prod -rc k7 --bridge_rc nwlpcie -ep k7 --bridge_ep axipcie --lane_count x4 --processor mb -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstmble.elf",
+                    "burst_hw": "",
+                    "knobs": "Inst_weight_pcie_mem=0;",
+                    "preempt": "YES",
+                    "script_name": "k7_rc_nwlpcie_k7_ep_axipcie_x4_mb_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "ep_bup": "/group/siv_burst/proj/kc705/ep/axipcie/viv-axipcie705_8_X/implementation/project_1.runs/impl_1/burst_bd_wrapper.bit",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "rc_bup": "/group/siv_burst/proj/kc705/rc/nwlpcie/kc705nwlv_4_x4g1/implementation/project_1.runs/impl_1/top.bit"
+                },
+                "template_file": "k7_rc_k7_ep.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "com": "serial",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "kintex7/prod/pcie",
+        "script_num": -1
+    },
+    "k7_rc_nwlpcie_k7_ep_nwlpcie_x4_mb": {
+        "cmd": "-pj kintex7 -si prod -rc k7 --bridge_rc nwlpcie -ep k7 --bridge_ep nwlpcie --lane_count x4 --processor mb",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstmble.elf",
+                    "burst_hw": "",
+                    "knobs": "Prob_axiex_enable_interrupts=0;",
+                    "preempt": "NO",
+                    "script_name": "k7_rc_nwlpcie_k7_ep_nwlpcie_x4_mb"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "ep_bup": "/group/siv_burst/proj/kc705/ep/nwlpcie/pcie705nwlv_8a_x4g1/implementation/project_1.runs/impl_1/top.bit",
+                    "rc_bup": "/group/siv_burst/proj/kc705/rc/nwlpcie/kc705nwlv_4_x4g1/implementation/project_1.runs/impl_1/top.bit"
+                },
+                "template_file": "k7_rc_k7_ep.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "com": "serial",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "kintex7/prod/pcie",
+        "script_num": 7
+    },
+    "k7_rc_nwlpcie_k7_ep_nwlpcie_x4_mb_preempt": {
+        "cmd": "-pj kintex7 -si prod -rc k7 --bridge_rc nwlpcie -ep k7 --bridge_ep nwlpcie --lane_count x4 --processor mb -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstmble.elf",
+                    "burst_hw": "",
+                    "knobs": "Prob_axiex_enable_interrupts =0;",
+                    "preempt": "YES",
+                    "script_name": "k7_rc_nwlpcie_k7_ep_nwlpcie_x4_mb_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "ep_bup": "/group/siv_burst/proj/kc705/ep/nwlpcie/pcie705nwlv_8a_x4g1/implementation/project_1.runs/impl_1/top.bit",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "rc_bup": "/group/siv_burst/proj/kc705/rc/nwlpcie/kc705nwlv_4_x4g1/implementation/project_1.runs/impl_1/top.bit"
+                },
+                "template_file": "k7_rc_k7_ep.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "com": "serial",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "kintex7/prod/pcie",
+        "script_num": 8
+    },
+    "k7_rc_nwlpcie_k7_ep_plb2pcie_x4_mb": {
+        "cmd": "-pj kintex7 -si prod -rc k7 --bridge_rc nwlpcie -ep k7 --bridge_ep plb2pcie --lane_count x4 --processor mb",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstmble.elf",
+                    "burst_hw": "",
+                    "knobs": "",
+                    "preempt": "NO",
+                    "script_name": "k7_rc_nwlpcie_k7_ep_plb2pcie_x4_mb"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "ep_bup": "/group/siv_burst/proj/kc705/ep/plb2pcie/pcie705_18_X_x4g2/implementation/download.bit",
+                    "rc_bup": "/group/siv_burst/proj/kc705/rc/nwlpcie/kc705nwlv_4_x4g1/implementation/project_1.runs/impl_1/top.bit"
+                },
+                "template_file": "k7_rc_k7_ep.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "com": "serial",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "kintex7/prod/pcie",
+        "script_num": 7
+    },
+    "k7_rc_nwlpcie_k7_ep_plb2pcie_x4_mb_preempt": {
+        "cmd": "-pj kintex7 -si prod -rc k7 --bridge_rc nwlpcie -ep k7 --bridge_ep plb2pcie --lane_count x4 --processor mb -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstmble.elf",
+                    "burst_hw": "",
+                    "knobs": "",
+                    "preempt": "YES",
+                    "script_name": "k7_rc_nwlpcie_k7_ep_plb2pcie_x4_mb_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "ep_bup": "/group/siv_burst/proj/kc705/ep/plb2pcie/pcie705_18_X_x4g2/implementation/download.bit",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "rc_bup": "/group/siv_burst/proj/kc705/rc/nwlpcie/kc705nwlv_4_x4g1/implementation/project_1.runs/impl_1/top.bit"
+                },
+                "template_file": "k7_rc_k7_ep.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "com": "serial",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "kintex7/prod/pcie",
+        "script_num": 8
+    },
+    "x86_rc_k7_ep_axipcie_x4_x86": {
+        "cmd": "-pj kintex7 -si prod -rc x86 -ep k7 --bridge_ep axipcie --lane_count x4 --processor x86",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burst86",
+                    "burst_hw": "",
+                    "knobs": "Bus2pcie_ignore_all_cor_errs=1;Aximon_ep0_sel = 0x3002;Aximon_ep1_sel = 0x3322;Prob_bus2pcie_change_link=0;Data_weight_pcie_mem=0;Grub_maximum_mem=0x80000000;",
+                    "preempt": "NO",
+                    "script_name": "x86_rc_k7_ep_axipcie_x4_x86"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "ep_bup": "/group/siv_burst/proj/kc705/ep/axipcie/viv-axipcie705_8_X/implementation/project_1.runs/impl_1/burst_bd_wrapper.bit"
+                },
+                "template_file": "x86_rc_k7_ep.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "Yes",
+                    "com": "serial",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "kintex7/prod/pcie",
+        "script_num": 9
+    },
+    "x86_rc_k7_ep_axipcie_x4_x86_preempt": {
+        "cmd": "-pj kintex7 -si prod -rc x86 -ep k7 --bridge_ep axipcie --lane_count x4 --processor x86 -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burst86",
+                    "burst_hw": "",
+                    "knobs": "Bus2pcie_ignore_all_cor_errs=1;Aximon_ep0_sel = 0x3002;Aximon_ep1_sel = 0x3322;Prob_bus2pcie_change_link=0;Data_weight_pcie_mem=0;Grub_maximum_mem=0x80000000;",
+                    "preempt": "YES",
+                    "script_name": "x86_rc_k7_ep_axipcie_x4_x86_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "ep_bup": "/group/siv_burst/proj/kc705/ep/axipcie/viv-axipcie705_8_X/implementation/project_1.runs/impl_1/burst_bd_wrapper.bit",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on"
+                },
+                "template_file": "x86_rc_k7_ep.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "Yes",
+                    "com": "serial",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on"
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "kintex7/prod/pcie",
+        "script_num": 10
+    },
+    "x86_rc_k7_ep_nwlpcie_x4_x86": {
+        "cmd": "-pj kintex7 -si prod -rc x86 -ep k7 --bridge_ep nwlpcie --lane_count x4 --processor x86",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burst86",
+                    "burst_hw": "",
+                    "knobs": "Bus2pcie_ignore_all_cor_errs=1;Bus2pcie_check_link_rate=0;Aximon_ep0_sel = 0x3002;Aximon_ep1_sel = 0x3322;Nwldma_check_special_rd_val=0;Prob_axiex_enable_interrupts=0;Data_weight_pcie_mem=0;",
+                    "preempt": "NO",
+                    "script_name": "x86_rc_k7_ep_nwlpcie_x4_x86"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "ep_bup": "/group/siv_burst/proj/kc705/ep/nwlpcie/pcie705nwlv_8a_x4g1/implementation/project_1.runs/impl_1/top.bit"
+                },
+                "template_file": "x86_rc_k7_ep.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "Yes",
+                    "com": "serial",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "kintex7/prod/pcie",
+        "script_num": 11
+    },
+    "x86_rc_k7_ep_nwlpcie_x4_x86_preempt": {
+        "cmd": "-pj kintex7 -si prod -rc x86 -ep k7 --bridge_ep nwlpcie --lane_count x4 --processor x86 -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burst86",
+                    "burst_hw": "",
+                    "knobs": "Bus2pcie_ignore_all_cor_errs=1;Bus2pcie_check_link_rate=0;Aximon_ep0_sel = 0x3002;Aximon_ep1_sel = 0x3322;Nwldma_check_special_rd_val=0;Prob_axiex_enable_interrupts=0;Data_weight_pcie_mem=0;",
+                    "preempt": "YES",
+                    "script_name": "x86_rc_k7_ep_nwlpcie_x4_x86_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "ep_bup": "/group/siv_burst/proj/kc705/ep/nwlpcie/pcie705nwlv_8a_x4g1/implementation/project_1.runs/impl_1/top.bit",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on"
+                },
+                "template_file": "x86_rc_k7_ep.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "Yes",
+                    "com": "serial",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on"
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "kintex7/prod/pcie",
+        "script_num": 12
+    },
+    "x86_rc_k7_ep_plb2pcie_x4_x86": {
+        "cmd": "-pj kintex7 -si prod -rc x86 -ep k7 --bridge_ep plb2pcie --lane_count x4 --processor x86",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burst86",
+                    "burst_hw": "",
+                    "knobs": "Bus2pcie_ignore_all_cor_errs=1;Bus2pcie_check_link_rate=0;Aximon_ep0_sel = 0x3002;Aximon_ep1_sel = 0x3322;Nwldma_check_special_rd_val=0;Prob_axiex_enable_interrupts=0;Data_weight_pcie_mem=0;",
+                    "preempt": "NO",
+                    "script_name": "x86_rc_k7_ep_plb2pcie_x4_x86"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "ep_bup": "/group/siv_burst/proj/kc705/ep/plb2pcie/pcie705_18_X_x4g2/implementation/download.bit"
+                },
+                "template_file": "x86_rc_k7_ep.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "Yes",
+                    "com": "serial",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "kintex7/prod/pcie",
+        "script_num": 11
+    },
+    "x86_rc_k7_ep_plb2pcie_x4_x86_preempt": {
+        "cmd": "-pj kintex7 -si prod -rc x86 -ep k7 --bridge_ep plb2pcie --lane_count x4 --processor x86 -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burst86",
+                    "burst_hw": "",
+                    "knobs": "Bus2pcie_ignore_all_cor_errs=1;Bus2pcie_check_link_rate=0;Aximon_ep0_sel = 0x3002;Aximon_ep1_sel = 0x3322;Nwldma_check_special_rd_val=0;Prob_axiex_enable_interrupts=0;Data_weight_pcie_mem=0;",
+                    "preempt": "YES",
+                    "script_name": "x86_rc_k7_ep_plb2pcie_x4_x86_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "ep_bup": "/group/siv_burst/proj/kc705/ep/plb2pcie/pcie705_18_X_x4g2/implementation/download.bit",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on"
+                },
+                "template_file": "x86_rc_k7_ep.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "Yes",
+                    "com": "serial",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on"
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "kintex7/prod/pcie",
+        "script_num": 12
+    }
+}

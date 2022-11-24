@@ -1,0 +1,70 @@
+{
+    "zc702_a9": {
+        "cmd": "-pj pele -si prod -b zc702 --processor a9",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "prod",
+                    "knobs": "",
+                    "preempt": "No",
+                    "script_name": "zc702_a9"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "bitstream": "$SIV2/proj/pele/arm/vnc3.1/builds/burst/zynq_bup/zc702_14X/implementation/project_1.runs/impl_1/top.bit",
+                    "board": "zc702",
+                    "bup_name": "zc702_14X",
+                    "ddr_init_tcl": "$SIV2/proj/pele/arm/vnc3.1/scripts/xmd/ddr3/config_zc702_revd_3p0_ddr3_533mhz.tcl",
+                    "init_elf_path": "$SIV2/proj/pele/arm/vnc3.1/builds/burst/zynq_mio_init/dc1_init8/src/dc1_init8.elf"
+                },
+                "template_file": "pele.txt"
+            },
+            {
+                "keys": {
+                    "baud_rate": "115200",
+                    "tx_delay": "100"
+                },
+                "template_file": "pele_run_zynq.txt"
+            }
+        ],
+        "script_location": "pele/prod/zc702",
+        "script_num": 1
+    },
+    "zc706_a9": {
+        "cmd": "-pj pele -si prod -b zc706 --processor a9",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "prod",
+                    "knobs": "",
+                    "preempt": "No",
+                    "script_name": "zc706_a9"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "bitstream": "$SIV2/proj/pele/arm/vnc3.1_7045/builds/burst/zynq_bup/zc706_14X/implementation/project_1.runs/impl_1/top.bit",
+                    "board": "zc706",
+                    "bup_name": "zc706_14X",
+                    "ddr_init_tcl": "$SIV2/proj/pele/arm/vnc3.1_7045/scripts/xmd/ddr3/config_zc706_revb_3p0_ddr3_667mhz.tcl",
+                    "init_elf_path": "$SIV2/proj/pele/arm/vnc3.1_7045/builds/burst/zynq_mio_init/zc706_init_arm1G/src/zc706_init_arm1G_2.elf"
+                },
+                "template_file": "pele.txt"
+            },
+            {
+                "keys": {
+                    "baud_rate": "115200",
+                    "tx_delay": "100"
+                },
+                "template_file": "pele_run_zynq.txt"
+            }
+        ],
+        "script_location": "pele/prod/zc706",
+        "script_num": 2
+    }
+}

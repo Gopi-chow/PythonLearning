@@ -1,0 +1,3 @@
+			#Changing the current working directory
+			cd "$BURST_HOME"
+

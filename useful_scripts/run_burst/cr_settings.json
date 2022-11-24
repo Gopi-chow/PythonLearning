@@ -1,0 +1,151 @@
+{
+  "afx": {},
+  "afx-uz": {},
+  "artix-7a50t": {},
+  "ep107": {},
+  "ep108": {},
+  "generic": {},
+  "haps": {
+    "device_family": "Versal",
+    "verifier": "asehgal",
+    "epic": "EB-845"
+  },
+  "kc705": {},
+  "kc764": {},
+  "kcu105": {},
+  "kcu114": {},
+  "kcu116": {},
+  "microzed": {},
+  "ml501": {},
+  "ml505": {},
+  "ml507": {},
+  "ml605": {},
+  "ml660": {},
+  "ml662": {},
+  "palladium": {},
+  "panda": {},
+  "pcie4": {},
+  "pcie705": {
+    "device_family": "Versal",
+    "verifier": "snag",
+    "epic": "EB-417"
+  },
+  "pcie707": {},
+  "pcie709": {},
+  "pcie_cpm": {
+    "device_family": "Versal",
+    "verifier": "snag",
+    "epic": "EB-417"
+  },
+  "pcie_vcu119": {
+    "device_family": "Versal",
+    "verifier": "snag",
+    "epic": "EB-417"
+  },
+  "pcie_x86": {
+    "device_family": "Versal",
+    "verifier": "snag",
+    "epic": "EB-417"
+  },
+  "pcie_xa2785": {
+    "device_family": "Versal",
+    "verifier": "snag",
+    "epic": "EB-417"
+  },
+  "pcie_zcu102": {
+    "device_family": "Versal",
+    "verifier": "snag",
+    "epic": "EB-417"
+  },
+  "picozed": {},
+  "protium": {
+    "device_family": "Versal",
+    "verifier": "asehgal",
+    "epic": "EB-416"
+  },
+  "sc760": {},
+  "sda_pcie": {},
+  "sp605": {},
+  "tenpro": {
+    "device_family": "Versal",
+    "verifier": "asehgal",
+    "epic": "EB-2298"
+  },
+  "tenzing": {
+    "device_family": "Versal",
+    "verifier": "asehgal",
+    "epic": "EB-416"
+  },
+  "uc1651": {},
+  "uc165x": {},
+  "vc707": {},
+  "vc709": {},
+  "vck190": {
+    "device_family": "Versal",
+    "verifier": "asehgal",
+    "epic": "EB-416"
+  },
+  "vcu107": {},
+  "vcu108": {},
+  "vcu109": {},
+  "vcu117": {},
+  "vcu118": {},
+  "vcu119": {},
+  "veloce": {},
+  "xa2785": {
+    "device_family": "Versal",
+    "verifier": "snag",
+    "epic": "EB-417"
+  },
+  "zc1253": {},
+  "zc1254": {},
+  "zc1275": {},
+  "zc1650": {
+    "device_family": "Zynq UltraScale+MPSoC",
+    "verifier": "snag",
+    "epic": "EB-2296"
+  },
+  "zc1651": {
+    "device_family": "Zynq UltraScale+MPSoC",
+    "verifier": "snag",
+    "epic": "EB-2296"
+  },
+  "zc165x": {
+    "device_family": "Zynq UltraScale+MPSoC",
+    "verifier": "snag",
+    "epic": "EB-2296"
+  },
+  "zc1751": {
+    "device_family": "Zynq UltraScale+MPSoC",
+    "verifier": "snag",
+    "epic": "EB-2296"
+  },
+  "zc702": {
+    "device_family": "Zynq",
+    "verifier": "snag",
+    "epic": "EB-423"
+  },
+  "zc706": {
+    "device_family": "Zynq",
+    "verifier": "snag",
+    "epic": "EB-423"
+  },
+  "zc760": {},
+  "zc761": {},
+  "zc762": {},
+  "zc763": {},
+  "zc765": {},
+  "zc770": {},
+  "zcu100": {},
+  "zcu102": {
+    "device_family": "Zynq UltraScale+MPSoC",
+    "verifier": "snag",
+    "epic": "EB-2296"
+  },
+  "zcu104": {},
+  "zcu106": {},
+  "zed": {},
+  "zybo": {},
+  "managers": ["avas", "manishku", "sachinc", "vmerugu"],
+  "regress_team": ["athula", "rthati", "saipraka", "snag", "asehgal"]
+}

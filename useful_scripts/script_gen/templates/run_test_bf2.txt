@@ -1,0 +1,146 @@
+burst_started = 0
+burst_message = ""
+dumping_trace = 0
+burst_hang = 0
+actualruntime = 0
+starttime = time.time()
+endtime = 0
+trace_for_hang = 0
+burst_com_inactv_t = 600
+ctrl = 0
+skip = 0
+fat_knobs = 0
+
+try:
+    timestamp = time.time()
+    fail_flag = 0
+    serial_response = ""
+    while 1:
+    #time.sleep(2)
+              try:
+                  response = <::com:=:serial::>.read_response().decode()
+                  serial_response = response + serial_response
+              except Exception as e:
+                  #print(e)
+                  response = ""
+              if not burst_started:
+                  serial_response = serial_response + response
+              else:
+                  serial_response = response
+
+              if "Press a key in" in serial_response:
+                if str(burst_started) == "0" :
+                        <::com:=:serial::>.write_data( ('\n' + BURST_KNOBS + '\n\n') )
+                        print("BURST started.")
+                        burst_started = 1
+                        starttime = time.time()
+                        serial_response = ""
+                        <::read_power:=: ::>
+
+                if str(fat_knobs) == "1" :
+                        <::com:=:serial::>.write_data(('\n' + BURST_KNOBS_FAT + '\n\n') )
+                        fat_knobs = 0
+              if not serial_response and reset_time == 0.0:
+                  reset_time = time.time()
+              elif serial_response:
+                  reset_time = float()
+
+              if "Cmd line knob lines: 0" in serial_response:
+                  if str(BURST_KNOBS) != "" :
+                        burst_message = "Knobs didn't get passed"
+                        print(f"BURST failed: {burst_message}")
+                        fail_flag = 1
+                        break
+
+              if "Filling memory with pattern now" in serial_response:
+                if str(trace_for_hang) != "0" :
+                        <::com:=:serial::>.write_data(('^C' + '\n\n'))
+
+              if re.search("Failing at test: .* seed .* Run: .*", serial_response):
+                if str(ctrl) == "0" :
+                        burst_message = re.search("Failing at test: .* seed .* Run: .*", serial_response).group()
+                        print(burst_message)
+                        dumping_trace = 1
+                        endtime = time.time()
+                        actualruntime = int(endtime - starttime)
+                        print(f"FAILURE: BURST failed, run time is {actualruntime} seconds")
+                        <::preemption_off:=: ::>
+                        fail_flag = 1
+                        break
+                        
+              if "WARN" in serial_response:
+                skip = 1
+
+              if "Failing after test" in serial_response:
+                skip = 1
+
+              if "Stopping due to initialization errors" in serial_response:
+                burst_message = re.search("Stopping due to initialization errors", serial_response).group()
+                print("Failed during initialization")
+                print(f"FAILURE: BURST failed: {burst_message}")
+                fail_flag = 1
+                break
+
+              if "Type 'h' for help" in serial_response:
+                if str(ctrl) == "1" :
+                        break
+
+              if "End of BURST dump" in serial_response:
+                burst_message = re.search("End of BURST dump", serial_response).group()
+                print(f"FAILURE: BURST failed: {burst_message}")
+                fail_flag = 1
+                break
+
+              if reset_time != 0.0 and (time.time() - reset_time) > float(burst_com_inactv_t):
+                burst_hang = 1
+                if str(burst_started) != "1" :
+                        raise Exception( "BURST never started.")
+                else:
+                        <::com:=:serial::>.write_data(('\003' + '\n\n'))
+                        print(f"ctrl+c is pressed after inactive time of {burst_com_inactv_t} seconds is completed")
+                        ctrl = 1
+                        os.system(f"echo burst hung >> {LOGFILE}")
+                        os.system(f"echo burst hung. Restarting to dump trace >> {LOGFILE}")
+                        print("BURST hang detected.Restarting to dump trace")
+                        endtime = time.time()
+                        actualruntime = int(endtime - starttime)
+                        dumping_trace = 1
+                        raise Exception(f"FAILURE: BURST hung. runtime is {actualruntime} seconds")
+
+              if (time.time() - timestamp) > float(BURST_RUNTIME):
+                if len(BURST_KNOBS_FAT) != 0 :
+                        fat_knobs = 1
+                        <::com:=:serial::>.write_data(('C' + '\n\n'))
+                        print("C is pressed after runtime is completed to enter Fail_after_test knob")
+
+                elif str(dumping_trace) != "1" and  str(ctrl) == "0" and str(skip) == "0" and str(fat_knobs) == "0" :
+                        <::com:=:serial::>.write_data(('\003' + '\n\n'))
+                        print("ctrl+c is pressed after runtime is completed")
+                        print(f"BURST run of {BURST_RUNTIME} seconds complete!")
+                        ctrl = 1
+    if fail_flag:
+                <::__SUB_TEMPLATE__noc_reg_dump_bf2__:=:No::>
+		<::__SUB_TEMPLATE__spp_h10_noc_reg_dump_bf2__:=:No::>
+		<::__SUB_TEMPLATE__h10_noc_reg_dump_bf2__:=:No::>
+                <::read_power:=: ::>
+                print("BURST failed during execution!")
+
+except (SystemExit):
+    print("Script is being exited !")
+except KeyboardInterrupt:
+    sys.exit(0)
+except Exception as e:
+    print(e)
+
+finally:
+            if str(actualruntime) == "0"  and str(ctrl) == "0":
+                <::com:=:serial::>.write_data(('\003' + '\n\n'))
+                endtime = time.time()
+                actualruntime = int(endtime - starttime)
+                default.check_pending_job()
+                print ("ctrl+c is pressed stopped_manually")
+                print (f"BURST run is preempted/terminated after {actualruntime} seconds")
+
+                <::__SUB_TEMPLATE__exit_protium_bf2__:=:No::>
+            b.close()
+            os._exit(0)

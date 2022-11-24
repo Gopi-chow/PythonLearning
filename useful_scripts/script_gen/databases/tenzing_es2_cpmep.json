@@ -1,0 +1,90 @@
+{
+    "x86_rc_s80v350_ep_qdma_qddr_x8_x86": {
+        "cmd": "-pj everest -si es2_cpmep -rc x86 -ep s80v350 --cpm_mode qdma --ddr_mode qddr --lane_count x8 --processor x86",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burst86",
+                    "burst_hw": "v350_es2_cpm",
+                    "knobs": "",
+                    "preempt": "NO",
+                    "script_name": "x86_rc_s80v350_ep_qdma_qddr_x8_x86"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__everest_es1_cpm_ep_dow__": {
+                        "v350_boot_hack": "1"
+                    },
+                    "baud_rate": "115200",
+                    "bd_serial": "",
+                    "com": "com0",
+                    "ep_bit": "None",
+                    "ep_bup": "None",
+                    "image_path": "/everest/set_vnc_bkup/vnc/s80/prod/results/burst/bup/cpm/2020.3_released/ps4_1mp_qddr_Ax_v350_cpmep_x8g4_2020_3_rel/hwflow_project_1/project_1.runs/impl_1/project_1_wrapper.pdi",
+                    "proc": "x86",
+                    "x86_cmd": ""
+                },
+                "template_file": "everest_es1_x86_rc_cpm_ep.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "com": "com0",
+                    "exit_x86": "1",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "everest/es2_cpmep/pcie",
+        "script_num": 13
+    },
+    "x86_rc_s80v350_ep_qdma_qddr_x8_x86_preempt": {
+        "cmd": "-pj everest -si es2_cpmep -rc x86 -ep s80v350 --cpm_mode qdma --ddr_mode qddr --lane_count x8 --processor x86 -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burst86",
+                    "burst_hw": "v350_es2_cpm",
+                    "knobs": "",
+                    "preempt": "YES",
+                    "script_name": "x86_rc_s80v350_ep_qdma_qddr_x8_x86_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__everest_es1_cpm_ep_dow__": {
+                        "v350_boot_hack": "1"
+                    },
+                    "baud_rate": "115200",
+                    "bd_serial": "",
+                    "com": "com0",
+                    "ep_bit": "None",
+                    "ep_bup": "None",
+                    "image_path": "/everest/set_vnc_bkup/vnc/s80/prod/results/burst/bup/cpm/2020.3_released/ps4_1mp_qddr_Ax_v350_cpmep_x8g4_2020_3_rel/hwflow_project_1/project_1.runs/impl_1/project_1_wrapper.pdi",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "x86",
+                    "x86_cmd": ""
+                },
+                "template_file": "everest_es1_x86_rc_cpm_ep.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_protium__": "No",
+                    "__SUB_TEMPLATE__tinylinux_elf__": "No",
+                    "com": "com0",
+                    "exit_x86": "1",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test_pcie.txt"
+            }
+        ],
+        "script_location": "everest/es2_cpmep/pcie",
+        "script_num": 14
+    }
+}

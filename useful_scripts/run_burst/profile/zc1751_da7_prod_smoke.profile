@@ -1,0 +1,4 @@
+--board zc1751 -si da7_prod -dc dc1 -p a53 -clk av -k Fail_after_test=0x100,
+--board zc1751 -si da7_prod -dc dc1 -p r5 -clk av -k Fail_after_test=0x100,
+--board zc1751 -si da7_prod -dc dc2 -p a53 -clk av -k Fail_after_test=0x100,
+--board zc1751 -si da7_prod -dc dc2 -p r5 -clk av -k Fail_after_test=0x100,

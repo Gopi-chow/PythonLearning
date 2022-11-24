@@ -1,0 +1,33 @@
+
+print my_xsdb "targets -set -filter {(name =~ \"*Versal*\")}"
+
+print my_xsdb "puts \"Programing EP $EP_PDI_IMAGE\""
+print my_xsdb "device program $EP_PDI_IMAGE"
+
+$match1 = 0
+test
+        sleep 5
+        wait
+        when my_xsdb matches "100%"
+                if run "[ \"$match1\" == \"0\" ]" then
+                        $match1 = 1
+                        print "EP PDI image loaded and PMCFW completed"
+                        continue
+                endif
+        end
+        when my_xsdb matches "No supported device"
+                fail "Couldn't load PDI or PMCFW issue"
+        end
+        when my_xsdb inactive 5 minutes
+                fail "Couldn't load PDI or PMCFW issue"
+        end
+        on failure
+                print my_xsdb "device status jtag_status"
+                sleep 2
+                print my_xsdb "device status error_status"
+                sleep 2
+                print "FAILURE: $0"
+                close
+                exit
+        end
+endtest

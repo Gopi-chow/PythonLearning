@@ -1,0 +1,4 @@
+# Take A53-0 out of reset     
+b.execute("my_xsdb", "mwr 0xffff0000 0x14000000")
+b.execute("my_xsdb", "mwr 0xFD1A0104 0x380E")
+b.execute("my_xsdb", "targets -set -filter {name =~ \"Cortex-A53 #0\"}")

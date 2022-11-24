@@ -1,0 +1,7 @@
+        # In case of failure, before stopping emulation wait for BURST dump for 2hrs
+                print my_pall "stop"
+                print "Exit PTM"
+                print my_pall "exit"
+                sleep 40
+                #Changing the current working directory
+                cd "$BURST_HOME"

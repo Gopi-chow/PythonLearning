@@ -1,0 +1,6 @@
+-pj ksb -si cpm5n_ipp_v2_2 -rc cpm5n -ep cpm5n --cpm_mode c0c1rcegress --lane_count x4 --processor a72 -b haps-4  -s 0
+-pj ksb -si cpm5n_ipp_v2_2 -rc cpm5n -ep cpm5n --cpm_mode c0c1epegress --lane_count x4 --processor a72 -b haps-4  -s 1
+-pj ksb -si cpm5n_ipp_v2_2 -rc cpm5n -ep cpm5n --cpm_mode c2c3rcegress --lane_count x4 --processor a72 -b haps-4  -s 2
+-pj ksb -si cpm5n_ipp_v2_2 -rc cpm5n -ep cpm5n --cpm_mode c2c3epegress --lane_count x4 --processor a72 -b haps-11 -s 1
+-pj ksb -si cpm5n_ipp_v3_0 -rc cpm5n -ep cpm5n --cpm_mode c0c1epegressqdma  --lane_count x4 --processor a72 -b haps-4 -s 0
+-pj ksb -si cpm5n_ipp_v3_0 -rc cpm5n -ep cpm5n --cpm_mode c2c3epegressqdma  --lane_count x4 --processor a72 -b haps-4 -s 2

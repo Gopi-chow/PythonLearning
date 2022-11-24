@@ -1,0 +1,104 @@
+--board zc1650 -p a53 -si da7_prod -clk sivdef
+--board zc1650 -p r5 -si da7_prod -clk sivdef
+--board zc1651 -p a53 -si da7_prod -clk sivdef
+--board zc1651 -p r5 -si da7_prod -clk sivdef
+--board zc165x -e "zc165x-3" -p a53 -si da7_prod -clk av
+--board zc165x -e "zc165x-3" -p r5 -si da7_prod -clk av
+--board zc165x -e "zc165x-3" -p a53 -si da7_prod -clk sivdef
+--board zc165x -e "zc165x-3" -p r5 -si da7_prod -clk sivdef
+--board zc1751 -dc dc1 -p a53 -si da7_prod -clk av
+--board zc1751 -dc dc1 -p a53 -be -si da7_prod -clk av
+--board zc1751 -dc dc1 -p a53 -be -dp -si da7_prod -clk av
+--board zc1751 -dc dc1 -p a53 -be -ecc -si da7_prod -clk av
+--board zc1751 -dc dc1 -p a53 -be -ecc -dp -si da7_prod -clk av
+--board zc1751 -dc dc1 -p a53 -dp -si da7_prod -clk av
+--board zc1751 -dc dc1 -p a53 -ecc -si da7_prod -clk av
+--board zc1751 -dc dc1 -p a53 -ecc -dp -si da7_prod -clk av
+--board zc1751 -dc dc1 -p r5 -si da7_prod -clk av
+--board zc1751 -dc dc1 -p r5 -dp -si da7_prod -clk av
+--board zc1751 -dc dc1 -p r5 -ecc -si da7_prod -clk av
+--board zc1751 -dc dc1 -p r5 -ecc -dp -si da7_prod -clk av
+--board zc1751 -dc dc1 -p a53 -si da7_prod -clk sivdef
+--board zc1751 -dc dc1 -p a53 -be -si da7_prod -clk sivdef
+--board zc1751 -dc dc1 -p a53 -be -dp -si da7_prod -clk sivdef
+--board zc1751 -dc dc1 -p a53 -be -ecc -si da7_prod -clk sivdef
+--board zc1751 -dc dc1 -p a53 -be -ecc -dp -si da7_prod -clk sivdef
+--board zc1751 -dc dc1 -p a53 -dp -si da7_prod -clk sivdef
+--board zc1751 -dc dc1 -p a53 -ecc -si da7_prod -clk sivdef
+--board zc1751 -dc dc1 -p a53 -ecc -dp -si da7_prod -clk sivdef
+--board zc1751 -dc dc1 -p r5 -si da7_prod -clk sivdef
+--board zc1751 -dc dc1 -p r5 -dp -si da7_prod -clk sivdef
+--board zc1751 -dc dc1 -p r5 -ecc -si da7_prod -clk sivdef
+--board zc1751 -dc dc1 -p r5 -ecc -dp -si da7_prod -clk sivdef
+--board zc1751 -dc dc2 -p a53 -si da7_prod -clk av
+--board zc1751 -dc dc2 -p a53 -be -si da7_prod -clk av
+--board zc1751 -dc dc2 -p a53 -be -dp -si da7_prod -clk av
+--board zc1751 -dc dc2 -p a53 -be -ecc -si da7_prod -clk av
+--board zc1751 -dc dc2 -p a53 -be -ecc -dp -si da7_prod -clk av
+--board zc1751 -dc dc2 -p a53 -dp -si da7_prod -clk av
+--board zc1751 -dc dc2 -p a53 -ecc -si da7_prod -clk av
+--board zc1751 -dc dc2 -p a53 -ecc -dp -si da7_prod -clk av
+--board zc1751 -dc dc2 -p r5 -si da7_prod -clk av
+--board zc1751 -dc dc2 -p r5 -dp -si da7_prod -clk av
+--board zc1751 -dc dc2 -p r5 -ecc -si da7_prod -clk av
+--board zc1751 -dc dc2 -p r5 -ecc -dp -si da7_prod -clk av
+--board zc1751 -dc dc2 -p a53 -si da7_prod -clk sivdef
+--board zc1751 -dc dc2 -p a53 -be -si da7_prod -clk sivdef
+--board zc1751 -dc dc2 -p a53 -be -dp -si da7_prod -clk sivdef
+--board zc1751 -dc dc2 -p a53 -be -ecc -si da7_prod -clk sivdef
+--board zc1751 -dc dc2 -p a53 -be -ecc -dp -si da7_prod -clk sivdef
+--board zc1751 -dc dc2 -p a53 -dp -si da7_prod -clk sivdef
+--board zc1751 -dc dc2 -p a53 -ecc -si da7_prod -clk sivdef
+--board zc1751 -dc dc2 -p a53 -ecc -dp -si da7_prod -clk sivdef
+--board zc1751 -dc dc2 -p r5 -si da7_prod -clk sivdef
+--board zc1751 -dc dc2 -p r5 -dp -si da7_prod -clk sivdef
+--board zc1751 -dc dc2 -p r5 -ecc -si da7_prod -clk sivdef
+--board zc1751 -dc dc2 -p r5 -ecc -dp -si da7_prod -clk sivdef
+--board zcu102 -br rev1.0  -p a53 -si da7_prod -clk av
+--board zcu102 -br rev1.0  -p a53 -be -si da7_prod -clk av
+--board zcu102 -br rev1.0  -p a53 -be -dp -si da7_prod -clk av
+--board zcu102 -br rev1.0  -p a53 -be -ecc -si da7_prod -clk av
+--board zcu102 -br rev1.0  -p a53 -be -ecc -dp -si da7_prod -clk av
+--board zcu102 -br rev1.0  -p a53 -dp -si da7_prod -clk av
+--board zcu102 -br rev1.0  -p a53 -ecc -si da7_prod -clk av
+--board zcu102 -br rev1.0  -p a53 -ecc -dp -si da7_prod -clk av
+--board zcu102 -br rev1.0  -p r5 -si da7_prod -clk av
+--board zcu102 -br rev1.0  -p r5 -dp -si da7_prod -clk av
+--board zcu102 -br rev1.0  -p r5 -ecc -si da7_prod -clk av
+--board zcu102 -br rev1.0  -p r5 -ecc -dp -si da7_prod -clk av
+--board zcu102 -br rev1.0  -p a53 -si da7_prod -clk sivdef
+--board zcu102 -br rev1.0  -p a53 -be -si da7_prod -clk sivdef
+--board zcu102 -br rev1.0  -p a53 -be -dp -si da7_prod -clk sivdef
+--board zcu102 -br rev1.0  -p a53 -be -ecc -si da7_prod -clk sivdef
+--board zcu102 -br rev1.0  -p a53 -be -ecc -dp -si da7_prod -clk sivdef
+--board zcu102 -br rev1.0  -p a53 -dp -si da7_prod -clk sivdef
+--board zcu102 -br rev1.0  -p a53 -ecc -si da7_prod -clk sivdef
+--board zcu102 -br rev1.0  -p a53 -ecc -dp -si da7_prod -clk sivdef
+--board zcu102 -br rev1.0  -p r5 -si da7_prod -clk sivdef
+--board zcu102 -br rev1.0  -p r5 -dp -si da7_prod -clk sivdef
+--board zcu102 -br rev1.0  -p r5 -ecc -si da7_prod -clk sivdef
+--board zcu102 -br rev1.0  -p r5 -ecc -dp -si da7_prod -clk sivdef
+--board zcu102-3 -br revb -p a53 -si da7_prod -clk av
+--board zcu102-3 -br revb -p a53 -be -si da7_prod -clk av
+--board zcu102-3 -br revb -p a53 -be -dp -si da7_prod -clk av
+--board zcu102-3 -br revb -p a53 -be -ecc -si da7_prod -clk av
+--board zcu102-3 -br revb -p a53 -be -ecc -dp -si da7_prod -clk av
+--board zcu102-3 -br revb -p a53 -dp -si da7_prod -clk av
+--board zcu102-3 -br revb -p a53 -ecc -si da7_prod -clk av
+--board zcu102-3 -br revb -p a53 -ecc -dp -si da7_prod -clk av
+--board zcu102-3 -br revb -p r5 -si da7_prod -clk av
+--board zcu102-3 -br revb -p r5 -dp -si da7_prod -clk av
+--board zcu102-3 -br revb -p r5 -ecc -si da7_prod -clk av
+--board zcu102-3 -br revb -p r5 -ecc -dp -si da7_prod -clk av
+--board zcu102-3 -br revb -p a53 -si da7_prod -clk sivdef
+--board zcu102-3 -br revb -p a53 -be -si da7_prod -clk sivdef
+--board zcu102-3 -br revb -p a53 -be -dp -si da7_prod -clk sivdef
+--board zcu102-3 -br revb -p a53 -be -ecc -si da7_prod -clk sivdef
+--board zcu102-3 -br revb -p a53 -be -ecc -dp -si da7_prod -clk sivdef
+--board zcu102-3 -br revb -p a53 -dp -si da7_prod -clk sivdef
+--board zcu102-3 -br revb -p a53 -ecc -si da7_prod -clk sivdef
+--board zcu102-3 -br revb -p a53 -ecc -dp -si da7_prod -clk sivdef
+--board zcu102-3 -br revb -p r5 -si da7_prod -clk sivdef
+--board zcu102-3 -br revb -p r5 -dp -si da7_prod -clk sivdef
+--board zcu102-3 -br revb -p r5 -ecc -si da7_prod -clk sivdef
+--board zcu102-3 -br revb -p r5 -ecc -dp -si da7_prod -clk sivdef

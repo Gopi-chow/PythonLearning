@@ -1,0 +1,107 @@
+<::preemption_off:=: ::>
+
+$PROCESSOR = "<::proc::>"
+$RC_FSBL_ELF = "/group/siv3/proj/ronaldo/vnc/4.0/da7/results/burst/fourth_silicon/fsbl/2018.3_released/<::rc_fsbl_elf::>"
+$K7_EP_BIT = "<::k7_ep_bit::>"
+$BURST_BUP= "/group/siv3/proj/ronaldo/vnc/4.0/da7/results/burst/fourth_silicon/bup/zcu102_19X_PL100_AXIEX125_DP300/implementation/project_1.runs/impl_1/top.bit"
+$dir1 = "$SYSTEST_HOST"
+run "mkdir -p $LOGPATH/$dir1"        
+$dir2 = "$logdate"
+run "mkdir -p $LOGPATH/$SYSTEST_HOST/$dir2"        
+$BURST_RESULTS = "$LOGPATH/$SYSTEST_HOST/$dir2"
+$LOGFILE = "$BURST_RESULTS/burst_serial_$SYSTEST_HOST.log"
+$WHICH_XSDB := "which xsdb"
+
+######################################################################
+
+power 0
+sleep 2
+power 1
+sleep 2
+serial baud = 115200
+record serial "$LOGFILE"        
+debug "$BURST_RESULTS/burst_debug_$SYSTEST_HOST.log" 
+#Echo all paths and configurations
+print "Printing all launch information..."
+print "Alto_PCIe_$logdate,$BURST_HW,$BURST_BUP,$RC_FSBL_ELF,None,None,$K7_EP_BIT,None,$BURST_ELF,$SYSTEST_HOST,$logdate1,$BURST_RUNTIME,xx,$PREEMPTABLE,IN_PROGRESS,TBD,$BURST_RESULTS,$BURST_KNOBS"
+
+print "Zynq Version    :$BURST_HW"
+print "BUP Version     :$BURST_BUP"
+print "RC_FSBL_ELF     :$RC_FSBL_ELF"
+print "K7_EP_BIT       :$K7_EP_BIT"
+print "BOARD           :$SYSTEST_HOST"
+print "BURST KNOBS     :$BURST_KNOBS"
+print "BURST elf       :$BURST_ELF"
+print "BURST runtime   :$BURST_RUNTIME seconds"
+print "BURST results   :$BURST_RESULTS"
+print "XSDB Version    :$WHICH_XSDB"
+print "Job ID          :$LSB_JOBID"
+
+read_dna
+
+fork "xsdb" as my_xsdb
+my_xsdb echo = 1        
+
+test
+	sleep 5
+	wait
+	when my_xsdb matches "xsdb%"
+		print "Forking xsdb completed"
+		continue
+	end
+	after 2 minutes
+		print "FAILURE: Forking xsdb failed"
+                close
+		exit
+	end
+endtest
+
+print my_xsdb "connect"
+print my_xsdb "targets"
+print my_xsdb "puts \"Downloading K7 RC bitstream\""            
+print my_xsdb "targets -set -filter {name =~ \"xc7k325t\"}"            
+print my_xsdb "fpga -f $K7_EP_BIT"
+
+
+<::__SUB_TEMPLATE__r5_rst_digilent__:=:No::>
+<::__SUB_TEMPLATE__a53_rst_digilent__:=:No::>
+# Download and run FSBL            
+print my_xsdb "dow $RC_FSBL_ELF"
+print my_xsdb "con"            
+print my_xsdb "after 2000"
+print my_xsdb "stop"            
+print my_xsdb "after 3000"
+
+print my_xsdb "puts \"Downloading BUP...\""
+print my_xsdb "tar -set -filter {name =~ \"PS TAP\" && jtag_cable_name =~ \"Digilent*\" }"
+print my_xsdb "fpga -no-revision-check -f  $BURST_BUP"
+print my_xsdb "tar -set -filter {name =~ \"Cortex-<::proc:=:A53::> #0\" && jtag_cable_name =~ \"Digilent*\" }"
+
+# Download BURST            
+print my_xsdb "mrd 0x00100000 20"            
+print my_xsdb "dow $BURST_ELF"            
+
+test
+        sleep 5
+        wait
+        when my_xsdb matches "Successfully downloaded .*burstarm.*"
+                continue
+        end
+        when my_xsdb matches "Failed to download .*burstarm.*"
+                fail "BURST elf download failed"
+        end
+        when my_xsdb inactive 2 minutes
+                fail "BURST not started"
+        end
+        on failure
+                print "FAILURE: $0"
+                close
+                exit
+        end
+endtest
+
+print my_xsdb "mrd 0x00100000 20"
+print my_xsdb "rrd"
+<::preemption_on:=: ::>            
+print my_xsdb "con"
+print my_xsdb "exit"

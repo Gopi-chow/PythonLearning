@@ -1,0 +1,367 @@
+<::preemption_off:=: ::>
+
+$BAUD_RATE = 115200
+<::com:=:serial::> baud=$BAUD_RATE
+<::com:=:serial::> txdelay=100
+
+$HAPS_DOW = "<::bit_file:=:/group/siv4/proj/everest/public/releases/spp/spp_psxl_2_0/download.systest::>"
+$RHSXSDB = "<::rhsxsdb:=:/group/siv4/proj/everest/public/releases/spp/spp_psxl_2_0/RHS/rhsxsdb.tcl::>"
+$XSDB = "<::xsdb_ver:=:/everest/sivhw_bkup/tools/xilinx/2021.2_INT_0727_0226/installs/lin64/Vitis/2021.2/bin/xsdb::>"
+if run "[ ! -z \"$6\" ]" then
+	print "Haps requires a specific XSDB tool version. $6 will be used for the Systest tool version."
+endif
+
+$XSDB_RC = "<::xsdbrc_path:=:/group/siv4/proj/everest/public/releases/spp/spp_psxl_2_0/RHS/.xsdbrc::>"
+
+# Create log directories for host
+$dir1 = "$SYSTEST_HOST-$SYSTEST_SESSION"
+run "mkdir -p $LOGPATH/$dir1"
+$dir2 = "$logdate"
+run "mkdir -p $LOGPATH/$dir1/$dir2"
+$BURST_RESULTS = "$LOGPATH/$dir1/$dir2"
+$SERIAL_LOG = "$BURST_RESULTS/burst_serial_$dir1.log"
+$DEBUG_LOG = "$BURST_RESULTS/burst_debug_$dir1.log"
+
+cleankeys
+sleep 5
+
+debug append $DEBUG_LOG
+
+#Echo all paths and configurations
+print "Printing all launch information..."
+print "HAPS_$logdate,$BURST_HW,$HAPS_DOW,$BURST_ELF,$SYSTEST_HOST-$SYSTEST_SESSION,$logdate1,$BURST_RUNTIME,xx,$PREEMPTABLE,IN_PROGRESS,$BURST_RESULTS,$BURST_KNOBS"
+print "DA Version               :$BURST_HW"
+print "BOARD                    :$SYSTEST_HOST-$SYSTEST_SESSION"
+print "BURST KNOBS              :$BURST_KNOBS"
+print "BURST runtime            :$BURST_RUNTIME seconds"
+print "BURST elf                :$BURST_ELF"
+print "BURST results            :$BURST_RESULTS"
+print "XSDB Version             :$WHICH_XSDB"
+print "HAPS bitfile             :$HAPS_DOW"
+print "RHSXSDB                  :$RHSXSDB"
+print "Job ID                   :$LSB_JOBID" 
+print "NO Haps Download		:$NO_HAPS_DOWNLOAD"
+
+sleep 1
+cd "$BURST_RESULTS"
+
+# Kill confprosh fork
+if run "[ \"$NO_HAPS_DOWNLOAD\" != \"1\" ]" then
+	print "starting haps"
+	if running my_haps then
+		kill my_haps
+		sleep 1
+	endif
+	print "Starting haps"
+	fork "confprosh" as my_haps
+	my_haps echo = 1
+	sleep 3
+endif
+
+# Kill xsdb fork
+if running my_xsdb then
+	kill my_xsdb
+	sleep 1
+endif
+
+if run "[ \"$NO_HAPS_DOWNLOAD\" != \"1\" ]" then
+	print my_haps "source $HAPS_DOW"
+	$match0 = 0
+	test
+		sleep 5
+		wait
+		when my_haps matches "toggle_reset"
+		        if run "[ \"$match0\" == \"0\" ]" then
+		                $match0 = 1
+				print "HAPD download completed"
+				continue
+		        endif
+		end
+
+		when my_haps matches "Error configuring FPGAs*"
+			fail "HAPS download is too slow or error while downloading"
+		end
+		after 10 minutes
+			fail "HAPS dowload is taking more than 20 min"
+		end
+		on failure
+			print "FAILURE: $0"
+			#Clearing the FPGA's
+			print my_haps "exit"
+			#Changing the current working directory
+			cd "$BURST_HOME"
+			close
+			exit
+		end
+	endtest
+elseif run "[ \"$NO_HAPS_DOWNLOAD\" == \"1\" ]" then
+	power 0
+	sleep 2
+	power 1
+	sleep 10
+	print my_haps "toggle_reset"
+endif
+
+record <::com:=:serial::> append $SERIAL_LOG
+
+# launch xsdb
+fork "$XSDB" as my_xsdb
+my_xsdb echo = 1
+$match1 = 0
+test
+	sleep 10
+	wait
+	when my_xsdb matches "xsdb%"
+                if run "[ \"$match1\" == \"0\" ]" then
+                        $match1 = 1
+			print "Forking xsdb completed"
+			continue
+                endif
+	end
+	after 2 minutes
+		fail "FAILURE: Forking xsdb failed"
+	end
+	on failure
+		print "FAILURE: $0"
+		print my_haps "exit"
+		#Changing the current working directory
+		cd "$BURST_HOME"
+		close
+		exit
+	end
+endtest
+
+print my_xsdb "source $CLUSTER_HOME/etc/xsdb_init.tcl"
+print my_xsdb "hw_server"
+print my_xsdb "conn"
+sleep 5
+print my_xsdb "source $RHSXSDB"
+sleep 5
+
+$pattern = "........................................"
+$match2 = 0
+$linkup_fail = 0
+test
+	wait
+	when my_xsdb matches "ThunderBus Linkup Value: 0x15"
+		sleep 5
+                if run "[ \"$match2\" == \"0\" ]" then
+                        $match2 = 1
+			print "sourcing rhsxsdb completed"
+			continue
+                endif
+	end
+	
+	when my_xsdb inactive 5 minutes
+		fail "Couldn't load rhsxsdb"
+	end
+
+	when my_xsdb matches "$pattern"
+		print  'linkup failed'
+		print my_xsdb "\003"
+		print my_xsdb "exit"
+		$linkup_fail = 1
+		continue
+	end
+
+	on failure
+		print my_xsdb "exit"
+		sleep 2
+		print "FAILURE: $0"
+		sleep 2
+		print my_haps "exit"
+		#Changing the current working directory
+		cd "$BURST_HOME"
+		close
+		exit
+	end
+endtest
+
+if run "[ \"$linkup_fail\" == \"1\" ]" then
+	sleep 60
+	print "forking xsdb again"
+	fork "$XSDB" as my_xsdb
+	my_xsdb echo = 1
+	$match1 = 0
+	test
+		sleep 10
+		wait
+		when my_xsdb matches "xsdb%"
+                	if run "[ \"$match1\" == \"0\" ]" then
+                        	$match1 = 1
+				print "Forking xsdb completed"
+				continue
+                	endif
+		end
+		after 2 minutes
+			fail "FAILURE: Forking xsdb failed"
+		end
+		on failure
+			print "FAILURE: $0"
+			print my_haps "exit"
+			#Changing the current working directory
+			cd "$BURST_HOME"
+			close
+			exit
+		end
+	endtest
+	print my_xsdb "source $CLUSTER_HOME/etc/xsdb_init.tcl"
+	print my_xsdb "hw_server"
+	print my_xsdb "conn"
+	sleep 5
+	print my_xsdb "source $RHSXSDB"
+	sleep 5
+	$match2 = 0
+	test
+		wait
+		when my_xsdb matches "ThunderBus Linkup Value: 0x15"
+			sleep 5
+                	if run "[ \"$match2\" == \"0\" ]" then
+                        	$match2 = 1
+				print "sourcing rhsxsdb completed"
+				continue
+                	endif
+		end
+	
+		when my_xsdb inactive 5 minutes
+			fail "Couldn't load rhsxsdb"
+		end
+
+		when my_xsdb matches "$pattern"
+			fail "Failed to linkup again"
+		end
+
+		on failure
+			print my_xsdb "exit"
+			sleep 2
+			print "FAILURE: $0"
+			sleep 2
+			print my_haps "exit"
+			#Changing the current working directory
+			cd "$BURST_HOME"
+			close
+			exit
+		end
+	endtest
+endif
+
+sleep 2
+print my_haps "toggle_reset"
+sleep 5
+print my_xsdb "ta"
+sleep 2
+print my_xsdb "<::load_pdi::>"
+sleep 5
+
+$match3 = 0
+$load_pdi_fail = 0
+test
+	wait
+	when my_xsdb matches "100%"
+		sleep 5
+                if run "[ \"$match3\" == \"0\" ]" then
+                        $match3 = 1
+			print "sourcing load_pdi completed"
+			continue
+                endif
+	end
+	
+	when my_xsdb matches "device program.* errors during"
+		sleep 5
+		print my_xsdb "exit"
+		$load_pdi_fail = 1
+		continue
+	end
+
+	when my_xsdb inactive 5 minutes
+		fail "Couldn't load PDI or PMCFW issue"
+	end
+	on failure
+		print my_xsdb "exit"
+		sleep 2
+		print "FAILURE: $0"
+		sleep 2
+		print my_haps "exit"
+		#Changing the current working directory
+		cd "$BURST_HOME"
+		close
+		exit
+	end
+endtest
+
+if run "[ \"$load_pdi_fail\" == \"1\" ]" then
+	sleep 60
+	print "forking xsdb again"
+	fork "$XSDB" as my_xsdb
+	my_xsdb echo = 1
+	$match1 = 0
+	test
+		sleep 10
+		wait
+		when my_xsdb matches "xsdb%"
+                	if run "[ \"$match1\" == \"0\" ]" then
+                        	$match1 = 1
+				print "Forking xsdb completed"
+				continue
+                	endif
+		end
+		after 2 minutes
+			fail "FAILURE: Forking xsdb failed"
+		end
+		on failure
+			print "FAILURE: $0"
+			print my_haps "exit"
+			#Changing the current working directory
+			cd "$BURST_HOME"
+			close
+			exit
+		end
+	endtest
+	print my_xsdb "source $CLUSTER_HOME/etc/xsdb_init.tcl"
+	print my_xsdb "hw_server"
+	print my_xsdb "conn"
+	sleep 5
+	print my_xsdb "source $XSDB_RC"
+	sleep 5
+	print my_xsdb "post_pdi"
+	sleep 2
+endif
+
+# Take <::proc::> out of reset and download BURST elf
+<::__SUB_TEMPLATE__psx_ipp_a78_core_rst__:=:No::>
+<::__SUB_TEMPLATE__psx_ipp_r52_core_rst__:=:No::>
+<::__SUB_TEMPLATE__psx_ipp_r52_core_rst_split__:=:No::>
+<::__SUB_TEMPLATE__psx_ipp_r52_core_rst_lockstep__:=:No::>
+print my_xsdb "dow -force $BURST_ELF"
+
+$match4 = 0
+test
+	sleep 5
+	wait
+	when my_xsdb matches "Successfully downloaded .*burstarm.*"
+                if run "[ \"$match4\" == \"0\" ]" then
+                        $match4 = 1
+			continue
+                endif
+	end
+	when my_xsdb matches "Failed to download .*burstarm.*"
+		fail "BURST elf download failed"
+	end
+	when my_xsdb inactive 2 minutes
+		fail "BURST not started"
+	end
+	on failure
+		print "FAILURE: $0"
+		#Clearing the FPGA's
+		print my_haps "exit"
+		print my_xsdb "exit"
+		#Changing the current working directory
+		cd "$BURST_HOME"
+		close
+		exit
+	end
+endtest
+print my_xsdb "after <::dwn_burst_wait::>"
+<::preemption_on:=: ::>
+print my_xsdb "con"
+print my_xsdb "exit"

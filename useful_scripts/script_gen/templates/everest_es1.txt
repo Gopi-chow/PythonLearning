@@ -1,0 +1,108 @@
+<::preemption_off:=: ::>
+$BAUD_RATE = <::baud_rate:=:115200::>
+<::com:=:serial::> baud = $BAUD_RATE
+<::com:=:serial::> txdelay = 100
+
+$XSDB = "<::xsdb_ver:=:xsdb::>"
+$PDI_IMAGE = "<::image_path:=:$PWD/boot.bin::>"
+
+# Create log directories for host
+$dir1 = "$SYSTEST_HOST"
+run "mkdir -p $LOGPATH/$dir1"
+$dir2 = "$logdate"
+run "mkdir -p $LOGPATH/$SYSTEST_HOST/$dir2"
+$BURST_RESULTS = "$LOGPATH/$SYSTEST_HOST/$dir2"
+$SERIAL_LOG = "$BURST_RESULTS/burst_serial_$SYSTEST_HOST.log"
+$DEBUG_LOG = "$BURST_RESULTS/burst_debug_$SYSTEST_HOST.log"
+
+if run "[ \"$XSDB\" == \"xsdb\" ] || [ \"$WHICH_XSDB\" == \"$XSDB\" ]" then
+   $WHICH_XSDB := "which xsdb"
+else
+   $WHICH_XSDB = "$XSDB"
+endif
+
+debug append $DEBUG_LOG
+
+#Echo all paths and configurations
+print "Printing all launch information..."
+print "Everest_$logdate,$BURST_HW,$PDI_IMAGE,$BURST_ELF,$SYSTEST_HOST,$logdate1,$BURST_RUNTIME,xx,$PREEMPTABLE,IN_PROGRESS,TBD,$BURST_RESULTS,$BURST_KNOBS"
+print "DA Version               :$BURST_HW"
+print "PDI Image                :$PDI_IMAGE"
+print "BOARD                    :$SYSTEST_HOST"
+print "BURST KNOBS              :$BURST_KNOBS"
+print "BURST runtime            :$BURST_RUNTIME seconds"
+print "BURST elf                :$BURST_ELF"
+print "BURST results            :$BURST_RESULTS"
+print "XSDB Version             :$WHICH_XSDB"
+print "Job ID                   :$LSB_JOBID" 
+<::board_serial_num:=: ::>
+
+power 0
+sleep 2
+power 1
+sleep 2
+<::__SUB_TEMPLATE__vcc_aux_test__:=:No::>
+
+record <::com:=:serial::> append $SERIAL_LOG
+
+# launch xsdb
+fork "$XSDB" as my_xsdb
+my_xsdb echo = 1
+
+test
+	sleep 5
+	wait
+	when my_xsdb matches "xsdb%"
+		print "Forking xsdb completed"
+		continue
+	end
+	after 2 minutes
+		print "FAILURE: Forking xsdb failed"
+                close
+		exit
+	end
+endtest
+
+print my_xsdb "connect"
+print my_xsdb "targets -set -filter {name =~ \"Versal*\"}"
+print my_xsdb "targets"        		# List all cores
+sleep 2
+
+<::__SUB_TEMPLATE__tenzing_pdi_images_dow__:=:No::>
+# Add any workarounds that needs to be done before BURST dow here
+<::__SUB_TEMPLATE__everest_es1_workaround__:=:No::>
+
+# Take <::proc::> out of reset and download BURST elf
+<::__SUB_TEMPLATE__spp_a72_ta_sel__:=:No::>
+<::__SUB_TEMPLATE__spp_r5_ta_sel__:=:No::>
+
+print my_xsdb "<::rst_type::>"
+print my_xsdb "targets"        		# List all cores
+sleep 2
+
+print my_xsdb "puts \"Read DIP switch status via PMC GPIO 3 register\"" 
+print my_xsdb "puts [mrd -force 0xf102006c]" 
+print my_xsdb "dow -force $BURST_ELF"
+
+test
+	sleep 5
+	wait
+	when my_xsdb matches "Successfully downloaded .*burstarm.*"
+		continue
+	end
+	when my_xsdb matches "Failed to download .*burstarm.*"
+		fail "BURST elf download failed"
+	end
+	when my_xsdb inactive 2 minutes
+		fail "BURST not started"
+	end
+	on failure
+                print "FAILURE: $0"
+                close
+		exit
+	end
+endtest
+print my_xsdb "after <::dwn_burst_wait::>"
+<::preemption_on:=: ::>
+print my_xsdb "con"
+print my_xsdb "exit"

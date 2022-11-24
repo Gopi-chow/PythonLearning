@@ -1,0 +1,1 @@
+print my_xsdb "rpu0_core0_rst_split"

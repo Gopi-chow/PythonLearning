@@ -1,0 +1,14 @@
+--board zcu102  -br rev1.0 -p a53 -clk sivdef -si da7_prod
+--board zcu102  -br rev1.0 -p a53 -clk sivdef -si da7_prod
+--board zcu102  -br rev1.0 -p a53 -clk sivdef -si da7_prod
+--board zcu102  -br rev1.0 -p a53 -clk sivdef -si da7_prod
+--board zcu102  -br rev1.0 -p a53 -clk sivdef -si da7_prod
+--board zcu102  -br rev1.0 -p a53 -clk sivdef -si da7_prod
+--board zcu102  -br rev1.0 -p a53 -clk sivdef -si da7_prod
+--board zcu102  -br rev1.0 -p a53 -dp -clk av -si da7_prod
+--board zcu102  -br rev1.0 -p a53 -dp -clk av -si da7_prod
+--board zcu102  -br rev1.0 -p a53 -dp -clk av -si da7_prod
+--board zcu102  -br rev1.0 -p a53 -dp -clk av -si da7_prod
+--board zcu102  -br rev1.0 -p a53 -dp -clk av -si da7_prod
+--board zcu102  -br rev1.0 -p a53 -dp -clk av -si da7_prod
+--board zcu102  -br rev1.0 -p a53 -dp -clk av -si da7_prod

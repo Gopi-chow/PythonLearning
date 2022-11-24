@@ -1,0 +1,98 @@
+################################################################################################
+# Parameters
+# $1 - log path , if set to "n" defaults to current directory
+# $2 - burst elf, if set to "n" defaults to $PWD/<::burst_elf::>
+# $3 - runtime, if set to "n" defaults to 1800 seconds
+# $4 - burst knobs - seperate and terminate with a comma
+# $5 - message to display in cluster-ping
+# $6 - XSDB version, empty argument uses default version. (OPTIONAL)
+#
+# Example run from systest prompt
+# systest$ execute "<::script_name::>.cmd" "n" "n" "3600" "Fail_after_test=0x100," "n"
+#
+# or
+#
+# systest$ execute "<::script_name::>.cmd" "n" "n" "3600" "Fail_after_test=0x100," "n" "2019.2_daily_latest"
+#################################################################################################
+
+$BURST_HOME = "$PWD"
+$BURST_KNOBS = ""
+$BURST_HW = "<::burst_hw:=:None::>"
+$PREEMPTABLE = "<::preempt:=:NO::>"
+$BURST_BUP = "<::bup:=:none::>"
+
+if run "[ -z \"$1\"  ]" then
+        $LOGPATH = "$PWD/logs/<::script_name::>"
+        $BURST_RUNTIME = "<::burst_runtime:=:1800::>"
+        $BURST_KNOBS = "<::knobs::>"
+        $BURST_ELF = "$PWD/<::burst_elf::>"
+elseif run "[ -z \"$5\" ]" then
+        fail "ERROR : Less than 5 parameters entered"
+elseif run "[ ! -z \"$7\" ] " then
+        fail "ERROR : More than 6 parameters entered"
+endif
+
+if run "[ ! -z \"$1\"  ]" then
+        # $1 - log path , if set to "n" defaults to current directory
+        if run "[ \"$1\" == \"n\" ]" then
+                $LOGPATH = "$PWD/logs/<::script_name::>"
+        else
+                $LOGPATH = $1
+        endif
+        
+        # $2 - burst elf, if set to "n" defaults to $PWD/<::burst_elf::>
+        if run "[ \"$2\" == \"n\" ]" then
+                $BURST_ELF = "$PWD/<::burst_elf::>"
+        else
+                $BURST_ELF = "$2/<::burst_elf::>"
+        endif
+        # Check if BURST elf is present
+        if run "[ ! -f $BURST_ELF ]" then
+                fail "ERROR: Cannot find file: $BURST_ELF"
+        endif
+        
+        # $3 - runtime, if set to "n" defaults to 1800 seconds
+        if run "[ \"$3\" == \"n\" ]" then
+                $BURST_RUNTIME = <::burst_runtime:=:1800::>
+        else
+                if run "[[ \"$3\" != [0-9]* ]]" then
+                        fail "ERROR : Runtime should be in integer"
+                else
+                        $BURST_RUNTIME = $3
+                endif
+        endif
+        
+        # $4 - burst knobs - seperate and terminate with a comma
+        if run "[ \"$4\" == \"n\" ]" then
+                $BURST_KNOBS = "<::knobs::>"
+        else
+		# Add default knobs at the end of list for priority
+                $BURST_KNOBS = "$4<::knobs::>"
+        endif
+        
+        # $5 - message to display in cluster-ping	
+        if run " [ ! -z \"$5\" ]  " then
+                if run " [ \"$5\" != \"n\" ]  " then
+                        message "$5"
+                endif
+        endif
+
+        # $6 - XSDB tool version to use, empty argument uses default version 
+        if run "[ ! -z \"$6\" ]" then
+                loadmodule "$6"
+        endif
+endif
+
+$FAT_KNOB := 'echo $BURST_KNOBS | grep -c "%" || echo "0" '
+if run "[ \"$FAT_KNOB\" == \"1\" ]" then
+        $BURST_KNOBS_1 := 'echo $BURST_KNOBS | sed -e "s/,/;/g"'
+        $BURST_KNOBS := 'echo $BURST_KNOBS_1 | sed -e "s/%.*//g"'
+        $BURST_KNOBS_FAT := 'echo $BURST_KNOBS_1 | sed -e "s/.*%//g"'
+        print "$BURST_KNOBS_1"
+        print "$BURST_KNOBS"
+        print "$BURST_KNOBS_FAT"
+endif
+
+$BURST_KNOBS := 'echo $BURST_KNOBS | sed -e "s/,/;/g"'
+$logdate := 'date +%Y%m%d_%H%M'
+$logdate1 := 'date +"%D"'

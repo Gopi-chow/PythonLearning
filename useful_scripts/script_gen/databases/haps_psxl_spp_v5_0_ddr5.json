@@ -1,0 +1,332 @@
+{
+    "haps_a78_be_bup": {
+        "cmd": "-pj ksb -si psxl_spp_v5_0_ddr5 -b haps --processor a78 -be -bup",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "spp_psxl_v5_0_ddr5",
+                    "knobs": "",
+                    "preempt": "NO",
+                    "script_name": "haps_a78_be_bup"
+                },
+                "template_file": "parameters_toggle_reset.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__psx_ipp_a78_core_rst__": "yes",
+                    "__SUB_TEMPLATE__psx_ipp_r52_core_rst_split__": "no",
+                    "bit_file": "/everest/sivhw_rel_bkup/proj/everest/public/releases/spp/spp_psxl_5_0_ddr5/download.systest_bup",
+                    "com": "com3",
+                    "dwn_burst_wait": "1",
+                    "load_pdi": "load_pdi",
+                    "proc": "a78",
+                    "rhsxsdb": "/everest/sivhw_rel_bkup/proj/everest/public/releases/spp/spp_psxl_5_0_ddr5/RHS/rhsxsdb.tcl",
+                    "xsdb_ver": "/everest/sivhw_bkup/tools/xilinx/2022.1_INT_0124_1/installs/lin64/Vitis/2022.1/bin/xsdb",
+                    "xsdbrc_path": "/everest/sivhw_rel_bkup/proj/everest/public/releases/spp/spp_psxl_5_0_ddr5/RHS/.xsdbrc"
+                },
+                "template_file": "keystoneb_haps_toggle.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_haps__": "yes",
+                    "com": "com3",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "ksb/psxl_spp_v5_0_ddr5/haps",
+        "script_num": 1
+    },
+    "haps_a78_be_bup_preempt": {
+        "cmd": "-pj ksb -si psxl_spp_v5_0_ddr5 -b haps --processor a78 -be -bup -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64be.elf",
+                    "burst_hw": "spp_psxl_v5_0_ddr5",
+                    "knobs": "",
+                    "preempt": "YES",
+                    "script_name": "haps_a78_be_bup_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__psx_ipp_a78_core_rst__": "yes",
+                    "__SUB_TEMPLATE__psx_ipp_r52_core_rst_split__": "no",
+                    "bit_file": "/everest/sivhw_rel_bkup/proj/everest/public/releases/spp/spp_psxl_5_0_ddr5/download.systest_bup",
+                    "com": "com3",
+                    "dwn_burst_wait": "1",
+                    "load_pdi": "load_pdi",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a78",
+                    "rhsxsdb": "/everest/sivhw_rel_bkup/proj/everest/public/releases/spp/spp_psxl_5_0_ddr5/RHS/rhsxsdb.tcl",
+                    "xsdb_ver": "/everest/sivhw_bkup/tools/xilinx/2022.1_INT_0124_1/installs/lin64/Vitis/2022.1/bin/xsdb",
+                    "xsdbrc_path": "/everest/sivhw_rel_bkup/proj/everest/public/releases/spp/spp_psxl_5_0_ddr5/RHS/.xsdbrc"
+                },
+                "template_file": "keystoneb_haps.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_haps__": "yes",
+                    "com": "com3",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "ksb/psxl_spp_v5_0_ddr5/haps",
+        "script_num": 2
+    },
+    "haps_a78_bup": {
+        "cmd": "-pj ksb -si psxl_spp_v5_0_ddr5 -b haps --processor a78 -bup",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "spp_psxl_v5_0_ddr5",
+                    "knobs": "",
+                    "preempt": "NO",
+                    "script_name": "haps_a78_bup"
+                },
+                "template_file": "parameters_toggle_reset.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__psx_ipp_a78_core_rst__": "yes",
+                    "__SUB_TEMPLATE__psx_ipp_r52_core_rst_split__": "no",
+                    "bit_file": "/everest/sivhw_rel_bkup/proj/everest/public/releases/spp/spp_psxl_5_0_ddr5/download.systest_bup",
+                    "com": "com3",
+                    "dwn_burst_wait": "1",
+                    "load_pdi": "load_pdi",
+                    "proc": "a78",
+                    "rhsxsdb": "/everest/sivhw_rel_bkup/proj/everest/public/releases/spp/spp_psxl_5_0_ddr5/RHS/rhsxsdb.tcl",
+                    "xsdb_ver": "/everest/sivhw_bkup/tools/xilinx/2022.1_INT_0124_1/installs/lin64/Vitis/2022.1/bin/xsdb",
+                    "xsdbrc_path": "/everest/sivhw_rel_bkup/proj/everest/public/releases/spp/spp_psxl_5_0_ddr5/RHS/.xsdbrc"
+                },
+                "template_file": "keystoneb_haps_toggle.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_haps__": "yes",
+                    "com": "com3",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "ksb/psxl_spp_v5_0_ddr5/haps",
+        "script_num": 3
+    },
+    "haps_a78_bup_preempt": {
+        "cmd": "-pj ksb -si psxl_spp_v5_0_ddr5 -b haps --processor a78 -bup -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm64.elf",
+                    "burst_hw": "spp_psxl_v5_0_ddr5",
+                    "knobs": "",
+                    "preempt": "YES",
+                    "script_name": "haps_a78_bup_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__psx_ipp_a78_core_rst__": "yes",
+                    "__SUB_TEMPLATE__psx_ipp_r52_core_rst_split__": "no",
+                    "bit_file": "/everest/sivhw_rel_bkup/proj/everest/public/releases/spp/spp_psxl_5_0_ddr5/download.systest_bup",
+                    "com": "com3",
+                    "dwn_burst_wait": "1",
+                    "load_pdi": "load_pdi",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "a78",
+                    "rhsxsdb": "/everest/sivhw_rel_bkup/proj/everest/public/releases/spp/spp_psxl_5_0_ddr5/RHS/rhsxsdb.tcl",
+                    "xsdb_ver": "/everest/sivhw_bkup/tools/xilinx/2022.1_INT_0124_1/installs/lin64/Vitis/2022.1/bin/xsdb",
+                    "xsdbrc_path": "/everest/sivhw_rel_bkup/proj/everest/public/releases/spp/spp_psxl_5_0_ddr5/RHS/.xsdbrc"
+                },
+                "template_file": "keystoneb_haps.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_haps__": "yes",
+                    "com": "com3",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "ksb/psxl_spp_v5_0_ddr5/haps",
+        "script_num": 4
+    },
+    "haps_r52-lockstep_bup": {
+        "cmd": "-pj ksb -si psxl_spp_v5_0_ddr5 -b haps --processor r52-lockstep -bup",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "spp_psxl_v5_0_ddr5",
+                    "knobs": "",
+                    "preempt": "NO",
+                    "script_name": "haps_r52-lockstep_bup"
+                },
+                "template_file": "parameters_toggle_reset.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__psx_ipp_a78_core_rst__": "no",
+                    "__SUB_TEMPLATE__psx_ipp_r52_core_rst_lockstep__": "yes",
+                    "__SUB_TEMPLATE__psx_ipp_r52_core_rst_split__": "no",
+                    "bit_file": "/everest/sivhw_rel_bkup/proj/everest/public/releases/spp/spp_psxl_5_0_ddr5/download.systest_bup",
+                    "com": "com3",
+                    "dwn_burst_wait": "1",
+                    "load_pdi": "load_pdi",
+                    "proc": "r52",
+                    "rhsxsdb": "/everest/sivhw_rel_bkup/proj/everest/public/releases/spp/spp_psxl_5_0_ddr5/RHS/rhsxsdb.tcl",
+                    "xsdb_ver": "/everest/sivhw_bkup/tools/xilinx/2022.1_INT_0124_1/installs/lin64/Vitis/2022.1/bin/xsdb",
+                    "xsdbrc_path": "/everest/sivhw_rel_bkup/proj/everest/public/releases/spp/spp_psxl_5_0_ddr5/RHS/.xsdbrc"
+                },
+                "template_file": "keystoneb_haps_toggle.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_haps__": "yes",
+                    "com": "com3",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "ksb/psxl_spp_v5_0_ddr5/haps",
+        "script_num": 7
+    },
+    "haps_r52-lockstep_bup_preempt": {
+        "cmd": "-pj ksb -si psxl_spp_v5_0_ddr5 -b haps --processor r52-lockstep -bup -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "spp_psxl_v5_0_ddr5",
+                    "knobs": "",
+                    "preempt": "YES",
+                    "script_name": "haps_r52-lockstep_bup_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__psx_ipp_a78_core_rst__": "no",
+                    "__SUB_TEMPLATE__psx_ipp_r52_core_rst_lockstep__": "yes",
+                    "__SUB_TEMPLATE__psx_ipp_r52_core_rst_split__": "no",
+                    "bit_file": "/everest/sivhw_rel_bkup/proj/everest/public/releases/spp/spp_psxl_5_0_ddr5/download.systest_bup",
+                    "com": "com3",
+                    "dwn_burst_wait": "1",
+                    "load_pdi": "load_pdi",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "r52",
+                    "rhsxsdb": "/everest/sivhw_rel_bkup/proj/everest/public/releases/spp/spp_psxl_5_0_ddr5/RHS/rhsxsdb.tcl",
+                    "xsdb_ver": "/everest/sivhw_bkup/tools/xilinx/2022.1_INT_0124_1/installs/lin64/Vitis/2022.1/bin/xsdb",
+                    "xsdbrc_path": "/everest/sivhw_rel_bkup/proj/everest/public/releases/spp/spp_psxl_5_0_ddr5/RHS/.xsdbrc"
+                },
+                "template_file": "keystoneb_haps.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_haps__": "no",
+                    "com": "com3",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "ksb/psxl_spp_v5_0_ddr5/haps",
+        "script_num": 8
+    },
+    "haps_r52_bup": {
+        "cmd": "-pj ksb -si psxl_spp_v5_0_ddr5 -b haps --processor r52 -bup",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "spp_psxl_v5_0_ddr5",
+                    "knobs": "",
+                    "preempt": "NO",
+                    "script_name": "haps_r52_bup"
+                },
+                "template_file": "parameters_toggle_reset.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__psx_ipp_a78_core_rst__": "no",
+                    "__SUB_TEMPLATE__psx_ipp_r52_core_rst_split__": "yes",
+                    "bit_file": "/everest/sivhw_rel_bkup/proj/everest/public/releases/spp/spp_psxl_5_0_ddr5/download.systest_bup",
+                    "com": "com3",
+                    "dwn_burst_wait": "1",
+                    "load_pdi": "load_pdi",
+                    "proc": "r52",
+                    "rhsxsdb": "/everest/sivhw_rel_bkup/proj/everest/public/releases/spp/spp_psxl_5_0_ddr5/RHS/rhsxsdb.tcl",
+                    "xsdb_ver": "/everest/sivhw_bkup/tools/xilinx/2022.1_INT_0124_1/installs/lin64/Vitis/2022.1/bin/xsdb",
+                    "xsdbrc_path": "/everest/sivhw_rel_bkup/proj/everest/public/releases/spp/spp_psxl_5_0_ddr5/RHS/.xsdbrc"
+                },
+                "template_file": "keystoneb_haps_toggle.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_haps__": "yes",
+                    "com": "com3",
+                    "preemption_off": ""
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "ksb/psxl_spp_v5_0_ddr5/haps",
+        "script_num": 5
+    },
+    "haps_r52_bup_preempt": {
+        "cmd": "-pj ksb -si psxl_spp_v5_0_ddr5 -b haps --processor r52 -bup -pm 1",
+        "form": [
+            {
+                "keys": {
+                    "burst_elf": "burstarm.elf",
+                    "burst_hw": "spp_psxl_v5_0_ddr5",
+                    "knobs": "",
+                    "preempt": "YES",
+                    "script_name": "haps_r52_bup_preempt"
+                },
+                "template_file": "parameters.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__psx_ipp_a78_core_rst__": "no",
+                    "__SUB_TEMPLATE__psx_ipp_r52_core_rst_split__": "yes",
+                    "bit_file": "/everest/sivhw_rel_bkup/proj/everest/public/releases/spp/spp_psxl_5_0_ddr5/download.systest_bup",
+                    "com": "com3",
+                    "dwn_burst_wait": "1",
+                    "load_pdi": "load_pdi",
+                    "preemption_off": "preemption_off",
+                    "preemption_on": "preemption_on",
+                    "proc": "r52",
+                    "rhsxsdb": "/everest/sivhw_rel_bkup/proj/everest/public/releases/spp/spp_psxl_5_0_ddr5/RHS/rhsxsdb.tcl",
+                    "xsdb_ver": "/everest/sivhw_bkup/tools/xilinx/2022.1_INT_0124_1/installs/lin64/Vitis/2022.1/bin/xsdb",
+                    "xsdbrc_path": "/everest/sivhw_rel_bkup/proj/everest/public/releases/spp/spp_psxl_5_0_ddr5/RHS/.xsdbrc"
+                },
+                "template_file": "keystoneb_haps.txt"
+            },
+            {
+                "keys": {
+                    "__SUB_TEMPLATE__exit_haps__": "no",
+                    "com": "com3",
+                    "preemption_off": "preemption_off"
+                },
+                "template_file": "run_test.txt"
+            }
+        ],
+        "script_location": "ksb/psxl_spp_v5_0_ddr5/haps",
+        "script_num": 6
+    }
+}

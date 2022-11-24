@@ -1,0 +1,12 @@
+--board tenzing -dc se1 -si es2_pscon4 -dm 3ddr -bupcoh -p a72     -ospi -ecc
+--board tenzing -dc se1 -si es2_pscon4 -dm 3ddr -bupcoh -p a72 -be -ospi -ecc
+--board tenzing -dc se1 -si es2_pscon4 -dm 3ddr -bupcoh -p r5      -ospi -ecc
+--board tenzing -dc se1 -si es2_pscon4 -dm dddr -bup    -p a72
+--board tenzing -dc se1 -si es2_pscon4 -dm dddr -bup    -p a72 -be
+--board tenzing -dc se1 -si es2_pscon4 -dm dddr -bup    -p r5
+--board tenzing -dc se1 -si es2_pscon4 -dm 3ddr -bup    -p a72     
+--board tenzing -dc se1 -si es2_pscon4 -dm 3ddr -bup    -p a72 -be
+--board tenzing -dc se1 -si es2_pscon4 -dm 3ddr -bup    -p r5
+--board tenzing -dc se2 -si es2_pscon4 -dm sddr -bup    -p a72
+--board tenzing -dc se2 -si es2_pscon4 -dm sddr -bup    -p a72 -be
+--board tenzing -dc se2 -si es2_pscon4 -dm sddr -bup    -p r5
